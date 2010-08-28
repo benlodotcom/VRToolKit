@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="interface_object3_d_parameters_view_controller_07_08" kind="class" prot="public">
+    <compoundname>Object3DParametersViewController()</compoundname>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_object3_d_parameters_view_controller_07_08_1a1d0fad4d22280b14661890ecf689c20a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Object3DParametersViewController()::refreshView</definition>
+        <argsstring>()</argsstring>
+        <name>refreshView</name>
+        <briefdescription>
+<para>Refresh the values of the sliders and the textfields. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.m" line="7"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_object3_d_parameters_view_controller_1a7957d65b85a530b32aaf44343e9e3655" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Object3DParametersViewController()::enableUI</definition>
+        <argsstring>()</argsstring>
+        <name>enableUI</name>
+        <briefdescription>
+<para>Enable the buttons, sliders and textfields. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.m" line="12"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_object3_d_parameters_view_controller_1a62308dd9f545a3c621f13fa66e214d30" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Object3DParametersViewController()::disableUI</definition>
+        <argsstring>()</argsstring>
+        <name>disableUI</name>
+        <briefdescription>
+<para>Disable the buttons, sliders and textfields. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.m" line="16"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Private interface for the <ref refid="interface_object3_d_parameters_view_controller" kindref="compound">Object3DParametersViewController</ref> class. </para>    </detaileddescription>
+    <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.m" line="7" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.m" bodystart="7" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="interface_object3_d_parameters_view_controller_1a62308dd9f545a3c621f13fa66e214d30" prot="public" virt="virtual"><scope>Object3DParametersViewController()</scope><name>disableUI</name></member>
+      <member refid="interface_object3_d_parameters_view_controller_1a7957d65b85a530b32aaf44343e9e3655" prot="public" virt="virtual"><scope>Object3DParametersViewController()</scope><name>enableUI</name></member>
+      <member refid="interface_object3_d_parameters_view_controller_07_08_1a1d0fad4d22280b14661890ecf689c20a" prot="public" virt="virtual"><scope>Object3DParametersViewController()</scope><name>refreshView</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

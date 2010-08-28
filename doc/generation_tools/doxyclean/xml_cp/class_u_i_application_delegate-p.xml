@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="class_u_i_application_delegate-p" kind="class" prot="public">
+    <compoundname>UIApplicationDelegate-p</compoundname>
+    <derivedcompoundref refid="interface_v_r_tool_kit_app_delegate" prot="public" virt="non-virtual">VRToolKitAppDelegate</derivedcompoundref>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/VRToolKitAppDelegate.h" line="22"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

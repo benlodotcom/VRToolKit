@@ -1,0 +1,159 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="interface_object3_d_07_08" kind="class" prot="public">
+    <compoundname>Object3D()</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="interface_object3_d_07_08_1a98800bbe36d9d3723864822fd8b66f20" prot="public" static="no" readable="yes" writable="yes" gettable="no" settable="no" accessor="retain">
+        <type>NSString *</type>
+        <definition>NSString* Object3D()::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <read></read>
+        <write></write>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3D.m" line="14" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3D.m" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_object3_d_07_08_1a83e23345e68bfa0623a5ded5a474d3c2" prot="public" static="no" readable="yes" writable="yes" gettable="no" settable="no" accessor="retain">
+        <type>NSString *</type>
+        <definition>NSString* Object3D()::xmlFilePath</definition>
+        <argsstring></argsstring>
+        <name>xmlFilePath</name>
+        <read></read>
+        <write></write>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3D.m" line="15" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3D.m" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_object3_d_07_08_1ac61f789edda36cb5663eea668a19160d" prot="public" static="no" readable="yes" writable="yes" gettable="no" settable="no" accessor="retain">
+        <type>NSString *</type>
+        <definition>NSString* Object3D()::textureFileName</definition>
+        <argsstring></argsstring>
+        <name>textureFileName</name>
+        <read></read>
+        <write></write>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3D.m" line="16" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3D.m" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_object3_d_07_08_1aef83c01b2a365027288d38ed32e21825" prot="public" static="no" readable="yes" writable="yes" gettable="no" settable="no" accessor="retain">
+        <type>NSString *</type>
+        <definition>NSString* Object3D()::modelFileName</definition>
+        <argsstring></argsstring>
+        <name>modelFileName</name>
+        <read></read>
+        <write></write>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3D.m" line="17" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3D.m" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_object3_d_07_08_1a69003b485b466a21bb5c2c6781e5eb95" prot="public" static="no" readable="yes" writable="yes" gettable="no" settable="no" accessor="assign">
+        <type>unsigned int</type>
+        <definition>unsigned int Object3D()::numberOfVertices</definition>
+        <argsstring></argsstring>
+        <name>numberOfVertices</name>
+        <read></read>
+        <write></write>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3D.m" line="18" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3D.m" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_object3_d_07_08_1a5e6cf23bf810be01f881a714250c6fe1" prot="public" static="no" readable="yes" writable="yes" gettable="no" settable="no" accessor="assign">
+        <type>GLfloat *</type>
+        <definition>GLfloat* Object3D()::vertices</definition>
+        <argsstring></argsstring>
+        <name>vertices</name>
+        <read></read>
+        <write></write>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3D.m" line="19" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3D.m" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_object3_d_07_08_1a6a70ea276bc020ddcda8ad10f21486d1" prot="public" static="no" readable="yes" writable="yes" gettable="no" settable="no" accessor="assign">
+        <type>GLfloat *</type>
+        <definition>GLfloat* Object3D()::normals</definition>
+        <argsstring></argsstring>
+        <name>normals</name>
+        <read></read>
+        <write></write>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3D.m" line="20" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3D.m" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_object3_d_07_08_1a70c18df7e98dc446c368cd035adf8628" prot="public" static="no" readable="yes" writable="yes" gettable="no" settable="no" accessor="assign">
+        <type>GLfloat *</type>
+        <definition>GLfloat* Object3D()::textureCoordinates</definition>
+        <argsstring></argsstring>
+        <name>textureCoordinates</name>
+        <read></read>
+        <write></write>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3D.m" line="21" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3D.m" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_object3_d_1a6d9c93a1e7a82967a4d3c07a872555ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Object3D()::loadShapesAndTextures</definition>
+        <argsstring>()</argsstring>
+        <name>loadShapesAndTextures</name>
+        <briefdescription>
+<para>This methods fills the numberOfVertices, vertices, normals and textureCoordinates with datas coming from either a .h file or a description file parsed by the appropriate parse. </para>        </briefdescription>
+        <detaileddescription>
+<para>You have to modify this function if you want to add objects whose shape is described in a .h file </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3D.m" line="29"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Private interface of <ref refid="interface_e_a_g_l_view" kindref="compound">EAGLView</ref> class </para>    </detaileddescription>
+    <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3D.m" line="17" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3D.m" bodystart="17" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="interface_object3_d_1a6d9c93a1e7a82967a4d3c07a872555ea" prot="public" virt="virtual"><scope>Object3D()</scope><name>loadShapesAndTextures</name></member>
+      <member refid="interface_object3_d_07_08_1aef83c01b2a365027288d38ed32e21825" prot="public" virt="non-virtual"><scope>Object3D()</scope><name>modelFileName</name></member>
+      <member refid="interface_object3_d_07_08_1a98800bbe36d9d3723864822fd8b66f20" prot="public" virt="non-virtual"><scope>Object3D()</scope><name>name</name></member>
+      <member refid="interface_object3_d_07_08_1a6a70ea276bc020ddcda8ad10f21486d1" prot="public" virt="non-virtual"><scope>Object3D()</scope><name>normals</name></member>
+      <member refid="interface_object3_d_07_08_1a69003b485b466a21bb5c2c6781e5eb95" prot="public" virt="non-virtual"><scope>Object3D()</scope><name>numberOfVertices</name></member>
+      <member refid="interface_object3_d_07_08_1a70c18df7e98dc446c368cd035adf8628" prot="public" virt="non-virtual"><scope>Object3D()</scope><name>textureCoordinates</name></member>
+      <member refid="interface_object3_d_07_08_1ac61f789edda36cb5663eea668a19160d" prot="public" virt="non-virtual"><scope>Object3D()</scope><name>textureFileName</name></member>
+      <member refid="interface_object3_d_07_08_1a5e6cf23bf810be01f881a714250c6fe1" prot="public" virt="non-virtual"><scope>Object3D()</scope><name>vertices</name></member>
+      <member refid="interface_object3_d_07_08_1a83e23345e68bfa0623a5ded5a474d3c2" prot="public" virt="non-virtual"><scope>Object3D()</scope><name>xmlFilePath</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

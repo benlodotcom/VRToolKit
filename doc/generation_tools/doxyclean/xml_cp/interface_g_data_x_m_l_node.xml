@@ -1,0 +1,678 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="interface_g_data_x_m_l_node" kind="class" prot="public">
+    <compoundname>GDataXMLNode</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">NSObject</basecompoundref>
+    <derivedcompoundref refid="interface_g_data_x_m_l_element" prot="public" virt="non-virtual">GDataXMLElement</derivedcompoundref>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="interface_g_data_x_m_l_node_1acfd13d67dcb0ed8011df204c36c88d6f" prot="protected" static="no" mutable="no">
+        <type>xmlNodePtr</type>
+        <definition>xmlNodePtr GDataXMLNode::xmlNode_</definition>
+        <argsstring></argsstring>
+        <name>xmlNode_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.h" line="107" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="interface_g_data_x_m_l_node_1af6ca9b5845f17e614acc517388e1bfd5" prot="protected" static="no" mutable="no">
+        <type>BOOL</type>
+        <definition>BOOL GDataXMLNode::shouldFreeXMLNode_</definition>
+        <argsstring></argsstring>
+        <name>shouldFreeXMLNode_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.h" line="108" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.h" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="interface_g_data_x_m_l_node_1abf237c0ffe4081e69064e6ca858b23c6" prot="protected" static="no" mutable="no">
+        <type>NSString *</type>
+        <definition>NSString* GDataXMLNode::cachedName_</definition>
+        <argsstring></argsstring>
+        <name>cachedName_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.h" line="111" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="interface_g_data_x_m_l_node_1a4bf9ed070da05d56e7af4481d7e85c3b" prot="protected" static="no" mutable="no">
+        <type>NSArray *</type>
+        <definition>NSArray* GDataXMLNode::cachedChildren_</definition>
+        <argsstring></argsstring>
+        <name>cachedChildren_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.h" line="112" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.h" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="interface_g_data_x_m_l_node_1a5681557d48aaa1ed6ba6a5d6488bb6a5" prot="protected" static="no" mutable="no">
+        <type>NSArray *</type>
+        <definition>NSArray* GDataXMLNode::cachedAttributes_</definition>
+        <argsstring></argsstring>
+        <name>cachedAttributes_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.h" line="113" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.h" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="interface_g_data_x_m_l_node_1ad7e4405c6195d993a5633faa1899c8a0" prot="public" static="yes" const="no" explicit="no" inline="no" virt="virtual">
+        <type>GDataXMLElement *</type>
+        <definition>GDataXMLElement * GDataXMLNode::elementWithName:</definition>
+        <argsstring>(NSString *name)</argsstring>
+        <name>elementWithName:</name>
+        <param>
+          <type>NSString *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.h" line="116" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.m" bodystart="161" bodyend="170"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_g_data_x_m_l_node_1ad8afb69afa7b083627e8a6db5eba45f7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="virtual">
+        <type>GDataXMLElement *</type>
+        <definition>GDataXMLElement * GDataXMLNode::elementWithName:stringValue:</definition>
+        <argsstring>(NSString *name,[stringValue] NSString *value)</argsstring>
+        <name>elementWithName:stringValue:</name>
+        <param>
+          <type>NSString *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <attributes>[stringValue]</attributes>
+          <type>NSString *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.h" line="117" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.m" bodystart="172" bodyend="192"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_g_data_x_m_l_node_1ae1241290bcd76d378ba9a5eb0612b6c4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="virtual">
+        <type>GDataXMLElement *</type>
+        <definition>GDataXMLElement * GDataXMLNode::elementWithName:URI:</definition>
+        <argsstring>(NSString *name,[URI] NSString *value)</argsstring>
+        <name>elementWithName:URI:</name>
+        <param>
+          <type>NSString *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <attributes>[URI]</attributes>
+          <type>NSString *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.h" line="118" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.m" bodystart="194" bodyend="207"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_g_data_x_m_l_node_1abd922c9940730a4f78c906c2392123df" prot="public" static="yes" const="no" explicit="no" inline="no" virt="virtual">
+        <type>id</type>
+        <definition>id GDataXMLNode::attributeWithName:stringValue:</definition>
+        <argsstring>(NSString *name,[stringValue] NSString *value)</argsstring>
+        <name>attributeWithName:stringValue:</name>
+        <param>
+          <type>NSString *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <attributes>[stringValue]</attributes>
+          <type>NSString *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.h" line="120" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.m" bodystart="209" bodyend="221"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_g_data_x_m_l_node_1a82060803e76687ce902f09c96f654ab2" prot="public" static="yes" const="no" explicit="no" inline="no" virt="virtual">
+        <type>id</type>
+        <definition>id GDataXMLNode::attributeWithName:URI:stringValue:</definition>
+        <argsstring>(NSString *name,[URI] NSString *attributeURI,[stringValue] NSString *value)</argsstring>
+        <name>attributeWithName:URI:stringValue:</name>
+        <param>
+          <type>NSString *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <attributes>[URI]</attributes>
+          <type>NSString *</type>
+          <declname>attributeURI</declname>
+        </param>
+        <param>
+          <attributes>[stringValue]</attributes>
+          <type>NSString *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.h" line="121" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.m" bodystart="223" bodyend="240"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_g_data_x_m_l_node_1a59cd9e673bcf2be9ed19ebbabc68ad26" prot="public" static="yes" const="no" explicit="no" inline="no" virt="virtual">
+        <type>id</type>
+        <definition>id GDataXMLNode::namespaceWithName:stringValue:</definition>
+        <argsstring>(NSString *name,[stringValue] NSString *value)</argsstring>
+        <name>namespaceWithName:stringValue:</name>
+        <param>
+          <type>NSString *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <attributes>[stringValue]</attributes>
+          <type>NSString *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.h" line="123" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.m" bodystart="251" bodyend="269"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_g_data_x_m_l_node_1a13761fd3b75c6f465800e2d4ae45db84" prot="public" static="yes" const="no" explicit="no" inline="no" virt="virtual">
+        <type>id</type>
+        <definition>id GDataXMLNode::textWithStringValue:</definition>
+        <argsstring>(NSString *value)</argsstring>
+        <name>textWithStringValue:</name>
+        <param>
+          <type>NSString *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.h" line="125" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.m" bodystart="242" bodyend="249"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_g_data_x_m_l_node_1abaa7cb3204ca104a89895f895728b942" prot="public" static="yes" const="no" explicit="no" inline="no" virt="virtual">
+        <type>NSString *</type>
+        <definition>NSString * GDataXMLNode::localNameForName:</definition>
+        <argsstring>(NSString *name)</argsstring>
+        <name>localNameForName:</name>
+        <param>
+          <type>NSString *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.h" line="143" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.m" bodystart="564" bodyend="578"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_g_data_x_m_l_node_1ad6038ded1bfe166d7c87718dde7a466f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="virtual">
+        <type>NSString *</type>
+        <definition>NSString * GDataXMLNode::prefixForName:</definition>
+        <argsstring>(NSString *name)</argsstring>
+        <name>prefixForName:</name>
+        <param>
+          <type>NSString *</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.h" line="144" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.m" bodystart="580" bodyend="591"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_g_data_x_m_l_node_1afa291e610c39be001971719e6eb37996" prot="public" static="yes" const="no" explicit="no" inline="no" virt="virtual">
+        <type>id</type>
+        <definition>id GDataXMLNode(PrivateMethods)::nodeConsumingXMLNode:</definition>
+        <argsstring>(xmlNodePtr theXMLNode)</argsstring>
+        <name>nodeConsumingXMLNode:</name>
+        <param>
+          <type>xmlNodePtr</type>
+          <declname>theXMLNode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.m" line="116"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_g_data_x_m_l_node_1a0b67aacd8d9351afa5d159b3971b932f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="virtual">
+        <type>id</type>
+        <definition>id GDataXMLNode(PrivateMethods)::nodeBorrowingXMLNode:</definition>
+        <argsstring>(xmlNodePtr theXMLNode)</argsstring>
+        <name>nodeBorrowingXMLNode:</name>
+        <param>
+          <type>xmlNodePtr</type>
+          <declname>theXMLNode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.m" line="119"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_g_data_x_m_l_node_1ad6cef8a7c9c6714b8ea42e2620f86866" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>NSString *</type>
+        <definition>NSString * GDataXMLNode::stringValue</definition>
+        <argsstring>()</argsstring>
+        <name>stringValue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.h" line="127" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.m" bodystart="411" bodyend="437"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_g_data_x_m_l_node_1ab3b73dcb1ac9607325552747a3055a1e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void GDataXMLNode::setStringValue:</definition>
+        <argsstring>(NSString *str)</argsstring>
+        <name>setStringValue:</name>
+        <param>
+          <type>NSString *</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.h" line="128" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.m" bodystart="389" bodyend="409"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_g_data_x_m_l_node_1a8c1ecef5a1827105f8cdb435fe330dda" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>NSUInteger</type>
+        <definition>NSUInteger GDataXMLNode::childCount</definition>
+        <argsstring>()</argsstring>
+        <name>childCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.h" line="130" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.m" bodystart="593" bodyend="612"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_g_data_x_m_l_node_1a5d78f07c8cd059176801973bf6883452" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>NSArray *</type>
+        <definition>NSArray * GDataXMLNode::children</definition>
+        <argsstring>()</argsstring>
+        <name>children</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.h" line="131" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.m" bodystart="614" bodyend="641"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_g_data_x_m_l_node_1acabc5e624c3bbc27ba75c443d48b9795" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>GDataXMLNode *</type>
+        <definition>GDataXMLNode * GDataXMLNode::childAtIndex:</definition>
+        <argsstring>(unsigned index)</argsstring>
+        <name>childAtIndex:</name>
+        <param>
+          <type>unsigned</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.h" line="132" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.m" bodystart="643" bodyend="652"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_g_data_x_m_l_node_1a503afc6b19e456b831f6b45ae184336c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>NSString *</type>
+        <definition>NSString * GDataXMLNode::localName</definition>
+        <argsstring>()</argsstring>
+        <name>localName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.h" line="134" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.m" bodystart="469" bodyend="480"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_g_data_x_m_l_node_1a4dcfed52258221c7387f1482d7ee8488" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>NSString *</type>
+        <definition>NSString * GDataXMLNode::name</definition>
+        <argsstring>()</argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.h" line="135" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.m" bodystart="551" bodyend="562"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_g_data_x_m_l_node_1ad243c0aec788b95cb5fa8b6a89707c10" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>NSString *</type>
+        <definition>NSString * GDataXMLNode::prefix</definition>
+        <argsstring>()</argsstring>
+        <name>prefix</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.h" line="136" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.m" bodystart="482" bodyend="497"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_g_data_x_m_l_node_1a9d34ab47a4b5e1b3c67b26b07e9956a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>NSString *</type>
+        <definition>NSString * GDataXMLNode::URI</definition>
+        <argsstring>()</argsstring>
+        <name>URI</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.h" line="137" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.m" bodystart="499" bodyend="510"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_g_data_x_m_l_node_1a5e033ccdae3236c8875e1c6feb44c949" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>GDataXMLNodeKind</type>
+        <definition>GDataXMLNodeKind GDataXMLNode::kind</definition>
+        <argsstring>()</argsstring>
+        <name>kind</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.h" line="139" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.m" bodystart="654" bodyend="682"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_g_data_x_m_l_node_1a958c434d973db58ada939d7276977812" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>NSString *</type>
+        <definition>NSString * GDataXMLNode::XMLString</definition>
+        <argsstring>()</argsstring>
+        <name>XMLString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.h" line="141" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.m" bodystart="439" bodyend="467"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_g_data_x_m_l_node_1a93c2784d84fc245d99cf2943fc41c19c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>NSArray *</type>
+        <definition>NSArray * GDataXMLNode::nodesForXPath:namespaces:error:</definition>
+        <argsstring>(NSString *xpath,[namespaces] NSDictionary *namespaces,[error] NSError **error)</argsstring>
+        <name>nodesForXPath:namespaces:error:</name>
+        <param>
+          <type>NSString *</type>
+          <declname>xpath</declname>
+        </param>
+        <param>
+          <attributes>[namespaces]</attributes>
+          <type>NSDictionary *</type>
+          <declname>namespaces</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>NSError **</type>
+          <declname>error</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.h" line="148" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.m" bodystart="690" bodyend="832"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_g_data_x_m_l_node_1a48f3179efdba9b7e017aa32e7118907b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>NSArray *</type>
+        <definition>NSArray * GDataXMLNode::nodesForXPath:error:</definition>
+        <argsstring>(NSString *xpath,[error] NSError **error)</argsstring>
+        <name>nodesForXPath:error:</name>
+        <param>
+          <type>NSString *</type>
+          <declname>xpath</declname>
+        </param>
+        <param>
+          <attributes>[error]</attributes>
+          <type>NSError **</type>
+          <declname>error</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.h" line="154" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.m" bodystart="684" bodyend="688"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_g_data_x_m_l_node_1a775ef8bdbcb26003bfd326930f028d44" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>xmlNodePtr</type>
+        <definition>xmlNodePtr GDataXMLNode::XMLNode</definition>
+        <argsstring>()</argsstring>
+        <name>XMLNode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.h" line="158" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.m" bodystart="885" bodyend="887"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_g_data_x_m_l_node_1a71cb5af09b5c6737c452f2e09bcdec36" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void GDataXMLNode::releaseCachedValues</definition>
+        <argsstring>()</argsstring>
+        <name>releaseCachedValues</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.h" line="159" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.m" bodystart="311" bodyend="321"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_g_data_x_m_l_node_1afe892d98b556fbab1381efd9fcde6819" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>id</type>
+        <definition>id GDataXMLNode(PrivateMethods)::initConsumingXMLNode:</definition>
+        <argsstring>(xmlNodePtr theXMLNode)</argsstring>
+        <name>initConsumingXMLNode:</name>
+        <param>
+          <type>xmlNodePtr</type>
+          <declname>theXMLNode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.m" line="117"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_g_data_x_m_l_node_1ac32928fffb81e4e96957c82e759fd192" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>id</type>
+        <definition>id GDataXMLNode(PrivateMethods)::initBorrowingXMLNode:</definition>
+        <argsstring>(xmlNodePtr theXMLNode)</argsstring>
+        <name>initBorrowingXMLNode:</name>
+        <param>
+          <type>xmlNodePtr</type>
+          <declname>theXMLNode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.m" line="120"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_g_data_x_m_l_node_1af9ab19e292ae4d18c6302f97f6e284f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>xmlNodePtr</type>
+        <definition>xmlNodePtr GDataXMLNode(PrivateMethods)::XMLNodeCopy</definition>
+        <argsstring>()</argsstring>
+        <name>XMLNodeCopy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.m" line="124"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_g_data_x_m_l_node_1adbb4de0b3d2e31e5016413f28df8ab23" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>GDataXMLNode *</type>
+        <definition>GDataXMLNode * GDataXMLNode(PrivateMethods)::attributeForXMLNode:</definition>
+        <argsstring>(xmlAttrPtr theXMLNode)</argsstring>
+        <name>attributeForXMLNode:</name>
+        <param>
+          <type>xmlAttrPtr</type>
+          <declname>theXMLNode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.m" line="127"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_g_data_x_m_l_node_1aab0df9eaa8a836f244fc035ceada7901" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>NSString *</type>
+        <definition>NSString * GDataXMLNode(PrivateMethods)::stringFromXMLString:</definition>
+        <argsstring>(const xmlChar *chars)</argsstring>
+        <name>stringFromXMLString:</name>
+        <param>
+          <type>const xmlChar *</type>
+          <declname>chars</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.m" line="131"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_g_data_x_m_l_node_1a7d6b77d179a4a83b5cfe0c173baf1c3c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>BOOL</type>
+        <definition>BOOL GDataXMLNode(PrivateMethods)::shouldFreeXMLNode</definition>
+        <argsstring>()</argsstring>
+        <name>shouldFreeXMLNode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.m" line="134"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_g_data_x_m_l_node_1a0faeb14e174431b0f7b6e90e5bb14e21" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void GDataXMLNode(PrivateMethods)::setShouldFreeXMLNode:</definition>
+        <argsstring>(BOOL flag)</argsstring>
+        <name>setShouldFreeXMLNode:</name>
+        <param>
+          <type>BOOL</type>
+          <declname>flag</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.m" line="135"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.h" line="93" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.h" bodystart="93" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="interface_g_data_x_m_l_node_1adbb4de0b3d2e31e5016413f28df8ab23" prot="public" virt="virtual"><scope>GDataXMLNode</scope><name>attributeForXMLNode:</name></member>
+      <member refid="interface_g_data_x_m_l_node_1abd922c9940730a4f78c906c2392123df" prot="public" virt="virtual"><scope>GDataXMLNode</scope><name>attributeWithName:stringValue:</name></member>
+      <member refid="interface_g_data_x_m_l_node_1a82060803e76687ce902f09c96f654ab2" prot="public" virt="virtual"><scope>GDataXMLNode</scope><name>attributeWithName:URI:stringValue:</name></member>
+      <member refid="interface_g_data_x_m_l_node_1a5681557d48aaa1ed6ba6a5d6488bb6a5" prot="protected" virt="non-virtual"><scope>GDataXMLNode</scope><name>cachedAttributes_</name></member>
+      <member refid="interface_g_data_x_m_l_node_1a4bf9ed070da05d56e7af4481d7e85c3b" prot="protected" virt="non-virtual"><scope>GDataXMLNode</scope><name>cachedChildren_</name></member>
+      <member refid="interface_g_data_x_m_l_node_1abf237c0ffe4081e69064e6ca858b23c6" prot="protected" virt="non-virtual"><scope>GDataXMLNode</scope><name>cachedName_</name></member>
+      <member refid="interface_g_data_x_m_l_node_1acabc5e624c3bbc27ba75c443d48b9795" prot="public" virt="virtual"><scope>GDataXMLNode</scope><name>childAtIndex:</name></member>
+      <member refid="interface_g_data_x_m_l_node_1a8c1ecef5a1827105f8cdb435fe330dda" prot="public" virt="virtual"><scope>GDataXMLNode</scope><name>childCount</name></member>
+      <member refid="interface_g_data_x_m_l_node_1a5d78f07c8cd059176801973bf6883452" prot="public" virt="virtual"><scope>GDataXMLNode</scope><name>children</name></member>
+      <member refid="interface_g_data_x_m_l_node_1ad7e4405c6195d993a5633faa1899c8a0" prot="public" virt="virtual"><scope>GDataXMLNode</scope><name>elementWithName:</name></member>
+      <member refid="interface_g_data_x_m_l_node_1ad8afb69afa7b083627e8a6db5eba45f7" prot="public" virt="virtual"><scope>GDataXMLNode</scope><name>elementWithName:stringValue:</name></member>
+      <member refid="interface_g_data_x_m_l_node_1ae1241290bcd76d378ba9a5eb0612b6c4" prot="public" virt="virtual"><scope>GDataXMLNode</scope><name>elementWithName:URI:</name></member>
+      <member refid="interface_g_data_x_m_l_node_1ac32928fffb81e4e96957c82e759fd192" prot="public" virt="virtual"><scope>GDataXMLNode</scope><name>initBorrowingXMLNode:</name></member>
+      <member refid="interface_g_data_x_m_l_node_1afe892d98b556fbab1381efd9fcde6819" prot="public" virt="virtual"><scope>GDataXMLNode</scope><name>initConsumingXMLNode:</name></member>
+      <member refid="interface_g_data_x_m_l_node_1a5e033ccdae3236c8875e1c6feb44c949" prot="public" virt="virtual"><scope>GDataXMLNode</scope><name>kind</name></member>
+      <member refid="interface_g_data_x_m_l_node_1a503afc6b19e456b831f6b45ae184336c" prot="public" virt="virtual"><scope>GDataXMLNode</scope><name>localName</name></member>
+      <member refid="interface_g_data_x_m_l_node_1abaa7cb3204ca104a89895f895728b942" prot="public" virt="virtual"><scope>GDataXMLNode</scope><name>localNameForName:</name></member>
+      <member refid="interface_g_data_x_m_l_node_1a4dcfed52258221c7387f1482d7ee8488" prot="public" virt="virtual"><scope>GDataXMLNode</scope><name>name</name></member>
+      <member refid="interface_g_data_x_m_l_node_1a59cd9e673bcf2be9ed19ebbabc68ad26" prot="public" virt="virtual"><scope>GDataXMLNode</scope><name>namespaceWithName:stringValue:</name></member>
+      <member refid="interface_g_data_x_m_l_node_1a0b67aacd8d9351afa5d159b3971b932f" prot="public" virt="virtual"><scope>GDataXMLNode</scope><name>nodeBorrowingXMLNode:</name></member>
+      <member refid="interface_g_data_x_m_l_node_1afa291e610c39be001971719e6eb37996" prot="public" virt="virtual"><scope>GDataXMLNode</scope><name>nodeConsumingXMLNode:</name></member>
+      <member refid="interface_g_data_x_m_l_node_1a48f3179efdba9b7e017aa32e7118907b" prot="public" virt="virtual"><scope>GDataXMLNode</scope><name>nodesForXPath:error:</name></member>
+      <member refid="interface_g_data_x_m_l_node_1a93c2784d84fc245d99cf2943fc41c19c" prot="public" virt="virtual"><scope>GDataXMLNode</scope><name>nodesForXPath:namespaces:error:</name></member>
+      <member refid="interface_g_data_x_m_l_node_1ad243c0aec788b95cb5fa8b6a89707c10" prot="public" virt="virtual"><scope>GDataXMLNode</scope><name>prefix</name></member>
+      <member refid="interface_g_data_x_m_l_node_1ad6038ded1bfe166d7c87718dde7a466f" prot="public" virt="virtual"><scope>GDataXMLNode</scope><name>prefixForName:</name></member>
+      <member refid="interface_g_data_x_m_l_node_1a71cb5af09b5c6737c452f2e09bcdec36" prot="public" virt="virtual"><scope>GDataXMLNode</scope><name>releaseCachedValues</name></member>
+      <member refid="interface_g_data_x_m_l_node_1a0faeb14e174431b0f7b6e90e5bb14e21" prot="public" virt="virtual"><scope>GDataXMLNode</scope><name>setShouldFreeXMLNode:</name></member>
+      <member refid="interface_g_data_x_m_l_node_1ab3b73dcb1ac9607325552747a3055a1e" prot="public" virt="virtual"><scope>GDataXMLNode</scope><name>setStringValue:</name></member>
+      <member refid="interface_g_data_x_m_l_node_1a7d6b77d179a4a83b5cfe0c173baf1c3c" prot="public" virt="virtual"><scope>GDataXMLNode</scope><name>shouldFreeXMLNode</name></member>
+      <member refid="interface_g_data_x_m_l_node_1af6ca9b5845f17e614acc517388e1bfd5" prot="protected" virt="non-virtual"><scope>GDataXMLNode</scope><name>shouldFreeXMLNode_</name></member>
+      <member refid="interface_g_data_x_m_l_node_1aab0df9eaa8a836f244fc035ceada7901" prot="public" virt="virtual"><scope>GDataXMLNode</scope><name>stringFromXMLString:</name></member>
+      <member refid="interface_g_data_x_m_l_node_1ad6cef8a7c9c6714b8ea42e2620f86866" prot="public" virt="virtual"><scope>GDataXMLNode</scope><name>stringValue</name></member>
+      <member refid="interface_g_data_x_m_l_node_1a13761fd3b75c6f465800e2d4ae45db84" prot="public" virt="virtual"><scope>GDataXMLNode</scope><name>textWithStringValue:</name></member>
+      <member refid="interface_g_data_x_m_l_node_1a9d34ab47a4b5e1b3c67b26b07e9956a1" prot="public" virt="virtual"><scope>GDataXMLNode</scope><name>URI</name></member>
+      <member refid="interface_g_data_x_m_l_node_1a775ef8bdbcb26003bfd326930f028d44" prot="public" virt="virtual"><scope>GDataXMLNode</scope><name>XMLNode</name></member>
+      <member refid="interface_g_data_x_m_l_node_1acfd13d67dcb0ed8011df204c36c88d6f" prot="protected" virt="non-virtual"><scope>GDataXMLNode</scope><name>xmlNode_</name></member>
+      <member refid="interface_g_data_x_m_l_node_1af9ab19e292ae4d18c6302f97f6e284f8" prot="public" virt="virtual"><scope>GDataXMLNode</scope><name>XMLNodeCopy</name></member>
+      <member refid="interface_g_data_x_m_l_node_1a958c434d973db58ada939d7276977812" prot="public" virt="virtual"><scope>GDataXMLNode</scope><name>XMLString</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

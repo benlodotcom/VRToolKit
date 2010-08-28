@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="interface_g_data_x_m_l_element_07_private_methods_08" kind="class" prot="public">
+    <compoundname>GDataXMLElement(PrivateMethods)</compoundname>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="interface_g_data_x_m_l_element_1a5f56aa547c9ba1abdc3d68e050a9b4e3" prot="public" static="yes" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void GDataXMLElement(PrivateMethods)::fixUpNamespacesForNode:graftingToTreeNode:</definition>
+        <argsstring>(xmlNodePtr nodeToFix,[graftingToTreeNode] xmlNodePtr graftPointNode)</argsstring>
+        <name>fixUpNamespacesForNode:graftingToTreeNode:</name>
+        <param>
+          <type>xmlNodePtr</type>
+          <declname>nodeToFix</declname>
+        </param>
+        <param>
+          <attributes>[graftingToTreeNode]</attributes>
+          <type>xmlNodePtr</type>
+          <declname>graftPointNode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.m" line="142"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.m" line="139" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.m" bodystart="139" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="interface_g_data_x_m_l_element_1a5f56aa547c9ba1abdc3d68e050a9b4e3" prot="public" virt="virtual"><scope>GDataXMLElement(PrivateMethods)</scope><name>fixUpNamespacesForNode:graftingToTreeNode:</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,453 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="_g_data_x_m_l_node_8h" kind="file">
+    <compoundname>GDataXMLNode.h</compoundname>
+    <includes local="no">Foundation/Foundation.h</includes>
+    <includes local="no">libxml/tree.h</includes>
+    <includes local="no">libxml/parser.h</includes>
+    <includes local="no">libxml/xmlstring.h</includes>
+    <includes local="no">libxml/xpath.h</includes>
+    <includes local="no">libxml/xpathInternals.h</includes>
+    <includes local="yes">GDataDefines.h</includes>
+    <includedby refid="_object3_d_8m" local="yes">Classes/Object3D.m</includedby>
+    <incdepgraph>
+      <node id="161">
+        <label>GDataDefines.h</label>
+      </node>
+      <node id="158">
+        <label>libxml/xmlstring.h</label>
+      </node>
+      <node id="157">
+        <label>libxml/parser.h</label>
+      </node>
+      <node id="154">
+        <label>Classes/XMLParser/GDataXMLNode.h</label>
+        <link refid="GDataXMLNode.h"/>
+        <childnode refid="155" relation="include">
+        </childnode>
+        <childnode refid="156" relation="include">
+        </childnode>
+        <childnode refid="157" relation="include">
+        </childnode>
+        <childnode refid="158" relation="include">
+        </childnode>
+        <childnode refid="159" relation="include">
+        </childnode>
+        <childnode refid="160" relation="include">
+        </childnode>
+        <childnode refid="161" relation="include">
+        </childnode>
+      </node>
+      <node id="155">
+        <label>Foundation/Foundation.h</label>
+      </node>
+      <node id="159">
+        <label>libxml/xpath.h</label>
+      </node>
+      <node id="156">
+        <label>libxml/tree.h</label>
+      </node>
+      <node id="160">
+        <label>libxml/xpathInternals.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="163">
+        <label>Classes/Object3D.m</label>
+        <childnode refid="163" relation="include">
+        </childnode>
+      </node>
+      <node id="162">
+        <label>Classes/XMLParser/GDataXMLNode.h</label>
+        <link refid="GDataXMLNode.h"/>
+        <childnode refid="163" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="interface_g_data_x_m_l_node" prot="public">GDataXMLNode</innerclass>
+    <innerclass refid="interface_g_data_x_m_l_element" prot="public">GDataXMLElement</innerclass>
+    <innerclass refid="interface_g_data_x_m_l_document" prot="public">GDataXMLDocument</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="_g_data_x_m_l_node_8h_1ab7d1de9a28b370a2ed9d5426d225abbe" prot="public" static="no">
+        <name>_EXTERN</name>
+        <initializer>extern</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.h" line="56" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_g_data_x_m_l_node_8h_1aa9bf4a8049cd7a87d81d88525d98d5d6" prot="public" static="no">
+        <name>_INITIALIZE_AS</name>
+        <param><defname>x</defname></param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.h" line="57" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="_g_data_x_m_l_node_8h_1a06fc87d81c62e9abb8790b6e5713c55b" prot="public" static="no">
+        <name>@0</name>
+        <enumvalue id="_g_data_x_m_l_node_8h_1a06fc87d81c62e9abb8790b6e5713c55bac8681236885100fd971d3a5815da7c9d" prot="public">
+          <name>GDataXMLInvalidKind</name>
+          <initializer> 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_g_data_x_m_l_node_8h_1a06fc87d81c62e9abb8790b6e5713c55ba5ebaa547fea5e8c6770b79c60982946c" prot="public">
+          <name>GDataXMLDocumentKind</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_g_data_x_m_l_node_8h_1a06fc87d81c62e9abb8790b6e5713c55baec79c7e743c795b03be9847592fca488" prot="public">
+          <name>GDataXMLElementKind</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_g_data_x_m_l_node_8h_1a06fc87d81c62e9abb8790b6e5713c55ba910b0888dd43e9f47e4ba3b8ff191ad7" prot="public">
+          <name>GDataXMLAttributeKind</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_g_data_x_m_l_node_8h_1a06fc87d81c62e9abb8790b6e5713c55ba42eb09358cb029bce446ad5b8e6f5873" prot="public">
+          <name>GDataXMLNamespaceKind</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_g_data_x_m_l_node_8h_1a06fc87d81c62e9abb8790b6e5713c55ba4fdf88c92b42fd61bdcdf048351a9d4a" prot="public">
+          <name>GDataXMLProcessingInstructionKind</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_g_data_x_m_l_node_8h_1a06fc87d81c62e9abb8790b6e5713c55ba5ffc3a09535d7f4ef95526fed897ae42" prot="public">
+          <name>GDataXMLCommentKind</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_g_data_x_m_l_node_8h_1a06fc87d81c62e9abb8790b6e5713c55baacfc763efab48e977ef4585c1a11c82b" prot="public">
+          <name>GDataXMLTextKind</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_g_data_x_m_l_node_8h_1a06fc87d81c62e9abb8790b6e5713c55ba607492e603d08ed2233f89ea45f8e31f" prot="public">
+          <name>GDataXMLDTDKind</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_g_data_x_m_l_node_8h_1a06fc87d81c62e9abb8790b6e5713c55ba949b3d527427325e33fcd90e1a68aaf5" prot="public">
+          <name>GDataXMLEntityDeclarationKind</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_g_data_x_m_l_node_8h_1a06fc87d81c62e9abb8790b6e5713c55ba2eaaf1c2c7b01bab5cbcf03773eec5b1" prot="public">
+          <name>GDataXMLAttributeDeclarationKind</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_g_data_x_m_l_node_8h_1a06fc87d81c62e9abb8790b6e5713c55ba8ac0a4c07febaf329e2ccc250b8570fa" prot="public">
+          <name>GDataXMLElementDeclarationKind</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_g_data_x_m_l_node_8h_1a06fc87d81c62e9abb8790b6e5713c55ba55db76bac307e4886d7c02ac7828e663" prot="public">
+          <name>GDataXMLNotationDeclarationKind</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.h" line="75" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.h" bodystart="75" bodyend="89"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="_g_data_x_m_l_node_8h_1abdf0c58d7e8504639df551cabfec3a4e" prot="public" static="no">
+        <type>NSUInteger</type>
+        <definition>typedef NSUInteger GDataXMLNodeKind</definition>
+        <argsstring></argsstring>
+        <name>GDataXMLNodeKind</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.h" line="91" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_g_data_x_m_l_node_8h_1a7109a9dc4bd03e724ac25401c24fa16f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>_EXTERN const char *kGDataXMLXPathDefaultNamespacePrefix</type>
+        <definition>_EXTERN const char* kGDataXMLXPathDefaultNamespacePrefix _INITIALIZE_AS</definition>
+        <argsstring>(&quot;_def_ns&quot;)</argsstring>
+        <name>_INITIALIZE_AS</name>
+        <param>
+          <type>&quot;_def_ns&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.h" line="62"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>Copyright<sp/>(c)<sp/>2008<sp/>Google<sp/>Inc.</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>Licensed<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the<sp/>&quot;License&quot;);</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance<sp/>with<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*<sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,<sp/>software</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>See<sp/>the<sp/>License<sp/>for<sp/>the<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>limitations<sp/>under<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//<sp/>These<sp/>node,<sp/>element,<sp/>and<sp/>document<sp/>classes<sp/>implement<sp/>a<sp/>subset<sp/>of<sp/>the<sp/>methods</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//<sp/>provided<sp/>by<sp/>NSXML.<sp/><sp/>While<sp/>NSXML<sp/>behavior<sp/>is<sp/>mimicked<sp/>as<sp/>much<sp/>as<sp/>possible,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//<sp/>there<sp/>are<sp/>important<sp/>differences.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//<sp/>The<sp/>biggest<sp/>difference<sp/>is<sp/>that,<sp/>since<sp/>this<sp/>is<sp/>based<sp/>on<sp/>libxml2,<sp/>there</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">//<sp/>is<sp/>no<sp/>retain<sp/>model<sp/>for<sp/>the<sp/>underlying<sp/>node<sp/>data.<sp/><sp/>Rather<sp/>than<sp/>copy<sp/>every</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//<sp/>node<sp/>obtained<sp/>from<sp/>a<sp/>parse<sp/>tree<sp/>(which<sp/>would<sp/>have<sp/>a<sp/>substantial<sp/>memory</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">//<sp/>impact),<sp/>we<sp/>rely<sp/>on<sp/>weak<sp/>references,<sp/>and<sp/>it<sp/>is<sp/>up<sp/>to<sp/>the<sp/>code<sp/>that</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">//<sp/>created<sp/>a<sp/>document<sp/>to<sp/>retain<sp/>it<sp/>for<sp/>as<sp/>long<sp/>as<sp/>any</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">//<sp/>references<sp/>rely<sp/>on<sp/>nodes<sp/>inside<sp/>that<sp/>document<sp/>tree.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&lt;Foundation/Foundation.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="comment">//<sp/>libxml<sp/>includes<sp/>require<sp/>that<sp/>the<sp/>target<sp/>Header<sp/>Search<sp/>Paths<sp/>contain</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/>/usr/include/libxml2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="comment">//<sp/>and<sp/>Other<sp/>Linker<sp/>Flags<sp/>contain</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/>-lxml2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&lt;libxml/tree.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&lt;libxml/parser.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&lt;libxml/xmlstring.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&lt;libxml/xpath.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&lt;libxml/xpathInternals.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(MAC_OS_X_VERSION_MAX_ALLOWED<sp/>&lt;=<sp/>MAC_OS_X_VERSION_10_4)<sp/>||<sp/>defined(GDATA_TARGET_NAMESPACE)</highlight></codeline>
+<codeline lineno="46"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>we<sp/>need<sp/>NSInteger<sp/>for<sp/>the<sp/>10.4<sp/>SDK,<sp/>or<sp/>we&apos;re<sp/>using<sp/>target<sp/>namespace<sp/>macros</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#import<sp/>&quot;GDataDefines.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="49"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>_EXTERN</highlight></codeline>
+<codeline lineno="51"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#undef<sp/>_INITIALIZE_AS</highlight></codeline>
+<codeline lineno="52"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#ifdef<sp/>GDATAXMLNODE_DEFINE_GLOBALS</highlight></codeline>
+<codeline lineno="53"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>_EXTERN</highlight></codeline>
+<codeline lineno="54"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>_INITIALIZE_AS(x)<sp/>=x</highlight></codeline>
+<codeline lineno="55"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#else</highlight></codeline>
+<codeline lineno="56"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>_EXTERN<sp/>extern</highlight></codeline>
+<codeline lineno="57"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>_INITIALIZE_AS(x)</highlight></codeline>
+<codeline lineno="58"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="59"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="comment">//<sp/>when<sp/>no<sp/>namespace<sp/>dictionary<sp/>is<sp/>supplied<sp/>for<sp/>XPath,<sp/>the<sp/>default<sp/>namespace</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="comment">//<sp/>for<sp/>the<sp/>evaluated<sp/>tree<sp/>is<sp/>registered<sp/>with<sp/>the<sp/>prefix<sp/>_def_ns</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal">_EXTERN<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>kGDataXMLXPathDefaultNamespacePrefix<sp/>_INITIALIZE_AS(</highlight><highlight class="stringliteral">&quot;_def_ns&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Nomenclature<sp/>for<sp/>method<sp/>names:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Node<sp/>=<sp/>GData<sp/>node</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="comment">//<sp/>XMLNode<sp/>=<sp/>xmlNodePtr</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="comment">//<sp/>So,<sp/>for<sp/>example:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>+<sp/>(id)nodeConsumingXMLNode:(xmlNodePtr)theXMLNode;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="keyword">@class</highlight><highlight class="normal"><sp/>NSArray,<sp/>NSDictionary,<sp/>NSError,<sp/>NSString,<sp/>NSURL;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="keyword">@class</highlight><highlight class="normal"><sp/>GDataXMLElement,<sp/>GDataXMLDocument;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/>GDataXMLInvalidKind<sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/>GDataXMLDocumentKind,</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/>GDataXMLElementKind,</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/>GDataXMLAttributeKind,</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/>GDataXMLNamespaceKind,</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/>GDataXMLProcessingInstructionKind,</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/>GDataXMLCommentKind,</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/>GDataXMLTextKind,</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/>GDataXMLDTDKind,</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/>GDataXMLEntityDeclarationKind,</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/>GDataXMLAttributeDeclarationKind,</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/>GDataXMLElementDeclarationKind,</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/>GDataXMLNotationDeclarationKind</highlight></codeline>
+<codeline lineno="89"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>NSUInteger<sp/>GDataXMLNodeKind;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">GDataXMLNode<sp/>:<sp/>NSObject<sp/>{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="keyword">@protected</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>NSXMLNodes<sp/>can<sp/>have<sp/>a<sp/>namespace<sp/>URI<sp/>or<sp/>prefix<sp/>even<sp/>if<sp/>not<sp/>part</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>of<sp/>a<sp/>tree;<sp/>xmlNodes<sp/>cannot.<sp/><sp/>When<sp/>we<sp/>create<sp/>nodes<sp/>apart<sp/>from</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>a<sp/>tree,<sp/>we&apos;ll<sp/>store<sp/>the<sp/>dangling<sp/>prefix<sp/>or<sp/>URI<sp/>in<sp/>the<sp/>xmlNode&apos;s<sp/>name,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>like</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/>&quot;prefix:name&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>or</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/>&quot;{http://uri}:name&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>We<sp/>will<sp/>fix<sp/>up<sp/>the<sp/>node&apos;s<sp/>namespace<sp/>and<sp/>name<sp/>(and<sp/>those<sp/>of<sp/>any<sp/>children)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>later<sp/>when<sp/>adding<sp/>the<sp/>node<sp/>to<sp/>a<sp/>tree<sp/>with<sp/>addChild:<sp/>or<sp/>addAttribute:.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>See<sp/>fixUpNamespacesForNode:.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/>xmlNodePtr<sp/>xmlNode_;<sp/></highlight><highlight class="comment">//<sp/>may<sp/>also<sp/>be<sp/>an<sp/>xmlAttrPtr<sp/>or<sp/>xmlNsPtr</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/>BOOL<sp/>shouldFreeXMLNode_;<sp/></highlight><highlight class="comment">//<sp/>if<sp/>yes,<sp/>xmlNode_<sp/>will<sp/>be<sp/>free&apos;d<sp/>in<sp/>dealloc</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>cached<sp/>values</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/>NSString<sp/>*cachedName_;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/>NSArray<sp/>*cachedChildren_;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/>NSArray<sp/>*cachedAttributes_;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal">+<sp/>(GDataXMLElement<sp/>*)elementWithName:(NSString<sp/>*)name;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal">+<sp/>(GDataXMLElement<sp/>*)elementWithName:(NSString<sp/>*)name<sp/>stringValue:(NSString<sp/>*)value;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal">+<sp/>(GDataXMLElement<sp/>*)elementWithName:(NSString<sp/>*)name<sp/>URI:(NSString<sp/>*)value;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal">+<sp/>(id)attributeWithName:(NSString<sp/>*)name<sp/>stringValue:(NSString<sp/>*)value;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal">+<sp/>(id)attributeWithName:(NSString<sp/>*)name<sp/>URI:(NSString<sp/>*)attributeURI<sp/>stringValue:(NSString<sp/>*)value;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal">+<sp/>(id)namespaceWithName:(NSString<sp/>*)name<sp/>stringValue:(NSString<sp/>*)value;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal">+<sp/>(id)textWithStringValue:(NSString<sp/>*)value;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal">-<sp/>(NSString<sp/>*)stringValue;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal">-<sp/>(void)setStringValue:(NSString<sp/>*)str;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal">-<sp/>(NSUInteger)childCount;</highlight></codeline>
+<codeline lineno="131"><highlight class="normal">-<sp/>(NSArray<sp/>*)children;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal">-<sp/>(GDataXMLNode<sp/>*)childAtIndex:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal">)index;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal">-<sp/>(NSString<sp/>*)localName;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal">-<sp/>(NSString<sp/>*)name;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal">-<sp/>(NSString<sp/>*)prefix;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal">-<sp/>(NSString<sp/>*)URI;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal">-<sp/>(GDataXMLNodeKind)kind;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal">-<sp/>(NSString<sp/>*)XMLString;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal">+<sp/>(NSString<sp/>*)localNameForName:(NSString<sp/>*)name;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal">+<sp/>(NSString<sp/>*)prefixForName:(NSString<sp/>*)name;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight><highlight class="comment">//<sp/>This<sp/>is<sp/>the<sp/>preferred<sp/>entry<sp/>point<sp/>for<sp/>nodesForXPath.<sp/><sp/>This<sp/>takes<sp/>an<sp/>explicit</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight><highlight class="comment">//<sp/>namespace<sp/>dictionary<sp/>(keys<sp/>are<sp/>prefixes,<sp/>values<sp/>are<sp/>URIs).</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal">-<sp/>(NSArray<sp/>*)nodesForXPath:(NSString<sp/>*)xpath<sp/>namespaces:(NSDictionary<sp/>*)namespaces<sp/>error:(NSError<sp/>**)error;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight><highlight class="comment">//<sp/>This<sp/>implementation<sp/>of<sp/>nodesForXPath<sp/>registers<sp/>namespaces<sp/>only<sp/>from<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight><highlight class="comment">//<sp/>document&apos;s<sp/>root<sp/>node.<sp/><sp/>_def_ns<sp/>may<sp/>be<sp/>used<sp/>as<sp/>a<sp/>prefix<sp/>for<sp/>the<sp/>default</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight><highlight class="comment">//<sp/>namespace,<sp/>though<sp/>there&apos;s<sp/>no<sp/>guarantee<sp/>that<sp/>the<sp/>default<sp/>namespace<sp/>will</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight><highlight class="comment">//<sp/>be<sp/>consistenly<sp/>the<sp/>same<sp/>namespace<sp/>in<sp/>server<sp/>responses.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal">-<sp/>(NSArray<sp/>*)nodesForXPath:(NSString<sp/>*)xpath<sp/>error:(NSError<sp/>**)error;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight><highlight class="comment">//<sp/>access<sp/>to<sp/>the<sp/>underlying<sp/>libxml<sp/>node;<sp/>be<sp/>sure<sp/>to<sp/>release<sp/>the<sp/>cached<sp/>values</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight><highlight class="comment">//<sp/>if<sp/>you<sp/>change<sp/>the<sp/>underlying<sp/>tree<sp/>at<sp/>all</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal">-<sp/>(xmlNodePtr)XMLNode;</highlight></codeline>
+<codeline lineno="159"><highlight class="normal">-<sp/>(void)releaseCachedValues;</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">GDataXMLElement<sp/>:<sp/>GDataXMLNode</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal">-<sp/>(id)initWithXMLString:(NSString<sp/>*)str<sp/>error:(NSError<sp/>**)error;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal">-<sp/>(NSArray<sp/>*)namespaces;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal">-<sp/>(void)setNamespaces:(NSArray<sp/>*)namespaces;</highlight></codeline>
+<codeline lineno="170"><highlight class="normal">-<sp/>(void)addNamespace:(GDataXMLNode<sp/>*)aNamespace;</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal">-<sp/>(void)addChild:(GDataXMLNode<sp/>*)child;</highlight></codeline>
+<codeline lineno="173"><highlight class="normal">-<sp/>(void)removeChild:(GDataXMLNode<sp/>*)child;</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal">-<sp/>(NSArray<sp/>*)elementsForName:(NSString<sp/>*)name;</highlight></codeline>
+<codeline lineno="176"><highlight class="normal">-<sp/>(NSArray<sp/>*)elementsForLocalName:(NSString<sp/>*)localName<sp/>URI:(NSString<sp/>*)URI;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal">-<sp/>(NSArray<sp/>*)attributes;</highlight></codeline>
+<codeline lineno="179"><highlight class="normal">-<sp/>(GDataXMLNode<sp/>*)attributeForName:(NSString<sp/>*)name;</highlight></codeline>
+<codeline lineno="180"><highlight class="normal">-<sp/>(GDataXMLNode<sp/>*)attributeForLocalName:(NSString<sp/>*)name<sp/>URI:(NSString<sp/>*)attributeURI;</highlight></codeline>
+<codeline lineno="181"><highlight class="normal">-<sp/>(void)addAttribute:(GDataXMLNode<sp/>*)attribute;</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal">-<sp/>(NSString<sp/>*)resolvePrefixForNamespaceURI:(NSString<sp/>*)namespaceURI;</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight><highlight class="keyword">@interface<sp/></highlight><highlight class="normal">GDataXMLDocument<sp/>:<sp/>NSObject<sp/>{</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight><highlight class="keyword">@protected</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/>xmlDoc*<sp/>xmlDoc_;<sp/></highlight><highlight class="comment">//<sp/>strong;<sp/>always<sp/>free&apos;d<sp/>in<sp/>dealloc</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal">-<sp/>(id)initWithXMLString:(NSString<sp/>*)str<sp/>options:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)mask<sp/>error:(NSError<sp/>**)error;</highlight></codeline>
+<codeline lineno="193"><highlight class="normal">-<sp/>(id)initWithData:(NSData<sp/>*)data<sp/>options:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)mask<sp/>error:(NSError<sp/>**)error;</highlight></codeline>
+<codeline lineno="194"><highlight class="normal">-<sp/>(id)initWithRootElement:(GDataXMLElement<sp/>*)element;</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal">-<sp/>(GDataXMLElement<sp/>*)rootElement;</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal">-<sp/>(NSData<sp/>*)XMLData;</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal">-<sp/>(void)setVersion:(NSString<sp/>*)version;</highlight></codeline>
+<codeline lineno="201"><highlight class="normal">-<sp/>(void)setCharacterEncoding:(NSString<sp/>*)encoding;</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight><highlight class="comment">//<sp/>This<sp/>is<sp/>the<sp/>preferred<sp/>entry<sp/>point<sp/>for<sp/>nodesForXPath.<sp/><sp/>This<sp/>takes<sp/>an<sp/>explicit</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight><highlight class="comment">//<sp/>namespace<sp/>dictionary<sp/>(keys<sp/>are<sp/>prefixes,<sp/>values<sp/>are<sp/>URIs).</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal">-<sp/>(NSArray<sp/>*)nodesForXPath:(NSString<sp/>*)xpath<sp/>namespaces:(NSDictionary<sp/>*)namespaces<sp/>error:(NSError<sp/>**)error;</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight><highlight class="comment">//<sp/>This<sp/>implementation<sp/>of<sp/>nodesForXPath<sp/>registers<sp/>namespaces<sp/>only<sp/>from<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight><highlight class="comment">//<sp/>document&apos;s<sp/>root<sp/>node.<sp/><sp/>_def_ns<sp/>may<sp/>be<sp/>used<sp/>as<sp/>a<sp/>prefix<sp/>for<sp/>the<sp/>default</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight><highlight class="comment">//<sp/>namespace,<sp/>though<sp/>there&apos;s<sp/>no<sp/>guarantee<sp/>that<sp/>the<sp/>default<sp/>namespace<sp/>will</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight><highlight class="comment">//<sp/>be<sp/>consistenly<sp/>the<sp/>same<sp/>namespace<sp/>in<sp/>server<sp/>responses.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal">-<sp/>(NSArray<sp/>*)nodesForXPath:(NSString<sp/>*)xpath<sp/>error:(NSError<sp/>**)error;</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal">-<sp/>(NSString<sp/>*)description;</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.h"/>
+  </compounddef>
+</doxygen>

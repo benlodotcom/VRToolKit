@@ -1,0 +1,2 @@
+<?xml version="1.0"?>
+<Object3D><Name>Banana</Name><DisplayParameters><ScaleFactor>100.000000</ScaleFactor><XRotation>0.000000</XRotation><YRotation>0.000000</YRotation><ZRotation>0.000000</ZRotation><ZTranslation>-0.500000</ZTranslation></DisplayParameters><Files><TextureFileName>banana.jpg</TextureFileName><ModelFileName></ModelFileName></Files></Object3D>

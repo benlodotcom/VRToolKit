@@ -1,0 +1,185 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="interface_g_data_x_m_l_node_07_private_methods_08" kind="class" prot="public">
+    <compoundname>GDataXMLNode(PrivateMethods)</compoundname>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="interface_g_data_x_m_l_node_1afa291e610c39be001971719e6eb37996" prot="public" static="yes" const="no" explicit="no" inline="no" virt="virtual">
+        <type>id</type>
+        <definition>id GDataXMLNode(PrivateMethods)::nodeConsumingXMLNode:</definition>
+        <argsstring>(xmlNodePtr theXMLNode)</argsstring>
+        <name>nodeConsumingXMLNode:</name>
+        <param>
+          <type>xmlNodePtr</type>
+          <declname>theXMLNode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.m" line="116"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_g_data_x_m_l_node_1a0b67aacd8d9351afa5d159b3971b932f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="virtual">
+        <type>id</type>
+        <definition>id GDataXMLNode(PrivateMethods)::nodeBorrowingXMLNode:</definition>
+        <argsstring>(xmlNodePtr theXMLNode)</argsstring>
+        <name>nodeBorrowingXMLNode:</name>
+        <param>
+          <type>xmlNodePtr</type>
+          <declname>theXMLNode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.m" line="119"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_g_data_x_m_l_node_1afe892d98b556fbab1381efd9fcde6819" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>id</type>
+        <definition>id GDataXMLNode(PrivateMethods)::initConsumingXMLNode:</definition>
+        <argsstring>(xmlNodePtr theXMLNode)</argsstring>
+        <name>initConsumingXMLNode:</name>
+        <param>
+          <type>xmlNodePtr</type>
+          <declname>theXMLNode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.m" line="117"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_g_data_x_m_l_node_1ac32928fffb81e4e96957c82e759fd192" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>id</type>
+        <definition>id GDataXMLNode(PrivateMethods)::initBorrowingXMLNode:</definition>
+        <argsstring>(xmlNodePtr theXMLNode)</argsstring>
+        <name>initBorrowingXMLNode:</name>
+        <param>
+          <type>xmlNodePtr</type>
+          <declname>theXMLNode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.m" line="120"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_g_data_x_m_l_node_07_private_methods_08_1a472c0a766d820c7774f5c587e32db00d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>xmlNodePtr</type>
+        <definition>xmlNodePtr GDataXMLNode(PrivateMethods)::XMLNode</definition>
+        <argsstring>()</argsstring>
+        <name>XMLNode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.m" line="123"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_g_data_x_m_l_node_1af9ab19e292ae4d18c6302f97f6e284f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>xmlNodePtr</type>
+        <definition>xmlNodePtr GDataXMLNode(PrivateMethods)::XMLNodeCopy</definition>
+        <argsstring>()</argsstring>
+        <name>XMLNodeCopy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.m" line="124"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_g_data_x_m_l_node_1adbb4de0b3d2e31e5016413f28df8ab23" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>GDataXMLNode *</type>
+        <definition>GDataXMLNode * GDataXMLNode(PrivateMethods)::attributeForXMLNode:</definition>
+        <argsstring>(xmlAttrPtr theXMLNode)</argsstring>
+        <name>attributeForXMLNode:</name>
+        <param>
+          <type>xmlAttrPtr</type>
+          <declname>theXMLNode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.m" line="127"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_g_data_x_m_l_node_1aab0df9eaa8a836f244fc035ceada7901" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>NSString *</type>
+        <definition>NSString * GDataXMLNode(PrivateMethods)::stringFromXMLString:</definition>
+        <argsstring>(const xmlChar *chars)</argsstring>
+        <name>stringFromXMLString:</name>
+        <param>
+          <type>const xmlChar *</type>
+          <declname>chars</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.m" line="131"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_g_data_x_m_l_node_1a7d6b77d179a4a83b5cfe0c173baf1c3c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>BOOL</type>
+        <definition>BOOL GDataXMLNode(PrivateMethods)::shouldFreeXMLNode</definition>
+        <argsstring>()</argsstring>
+        <name>shouldFreeXMLNode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.m" line="134"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_g_data_x_m_l_node_1a0faeb14e174431b0f7b6e90e5bb14e21" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void GDataXMLNode(PrivateMethods)::setShouldFreeXMLNode:</definition>
+        <argsstring>(BOOL flag)</argsstring>
+        <name>setShouldFreeXMLNode:</name>
+        <param>
+          <type>BOOL</type>
+          <declname>flag</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.m" line="135"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.m" line="110" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.m" bodystart="110" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="interface_g_data_x_m_l_node_1adbb4de0b3d2e31e5016413f28df8ab23" prot="public" virt="virtual"><scope>GDataXMLNode(PrivateMethods)</scope><name>attributeForXMLNode:</name></member>
+      <member refid="interface_g_data_x_m_l_node_1ac32928fffb81e4e96957c82e759fd192" prot="public" virt="virtual"><scope>GDataXMLNode(PrivateMethods)</scope><name>initBorrowingXMLNode:</name></member>
+      <member refid="interface_g_data_x_m_l_node_1afe892d98b556fbab1381efd9fcde6819" prot="public" virt="virtual"><scope>GDataXMLNode(PrivateMethods)</scope><name>initConsumingXMLNode:</name></member>
+      <member refid="interface_g_data_x_m_l_node_1a0b67aacd8d9351afa5d159b3971b932f" prot="public" virt="virtual"><scope>GDataXMLNode(PrivateMethods)</scope><name>nodeBorrowingXMLNode:</name></member>
+      <member refid="interface_g_data_x_m_l_node_1afa291e610c39be001971719e6eb37996" prot="public" virt="virtual"><scope>GDataXMLNode(PrivateMethods)</scope><name>nodeConsumingXMLNode:</name></member>
+      <member refid="interface_g_data_x_m_l_node_1a0faeb14e174431b0f7b6e90e5bb14e21" prot="public" virt="virtual"><scope>GDataXMLNode(PrivateMethods)</scope><name>setShouldFreeXMLNode:</name></member>
+      <member refid="interface_g_data_x_m_l_node_1a7d6b77d179a4a83b5cfe0c173baf1c3c" prot="public" virt="virtual"><scope>GDataXMLNode(PrivateMethods)</scope><name>shouldFreeXMLNode</name></member>
+      <member refid="interface_g_data_x_m_l_node_1aab0df9eaa8a836f244fc035ceada7901" prot="public" virt="virtual"><scope>GDataXMLNode(PrivateMethods)</scope><name>stringFromXMLString:</name></member>
+      <member refid="interface_g_data_x_m_l_node_07_private_methods_08_1a472c0a766d820c7774f5c587e32db00d" prot="public" virt="virtual"><scope>GDataXMLNode(PrivateMethods)</scope><name>XMLNode</name></member>
+      <member refid="interface_g_data_x_m_l_node_1af9ab19e292ae4d18c6302f97f6e284f8" prot="public" virt="virtual"><scope>GDataXMLNode(PrivateMethods)</scope><name>XMLNodeCopy</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

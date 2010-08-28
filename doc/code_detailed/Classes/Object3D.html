@@ -1,0 +1,262 @@
+<!DOCTYPE html><html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<title>Object3D Class Reference</title>
+<meta id="Generator" name="Generator" content="Doxyclean">
+<meta id="GeneratorVersion" name="GeneratorVersion" content="2.2">
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<link rel="stylesheet" type="text/css" media="screen" href="../css/screen.css">
+<link rel="stylesheet" type="text/css" media="print" href="../css/print.css">
+<script type="text/javascript">
+				function toggleTOC() {
+					var toc = document.getElementById('tableOfContents');
+					var tocButton = document.getElementById('toc_button');
+					var contents = document.getElementById('contents');
+					if (toc.style.display == 'block') {
+						toc.style.display = 'none';
+						contents.className = '';
+						tocButton.className = '';
+					} else {
+						toc.style.display = 'block';
+						contents.className = 'tableOfContentsOpen';
+						tocButton.className = 'open';
+					}
+				}
+				
+				function toggleTOCItem() {
+					var listItem = event.srcElement;
+					var sublist = listItem.getElementsByTagName('ul')[0];
+					if (sublist.style.display == 'block') {
+						sublist.style.display = 'none';
+						listItem.className = 'expandable';
+					} else {
+						sublist.style.display = 'block';
+						listItem.className = 'expandable expanded';
+					}
+				}
+				
+				function jumpTo() {
+					selectedItem = event.srcElement.options[event.srcElement.selectedIndex].value;
+					window.location = "#" + selectedItem;
+				}
+			</script>
+</head>
+<body>
+<header id="projectHeader"><h1><a href="../index.html">VRToolKit Reference Library</a></h1></header><header id="fileHeader"><h1><a href="#classTitle">Object3D Class Reference</a></h1></header><nav id="buttons"><ul>
+<li id="toc_button"><button id="table_of_contents" onclick="toggleTOC()">Table of Contents</button></li>
+<li id="jumpto_button"><select id="jumpto" onchange="jumpTo()"><option value="classTitle">Jump To...</option>
+<option value="overview">Overview</option>
+<option value="tasks">Tasks</option>
+<option value="properties">Properties</option>
+<option value="name">    name</option>
+<option value="xmlFilePath">    xmlFilePath</option>
+<option value="scaleFactor">    scaleFactor</option>
+<option value="xRotation">    xRotation</option>
+<option value="yRotation">    yRotation</option>
+<option value="zRotation">    zRotation</option>
+<option value="zTranslation">    zTranslation</option>
+<option value="textureFileName">    textureFileName</option>
+<option value="modelFileName">    modelFileName</option>
+<option value="numberOfVertices">    numberOfVertices</option>
+<option value="vertices">    vertices</option>
+<option value="normals">    normals</option>
+<option value="textureCoordinates">    textureCoordinates</option>
+<option value="classMethods">Class Methods</option>
+<option value="object3DFromFileNamed:">    + object3DFromFileNamed:</option>
+<option value="instanceMethods">Instance Methods</option>
+<option value="writeInDocumentDirectory">    - writeInDocumentDirectory</option>
+<option value="loadShapesAndTextures">    - loadShapesAndTextures</option></select></li>
+</ul></nav><nav id="tableOfContents" style="display: none;"><ul>
+<li><a href="#overview">Overview</a></li>
+<li class="expandable" id="tocTasks" onclick="toggleTOCItem()">
+<a href="#tasks">Tasks</a><ul style="display: none;">
+<li><a href="#Other">Other</a></li>
+<li><a href="#Other">Other</a></li>
+<li><a href="#Other">Other</a></li>
+</ul>
+</li>
+<li class="expandable" id="tocProperties" onclick="toggleTOCItem()">
+<a href="#properties">Properties</a><ul style="display: none;">
+<li><a href="#name">name</a></li>
+<li><a href="#xmlFilePath">xmlFilePath</a></li>
+<li><a href="#scaleFactor">scaleFactor</a></li>
+<li><a href="#xRotation">xRotation</a></li>
+<li><a href="#yRotation">yRotation</a></li>
+<li><a href="#zRotation">zRotation</a></li>
+<li><a href="#zTranslation">zTranslation</a></li>
+<li><a href="#textureFileName">textureFileName</a></li>
+<li><a href="#modelFileName">modelFileName</a></li>
+<li><a href="#numberOfVertices">numberOfVertices</a></li>
+<li><a href="#vertices">vertices</a></li>
+<li><a href="#normals">normals</a></li>
+<li><a href="#textureCoordinates">textureCoordinates</a></li>
+</ul>
+</li>
+<li class="expandable" id="tocClassMethods" onclick="toggleTOCItem()">
+<a href="#classMethods">Class Methods</a><ul style="display: none;"><li><a href="#object3DFromFileNamed:">object3DFromFileNamed:</a></li></ul>
+</li>
+<li class="expandable" id="tocInstanceMethods" onclick="toggleTOCItem()">
+<a href="#instanceMethods">Instance Methods</a><ul style="display: none;">
+<li><a href="#writeInDocumentDirectory">writeInDocumentDirectory</a></li>
+<li><a href="#loadShapesAndTextures">loadShapesAndTextures</a></li>
+</ul>
+</li>
+</ul></nav><div id="contents">
+<h1 id="classTitle">Object3D Class Reference</h1>
+<table id="metadata">
+<tr class="alt">
+<th>Inherits from</th>
+<td><ul class="inheritance"><li>NSObject</li></ul></td>
+</tr>
+<tr>
+<th>Conforms to</th>
+<td><ul><li>&lt;Parser3DDelegate&gt;</li></ul></td>
+</tr>
+<tr class="alt">
+<th>Declared in</th>
+<td>Object3D.h</td>
+</tr>
+</table>
+<h2 id="overview">Overview</h2>
+<p>This class is the internal representation of an object you want to display in Virtual Reality. </p>
+<p>
+This class is mainly a data container, but it also contains the methods to unserialize/serialize an object from/to its xml representation. </p>
+<h2 id="tasks">Tasks</h2>
+<ul id="tasksList">
+<li id="Other">
+<h3>Other</h3>
+<ul class="methods">
+<li>
+<span class="tooltipRegion"><code><a href="#name">name</a></code> <span class="specialType">property</span></span><span class="tooltip">The name of the 3D object. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#xmlFilePath">xmlFilePath</a></code> <span class="specialType">property</span></span><span class="tooltip">The path of the xml file corresponding to this object. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#scaleFactor">scaleFactor</a></code> <span class="specialType">property</span></span><span class="tooltip">The scaling applied when the object is displayed. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#xRotation">xRotation</a></code> <span class="specialType">property</span></span><span class="tooltip">The rotation around the X axis applied when the object is displayed. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#yRotation">yRotation</a></code> <span class="specialType">property</span></span><span class="tooltip">The rotation around the Y axis applied when the object is displayed. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#zRotation">zRotation</a></code> <span class="specialType">property</span></span><span class="tooltip">The rotation around the Z axis applied when the object is displayed. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#zTranslation">zTranslation</a></code> <span class="specialType">property</span></span><span class="tooltip">The translation along the Z axis applied when the object is displayed. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#textureFileName">textureFileName</a></code> <span class="specialType">property</span></span><span class="tooltip">The name of the texture file with its extension (only one texture file supported for now). </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#modelFileName">modelFileName</a></code> <span class="specialType">property</span></span><span class="tooltip">The name of the shape description file (for now only .obj are supported and their parsing is damn slow). </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#numberOfVertices">numberOfVertices</a></code> <span class="specialType">property</span></span><span class="tooltip">The number of vertices of the object. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#vertices">vertices</a></code> <span class="specialType">property</span></span><span class="tooltip">The array containing all the vertices in the right order (ordered according to the faces). </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#normals">normals</a></code> <span class="specialType">property</span></span><span class="tooltip">The array containing all the normals in the right order (ordered according to the faces). </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#textureCoordinates">textureCoordinates</a></code> <span class="specialType">property</span></span><span class="tooltip">The array containing all the texture coordinates in the right order (ordered according to the faces). </span>
+</li>
+</ul>
+</li>
+<li id="Other">
+<h3>Other</h3>
+<ul class="methods"><li>
+<span class="tooltipRegion"><code><a href="#object3DFromFileNamed:">+ object3DFromFileNamed:</a></code></span><span class="tooltip">This method unserialize an object from its xml representation. </span>
+</li></ul>
+</li>
+<li id="Other">
+<h3>Other</h3>
+<ul class="methods">
+<li>
+<span class="tooltipRegion"><code><a href="#writeInDocumentDirectory">- writeInDocumentDirectory</a></code></span><span class="tooltip">This method serialize and object and save its xml representation in the document directory of the app. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#loadShapesAndTextures">- loadShapesAndTextures</a></code></span><span class="tooltip">This methods fills the numberOfVertices, vertices, normals and textureCoordinates with datas coming from either a .h file or a description file parsed by the appropriate parse. </span>
+</li>
+</ul>
+</li>
+</ul>
+<section id="properties"><h2>Properties</h2>
+<section class="definition" id="name"><h3>name</h3>
+<p>The name of the 3D object. </p>
+<code class="methodDeclaration">@property NSString *name</code><h5>Declared In</h5>
+<code>Object3D.h</code></section><section class="definition" id="xmlFilePath"><h3>xmlFilePath</h3>
+<p>The path of the xml file corresponding to this object. </p>
+<code class="methodDeclaration">@property NSString *xmlFilePath</code><h5>Declared In</h5>
+<code>Object3D.h</code></section><section class="definition" id="scaleFactor"><h3>scaleFactor</h3>
+<p>The scaling applied when the object is displayed. </p>
+<code class="methodDeclaration">@property float scaleFactor</code><h5>Declared In</h5>
+<code>Object3D.h</code></section><section class="definition" id="xRotation"><h3>xRotation</h3>
+<p>The rotation around the X axis applied when the object is displayed. </p>
+<code class="methodDeclaration">@property float xRotation</code><h5>Declared In</h5>
+<code>Object3D.h</code></section><section class="definition" id="yRotation"><h3>yRotation</h3>
+<p>The rotation around the Y axis applied when the object is displayed. </p>
+<code class="methodDeclaration">@property float yRotation</code><h5>Declared In</h5>
+<code>Object3D.h</code></section><section class="definition" id="zRotation"><h3>zRotation</h3>
+<p>The rotation around the Z axis applied when the object is displayed. </p>
+<code class="methodDeclaration">@property float zRotation</code><h5>Declared In</h5>
+<code>Object3D.h</code></section><section class="definition" id="zTranslation"><h3>zTranslation</h3>
+<p>The translation along the Z axis applied when the object is displayed. </p>
+<code class="methodDeclaration">@property float zTranslation</code><h5>Discussion</h5>
+<p>You can use this to stick the object to the marker or in the contrary to make it "float over" </p>
+<h5>Declared In</h5>
+<code>Object3D.h</code></section><section class="definition" id="textureFileName"><h3>textureFileName</h3>
+<p>The name of the texture file with its extension (only one texture file supported for now). </p>
+<code class="methodDeclaration">@property NSString *textureFileName</code><h5>Declared In</h5>
+<code>Object3D.h</code></section><section class="definition" id="modelFileName"><h3>modelFileName</h3>
+<p>The name of the shape description file (for now only .obj are supported and their parsing is damn slow). </p>
+<code class="methodDeclaration">@property NSString *modelFileName</code><h5>Declared In</h5>
+<code>Object3D.h</code></section><section class="definition" id="numberOfVertices"><h3>numberOfVertices</h3>
+<p>The number of vertices of the object. </p>
+<code class="methodDeclaration">@property unsigned int numberOfVertices</code><h5>Declared In</h5>
+<code>Object3D.h</code></section><section class="definition" id="vertices"><h3>vertices</h3>
+<p>The array containing all the vertices in the right order (ordered according to the faces). </p>
+<code class="methodDeclaration">@property GLfloat *vertices</code><h5>Declared In</h5>
+<code>Object3D.h</code></section><section class="definition" id="normals"><h3>normals</h3>
+<p>The array containing all the normals in the right order (ordered according to the faces). </p>
+<code class="methodDeclaration">@property GLfloat *normals</code><h5>Declared In</h5>
+<code>Object3D.h</code></section><section class="definition" id="textureCoordinates"><h3>textureCoordinates</h3>
+<p>The array containing all the texture coordinates in the right order (ordered according to the faces). </p>
+<code class="methodDeclaration">@property GLfloat *textureCoordinates</code><h5>Declared In</h5>
+<code>Object3D.h</code></section></section><section id="classMethods"><h2>Class Methods</h2>
+<section class="definition" id="object3DFromFileNamed:"><h3>object3DFromFileNamed:</h3>
+<p>This method unserialize an object from its xml representation. </p>
+<code class="methodDeclaration">+ (Object3D *)object3DFromFileNamed:(NSString *)<span class="parameter">filename</span> </code><h5>Parameters</h5>
+<dl class="parameterList">
+<dt>filename</dt>
+<dd><p>The name with the extension of the file used for unserialization </p></dd>
+</dl>
+<h5>Return Value</h5>
+<p>An autoreleased instance of <code>Object3D</code>, that you can pass on to <code><strong>EAGLView</strong></code> for display </p>
+<h5>Discussion</h5>
+<p>This methods fill the object with the right datas coming from the xml, then it fills the array used to describe the shape of the 3D model and the texture coordinates. To do so it either parse the file with modelFileName or use an imported .h file.</p>
+<p></p>
+<h5>Declared In</h5>
+<code>Object3D.h</code></section></section><section id="instanceMethods"><h2>Instance Methods</h2>
+<section class="definition" id="writeInDocumentDirectory"><h3>writeInDocumentDirectory</h3>
+<p>This method serialize and object and save its xml representation in the document directory of the app. </p>
+<code class="methodDeclaration">- (void)writeInDocumentDirectory</code><h5>Declared In</h5>
+<code>Object3D.h</code></section><section class="definition" id="loadShapesAndTextures"><h3>loadShapesAndTextures</h3>
+<p>This methods fills the numberOfVertices, vertices, normals and textureCoordinates with datas coming from either a .h file or a description file parsed by the appropriate parse. </p>
+<code class="methodDeclaration">- (void)loadShapesAndTextures</code><h5>Discussion</h5>
+<p>You have to modify this function if you want to add objects whose shape is described in a .h file </p>
+<h5>Declared In</h5>
+<code>Object3D.m</code></section></section><hr>
+<p id="lastUpdated">Last updated: 2010-8-17</p>
+</div>
+<footer id="breadcrumbs"><ul>
+<li><a href="../index.html">ARApi</a></li>
+<li><a href="#classTitle">Object3D Class Reference</a></li>
+</ul></footer>
+</body>
+</html>

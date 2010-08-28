@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="interface_g_data_x_m_l_document_07_private_methods_08" kind="class" prot="public">
+    <compoundname>GDataXMLDocument(PrivateMethods)</compoundname>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_g_data_x_m_l_document_1a919a4f1c9925f4d6de2c09a92bfd0f35" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void GDataXMLDocument(PrivateMethods)::addStringsCacheToDoc</definition>
+        <argsstring>()</argsstring>
+        <name>addStringsCacheToDoc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.m" line="1598"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.m" line="1597" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/GDataXMLNode.m" bodystart="1597" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="interface_g_data_x_m_l_document_1a919a4f1c9925f4d6de2c09a92bfd0f35" prot="public" virt="virtual"><scope>GDataXMLDocument(PrivateMethods)</scope><name>addStringsCacheToDoc</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

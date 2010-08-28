@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="class_a_v_capture_video_data_output_sample_buffer_delegate-p" kind="class" prot="public">
+    <compoundname>AVCaptureVideoDataOutputSampleBufferDelegate-p</compoundname>
+    <derivedcompoundref refid="interface_v_r_view_controller" prot="public" virt="non-virtual">VRViewController</derivedcompoundref>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="8">
+        <label>VRViewController</label>
+        <link refid="interface_v_r_view_controller"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>AVCaptureVideoDataOutputSampleBufferDelegate-p</label>
+      </node>
+    </inheritancegraph>
+    <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/VRViewController.h" line="40"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

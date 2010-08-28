@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="_a_r_tool_kit_plus_wrapper_8h" kind="file">
+    <compoundname>ARToolKitPlusWrapper.h</compoundname>
+    <includes local="no">Foundation/Foundation.h</includes>
+    <includes local="no">CoreVideo/CoreVideo.h</includes>
+    <includedby refid="_v_r_tool_kit_app_delegate_8m" local="yes">Classes/VRToolKitAppDelegate.m</includedby>
+    <includedby refid="_v_r_view_controller_8h" local="yes">Classes/VRViewController.h</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>CoreVideo/CoreVideo.h</label>
+      </node>
+      <node id="0">
+        <label>Classes/ARToolKitPlusWrapper.h</label>
+        <link refid="ARToolKitPlusWrapper.h"/>
+        <childnode refid="1" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Foundation/Foundation.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="4">
+        <label>Classes/VRToolKitAppDelegate.m</label>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>Classes/VRViewController.h</label>
+        <link refid="_v_r_view_controller_8h_source"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>Classes/VRViewController.m</label>
+      </node>
+      <node id="3">
+        <label>Classes/ARToolKitPlusWrapper.h</label>
+        <link refid="ARToolKitPlusWrapper.h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="protocol_a_r_tool_kit_plus_wrapper_delegate-p" prot="public">ARToolKitPlusWrapperDelegate-p</innerclass>
+    <innerclass refid="interface_a_r_tool_kit_plus_wrapper" prot="public">ARToolKitPlusWrapper</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">Copyright<sp/>Benjamin<sp/>Loulier<sp/>2010,<sp/>http://www.benjaminloulier.com</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"></highlight></codeline>
+<codeline lineno="4"><highlight class="comment">This<sp/>program<sp/>is<sp/>free<sp/>software:<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">the<sp/>Free<sp/>Software<sp/>Foundation,<sp/>either<sp/>version<sp/>3<sp/>of<sp/>the<sp/>License,<sp/>or</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">(at<sp/>your<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"></highlight></codeline>
+<codeline lineno="9"><highlight class="comment">This<sp/>program<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight></codeline>
+<codeline lineno="10"><highlight class="comment">but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight></codeline>
+<codeline lineno="11"><highlight class="comment">MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the</highlight></codeline>
+<codeline lineno="12"><highlight class="comment">GNU<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"></highlight></codeline>
+<codeline lineno="14"><highlight class="comment">You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License</highlight></codeline>
+<codeline lineno="15"><highlight class="comment">along<sp/>with<sp/>this<sp/>program.<sp/><sp/>If<sp/>not,<sp/>see<sp/>&lt;http://www.gnu.org/licenses/&gt;.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&lt;Foundation/Foundation.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&lt;CoreVideo/CoreVideo.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">@class</highlight><highlight class="normal"><sp/><ref refid="interface_a_r_tool_kit_plus_wrapper" kindref="compound" tooltip="This class is an objective-c wrapper for ARToolKitPlus.">ARToolKitPlusWrapper</ref>;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="protocol_a_r_tool_kit_plus_wrapper_delegate-p" refkind="compound"><highlight class="keyword">@protocol<sp/></highlight><highlight class="normal">ARToolKitPlusWrapperDelegate</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal">-<sp/>(void)aRToolKitPlusWrapper:(<ref refid="interface_a_r_tool_kit_plus_wrapper" kindref="compound" tooltip="This class is an objective-c wrapper for ARToolKitPlus.">ARToolKitPlusWrapper</ref><sp/>*)wrapper<sp/>didSetupWithProjectionMatrix:(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*)projectionMatrix;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">-<sp/>(void)aRToolKitPlusWrapper:(<ref refid="interface_a_r_tool_kit_plus_wrapper" kindref="compound" tooltip="This class is an objective-c wrapper for ARToolKitPlus.">ARToolKitPlusWrapper</ref><sp/>*)wrapper<sp/>didDetectMarker:(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)markerID<sp/>withConfidence:(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">)confidence</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>andComputeModelViewMatrix:(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*)modelViewMatrix;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="interface_a_r_tool_kit_plus_wrapper" refkind="compound"><highlight class="keyword">@interface<sp/></highlight><highlight class="normal"><ref refid="interface_a_r_tool_kit_plus_wrapper" kindref="compound" tooltip="This class is an objective-c wrapper for ARToolKitPlus.">ARToolKitPlusWrapper</ref><sp/>:<sp/>NSObject<sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="keyword">@private</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>_delegate;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*ARToolkit<sp/>options*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BOOL<sp/>_useBCHMarker;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BOOL<sp/>_useThinBorderMarker;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77" refid="interface_a_r_tool_kit_plus_wrapper_1a7e1d39c97018af294b851a18f5354bac" refkind="member"><highlight class="normal">@property<sp/>(nonatomic,<sp/>assign)<sp/>id<sp/>delegate;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="comment">/*ARToolkit<sp/>options*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84" refid="interface_a_r_tool_kit_plus_wrapper_1a9a65fc5fa39033f6f31533921e86e9e7" refkind="member"><highlight class="normal">@property<sp/>(nonatomic,<sp/>assign)<sp/>BOOL<sp/>useBCHMarker;</highlight></codeline>
+<codeline lineno="88" refid="interface_a_r_tool_kit_plus_wrapper_1a381ffb7c89902394d892268c598651a9" refkind="member"><highlight class="normal">@property<sp/>(nonatomic,<sp/>assign)<sp/>BOOL<sp/>useThinBorderMarker;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal">-<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)setupWithImageBuffer:(CVImageBufferRef)imageBuffer;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal">-<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)detectMarkerInImageBuffer:(CVImageBufferRef)imageBuffer;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal">@end</highlight></codeline>
+    </programlisting>
+    <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/ARToolKitPlusWrapper.h"/>
+  </compounddef>
+</doxygen>

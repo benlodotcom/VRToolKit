@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<Object3D>
+	<Name>Cube</Name>
+	<DisplayParameters>
+		<ScaleFactor>50</ScaleFactor>
+		<XRotation>0.000000</XRotation>
+		<YRotation>0.000000</YRotation>
+		<ZRotation>0.000000</ZRotation>
+	</DisplayParameters>
+	<Files>
+		<TextureFileName>Default</TextureFileName>
+		<ModelFileName>cube.obj</ModelFileName>
+	</Files>
+</Object3D>

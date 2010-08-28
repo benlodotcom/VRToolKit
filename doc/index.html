@@ -1,0 +1,257 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<head>
+<meta charset="utf-8" />
+<link href="css/main.css" type="text/css" rel="stylesheet" media="screen" charset="utf-8" />
+<title>VRToolKit documentation</title>
+<!--JQuery library -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+<!--Table of content script -->
+<script type="text/javascript" src="js/jquery.jqTOC.js"></script>
+<script type="text/javascript">
+      $(document).ready(function(){
+         $('#content').jqTOC({tocContainer:'toc', tocStart:2, tocEnd:2, tocWidth: '100%', tocTopLink: '', tocTitle: 'Table of contents', tocShowOnClick: false});
+      });
+</script>
+<script type="text/javascript">
+      $(document).ready(function(){
+         $('#content').jqTOC({tocContainer:'toc_detailed', tocStart:2, tocEnd:4, tocWidth: '100%', tocTopLink: '', tocTitle: 'Table of contents', tocShowOnClick: false});
+      });
+</script>
+<script type="text/javascript">
+var name = "#float_menu";  
+var menuYloc = null;
+  
+$(document).ready(function(){  
+    menuYloc = parseInt($(name).css("top").substring(0,$(name).css("top").indexOf("px")))  
+    $(window).scroll(function () {  
+		var offset = menuYloc+$(document).scrollTop()+"px";  
+        $(name).animate({top:offset},{duration:500,queue:false});  
+    });  
+});
+</script>
+<!--Fancybox script-->
+<script type="text/javascript" src="js/fancybox/jquery.mousewheel-3.0.2.pack.js"></script>
+<script type="text/javascript" src="js/fancybox/jquery.fancybox-1.3.1.js"></script>
+<link rel="stylesheet" type="text/css" href="js/fancybox/jquery.fancybox-1.3.1.css" media="screen" />
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('a.fancybox').fancybox({
+			'titlePosition' : 'outside',
+			'transitionIn'	: 'elastic',
+			'transitionOut'	: 'elastic'
+		});
+		$("a[rel=blender_export]").fancybox({
+			'transitionIn'		: 'none',
+			'transitionOut'		: 'none',
+			'titlePosition' 	: 'over',
+			'titleFormat'		: function(title, currentArray, currentIndex, currentOpts) {
+				return '<span id="fancybox-title-over">Image ' + (currentIndex + 1) + ' / ' + currentArray.length + (title.length ? ' &nbsp; ' + title : '') + '</span>';
+			}
+		});
+	});
+</script>
+<!--Syntax highlighter script-->
+<script type="text/javascript" src="js/jquery.beautyOfCode.js"></script>
+<script type="text/javascript">
+    $.beautyOfCode.init({
+        brushes: ['Xml', 'JScript', 'Cpp', 'Plain', 'Php'],
+        ready: function() {
+            $.beautyOfCode.beautifyAll();
+            $("#someCode").beautifyCode('javascript', {gutter:false});
+        }
+    });
+</script>
+
+</head>
+<body>
+	<div id="float_menu">
+		<div id="toc"></div>
+		<div id="links_header">External Links</div>
+		<div id="links"><a href="code_detailed/index.html" target="_blank">> Detailed documentation of the code</a></div>
+	</div>
+	<div id="main">
+		<div id="header" name="top">
+			<div id="header_left">
+			</div>
+			<div id="header_center">
+			<h1>VRToolKit Documentation</h1>
+			VRToolKit is an iphone app designed to show 3D objects in augmented reality using marker detection.
+			</div>
+			<div id="header_right">
+			<img src="images/artoolkitplus_iphone.png" alt="Logo GFI" height="100" />
+			</div>
+		</div>
+		<div id="content">
+		<div id="toc_detailed"></div>
+		<h2>Introduction</h2>
+		Here is an overview of the functionalities provided by this app :
+		<ul>
+			<li>Single marker detection (the marker detection is done using an objective-c wrapper developed over ARToolkitPlus)</li>
+			<li>Loading of 3D objects using custom xml and .h files (or .obj but the parser is very slow for now)</li>
+			<li>Only one texture file is supported</li>
+			<li>The association between a markerID and an object is done using a .plist file</li>
+			<li>Admin mode giving access to a GUI to modify the display parameters associated to an object</li>
+		</ul>
+		<h2>Compilation prerequisites</h2>
+		<h3>Frameworks needed</h3>
+		<ul>
+			<li>QuartzCore</li>
+			<li>AVFoundation</li>
+			<li>CoreVideo</li>
+			<li>OpenGLES</li>
+			<li>MessageUI</li>
+			<li>CoreMedia</li>
+			<li>
+				libxml 2 (last version available) <br \>
+				To make it compile you'll also have to add /usr/include/libxml2 in your header search path. To do so right click on your application target and select get info, then in the build tab fetch the line Header Search Path and add this path: /usr/include/libxml2.
+		</ul>
+		<h3>Getting ARToolKitPlus to compile on iPhone</h3>
+		<p>Only a few tweaks were necessary to make ARToolKitPlus build on the iPhone :</p>
+		<ul>
+			<li>Do not compile the .cxx files. When ARToolKitPlus is added on XCode all the .cxx files are automatically added
+				to the files to compile. To remove them go to targets, select your app target and remove in the compile sources build phase all the .cxx files.</li>
+			<li>The same way you removed the .cxx files, remove the DLL.cpp file. Apple systems don't need this windows stuff ;-)</li>
+			<li>I don't know why but apparently <code>&lt;malloc.h&gt;</code> is called <code>&lt;stdlib.h&gt;</code> in iPhone and OSX.
+				Therefore, replace the occurrences of <code>&lt;malloc.h&gt;</code> by this:
+				<pre class="code">
+					<code class="xml">
+						#ifndef __APPLE__
+						#include &lt;malloc.h&gt;
+						#else
+						#include &lt;stdlib.h&gt;
+						#endif
+						
+				</code>
+				</pre>
+			</li>
+			<li>I didn't find the mex.h file, some classes related to robust pose include it so for now remove them from them the same way as .cxx files. If you have any hints on this mex.h let me know.</li>
+			<li>Finally you need to add the folder containing the ARToolKitPlus headers in your header search path. To do so right click on your application target and select get info, then in the build tab fetch the line Header Search Path and add the right path (ARToolKitPlus/include in this app).</li>
+		</ul>
+		<h2>Loading a 3D object</h2>
+		<h3>XML description file</h3>
+		To be loaded by the app a 3D object must be described in an xml file, here is how it looks like :
+		<pre class="code">
+			<code class="xml">
+				&lt;?xml version="1.0"?&gt;
+				&lt;Object3D&gt;
+					&lt;Name&gt;Banana&lt;/Name&gt; The name of the object
+					&lt;DisplayParameters&gt;
+						&lt;ScaleFactor&gt;50&lt;/ScaleFactor&gt; The scaling applied when displayed
+						&lt;XRotation&gt;0.000000&lt;/XRotation&gt; The rotation along the X axis when displayed
+						&lt;YRotation&gt;0.000000&lt;/YRotation&gt; The rotation along the Y axis when displayed
+						&lt;ZRotation&gt;0.000000&lt;/ZRotation&gt; The rotation along the Z axis when displayed
+						&lt;ZTranslation&gt;0.000000&lt;/ZTranslation&gt; The translation along the Z axis when displayed
+					&lt;/DisplayParameters&gt;
+					&lt;Files&gt;
+						&lt;TextureFileName&gt;banana.png&lt;/TextureFileName&gt; <strong>For now only one texture file is supported</strong>
+						&lt;ModelFileName&gt;&lt;/ModelFileName&gt; This has to be filled if you want to load the shape description from an obj file (slow)
+					&lt;/Files&gt;
+				&lt;/Object3D&gt;
+		</code>
+		</pre>
+		<h3>Loading the shape description of an object</h3>
+		The app is optimized to receive object with normalized coordinates (coordinates between -1 and 1) and centered in [0,0].<br />
+		Here is how a sphere should be positioned and sized :
+		<center><a class="fancybox" title="" href="images/normalized_object.png">
+			<img alt="" src="images/normalized_object.png" />
+		</a></center>
+		<h4>Using an obj file</h4>
+		In that case you just have to fill the ModelFileName tag in the xml, but again the parsing is for now very slow so use this alternative only for small objects.
+		<h4>Using a .h file</h4>
+		These files contain C array describing the vertices, the normals and the texture coordinates for an object. They also contain the length of these arrays.
+		<strong>OpenGL ES can only deal with triangle so you might want to be sure that all the faces of the object are shaped this way.</strong><br />
+		To use these .h files you have to:
+		<ul>
+			<li>Import them in the Object3D.m file, Object3D instances are the internal representation of a 3D object in the app</li>
+			<li>Modify the loadShapeAndTextures so that you can bind the properties of your instance to the right arrays.</li>
+		</ul>
+		Here is an example for the banana.h file : <br />
+		<pre class="code">
+			<code class="cpp">
+				#import "banana.h"
+				
+				...
+				
+				- (void)loadShapesAndTextures {
+					//Objects loaded from an obj description file
+					if ([[self.modelFileName pathExtension] isEqualToString:@"obj"]) {
+						WavefrontParser *parser = [[WavefrontParser alloc] init];
+						parser.delegate = self;
+						[parser parseFileNamed:self.modelFileName];
+						[parser release];
+					}
+					else if ([self.name isEqualToString:@"Banana"]) {
+						self.numberOfVertices = bananaNumVerts;
+						self.vertices = bananaVerts;
+						self.normals = bananaNormals;
+						self.textureCoordinates = bananaTexCoords;
+					}
+				}
+		</code>
+		</pre> 
+	<h3>Associate a markerID to the 3D object</h3>
+	The models.plist file represents a serialized NSDictionary, to associate an object to a marker ID you just have to add an entry with the marker ID as key and the name of the object xml file as value. <br />
+	Here is the example for the banana:
+	<pre class="code">
+		<code class="cpp">
+			&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+			&lt;!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"&gt;
+			&lt;plist version="1.0"&gt;
+			&lt;dict&gt;
+				&lt;key&gt;0&lt;/key&gt;
+				&lt;string&gt;banana.xml&lt;/string&gt;
+				&lt;key&gt;1&lt;/key&gt;
+			&lt;/dict&gt;
+			&lt;/plist&gt;
+		</code>
+	</pre>
+	
+	<br />
+	<br />
+	Now it should be ok and your object should be displayed when the marker with the right ID is detected.
+	
+	<h2>Modifying the way the object is displayed</h2>
+	To modify the way the object is displayed you can either modify the xml file or use the parameters view.
+	<h3>Using the parameters view</h3>
+	<h4>Activate the admin mode</h4>
+	Go to <code>VRViewController.m</code> and make the constant ADMIN_MODE TRUE.
+	<pre class="code">
+		<code class="cpp">
+			#define ADMIN_MODE TRUE;
+		</code>
+	</pre>
+	<h4>Display the parameters view and make changes</h4>
+	To display the parameters view while an object is displayed in augmented reality just touch the wheel on the screen.<br />
+	Then you can play with the sliders or enter values in the texfields to change the display parameters of the object.
+	<h4>Save those changes</h4>
+	To save the changes, touch the save button. You can also send the modified xml file by mail, this way you can integrate the changes by replacing the previous xml.
+	<h2>HOWTO using blender and obj2openGL</h2>
+	<h3>Export your blender model in .obj</h3>
+	<a rel="blender_export" title="Go to the outliner view" href="images/1_outliner.png">
+		<img alt="" src="images/1_outliner_m.png" />
+	</a>
+
+	<a rel="blender_export" title="Select the objects you want to export" href="images/2_select.png">
+		<img alt="" src="images/2_select_m.png" />
+	</a>
+
+	<a rel="blender_export" title="Select wavefront (.obj) in the export menu" href="images/3_export_menu.png">
+		<img alt="" src="images/3_export_menu_m.png" />
+	</a>
+		
+	<a rel="blender_export" title="Select selection only and triangulate in the options panel" href="images/4_export_options.png">
+		<img alt="" src="images/4_export_options_m.png" />
+	</a>
+	<h3>Convert you .obj in .h</h3>
+	Use the obj2openGL script, you can find it on the <a href="http://www.heikobehrens.net/2009/08/27/obj2opengl/">website of the author</a> or in the utils folder. <strong>You need to have perl installed !</strong>
+	<pre class="code">
+		<code class="cpp">
+			~ $./obj2opengl.pl myfile.obj
+		</code>
+	</pre>
+	<strong>obj2opengl automatically normalize the coordinate of your vertices and center the object in (0,0).</strong>
+	<h2>Download</h2>
+	<a href="VRToolKit.zip">Download the code</a>
+	</div>
+</body>
+</html>

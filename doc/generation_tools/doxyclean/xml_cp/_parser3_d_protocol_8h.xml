@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="_parser3_d_protocol_8h" kind="file">
+    <compoundname>Parser3DProtocol.h</compoundname>
+    <includes local="no">OpenGLES/ES1/gl.h</includes>
+    <includedby refid="_object3_d_8h" local="yes">Classes/Object3D.h</includedby>
+    <includedby refid="_object3_d_8m" local="yes">Classes/Object3D.m</includedby>
+    <includedby refid="_wavefront_parser_8h" local="yes">Classes/WavefrontParser.h</includedby>
+    <includedby refid="_wavefront_parser2_8h" local="yes">Classes/WavefrontParser2.h</includedby>
+    <incdepgraph>
+      <node id="69">
+        <label>OpenGLES/ES1/gl.h</label>
+      </node>
+      <node id="68">
+        <label>Classes/Parser3DProtocol.h</label>
+        <link refid="Parser3DProtocol.h"/>
+        <childnode refid="69" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="78">
+        <label>Classes/WavefrontParser2.h</label>
+        <link refid="_wavefront_parser2_8h_source"/>
+        <childnode refid="79" relation="include">
+        </childnode>
+      </node>
+      <node id="79">
+        <label>Classes/WavefrontParser2.m</label>
+      </node>
+      <node id="73">
+        <label>Classes/Object3DParametersViewController.m</label>
+        <childnode refid="73" relation="include">
+        </childnode>
+      </node>
+      <node id="74">
+        <label>Classes/VRToolKitAppDelegate.m</label>
+        <childnode refid="74" relation="include">
+        </childnode>
+      </node>
+      <node id="75">
+        <label>Classes/VRViewController.m</label>
+      </node>
+      <node id="70">
+        <label>Classes/Parser3DProtocol.h</label>
+        <link refid="Parser3DProtocol.h"/>
+        <childnode refid="71" relation="include">
+        </childnode>
+        <childnode refid="72" relation="include">
+        </childnode>
+        <childnode refid="76" relation="include">
+        </childnode>
+        <childnode refid="78" relation="include">
+        </childnode>
+      </node>
+      <node id="71">
+        <label>Classes/Object3D.h</label>
+        <link refid="_object3_d_8h_source"/>
+        <childnode refid="72" relation="include">
+        </childnode>
+        <childnode refid="73" relation="include">
+        </childnode>
+        <childnode refid="74" relation="include">
+        </childnode>
+        <childnode refid="75" relation="include">
+        </childnode>
+      </node>
+      <node id="72">
+        <label>Classes/Object3D.m</label>
+        <childnode refid="72" relation="include">
+        </childnode>
+      </node>
+      <node id="76">
+        <label>Classes/WavefrontParser.h</label>
+        <link refid="_wavefront_parser_8h_source"/>
+        <childnode refid="77" relation="include">
+        </childnode>
+      </node>
+      <node id="77">
+        <label>Classes/WavefrontParser.m</label>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="protocol_parser3_d_protocol-p" prot="public">Parser3DProtocol-p</innerclass>
+    <innerclass refid="protocol_parser3_d_delegate-p" prot="public">Parser3DDelegate-p</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#import<sp/>&lt;OpenGLES/ES1/gl.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="protocol_parser3_d_protocol-p" refkind="compound"><highlight class="keyword">@protocol<sp/></highlight><highlight class="normal">Parser3DProtocol</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal">-<sp/>(void)<sp/>parseFileNamed:(NSString<sp/>*)filename;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="protocol_parser3_d_delegate-p" refkind="compound"><highlight class="keyword">@protocol<sp/></highlight><highlight class="normal">Parser3DDelegate</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal">-<sp/>(void)<sp/>parserDidCountVertices:(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)numberOfVertices<sp/>andDidParseVertices:(GLfloat<sp/>*)vertices<sp/></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/>normals:(GLfloat<sp/>*)normals<sp/>andTextures:(GLfloat<sp/>*)textures;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Parser3DProtocol.h"/>
+  </compounddef>
+</doxygen>

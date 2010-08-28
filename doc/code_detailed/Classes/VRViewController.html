@@ -1,0 +1,252 @@
+<!DOCTYPE html><html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<title>VRViewController Class Reference</title>
+<meta id="Generator" name="Generator" content="Doxyclean">
+<meta id="GeneratorVersion" name="GeneratorVersion" content="2.2">
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<link rel="stylesheet" type="text/css" media="screen" href="../css/screen.css">
+<link rel="stylesheet" type="text/css" media="print" href="../css/print.css">
+<script type="text/javascript">
+				function toggleTOC() {
+					var toc = document.getElementById('tableOfContents');
+					var tocButton = document.getElementById('toc_button');
+					var contents = document.getElementById('contents');
+					if (toc.style.display == 'block') {
+						toc.style.display = 'none';
+						contents.className = '';
+						tocButton.className = '';
+					} else {
+						toc.style.display = 'block';
+						contents.className = 'tableOfContentsOpen';
+						tocButton.className = 'open';
+					}
+				}
+				
+				function toggleTOCItem() {
+					var listItem = event.srcElement;
+					var sublist = listItem.getElementsByTagName('ul')[0];
+					if (sublist.style.display == 'block') {
+						sublist.style.display = 'none';
+						listItem.className = 'expandable';
+					} else {
+						sublist.style.display = 'block';
+						listItem.className = 'expandable expanded';
+					}
+				}
+				
+				function jumpTo() {
+					selectedItem = event.srcElement.options[event.srcElement.selectedIndex].value;
+					window.location = "#" + selectedItem;
+				}
+			</script>
+</head>
+<body>
+<header id="projectHeader"><h1><a href="../index.html">VRToolKit Reference Library</a></h1></header><header id="fileHeader"><h1><a href="#classTitle">VRViewController Class Reference</a></h1></header><nav id="buttons"><ul>
+<li id="toc_button"><button id="table_of_contents" onclick="toggleTOC()">Table of Contents</button></li>
+<li id="jumpto_button"><select id="jumpto" onchange="jumpTo()"><option value="classTitle">Jump To...</option>
+<option value="overview">Overview</option>
+<option value="tasks">Tasks</option>
+<option value="properties">Properties</option>
+<option value="overlay">    overlay</option>
+<option value="parametersButton">    parametersButton</option>
+<option value="wrapper">    wrapper</option>
+<option value="parametersViewController">    parametersViewController</option>
+<option value="captureSession">    captureSession</option>
+<option value="previewLayer">    previewLayer</option>
+<option value="detectionEnabled">    detectionEnabled</option>
+<option value="currentMarkerID">    currentMarkerID</option>
+<option value="models">    models</option>
+<option value="instanceMethods">Instance Methods</option>
+<option value="startDetection">    - startDetection</option>
+<option value="stopDetection">    - stopDetection</option>
+<option value="showHideParameters:">    - showHideParameters:</option>
+<option value="startStopAnimatingObject:">    - startStopAnimatingObject:</option>
+<option value="initCapture">    - initCapture</option>
+<option value="hideParameters">    - hideParameters</option>
+<option value="showParameters">    - showParameters</option></select></li>
+</ul></nav><nav id="tableOfContents" style="display: none;"><ul>
+<li><a href="#overview">Overview</a></li>
+<li class="expandable" id="tocTasks" onclick="toggleTOCItem()">
+<a href="#tasks">Tasks</a><ul style="display: none;">
+<li><a href="#Other">Other</a></li>
+<li><a href="#Other">Other</a></li>
+</ul>
+</li>
+<li class="expandable" id="tocProperties" onclick="toggleTOCItem()">
+<a href="#properties">Properties</a><ul style="display: none;">
+<li><a href="#overlay">overlay</a></li>
+<li><a href="#parametersButton">parametersButton</a></li>
+<li><a href="#wrapper">wrapper</a></li>
+<li><a href="#parametersViewController">parametersViewController</a></li>
+<li><a href="#captureSession">captureSession</a></li>
+<li><a href="#previewLayer">previewLayer</a></li>
+<li><a href="#detectionEnabled">detectionEnabled</a></li>
+<li><a href="#currentMarkerID">currentMarkerID</a></li>
+<li><a href="#models">models</a></li>
+</ul>
+</li>
+<li class="expandable" id="tocInstanceMethods" onclick="toggleTOCItem()">
+<a href="#instanceMethods">Instance Methods</a><ul style="display: none;">
+<li><a href="#startDetection">startDetection</a></li>
+<li><a href="#stopDetection">stopDetection</a></li>
+<li><a href="#showHideParameters:">showHideParameters:</a></li>
+<li><a href="#startStopAnimatingObject:">startStopAnimatingObject:</a></li>
+<li><a href="#initCapture">initCapture</a></li>
+<li><a href="#hideParameters">hideParameters</a></li>
+<li><a href="#showParameters">showParameters</a></li>
+</ul>
+</li>
+</ul></nav><div id="contents">
+<h1 id="classTitle">VRViewController Class Reference</h1>
+<table id="metadata">
+<tr class="alt">
+<th>Inherits from</th>
+<td><ul class="inheritance"><li>UIViewController</li></ul></td>
+</tr>
+<tr>
+<th>Conforms to</th>
+<td><ul>
+<li>&lt;AVCaptureVideoDataOutputSampleBufferDelegate&gt;</li>
+<li>&lt;ARToolKitPlusWrapperDelegate&gt;</li>
+<li>&lt;ParametersDelegate&gt;</li>
+</ul></td>
+</tr>
+<tr class="alt">
+<th>Declared in</th>
+<td>VRViewController.h</td>
+</tr>
+</table>
+<h2 id="overview">Overview</h2>
+<p>This class is the core of the Application. </p>
+<p>
+It initializes the capture of frames from the camera, send them to the <code><strong>ARToolKitPlusWrapper</strong></code>, receives the result of the marker detection and pass on those results to the <code><strong>EAGLView</strong></code>. </p>
+<h2 id="tasks">Tasks</h2>
+<ul id="tasksList">
+<li id="Other">
+<h3>Other</h3>
+<ul class="methods">
+<li>
+<span class="tooltipRegion"><code><a href="#overlay">overlay</a></code> <span class="specialType">property</span></span><span class="tooltip">The view where the 3D object is shown, this view is overlayed over the VRViewController's view. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#parametersButton">parametersButton</a></code> <span class="specialType">property</span></span><span class="tooltip"></span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#wrapper">wrapper</a></code> <span class="specialType">property</span></span><span class="tooltip">The ARToolKitPlusWrapper instance the controller pass on video frames for marler detection. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#parametersViewController">parametersViewController</a></code> <span class="specialType">property</span></span><span class="tooltip">The controller responsible of the parameters view. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#captureSession">captureSession</a></code> <span class="specialType">property</span></span><span class="tooltip">The capture session we use to capture video frames. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#previewLayer">previewLayer</a></code> <span class="specialType">property</span></span><span class="tooltip">The layer displaying the frames from the camera. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#detectionEnabled">detectionEnabled</a></code> <span class="specialType">property</span></span><span class="tooltip"></span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#currentMarkerID">currentMarkerID</a></code> <span class="specialType">property</span></span><span class="tooltip">The markerID of the current marker detect (-1 if or marker is detected). </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#models">models</a></code> <span class="specialType">property</span></span><span class="tooltip">The NSDictionnary loaded from the models.plist file. </span>
+</li>
+</ul>
+</li>
+<li id="Other">
+<h3>Other</h3>
+<ul class="methods">
+<li>
+<span class="tooltipRegion"><code><a href="#startDetection">- startDetection</a></code></span><span class="tooltip">This method start the detection of markers in frames from the camera. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#stopDetection">- stopDetection</a></code></span><span class="tooltip">This method stop the detection of markers in frames from the camera. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#showHideParameters:">- showHideParameters:</a></code></span><span class="tooltip">This method trigger the display of the parameters view. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#startStopAnimatingObject:">- startStopAnimatingObject:</a></code></span><span class="tooltip">This method tell the EAGLView to animate the 3D Objects displayed. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#initCapture">- initCapture</a></code></span><span class="tooltip">This methods initialize the capture session. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#hideParameters">- hideParameters</a></code></span><span class="tooltip">This shows the parameters view. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#showParameters">- showParameters</a></code></span><span class="tooltip">This hides the parameters view. </span>
+</li>
+</ul>
+</li>
+</ul>
+<section id="properties"><h2>Properties</h2>
+<section class="definition" id="overlay"><h3>overlay</h3>
+<p>The view where the 3D object is shown, this view is overlayed over the VRViewController's view. </p>
+<code class="methodDeclaration">@property IBOutlet EAGLView *overlay</code><h5>Declared In</h5>
+<code>VRViewController.h</code></section><section class="definition" id="parametersButton"><h3>parametersButton</h3>
+<code class="methodDeclaration">@property IBOutlet UIButton *parametersButton</code><h5>Declared In</h5>
+<code>VRViewController.h</code></section><section class="definition" id="wrapper"><h3>wrapper</h3>
+<p>The <code><strong>ARToolKitPlusWrapper</strong></code> instance the controller pass on video frames for marler detection. </p>
+<code class="methodDeclaration">@property ARToolKitPlusWrapper *wrapper</code><h5>Discussion</h5>
+<p>The <code>VRViewController</code> is also the delegate of this wrapper. </p>
+<h5>Declared In</h5>
+<code>VRViewController.m</code></section><section class="definition" id="parametersViewController"><h3>parametersViewController</h3>
+<p>The controller responsible of the parameters view. </p>
+<code class="methodDeclaration">@property Object3DParametersViewController *parametersViewController</code><h5>Declared In</h5>
+<code>VRViewController.m</code></section><section class="definition" id="captureSession"><h3>captureSession</h3>
+<p>The capture session we use to capture video frames. </p>
+<code class="methodDeclaration">@property AVCaptureSession *captureSession</code><h5>Declared In</h5>
+<code>VRViewController.m</code></section><section class="definition" id="previewLayer"><h3>previewLayer</h3>
+<p>The layer displaying the frames from the camera. </p>
+<code class="methodDeclaration">@property AVCaptureVideoPreviewLayer *previewLayer</code><h5>Declared In</h5>
+<code>VRViewController.m</code></section><section class="definition" id="detectionEnabled"><h3>detectionEnabled</h3>
+<code class="methodDeclaration">@property BOOL detectionEnabled</code><h5>Discussion</h5>
+<p>/n </p>
+<h5>Declared In</h5>
+<code>VRViewController.m</code></section><section class="definition" id="currentMarkerID"><h3>currentMarkerID</h3>
+<p>The markerID of the current marker detect (-1 if or marker is detected). </p>
+<code class="methodDeclaration">@property int currentMarkerID</code><h5>Declared In</h5>
+<code>VRViewController.m</code></section><section class="definition" id="models"><h3>models</h3>
+<p>The NSDictionnary loaded from the models.plist file. </p>
+<code class="methodDeclaration">@property NSDictionary *models</code><h5>Discussion</h5>
+<p>This dictionnary uses as key the markerID and as value the corresponding xml description file to load. </p>
+<h5>Declared In</h5>
+<code>VRViewController.m</code></section></section><section id="instanceMethods"><h2>Instance Methods</h2>
+<section class="definition" id="startDetection"><h3>startDetection</h3>
+<p>This method start the detection of markers in frames from the camera. </p>
+<code class="methodDeclaration">- (void)startDetection</code><h5>Declared In</h5>
+<code>VRViewController.h</code></section><section class="definition" id="stopDetection"><h3>stopDetection</h3>
+<p>This method stop the detection of markers in frames from the camera. </p>
+<code class="methodDeclaration">- (void)stopDetection</code><h5>Declared In</h5>
+<code>VRViewController.h</code></section><section class="definition" id="showHideParameters:"><h3>showHideParameters:</h3>
+<p>This method trigger the display of the parameters view. </p>
+<code class="methodDeclaration">- (IBAction)showHideParameters:(id)<span class="parameter">sender</span> </code><h5>Declared In</h5>
+<code>VRViewController.h</code></section><section class="definition" id="startStopAnimatingObject:"><h3>startStopAnimatingObject:</h3>
+<p>This method tell the <code><strong>EAGLView</strong></code> to animate the 3D Objects displayed. </p>
+<code class="methodDeclaration">- (IBAction)startStopAnimatingObject:(id)<span class="parameter">sender</span> </code><h5>Declared In</h5>
+<code>VRViewController.h</code></section><section class="definition" id="initCapture"><h3>initCapture</h3>
+<p>This methods initialize the capture session. </p>
+<code class="methodDeclaration">- (void)initCapture</code><h5>Discussion</h5>
+<p>It sets up the AVCaptureDeviceInput instance, the AVCaptureVideoDataOutput instance and create an AVCaptureSession which links the input and the output.
+ The format chosen for the capture is kCVPixelFormatType_32BGRA because for now <code><strong>ARToolKitPlusWrapper</strong></code> want BGRA encoded frames.
+ The queue used is not the main queue, so all the capture and detection process is done in a separate thread. </p>
+<h5>Declared In</h5>
+<code>VRViewController.m</code></section><section class="definition" id="hideParameters"><h3>hideParameters</h3>
+<p>This shows the parameters view. </p>
+<code class="methodDeclaration">- (void)hideParameters</code><h5>Declared In</h5>
+<code>VRViewController.m</code></section><section class="definition" id="showParameters"><h3>showParameters</h3>
+<p>This hides the parameters view. </p>
+<code class="methodDeclaration">- (void)showParameters</code><h5>Declared In</h5>
+<code>VRViewController.m</code></section></section><hr>
+<p id="lastUpdated">Last updated: 2010-8-17</p>
+</div>
+<footer id="breadcrumbs"><ul>
+<li><a href="../index.html">ARApi</a></li>
+<li><a href="#classTitle">VRViewController Class Reference</a></li>
+</ul></footer>
+</body>
+</html>

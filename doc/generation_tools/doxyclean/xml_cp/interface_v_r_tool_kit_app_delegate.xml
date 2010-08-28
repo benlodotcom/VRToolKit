@@ -1,0 +1,134 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="interface_v_r_tool_kit_app_delegate" kind="class" prot="public">
+    <compoundname>VRToolKitAppDelegate</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">NSObject</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">UIApplicationDelegate-p</basecompoundref>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="interface_v_r_tool_kit_app_delegate_1a436653f358c43b8ae216f052d0808cdf" prot="protected" static="no" mutable="no">
+        <type>UIWindow *</type>
+        <definition>UIWindow* VRToolKitAppDelegate::window</definition>
+        <argsstring></argsstring>
+        <name>window</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/VRToolKitAppDelegate.h" line="23" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/VRToolKitAppDelegate.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="interface_v_r_tool_kit_app_delegate_1a9589f48d4984d27e72ae4b17b6e2c39b" prot="protected" static="no" mutable="no">
+        <type><ref refid="interface_v_r_view_controller" kindref="compound">VRViewController</ref> *</type>
+        <definition>VRViewController* VRToolKitAppDelegate::viewController</definition>
+        <argsstring></argsstring>
+        <name>viewController</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/VRToolKitAppDelegate.h" line="24" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/VRToolKitAppDelegate.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="interface_v_r_tool_kit_app_delegate_1a710eb10081a8dabb7e55e56201739932" prot="public" static="no" readable="yes" writable="yes" gettable="no" settable="no" accessor="retain">
+        <type>IBOutlet UIWindow *</type>
+        <definition>IBOutlet UIWindow* VRToolKitAppDelegate::window</definition>
+        <argsstring></argsstring>
+        <name>window</name>
+        <read></read>
+        <write></write>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/VRToolKitAppDelegate.h" line="27" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/VRToolKitAppDelegate.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_v_r_tool_kit_app_delegate_1acbf0d3be374cb3b387c7bb5b978b1d00" prot="public" static="no" readable="yes" writable="yes" gettable="no" settable="no" accessor="retain">
+        <type>IBOutlet <ref refid="interface_v_r_view_controller" kindref="compound">VRViewController</ref> *</type>
+        <definition>IBOutlet VRViewController* VRToolKitAppDelegate::viewController</definition>
+        <argsstring></argsstring>
+        <name>viewController</name>
+        <read></read>
+        <write></write>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/VRToolKitAppDelegate.h" line="28" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/VRToolKitAppDelegate.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="76">
+        <label>ARToolKitPlusWrapper</label>
+        <link refid="interface_a_r_tool_kit_plus_wrapper"/>
+      </node>
+      <node id="77">
+        <label>EAGLView</label>
+        <link refid="interface_e_a_g_l_view"/>
+        <childnode refid="74" relation="usage">
+          <edgelabel>_object</edgelabel>
+        </childnode>
+      </node>
+      <node id="73">
+        <label>Object3DParametersViewController</label>
+        <link refid="interface_object3_d_parameters_view_controller"/>
+        <childnode refid="74" relation="usage">
+          <edgelabel>_object</edgelabel>
+        </childnode>
+      </node>
+      <node id="71">
+        <label>VRViewController</label>
+        <link refid="interface_v_r_view_controller"/>
+        <childnode refid="72" relation="public-inheritance">
+        </childnode>
+        <childnode refid="73" relation="usage">
+          <edgelabel>_parametersViewController</edgelabel>
+        </childnode>
+        <childnode refid="76" relation="usage">
+          <edgelabel>_wrapper</edgelabel>
+        </childnode>
+        <childnode refid="77" relation="usage">
+          <edgelabel>_overlay</edgelabel>
+        </childnode>
+      </node>
+      <node id="72">
+        <label>&lt;ARToolKitPlusWrapperDelegate&gt;</label>
+        <link refid="protocol_a_r_tool_kit_plus_wrapper_delegate-p"/>
+      </node>
+      <node id="75">
+        <label>&lt;Parser3DDelegate&gt;</label>
+        <link refid="protocol_parser3_d_delegate-p"/>
+      </node>
+      <node id="74">
+        <label>Object3D</label>
+        <link refid="interface_object3_d"/>
+        <childnode refid="75" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="70">
+        <label>VRToolKitAppDelegate</label>
+        <childnode refid="71" relation="usage">
+          <edgelabel>viewController</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/VRToolKitAppDelegate.h" line="22" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/VRToolKitAppDelegate.h" bodystart="22" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="interface_v_r_tool_kit_app_delegate_1a9589f48d4984d27e72ae4b17b6e2c39b" prot="protected" virt="non-virtual"><scope>VRToolKitAppDelegate</scope><name>viewController</name></member>
+      <member refid="interface_v_r_tool_kit_app_delegate_1acbf0d3be374cb3b387c7bb5b978b1d00" prot="public" virt="non-virtual"><scope>VRToolKitAppDelegate</scope><name>viewController</name></member>
+      <member refid="interface_v_r_tool_kit_app_delegate_1a436653f358c43b8ae216f052d0808cdf" prot="protected" virt="non-virtual"><scope>VRToolKitAppDelegate</scope><name>window</name></member>
+      <member refid="interface_v_r_tool_kit_app_delegate_1a710eb10081a8dabb7e55e56201739932" prot="public" virt="non-virtual"><scope>VRToolKitAppDelegate</scope><name>window</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

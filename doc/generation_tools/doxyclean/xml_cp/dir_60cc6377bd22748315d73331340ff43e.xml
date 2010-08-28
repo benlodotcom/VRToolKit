@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="dir_60cc6377bd22748315d73331340ff43e" kind="dir">
+    <compoundname>Classes/</compoundname>
+    <innerdir refid="dir_73d81b3fffa1ec46d54f01f64c979b2f">Classes/XMLParser/</innerdir>
+    <innerfile refid="_a_r_tool_kit_plus_wrapper_8h">ARToolKitPlusWrapper.h</innerfile>
+    <innerfile refid="_a_r_tool_kit_plus_wrapper_8mm">ARToolKitPlusWrapper.mm</innerfile>
+    <innerfile refid="_e_a_g_l_view_8h">EAGLView.h</innerfile>
+    <innerfile refid="_e_a_g_l_view_8m">EAGLView.m</innerfile>
+    <innerfile refid="_object3_d_8h">Object3D.h</innerfile>
+    <innerfile refid="_object3_d_8m">Object3D.m</innerfile>
+    <innerfile refid="_object3_d_parameters_view_controller_8h">Object3DParametersViewController.h</innerfile>
+    <innerfile refid="_object3_d_parameters_view_controller_8m">Object3DParametersViewController.m</innerfile>
+    <innerfile refid="_parser3_d_protocol_8h">Parser3DProtocol.h</innerfile>
+    <innerfile refid="_v_r_tool_kit_app_delegate_8h">VRToolKitAppDelegate.h</innerfile>
+    <innerfile refid="_v_r_tool_kit_app_delegate_8m">VRToolKitAppDelegate.m</innerfile>
+    <innerfile refid="_v_r_view_controller_8h">VRViewController.h</innerfile>
+    <innerfile refid="_v_r_view_controller_8m">VRViewController.m</innerfile>
+    <innerfile refid="_wavefront_parser_8h">WavefrontParser.h</innerfile>
+    <innerfile refid="_wavefront_parser_8m">WavefrontParser.m</innerfile>
+    <innerfile refid="_wavefront_parser2_8h">WavefrontParser2.h</innerfile>
+    <innerfile refid="_wavefront_parser2_8m">WavefrontParser2.m</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/"/>
+  </compounddef>
+</doxygen>

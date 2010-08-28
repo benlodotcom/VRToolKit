@@ -1,0 +1,180 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="interface_a_r_tool_kit_plus_wrapper" kind="class" prot="public">
+    <compoundname>ARToolKitPlusWrapper</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">NSObject</basecompoundref>
+    <includes refid="_a_r_tool_kit_plus_wrapper_8h" local="no">ARToolKitPlusWrapper.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="interface_a_r_tool_kit_plus_wrapper_1a56d1ad4aded6b5abf3615378fef97595" prot="private" static="no" mutable="no">
+        <type>id</type>
+        <definition>id ARToolKitPlusWrapper::_delegate</definition>
+        <argsstring></argsstring>
+        <name>_delegate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/ARToolKitPlusWrapper.h" line="68" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/ARToolKitPlusWrapper.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="interface_a_r_tool_kit_plus_wrapper_1aef1664bcfad6b3464fca76c0da35a0a4" prot="private" static="no" mutable="no">
+        <type>BOOL</type>
+        <definition>BOOL ARToolKitPlusWrapper::_useBCHMarker</definition>
+        <argsstring></argsstring>
+        <name>_useBCHMarker</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/ARToolKitPlusWrapper.h" line="70" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/ARToolKitPlusWrapper.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="interface_a_r_tool_kit_plus_wrapper_1a50244d0080416e828a52e644ee3df14c" prot="private" static="no" mutable="no">
+        <type>BOOL</type>
+        <definition>BOOL ARToolKitPlusWrapper::_useThinBorderMarker</definition>
+        <argsstring></argsstring>
+        <name>_useThinBorderMarker</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/ARToolKitPlusWrapper.h" line="71" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/ARToolKitPlusWrapper.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="interface_a_r_tool_kit_plus_wrapper_1a7e1d39c97018af294b851a18f5354bac" prot="public" static="no" readable="yes" writable="yes" gettable="no" settable="no" accessor="assign">
+        <type>id</type>
+        <definition>id ARToolKitPlusWrapper::delegate</definition>
+        <argsstring></argsstring>
+        <name>delegate</name>
+        <read></read>
+        <write></write>
+        <briefdescription>
+<para>The delegate will receive the datas returned by ARToolKit when a frame is processed. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/ARToolKitPlusWrapper.h" line="77" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/ARToolKitPlusWrapper.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_a_r_tool_kit_plus_wrapper_1a9a65fc5fa39033f6f31533921e86e9e7" prot="public" static="no" readable="yes" writable="yes" gettable="no" settable="no" accessor="assign">
+        <type>BOOL</type>
+        <definition>BOOL ARToolKitPlusWrapper::useBCHMarker</definition>
+        <argsstring></argsstring>
+        <name>useBCHMarker</name>
+        <read></read>
+        <write></write>
+        <briefdescription>
+<para>Options to make ARToolKitPlus use BCH Markers instead of the regular ones (untested). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/ARToolKitPlusWrapper.h" line="84" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/ARToolKitPlusWrapper.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_a_r_tool_kit_plus_wrapper_1a381ffb7c89902394d892268c598651a9" prot="public" static="no" readable="yes" writable="yes" gettable="no" settable="no" accessor="assign">
+        <type>BOOL</type>
+        <definition>BOOL ARToolKitPlusWrapper::useThinBorderMarker</definition>
+        <argsstring></argsstring>
+        <name>useThinBorderMarker</name>
+        <read></read>
+        <write></write>
+        <briefdescription>
+<para>Options to make ARToolKitPlus use markers with thin borders instead of the regular ones (untested). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/ARToolKitPlusWrapper.h" line="88" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/ARToolKitPlusWrapper.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_a_r_tool_kit_plus_wrapper_1a9328a02468d95a6c23cb46a79d18da86" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ARToolKitPlusWrapper::setupWithImageBuffer:</definition>
+        <argsstring>(CVImageBufferRef imageBuffer)</argsstring>
+        <name>setupWithImageBuffer:</name>
+        <param>
+          <type>CVImageBufferRef</type>
+          <declname>imageBuffer</declname>
+        </param>
+        <briefdescription>
+<para>This method setup the marker detection with a sample image. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>imageBuffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The sample image buffer </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/ARToolKitPlusWrapper.h" line="95"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_a_r_tool_kit_plus_wrapper_1a7398ba1fadc4d68368ebb7f832023830" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ARToolKitPlusWrapper::detectMarkerInImageBuffer:</definition>
+        <argsstring>(CVImageBufferRef imageBuffer)</argsstring>
+        <name>detectMarkerInImageBuffer:</name>
+        <param>
+          <type>CVImageBufferRef</type>
+          <declname>imageBuffer</declname>
+        </param>
+        <briefdescription>
+<para>This method trigger the marker detection on an image buffer. </para>        </briefdescription>
+        <detaileddescription>
+<para>This methods when the marker detection is over call its delegate to send it informations. See <ref refid="protocol_a_r_tool_kit_plus_wrapper_delegate-p" kindref="compound">ARToolKitPlusWrapperDelegate</ref>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>imageBuffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The image buffer processed for marker detection </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/ARToolKitPlusWrapper.h" line="104"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="interface_a_r_tool_kit_plus_wrapper_1aa39d3a247f0b60b8d9bed37089717af0" prot="protected" static="no" mutable="no">
+        <type>ARToolKitPlus::TrackerSingleMarker *</type>
+        <definition>ARToolKitPlus::TrackerSingleMarker* ARToolKitPlusWrapper()::tracker</definition>
+        <argsstring></argsstring>
+        <name>tracker</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The Object from ARToolKitPlus library responsible for detecting markers </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/ARToolKitPlusWrapper.mm" line="23" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/ARToolKitPlusWrapper.mm" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class is an objective-c wrapper for ARToolKitPlus. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Benjamin Loulier</para></simplesect>
+ARToolKitPlus is written in C++, the aim of this class is makint it more Objective-c friendly by &quot;hiding&quot; the complexity of mixing C++ and objective-C code. This class contains objective-c methods which create ARToolKitPlus instances and invoke some C++ methods. </para>    </detaileddescription>
+    <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/ARToolKitPlusWrapper.h" line="66" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/ARToolKitPlusWrapper.h" bodystart="66" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="interface_a_r_tool_kit_plus_wrapper_1a56d1ad4aded6b5abf3615378fef97595" prot="private" virt="non-virtual"><scope>ARToolKitPlusWrapper</scope><name>_delegate</name></member>
+      <member refid="interface_a_r_tool_kit_plus_wrapper_1aef1664bcfad6b3464fca76c0da35a0a4" prot="private" virt="non-virtual"><scope>ARToolKitPlusWrapper</scope><name>_useBCHMarker</name></member>
+      <member refid="interface_a_r_tool_kit_plus_wrapper_1a50244d0080416e828a52e644ee3df14c" prot="private" virt="non-virtual"><scope>ARToolKitPlusWrapper</scope><name>_useThinBorderMarker</name></member>
+      <member refid="interface_a_r_tool_kit_plus_wrapper_1a7e1d39c97018af294b851a18f5354bac" prot="public" virt="non-virtual"><scope>ARToolKitPlusWrapper</scope><name>delegate</name></member>
+      <member refid="interface_a_r_tool_kit_plus_wrapper_1a7398ba1fadc4d68368ebb7f832023830" prot="public" virt="virtual"><scope>ARToolKitPlusWrapper</scope><name>detectMarkerInImageBuffer:</name></member>
+      <member refid="interface_a_r_tool_kit_plus_wrapper_1a9328a02468d95a6c23cb46a79d18da86" prot="public" virt="virtual"><scope>ARToolKitPlusWrapper</scope><name>setupWithImageBuffer:</name></member>
+      <member refid="interface_a_r_tool_kit_plus_wrapper_1aa39d3a247f0b60b8d9bed37089717af0" prot="protected" virt="non-virtual"><scope>ARToolKitPlusWrapper</scope><name>tracker</name></member>
+      <member refid="interface_a_r_tool_kit_plus_wrapper_1a9a65fc5fa39033f6f31533921e86e9e7" prot="public" virt="non-virtual"><scope>ARToolKitPlusWrapper</scope><name>useBCHMarker</name></member>
+      <member refid="interface_a_r_tool_kit_plus_wrapper_1a381ffb7c89902394d892268c598651a9" prot="public" virt="non-virtual"><scope>ARToolKitPlusWrapper</scope><name>useThinBorderMarker</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

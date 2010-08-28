@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="class_my_logger" kind="class" prot="public">
+    <compoundname>MyLogger</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Logger</basecompoundref>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_my_logger_1abb555e3f0819ba8e8d8655c4c6882252" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void MyLogger::artLog</definition>
+        <argsstring>(const char *nStr)</argsstring>
+        <name>artLog</name>
+        <param>
+          <type>const char *</type>
+          <declname>nStr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/ARToolKitPlusWrapper.mm" line="38" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/ARToolKitPlusWrapper.mm" bodystart="37" bodyend="40"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/ARToolKitPlusWrapper.mm" line="36" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/ARToolKitPlusWrapper.mm" bodystart="35" bodyend="41"/>
+    <listofallmembers>
+      <member refid="class_my_logger_1abb555e3f0819ba8e8d8655c4c6882252" prot="private" virt="non-virtual"><scope>MyLogger</scope><name>artLog</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

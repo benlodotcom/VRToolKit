@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="protocol_parser3_d_protocol-p" kind="protocol" prot="public">
+    <compoundname>Parser3DProtocol-p</compoundname>
+    <includes refid="_parser3_d_protocol_8h" local="no">Parser3DProtocol.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="protocol_parser3_d_protocol-p_1a360fc89bca11ba6ea954ddb70376ebe6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Parser3DProtocol-p::parseFileNamed:</definition>
+        <argsstring>(NSString *filename)</argsstring>
+        <name>parseFileNamed:</name>
+        <param>
+          <type>NSString *</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+<para>This method parse a file located in the mainBundle. </para>        </briefdescription>
+        <detaileddescription>
+<para>When the parsing is over the delegate is called.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the file with the extension </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Parser3DProtocol.h" line="19"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The protocol a class parsing 3D shape description files (.obj, .vrml ...) must implement. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Benjamin Loulier</para></simplesect>
+These parsers parse 3D format not the xml description file ! </para>    </detaileddescription>
+    <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Parser3DProtocol.h" line="10" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Parser3DProtocol.h" bodystart="10" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="protocol_parser3_d_protocol-p_1a360fc89bca11ba6ea954ddb70376ebe6" prot="public" virt="virtual"><scope>Parser3DProtocol-p</scope><name>parseFileNamed:</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

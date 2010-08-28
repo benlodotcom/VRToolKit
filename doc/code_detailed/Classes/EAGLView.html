@@ -1,0 +1,212 @@
+<!DOCTYPE html><html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<title>EAGLView Class Reference</title>
+<meta id="Generator" name="Generator" content="Doxyclean">
+<meta id="GeneratorVersion" name="GeneratorVersion" content="2.2">
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<link rel="stylesheet" type="text/css" media="screen" href="../css/screen.css">
+<link rel="stylesheet" type="text/css" media="print" href="../css/print.css">
+<script type="text/javascript">
+				function toggleTOC() {
+					var toc = document.getElementById('tableOfContents');
+					var tocButton = document.getElementById('toc_button');
+					var contents = document.getElementById('contents');
+					if (toc.style.display == 'block') {
+						toc.style.display = 'none';
+						contents.className = '';
+						tocButton.className = '';
+					} else {
+						toc.style.display = 'block';
+						contents.className = 'tableOfContentsOpen';
+						tocButton.className = 'open';
+					}
+				}
+				
+				function toggleTOCItem() {
+					var listItem = event.srcElement;
+					var sublist = listItem.getElementsByTagName('ul')[0];
+					if (sublist.style.display == 'block') {
+						sublist.style.display = 'none';
+						listItem.className = 'expandable';
+					} else {
+						sublist.style.display = 'block';
+						listItem.className = 'expandable expanded';
+					}
+				}
+				
+				function jumpTo() {
+					selectedItem = event.srcElement.options[event.srcElement.selectedIndex].value;
+					window.location = "#" + selectedItem;
+				}
+			</script>
+</head>
+<body>
+<header id="projectHeader"><h1><a href="../index.html">VRToolKit Reference Library</a></h1></header><header id="fileHeader"><h1><a href="#classTitle">EAGLView Class Reference</a></h1></header><nav id="buttons"><ul>
+<li id="toc_button"><button id="table_of_contents" onclick="toggleTOC()">Table of Contents</button></li>
+<li id="jumpto_button"><select id="jumpto" onchange="jumpTo()"><option value="classTitle">Jump To...</option>
+<option value="overview">Overview</option>
+<option value="tasks">Tasks</option>
+<option value="properties">Properties</option>
+<option value="object">    object</option>
+<option value="markerID">    markerID</option>
+<option value="instanceMethods">Instance Methods</option>
+<option value="setModelViewMatrix:">    - setModelViewMatrix:</option>
+<option value="setProjectionMatrix:">    - setProjectionMatrix:</option>
+<option value="drawView">    - drawView</option>
+<option value="startAnimating">    - startAnimating</option>
+<option value="stopAnimating">    - stopAnimating</option>
+<option value="createFramebuffer">    - createFramebuffer</option>
+<option value="destroyFramebuffer">    - destroyFramebuffer</option>
+<option value="setupView">    - setupView</option>
+<option value="loadObject:">    - loadObject:</option>
+<option value="loadTexture">    - loadTexture</option>
+<option value="unloadTexture">    - unloadTexture</option></select></li>
+</ul></nav><nav id="tableOfContents" style="display: none;"><ul>
+<li><a href="#overview">Overview</a></li>
+<li class="expandable" id="tocTasks" onclick="toggleTOCItem()">
+<a href="#tasks">Tasks</a><ul style="display: none;">
+<li><a href="#Other">Other</a></li>
+<li><a href="#Other">Other</a></li>
+</ul>
+</li>
+<li class="expandable" id="tocProperties" onclick="toggleTOCItem()">
+<a href="#properties">Properties</a><ul style="display: none;">
+<li><a href="#object">object</a></li>
+<li><a href="#markerID">markerID</a></li>
+</ul>
+</li>
+<li class="expandable" id="tocInstanceMethods" onclick="toggleTOCItem()">
+<a href="#instanceMethods">Instance Methods</a><ul style="display: none;">
+<li><a href="#setModelViewMatrix:">setModelViewMatrix:</a></li>
+<li><a href="#setProjectionMatrix:">setProjectionMatrix:</a></li>
+<li><a href="#drawView">drawView</a></li>
+<li><a href="#startAnimating">startAnimating</a></li>
+<li><a href="#stopAnimating">stopAnimating</a></li>
+<li><a href="#createFramebuffer">createFramebuffer</a></li>
+<li><a href="#destroyFramebuffer">destroyFramebuffer</a></li>
+<li><a href="#setupView">setupView</a></li>
+<li><a href="#loadObject:">loadObject:</a></li>
+<li><a href="#loadTexture">loadTexture</a></li>
+<li><a href="#unloadTexture">unloadTexture</a></li>
+</ul>
+</li>
+</ul></nav><div id="contents">
+<h1 id="classTitle">EAGLView Class Reference</h1>
+<table id="metadata">
+<tr class="alt">
+<th>Inherits from</th>
+<td><ul class="inheritance"><li>UIView</li></ul></td>
+</tr>
+<tr>
+<th>Declared in</th>
+<td>EAGLView.h</td>
+</tr>
+</table>
+<h2 id="overview">Overview</h2>
+<p>This view is used to display 3D models using OpenGL ES. </p>
+<p>
+This class handles the rendering of the 3D models, but also th </p>
+<h2 id="tasks">Tasks</h2>
+<ul id="tasksList">
+<li id="Other">
+<h3>Other</h3>
+<ul class="methods">
+<li>
+<span class="tooltipRegion"><code><a href="#object">object</a></code> <span class="specialType">property</span></span><span class="tooltip">The Object3D instance displayed. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#markerID">markerID</a></code> <span class="specialType">property</span></span><span class="tooltip">The current MarkerID corresponding to the object displayed (if no object displayed -1). </span>
+</li>
+</ul>
+</li>
+<li id="Other">
+<h3>Other</h3>
+<ul class="methods">
+<li>
+<span class="tooltipRegion"><code><a href="#setModelViewMatrix:">- setModelViewMatrix:</a></code></span><span class="tooltip">Custom setter for the modelViewMatrix, it has as additional effect to redraw the view. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#setProjectionMatrix:">- setProjectionMatrix:</a></code></span><span class="tooltip">Custom setter for the projectionMatrix, it has as additional effect to setup and redraw the view. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#drawView">- drawView</a></code></span><span class="tooltip">This method is called to reresh the display of the 3D model. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#startAnimating">- startAnimating</a></code></span><span class="tooltip">This method is called to start animating the object. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#stopAnimating">- stopAnimating</a></code></span><span class="tooltip">This method is called to stop animating the object. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#createFramebuffer">- createFramebuffer</a></code></span><span class="tooltip"></span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#destroyFramebuffer">- destroyFramebuffer</a></code></span><span class="tooltip"></span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#setupView">- setupView</a></code></span><span class="tooltip">This function initialize the OpenGL view. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#loadObject:">- loadObject:</a></code></span><span class="tooltip">This function loads the 3D model and textues associated to a 3DObject instance. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#loadTexture">- loadTexture</a></code></span><span class="tooltip">This function loads the texture of the Object3D instance hold by the EAGLView. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#unloadTexture">- unloadTexture</a></code></span><span class="tooltip">This function unloads the current texture. </span>
+</li>
+</ul>
+</li>
+</ul>
+<section id="properties"><h2>Properties</h2>
+<section class="definition" id="object"><h3>object</h3>
+<p>The <code><strong>Object3D</strong></code> instance displayed. </p>
+<code class="methodDeclaration">@property Object3D *object</code><h5>Declared In</h5>
+<code>EAGLView.h</code></section><section class="definition" id="markerID"><h3>markerID</h3>
+<p>The current MarkerID corresponding to the object displayed (if no object displayed -1). </p>
+<code class="methodDeclaration">@property int markerID</code><h5>Declared In</h5>
+<code>EAGLView.h</code></section></section><section id="instanceMethods"><h2>Instance Methods</h2>
+<section class="definition" id="setModelViewMatrix:"><h3>setModelViewMatrix:</h3>
+<p>Custom setter for the modelViewMatrix, it has as additional effect to redraw the view. </p>
+<code class="methodDeclaration">- (void)setModelViewMatrix:(NSArray *)<span class="parameter">matrix</span> </code><h5>Declared In</h5>
+<code>EAGLView.h</code></section><section class="definition" id="setProjectionMatrix:"><h3>setProjectionMatrix:</h3>
+<p>Custom setter for the projectionMatrix, it has as additional effect to setup and redraw the view. </p>
+<code class="methodDeclaration">- (void)setProjectionMatrix:(NSArray *)<span class="parameter">matrix</span> </code><h5>Declared In</h5>
+<code>EAGLView.h</code></section><section class="definition" id="drawView"><h3>drawView</h3>
+<p>This method is called to reresh the display of the 3D model. </p>
+<code class="methodDeclaration">- (void)drawView</code><h5>Declared In</h5>
+<code>EAGLView.h</code></section><section class="definition" id="startAnimating"><h3>startAnimating</h3>
+<p>This method is called to start animating the object. </p>
+<code class="methodDeclaration">- (void)startAnimating</code><h5>Declared In</h5>
+<code>EAGLView.h</code></section><section class="definition" id="stopAnimating"><h3>stopAnimating</h3>
+<p>This method is called to stop animating the object. </p>
+<code class="methodDeclaration">- (void)stopAnimating</code><h5>Declared In</h5>
+<code>EAGLView.h</code></section><section class="definition" id="createFramebuffer"><h3>createFramebuffer</h3>
+<code class="methodDeclaration">- (BOOL)createFramebuffer</code><h5>Declared In</h5>
+<code>EAGLView.m</code></section><section class="definition" id="destroyFramebuffer"><h3>destroyFramebuffer</h3>
+<code class="methodDeclaration">- (void)destroyFramebuffer</code><h5>Declared In</h5>
+<code>EAGLView.m</code></section><section class="definition" id="setupView"><h3>setupView</h3>
+<p>This function initialize the OpenGL view. </p>
+<code class="methodDeclaration">- (void)setupView</code><h5>Discussion</h5>
+<p>This function sets up such things as lighting and the GL_Projection matrix. This method is called when the projectionMatrix property is set. </p>
+<h5>Declared In</h5>
+<code>EAGLView.m</code></section><section class="definition" id="loadObject:"><h3>loadObject:</h3>
+<p>This function loads the 3D model and textues associated to a 3DObject instance. </p>
+<code class="methodDeclaration">- (void)loadObject:(Object3D *)<span class="parameter">object</span> </code><h5>Declared In</h5>
+<code>EAGLView.m</code></section><section class="definition" id="loadTexture"><h3>loadTexture</h3>
+<p>This function loads the texture of the <code><strong>Object3D</strong></code> instance hold by the <code>EAGLView</code>. </p>
+<code class="methodDeclaration">- (void)loadTexture</code><h5>Declared In</h5>
+<code>EAGLView.m</code></section><section class="definition" id="unloadTexture"><h3>unloadTexture</h3>
+<p>This function unloads the current texture. </p>
+<code class="methodDeclaration">- (void)unloadTexture</code><h5>Declared In</h5>
+<code>EAGLView.m</code></section></section><hr>
+<p id="lastUpdated">Last updated: 2010-8-17</p>
+</div>
+<footer id="breadcrumbs"><ul>
+<li><a href="../index.html">ARApi</a></li>
+<li><a href="#classTitle">EAGLView Class Reference</a></li>
+</ul></footer>
+</body>
+</html>

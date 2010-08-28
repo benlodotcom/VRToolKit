@@ -1,0 +1,285 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="_object3_d_parameters_view_controller_8m" kind="file">
+    <compoundname>Object3DParametersViewController.m</compoundname>
+    <includes refid="_object3_d_parameters_view_controller_8m" local="yes">Object3DParametersViewController.h</includes>
+    <includes local="no">MessageUI/MessageUI.h</includes>
+    <includes refid="_object3_d_8h" local="yes">Object3D.h</includes>
+    <includedby refid="_object3_d_parameters_view_controller_8m" local="yes">Classes/Object3DParametersViewController.m</includedby>
+    <incdepgraph>
+      <node id="61">
+        <label>Classes/Object3DParametersViewController.m</label>
+        <link refid="Object3DParametersViewController.m"/>
+        <childnode refid="61" relation="include">
+        </childnode>
+        <childnode refid="62" relation="include">
+        </childnode>
+        <childnode refid="63" relation="include">
+        </childnode>
+      </node>
+      <node id="65">
+        <label>OpenGLES/ES1/gl.h</label>
+      </node>
+      <node id="66">
+        <label>Parser3DProtocol.h</label>
+        <link refid="_parser3_d_protocol_8h_source"/>
+        <childnode refid="65" relation="include">
+        </childnode>
+      </node>
+      <node id="63">
+        <label>Object3D.h</label>
+        <link refid="_object3_d_8h_source"/>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+        <childnode refid="66" relation="include">
+        </childnode>
+      </node>
+      <node id="62">
+        <label>MessageUI/MessageUI.h</label>
+      </node>
+      <node id="64">
+        <label>Foundation/Foundation.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="67">
+        <label>Classes/Object3DParametersViewController.m</label>
+        <link refid="Object3DParametersViewController.m"/>
+        <childnode refid="67" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="interface_object3_d_parameters_view_controller_07_08" prot="public">Object3DParametersViewController()</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#import<sp/>&quot;Object3DParametersViewController.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&quot;Object3D.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="keyword">@interface<sp/></highlight><highlight class="normal"><ref refid="interface_object3_d_parameters_view_controller" kindref="compound" tooltip="This class is the view controller for the parametersView.">Object3DParametersViewController</ref><sp/>()<sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal">-<sp/>(void)<ref refid="interface_object3_d_parameters_view_controller_1a7fec7383cff456b674fee88bfa92c36b" kindref="member" tooltip="Refresh the view according to the parameters of the Object3D instance hold.">refreshView</ref>;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal">-<sp/>(void)<ref refid="interface_object3_d_parameters_view_controller_1a7957d65b85a530b32aaf44343e9e3655" kindref="member" tooltip="Enable the buttons, sliders and textfields.">enableUI</ref>;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">-<sp/>(void)<ref refid="interface_object3_d_parameters_view_controller_1a62308dd9f545a3c621f13fa66e214d30" kindref="member" tooltip="Disable the buttons, sliders and textfields.">disableUI</ref>;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">@implementation<sp/></highlight><highlight class="normal"><ref refid="interface_object3_d_parameters_view_controller" kindref="compound" tooltip="This class is the view controller for the parametersView.">Object3DParametersViewController</ref></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">@synthesize</highlight><highlight class="normal"><sp/><ref refid="interface_object3_d_parameters_view_controller_1aa5ed4276fcd2ea0cb4ee6e09d3dca265" kindref="member">delegate</ref><sp/><sp/>=_delegate;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">@synthesize</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">object</highlight><highlight class="normal"><sp/>=<sp/>_object;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">@synthesize</highlight><highlight class="normal"><sp/><ref refid="interface_object3_d_parameters_view_controller_1a5857494925c30e16b6870faf646ae9df" kindref="member" tooltip="The markerID detected.">markerID</ref><sp/>=<sp/>_markerID;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">@synthesize</highlight><highlight class="normal"><sp/><ref refid="interface_object3_d_parameters_view_controller_1aa8d0a8a0965ae0aee0539b40628c07ef" kindref="member">saveButton</ref><sp/>=<sp/>_saveButton;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">@synthesize</highlight><highlight class="normal"><sp/><ref refid="interface_object3_d_parameters_view_controller_1a9e32afa9605260782255155d14b9caa3" kindref="member">sendMailButton</ref><sp/>=<sp/>_sendMailButton;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">@synthesize</highlight><highlight class="normal"><sp/><ref refid="interface_object3_d_parameters_view_controller_1aaecdb70abd3e3a37cb77924768c665fd" kindref="member">descriptionLabel</ref><sp/>=<sp/>_descriptionLabel;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keyword">@synthesize</highlight><highlight class="normal"><sp/><ref refid="interface_object3_d_parameters_view_controller_1a570d3810997c82313a4a67432ef0bcb4" kindref="member">xRotationSlider</ref><sp/>=<sp/>_xRotationSlider;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keyword">@synthesize</highlight><highlight class="normal"><sp/><ref refid="interface_object3_d_parameters_view_controller_1a9a81eed92cd8186ee33e2969f56d79f7" kindref="member">yRotationSlider</ref><sp/>=<sp/>_yRotationSlider;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keyword">@synthesize</highlight><highlight class="normal"><sp/><ref refid="interface_object3_d_parameters_view_controller_1aae4e3ae7ca4d8eee94ecaf6a16491793" kindref="member">zRotationSlider</ref><sp/>=<sp/>_zRotationSlider;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keyword">@synthesize</highlight><highlight class="normal"><sp/><ref refid="interface_object3_d_parameters_view_controller_1a8a97c5b3b71756bbb8a0c1f7dba5dfef" kindref="member">zTranslationSlider</ref><sp/>=<sp/>_zTranslationSlider;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keyword">@synthesize</highlight><highlight class="normal"><sp/><ref refid="interface_object3_d_parameters_view_controller_1ab8a3dcd36d6f693a5425cd195d74acdb" kindref="member">scaleFactorSlider</ref><sp/>=<sp/>_scaleFactorSlider;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">@synthesize</highlight><highlight class="normal"><sp/><ref refid="interface_object3_d_parameters_view_controller_1adaf8ec138a67507446109309f201e71d" kindref="member">xRotationTextField</ref><sp/>=<sp/>_xRotationTextField;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keyword">@synthesize</highlight><highlight class="normal"><sp/><ref refid="interface_object3_d_parameters_view_controller_1af951ff5a29bb178fb99bd7fd94a888a7" kindref="member">yRotationTextField</ref><sp/>=<sp/>_yRotationTextField;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="keyword">@synthesize</highlight><highlight class="normal"><sp/><ref refid="interface_object3_d_parameters_view_controller_1a70a94afb25fad535b1efe6483e8d6ef1" kindref="member">zRotationTextField</ref><sp/>=<sp/>_zRotationTextField;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="keyword">@synthesize</highlight><highlight class="normal"><sp/><ref refid="interface_object3_d_parameters_view_controller_1ab6e7ab8e75a9a0b5079f5401403a2d2a" kindref="member">zTranslationTextField</ref><sp/>=<sp/>_zTranslationTextField;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="keyword">@synthesize</highlight><highlight class="normal"><sp/><ref refid="interface_object3_d_parameters_view_controller_1a4a3d46f003380d02a9ccb25c83d3b09b" kindref="member">scaleFactorTextField</ref><sp/>=<sp/>_scaleFactorTextField;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>mark<sp/>-</highlight></codeline>
+<codeline lineno="45"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#pragma<sp/>mark<sp/>Object<sp/>loading</highlight></codeline>
+<codeline lineno="46"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal">-<sp/>(void)loadObject:(<ref refid="interface_object3_d" kindref="compound" tooltip="This class is the internal representation of an object you want to display in Virtual...">Object3D</ref><sp/>*)object<sp/>withMarkerID:(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)markerID<sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.object<sp/>=<sp/>object;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.markerID<sp/>=<sp/><ref refid="interface_object3_d_parameters_view_controller_1a5857494925c30e16b6870faf646ae9df" kindref="member" tooltip="The markerID detected.">markerID</ref>;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>refreshView];</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>mark<sp/>-</highlight></codeline>
+<codeline lineno="54"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#pragma<sp/>mark<sp/>Display</highlight></codeline>
+<codeline lineno="55"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal">-<sp/>(void)<ref refid="interface_object3_d_parameters_view_controller_1a7fec7383cff456b674fee88bfa92c36b" kindref="member" tooltip="Refresh the view according to the parameters of the Object3D instance hold.">refreshView</ref><sp/>{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">self</highlight><highlight class="normal">.<ref refid="interface_object3_d_parameters_view_controller_1a5857494925c30e16b6870faf646ae9df" kindref="member" tooltip="The markerID detected.">markerID</ref><sp/>==<sp/>-1)<sp/>{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.descriptionLabel.text<sp/>=<sp/></highlight><highlight class="stringliteral">@&quot;No<sp/>markers<sp/>detected&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>disableUI];</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!</highlight><highlight class="keyword">self</highlight><highlight class="normal">.</highlight><highlight class="keywordtype">object</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.descriptionLabel.text<sp/>=<sp/>[NSString<sp/>stringWithFormat:@&quot;No<sp/>object<sp/>associated<sp/>to<sp/>marker<sp/>number<sp/>%d&quot;,<sp/>self.markerID];</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>disableUI];</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>enableUI];</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.descriptionLabel.text<sp/>=<sp/>[NSString<sp/>stringWithFormat:@&quot;Object<sp/>named<sp/>%@<sp/>and<sp/>associated<sp/>to<sp/>marker<sp/>number<sp/>%d&quot;,</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.object.name,<sp/>self.markerID];</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.xRotationSlider.value<sp/>=<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.object.xRotation;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.yRotationSlider.value<sp/>=<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.object.yRotation;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.zRotationSlider.value<sp/>=<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.object.zRotation;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.zTranslationSlider.value<sp/>=<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.object.zTranslation;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.scaleFactorSlider.value<sp/>=<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.object.scaleFactor;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.xRotationTextField.text<sp/>=<sp/>[NSString<sp/>stringWithFormat:@&quot;%.2f&quot;,<sp/>self.object.xRotation];</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.yRotationTextField.text<sp/>=<sp/>[NSString<sp/>stringWithFormat:@&quot;%.2f&quot;,<sp/>self.object.yRotation];</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.zRotationTextField.text<sp/>=<sp/>[NSString<sp/>stringWithFormat:@&quot;%.2f&quot;,<sp/>self.object.zRotation];</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.zTranslationTextField.text<sp/>=<sp/>[NSString<sp/>stringWithFormat:@&quot;%.2f&quot;,<sp/>self.object.zTranslation];</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.scaleFactorTextField.text<sp/>=<sp/>[NSString<sp/>stringWithFormat:@&quot;%.2f&quot;,<sp/>self.object.scaleFactor];</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal">-<sp/>(void)<ref refid="interface_object3_d_parameters_view_controller_1a62308dd9f545a3c621f13fa66e214d30" kindref="member" tooltip="Disable the buttons, sliders and textfields.">disableUI</ref><sp/>{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.saveButton.enabled<sp/>=<sp/>NO;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.sendMailButton.enabled<sp/>=<sp/>NO;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.xRotationSlider.enabled<sp/>=<sp/>NO;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.yRotationSlider.enabled<sp/>=<sp/>NO;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.zRotationSlider.enabled<sp/>=<sp/>NO;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.zTranslationSlider.enabled<sp/>=<sp/>NO;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.scaleFactorSlider.enabled<sp/>=<sp/>NO;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.xRotationTextField.enabled<sp/>=<sp/>NO;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.yRotationTextField.enabled<sp/>=<sp/>NO;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.zRotationTextField.enabled<sp/>=<sp/>NO;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.zTranslationTextField.enabled<sp/>=<sp/>NO;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.scaleFactorTextField.enabled<sp/>=<sp/>NO;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal">-<sp/>(void)<ref refid="interface_object3_d_parameters_view_controller_1a7957d65b85a530b32aaf44343e9e3655" kindref="member" tooltip="Enable the buttons, sliders and textfields.">enableUI</ref><sp/>{</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.saveButton.enabled<sp/>=<sp/>YES;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.sendMailButton.enabled<sp/>=<sp/>YES;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.xRotationSlider.enabled<sp/>=<sp/>YES;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.yRotationSlider.enabled<sp/>=<sp/>YES;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.zRotationSlider.enabled<sp/>=<sp/>YES;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.zTranslationSlider.enabled<sp/>=<sp/>YES;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.scaleFactorSlider.enabled<sp/>=<sp/>YES;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.xRotationTextField.enabled<sp/>=<sp/>YES;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.yRotationTextField.enabled<sp/>=<sp/>YES;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.zRotationTextField.enabled<sp/>=<sp/>YES;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.zTranslationTextField.enabled<sp/>=<sp/>YES;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.scaleFactorTextField.enabled<sp/>=<sp/>YES;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal">-<sp/>(BOOL)textFieldShouldReturn:(UITextField<sp/>*)textField<sp/>{</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[textField<sp/>resignFirstResponder];</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>YES;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>mark<sp/>-</highlight></codeline>
+<codeline lineno="119"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#pragma<sp/>mark<sp/>Object<sp/>modifying</highlight></codeline>
+<codeline lineno="120"><highlight class="preprocessor"></highlight><highlight class="normal">-<sp/>(IBAction)xRotationSliderValueChanged:(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">)sender<sp/>{</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.object.xRotation<sp/>=<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.xRotationSlider.value;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>refreshView];</highlight></codeline>
+<codeline lineno="123"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="124"><highlight class="normal">-<sp/>(IBAction)yRotationSliderValueChanged:(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">)sender<sp/>{</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.object.yRotation<sp/>=<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.yRotationSlider.value;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>refreshView];</highlight></codeline>
+<codeline lineno="127"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="128"><highlight class="normal">-<sp/>(IBAction)zRotationSliderValueChanged:(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">)sender<sp/>{</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.object.zRotation<sp/>=<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.zRotationSlider.value;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>refreshView];</highlight></codeline>
+<codeline lineno="131"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="132"><highlight class="normal">-<sp/>(IBAction)zTranslationSliderValueChanged:(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">)sender<sp/>{</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.object.zTranslation<sp/>=<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.zTranslationSlider.value;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>refreshView];</highlight></codeline>
+<codeline lineno="135"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="136"><highlight class="normal">-<sp/>(IBAction)scaleFactorSliderValueChanged:(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">)sender<sp/>{</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.object.scaleFactor<sp/>=<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.scaleFactorSlider.value;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>refreshView];</highlight></codeline>
+<codeline lineno="139"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal">-<sp/>(IBAction)xRotationTextFieldValueChanged:(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">)sender<sp/>{</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.object.xRotation<sp/>=<sp/>[</highlight><highlight class="keyword">self</highlight><highlight class="normal">.xRotationTextField.text<sp/>floatValue];</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>refreshView];</highlight></codeline>
+<codeline lineno="144"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal">-<sp/>(IBAction)yRotationTextFieldValueChanged:(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">)sender<sp/>{</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.object.yRotation<sp/>=<sp/>[</highlight><highlight class="keyword">self</highlight><highlight class="normal">.yRotationTextField.text<sp/>floatValue];</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>refreshView];</highlight></codeline>
+<codeline lineno="149"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal">-<sp/>(IBAction)zRotationTextFieldValueChanged:(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">)sender<sp/>{</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.object.zRotation<sp/>=<sp/>[</highlight><highlight class="keyword">self</highlight><highlight class="normal">.zRotationTextField.text<sp/>floatValue];</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>refreshView];</highlight></codeline>
+<codeline lineno="154"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal">-<sp/>(IBAction)zTranslationTextFieldValueChanged:(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">)sender<sp/>{</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.object.zTranslation<sp/>=<sp/>[</highlight><highlight class="keyword">self</highlight><highlight class="normal">.zTranslationTextField.text<sp/>floatValue];</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>refreshView];</highlight></codeline>
+<codeline lineno="159"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal">-<sp/>(IBAction)scaleFactorTextFieldValueChanged:(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">)sender<sp/>{</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.object.scaleFactor<sp/>=<sp/>[</highlight><highlight class="keyword">self</highlight><highlight class="normal">.scaleFactorTextField.text<sp/>floatValue];</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>refreshView];</highlight></codeline>
+<codeline lineno="164"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>mark<sp/>-</highlight></codeline>
+<codeline lineno="167"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#pragma<sp/>mark<sp/>save/mail</highlight></codeline>
+<codeline lineno="168"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal">-<sp/>(IBAction)save:(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">)sender<sp/>{</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[</highlight><highlight class="keyword">self</highlight><highlight class="normal">.object<sp/>writeInDocumentDirectory];</highlight></codeline>
+<codeline lineno="171"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal">-<sp/>(NSString<sp/>*)applicationDocumentsDirectory<sp/>{</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/>NSArray<sp/>*paths<sp/>=<sp/></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,<sp/>NSUserDomainMask,<sp/>YES);</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/>NSString<sp/>*basePath<sp/>=<sp/>([paths<sp/>count]<sp/>&gt;<sp/>0)<sp/>?<sp/>[paths<sp/>objectAtIndex:0]<sp/>:<sp/>nil;</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>basePath;</highlight></codeline>
+<codeline lineno="179"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal">-<sp/>(IBAction)sendByMail:(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">)sender<sp/>{</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>save:self];</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>([MFMailComposeViewController<sp/>canSendMail])<sp/>{</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MFMailComposeViewController*<sp/>mailController<sp/>=<sp/>[[MFMailComposeViewController<sp/>alloc]<sp/>init];</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mailController.mailComposeDelegate<sp/>=<sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[mailController<sp/>setSubject:@&quot;Augmented<sp/>reality&quot;];</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[mailController<sp/>setMessageBody:@&quot;Hello<sp/>there.&quot;<sp/>isHTML:NO];</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[mailController<sp/>addAttachmentData:[NSData<sp/>dataWithContentsOfFile:self.object.xmlFilePath]<sp/></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mimeType:@&quot;text/xml&quot;<sp/>fileName:[</highlight><highlight class="keyword">self</highlight><highlight class="normal">.object.xmlFilePath<sp/>lastPathComponent]];</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[</highlight><highlight class="keyword">self</highlight><highlight class="normal">.delegate<sp/>object3DParametersViewControllerWillDisplayModalViewController:self];</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>presentModalViewController:mailController<sp/>animated:YES];</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[mailController<sp/>release];</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NSLog(</highlight><highlight class="stringliteral">@&quot;The<sp/>device<sp/>can&apos;t<sp/>send<sp/>mail&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="201"><highlight class="normal">-<sp/>(void)mailComposeController:(MFMailComposeViewController*)controller<sp/>didFinishWithResult:(MFMailComposeResult)result<sp/>error:(NSError*)error<sp/>{</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[</highlight><highlight class="keyword">self</highlight><highlight class="normal">.delegate<sp/>object3DParametersViewControllerWillDismissModalViewController:self];</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[</highlight><highlight class="keyword">self</highlight><highlight class="normal"><sp/>dismissModalViewControllerAnimated:YES];</highlight></codeline>
+<codeline lineno="204"><highlight class="normal">}<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>mark<sp/>-</highlight></codeline>
+<codeline lineno="207"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#pragma<sp/>mark<sp/>Memory<sp/>managment</highlight></codeline>
+<codeline lineno="208"><highlight class="preprocessor"></highlight><highlight class="normal">-<sp/>(void)didReceiveMemoryWarning<sp/>{</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Releases<sp/>the<sp/>view<sp/>if<sp/>it<sp/>doesn&apos;t<sp/>have<sp/>a<sp/>superview.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/>[</highlight><highlight class="keyword">super</highlight><highlight class="normal"><sp/>didReceiveMemoryWarning];</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Release<sp/>any<sp/>cached<sp/>data,<sp/>images,<sp/>etc<sp/>that<sp/>aren&apos;t<sp/>in<sp/>use.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal">-<sp/>(void)viewDidUnload<sp/>{</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/>[</highlight><highlight class="keyword">super</highlight><highlight class="normal"><sp/>viewDidUnload];</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Release<sp/>any<sp/>retained<sp/>subviews<sp/>of<sp/>the<sp/>main<sp/>view.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.xRotationSlider<sp/>=<sp/>nil;</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.yRotationSlider<sp/>=<sp/>nil;</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.zRotationSlider<sp/>=<sp/>nil;</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.scaleFactorSlider<sp/>=<sp/>nil;</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.xRotationTextField<sp/>=<sp/>nil;</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.yRotationTextField<sp/>=<sp/>nil;</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.zRotationTextField<sp/>=<sp/>nil;</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">self</highlight><highlight class="normal">.scaleFactorTextField<sp/>=<sp/>nil;</highlight></codeline>
+<codeline lineno="226"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal">-<sp/>(void)dealloc<sp/>{</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/>[</highlight><highlight class="keyword">super</highlight><highlight class="normal"><sp/>dealloc];</highlight></codeline>
+<codeline lineno="231"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight><highlight class="keyword">@end</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.m"/>
+  </compounddef>
+</doxygen>

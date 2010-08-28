@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="_e_a_g_l_view_8h" kind="file">
+    <compoundname>EAGLView.h</compoundname>
+    <includes local="no">UIKit/UIKit.h</includes>
+    <includes local="no">QuartzCore/QuartzCore.h</includes>
+    <includes local="no">OpenGLES/EAGL.h</includes>
+    <includes local="no">OpenGLES/ES1/gl.h</includes>
+    <includes local="no">OpenGLES/ES1/glext.h</includes>
+    <includedby refid="_v_r_view_controller_8m" local="yes">Classes/VRViewController.m</includedby>
+    <incdepgraph>
+      <node id="16">
+        <label>OpenGLES/ES1/gl.h</label>
+      </node>
+      <node id="15">
+        <label>OpenGLES/EAGL.h</label>
+      </node>
+      <node id="13">
+        <label>UIKit/UIKit.h</label>
+      </node>
+      <node id="17">
+        <label>OpenGLES/ES1/glext.h</label>
+      </node>
+      <node id="12">
+        <label>Classes/EAGLView.h</label>
+        <link refid="EAGLView.h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>QuartzCore/QuartzCore.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="19">
+        <label>Classes/VRViewController.m</label>
+      </node>
+      <node id="18">
+        <label>Classes/EAGLView.h</label>
+        <link refid="EAGLView.h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="interface_e_a_g_l_view" prot="public">EAGLView</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#import<sp/>&lt;UIKit/UIKit.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&lt;QuartzCore/QuartzCore.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&lt;OpenGLES/EAGL.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&lt;OpenGLES/ES1/gl.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&lt;OpenGLES/ES1/glext.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">@class</highlight><highlight class="normal"><sp/><ref refid="interface_object3_d" kindref="compound" tooltip="This class is the internal representation of an object you want to display in Virtual...">Object3D</ref>;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="interface_e_a_g_l_view" refkind="compound"><highlight class="keyword">@interface<sp/></highlight><highlight class="normal"><ref refid="interface_e_a_g_l_view" kindref="compound" tooltip="This view is used to display 3D models using OpenGL ES.">EAGLView</ref><sp/>:<sp/>UIView</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">@private</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*_projectionMatrix;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*_modelViewMatrix;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*The<sp/>pixel<sp/>dimensions<sp/>of<sp/>the<sp/>backbuffer*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GLint<sp/>backingWidth;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GLint<sp/>backingHeight;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EAGLContext<sp/>*context;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*OpenGL<sp/>names<sp/>for<sp/>the<sp/>renderbuffer<sp/>and<sp/>framebuffers<sp/>used<sp/>to<sp/>render<sp/>to<sp/>this<sp/>view*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GLuint<sp/>viewRenderbuffer,<sp/>viewFramebuffer;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*OpenGL<sp/>name<sp/>for<sp/>the<sp/>depth<sp/>buffer<sp/>that<sp/>is<sp/>attached<sp/>to<sp/>viewFramebuffer,<sp/>if<sp/>it<sp/>exists<sp/>(0<sp/>if<sp/>it<sp/>does<sp/>not<sp/>exist)*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GLuint<sp/>depthRenderbuffer;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GLuint<sp/>textures[1];</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*The<sp/>3DObject<sp/>that<sp/>we<sp/>draw<sp/>on<sp/>the<sp/>view*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="interface_object3_d" kindref="compound" tooltip="This class is the internal representation of an object you want to display in Virtual...">Object3D</ref><sp/>*_object;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*Animating*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BOOL<sp/>animating;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="43"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="47" refid="interface_e_a_g_l_view_1af85f4a42bac4d7a1a9eb1dbb17599c57" refkind="member"><highlight class="normal">@property<sp/>(nonatomic,<sp/>assign,<sp/>setter=setProjectionMatrix:)<sp/>float<sp/>*projectionMatrix;</highlight></codeline>
+<codeline lineno="51" refid="interface_e_a_g_l_view_1a7366a72beb8803d6f55a847c1e617273" refkind="member"><highlight class="normal">@property<sp/>(nonatomic,<sp/>assign)<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>*modelViewMatrix;</highlight></codeline>
+<codeline lineno="55" refid="interface_e_a_g_l_view_1a5ffa8b552d166a08a3d91b4c12072fb3" refkind="member"><highlight class="normal">@property<sp/>(nonatomic,<sp/>retain)<sp/><ref refid="interface_object3_d" kindref="compound" tooltip="This class is the internal representation of an object you want to display in Virtual...">Object3D</ref><sp/>*</highlight><highlight class="keywordtype">object</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal">-<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)drawView;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal">-<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)startAnimating;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal">-<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)stopAnimating;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal">@end</highlight></codeline>
+    </programlisting>
+    <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/EAGLView.h"/>
+  </compounddef>
+</doxygen>

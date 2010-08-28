@@ -1,0 +1,330 @@
+<!DOCTYPE html><html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<title>Object3DParametersViewController Class Reference</title>
+<meta id="Generator" name="Generator" content="Doxyclean">
+<meta id="GeneratorVersion" name="GeneratorVersion" content="2.2">
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<link rel="stylesheet" type="text/css" media="screen" href="../css/screen.css">
+<link rel="stylesheet" type="text/css" media="print" href="../css/print.css">
+<script type="text/javascript">
+				function toggleTOC() {
+					var toc = document.getElementById('tableOfContents');
+					var tocButton = document.getElementById('toc_button');
+					var contents = document.getElementById('contents');
+					if (toc.style.display == 'block') {
+						toc.style.display = 'none';
+						contents.className = '';
+						tocButton.className = '';
+					} else {
+						toc.style.display = 'block';
+						contents.className = 'tableOfContentsOpen';
+						tocButton.className = 'open';
+					}
+				}
+				
+				function toggleTOCItem() {
+					var listItem = event.srcElement;
+					var sublist = listItem.getElementsByTagName('ul')[0];
+					if (sublist.style.display == 'block') {
+						sublist.style.display = 'none';
+						listItem.className = 'expandable';
+					} else {
+						sublist.style.display = 'block';
+						listItem.className = 'expandable expanded';
+					}
+				}
+				
+				function jumpTo() {
+					selectedItem = event.srcElement.options[event.srcElement.selectedIndex].value;
+					window.location = "#" + selectedItem;
+				}
+			</script>
+</head>
+<body>
+<header id="projectHeader"><h1><a href="../index.html">VRToolKit Reference Library</a></h1></header><header id="fileHeader"><h1><a href="#classTitle">Object3DParametersViewController Class Reference</a></h1></header><nav id="buttons"><ul>
+<li id="toc_button"><button id="table_of_contents" onclick="toggleTOC()">Table of Contents</button></li>
+<li id="jumpto_button"><select id="jumpto" onchange="jumpTo()"><option value="classTitle">Jump To...</option>
+<option value="overview">Overview</option>
+<option value="tasks">Tasks</option>
+<option value="properties">Properties</option>
+<option value="delegate">    delegate</option>
+<option value="glView">    glView</option>
+<option value="saveButton">    saveButton</option>
+<option value="sendMailButton">    sendMailButton</option>
+<option value="descriptionLabel">    descriptionLabel</option>
+<option value="xRotationSlider">    xRotationSlider</option>
+<option value="yRotationSlider">    yRotationSlider</option>
+<option value="zRotationSlider">    zRotationSlider</option>
+<option value="zTranslationSlider">    zTranslationSlider</option>
+<option value="scaleFactorSlider">    scaleFactorSlider</option>
+<option value="xRotationTextField">    xRotationTextField</option>
+<option value="yRotationTextField">    yRotationTextField</option>
+<option value="zRotationTextField">    zRotationTextField</option>
+<option value="zTranslationTextField">    zTranslationTextField</option>
+<option value="scaleFactorTextField">    scaleFactorTextField</option>
+<option value="instanceMethods">Instance Methods</option>
+<option value="refreshView">    - refreshView</option>
+<option value="save:">    - save:</option>
+<option value="sendByMail:">    - sendByMail:</option>
+<option value="xRotationSliderValueChanged:">    - xRotationSliderValueChanged:</option>
+<option value="yRotationSliderValueChanged:">    - yRotationSliderValueChanged:</option>
+<option value="zRotationSliderValueChanged:">    - zRotationSliderValueChanged:</option>
+<option value="zTranslationSliderValueChanged:">    - zTranslationSliderValueChanged:</option>
+<option value="scaleFactorSliderValueChanged:">    - scaleFactorSliderValueChanged:</option>
+<option value="xRotationTextFieldValueChanged:">    - xRotationTextFieldValueChanged:</option>
+<option value="yRotationTextFieldValueChanged:">    - yRotationTextFieldValueChanged:</option>
+<option value="zRotationTextFieldValueChanged:">    - zRotationTextFieldValueChanged:</option>
+<option value="zTranslationTextFieldValueChanged:">    - zTranslationTextFieldValueChanged:</option>
+<option value="scaleFactorTextFieldValueChanged:">    - scaleFactorTextFieldValueChanged:</option>
+<option value="enableUI">    - enableUI</option>
+<option value="disableUI">    - disableUI</option></select></li>
+</ul></nav><nav id="tableOfContents" style="display: none;"><ul>
+<li><a href="#overview">Overview</a></li>
+<li class="expandable" id="tocTasks" onclick="toggleTOCItem()">
+<a href="#tasks">Tasks</a><ul style="display: none;">
+<li><a href="#Other">Other</a></li>
+<li><a href="#Other">Other</a></li>
+</ul>
+</li>
+<li class="expandable" id="tocProperties" onclick="toggleTOCItem()">
+<a href="#properties">Properties</a><ul style="display: none;">
+<li><a href="#delegate">delegate</a></li>
+<li><a href="#glView">glView</a></li>
+<li><a href="#saveButton">saveButton</a></li>
+<li><a href="#sendMailButton">sendMailButton</a></li>
+<li><a href="#descriptionLabel">descriptionLabel</a></li>
+<li><a href="#xRotationSlider">xRotationSlider</a></li>
+<li><a href="#yRotationSlider">yRotationSlider</a></li>
+<li><a href="#zRotationSlider">zRotationSlider</a></li>
+<li><a href="#zTranslationSlider">zTranslationSlider</a></li>
+<li><a href="#scaleFactorSlider">scaleFactorSlider</a></li>
+<li><a href="#xRotationTextField">xRotationTextField</a></li>
+<li><a href="#yRotationTextField">yRotationTextField</a></li>
+<li><a href="#zRotationTextField">zRotationTextField</a></li>
+<li><a href="#zTranslationTextField">zTranslationTextField</a></li>
+<li><a href="#scaleFactorTextField">scaleFactorTextField</a></li>
+</ul>
+</li>
+<li class="expandable" id="tocInstanceMethods" onclick="toggleTOCItem()">
+<a href="#instanceMethods">Instance Methods</a><ul style="display: none;">
+<li><a href="#refreshView">refreshView</a></li>
+<li><a href="#save:">save:</a></li>
+<li><a href="#sendByMail:">sendByMail:</a></li>
+<li><a href="#xRotationSliderValueChanged:">xRotationSliderValueChanged:</a></li>
+<li><a href="#yRotationSliderValueChanged:">yRotationSliderValueChanged:</a></li>
+<li><a href="#zRotationSliderValueChanged:">zRotationSliderValueChanged:</a></li>
+<li><a href="#zTranslationSliderValueChanged:">zTranslationSliderValueChanged:</a></li>
+<li><a href="#scaleFactorSliderValueChanged:">scaleFactorSliderValueChanged:</a></li>
+<li><a href="#xRotationTextFieldValueChanged:">xRotationTextFieldValueChanged:</a></li>
+<li><a href="#yRotationTextFieldValueChanged:">yRotationTextFieldValueChanged:</a></li>
+<li><a href="#zRotationTextFieldValueChanged:">zRotationTextFieldValueChanged:</a></li>
+<li><a href="#zTranslationTextFieldValueChanged:">zTranslationTextFieldValueChanged:</a></li>
+<li><a href="#scaleFactorTextFieldValueChanged:">scaleFactorTextFieldValueChanged:</a></li>
+<li><a href="#enableUI">enableUI</a></li>
+<li><a href="#disableUI">disableUI</a></li>
+</ul>
+</li>
+</ul></nav><div id="contents">
+<h1 id="classTitle">Object3DParametersViewController Class Reference</h1>
+<table id="metadata">
+<tr class="alt">
+<th>Inherits from</th>
+<td><ul class="inheritance"><li>UIViewController</li></ul></td>
+</tr>
+<tr>
+<th>Conforms to</th>
+<td><ul><li>&lt;MFMailComposeViewControllerDelegate&gt;</li></ul></td>
+</tr>
+<tr class="alt">
+<th>Declared in</th>
+<td>Object3DParametersViewController.h</td>
+</tr>
+</table>
+<h2 id="overview">Overview</h2>
+<p>This class is the view controller for the parametersView. </p>
+<p>
+The parametersView is a GUI where you can modify different display settings for your 3D Objects and see the results of these modifications on the way your object is displayed. You can the save those settings and/or send them by mail to integrate them in another app for instance. </p>
+<h2 id="tasks">Tasks</h2>
+<ul id="tasksList">
+<li id="Other">
+<h3>Other</h3>
+<ul class="methods">
+<li>
+<span class="tooltipRegion"><code><a href="#delegate">delegate</a></code> <span class="specialType">property</span></span><span class="tooltip"></span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#glView">glView</a></code> <span class="specialType">property</span></span><span class="tooltip">The EAGLView instance the controller is modifying the displaay. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#saveButton">saveButton</a></code> <span class="specialType">property</span></span><span class="tooltip"></span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#sendMailButton">sendMailButton</a></code> <span class="specialType">property</span></span><span class="tooltip"></span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#descriptionLabel">descriptionLabel</a></code> <span class="specialType">property</span></span><span class="tooltip"></span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#xRotationSlider">xRotationSlider</a></code> <span class="specialType">property</span></span><span class="tooltip"></span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#yRotationSlider">yRotationSlider</a></code> <span class="specialType">property</span></span><span class="tooltip"></span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#zRotationSlider">zRotationSlider</a></code> <span class="specialType">property</span></span><span class="tooltip"></span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#zTranslationSlider">zTranslationSlider</a></code> <span class="specialType">property</span></span><span class="tooltip"></span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#scaleFactorSlider">scaleFactorSlider</a></code> <span class="specialType">property</span></span><span class="tooltip"></span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#xRotationTextField">xRotationTextField</a></code> <span class="specialType">property</span></span><span class="tooltip"></span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#yRotationTextField">yRotationTextField</a></code> <span class="specialType">property</span></span><span class="tooltip"></span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#zRotationTextField">zRotationTextField</a></code> <span class="specialType">property</span></span><span class="tooltip"></span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#zTranslationTextField">zTranslationTextField</a></code> <span class="specialType">property</span></span><span class="tooltip"></span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#scaleFactorTextField">scaleFactorTextField</a></code> <span class="specialType">property</span></span><span class="tooltip"></span>
+</li>
+</ul>
+</li>
+<li id="Other">
+<h3>Other</h3>
+<ul class="methods">
+<li>
+<span class="tooltipRegion"><code><a href="#refreshView">- refreshView</a></code></span><span class="tooltip">Refresh the view according to the parameters of the Object3D instance hold. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#save:">- save:</a></code></span><span class="tooltip">This method saves the settings by serializing the object and storing the xml file in the document directory. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#sendByMail:">- sendByMail:</a></code></span><span class="tooltip">This method send the xml file with the right settings by mail. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#xRotationSliderValueChanged:">- xRotationSliderValueChanged:</a></code></span><span class="tooltip"></span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#yRotationSliderValueChanged:">- yRotationSliderValueChanged:</a></code></span><span class="tooltip"></span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#zRotationSliderValueChanged:">- zRotationSliderValueChanged:</a></code></span><span class="tooltip"></span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#zTranslationSliderValueChanged:">- zTranslationSliderValueChanged:</a></code></span><span class="tooltip"></span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#scaleFactorSliderValueChanged:">- scaleFactorSliderValueChanged:</a></code></span><span class="tooltip"></span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#xRotationTextFieldValueChanged:">- xRotationTextFieldValueChanged:</a></code></span><span class="tooltip"></span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#yRotationTextFieldValueChanged:">- yRotationTextFieldValueChanged:</a></code></span><span class="tooltip"></span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#zRotationTextFieldValueChanged:">- zRotationTextFieldValueChanged:</a></code></span><span class="tooltip"></span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#zTranslationTextFieldValueChanged:">- zTranslationTextFieldValueChanged:</a></code></span><span class="tooltip"></span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#scaleFactorTextFieldValueChanged:">- scaleFactorTextFieldValueChanged:</a></code></span><span class="tooltip"></span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#enableUI">- enableUI</a></code></span><span class="tooltip">Enable the buttons, sliders and textfields. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#disableUI">- disableUI</a></code></span><span class="tooltip">Disable the buttons, sliders and textfields. </span>
+</li>
+</ul>
+</li>
+</ul>
+<section id="properties"><h2>Properties</h2>
+<section class="definition" id="delegate"><h3>delegate</h3>
+<code class="methodDeclaration">@property id&lt;ParametersDelegate&gt; delegate</code><h5>Declared In</h5>
+<code>Object3DParametersViewController.h</code></section><section class="definition" id="glView"><h3>glView</h3>
+<p>The <code><strong>EAGLView</strong></code> instance the controller is modifying the displaay. </p>
+<code class="methodDeclaration">@property EAGLView *glView</code><h5>Declared In</h5>
+<code>Object3DParametersViewController.h</code></section><section class="definition" id="saveButton"><h3>saveButton</h3>
+<code class="methodDeclaration">@property IBOutlet UIButton *saveButton</code><h5>Declared In</h5>
+<code>Object3DParametersViewController.h</code></section><section class="definition" id="sendMailButton"><h3>sendMailButton</h3>
+<code class="methodDeclaration">@property IBOutlet UIButton *sendMailButton</code><h5>Declared In</h5>
+<code>Object3DParametersViewController.h</code></section><section class="definition" id="descriptionLabel"><h3>descriptionLabel</h3>
+<code class="methodDeclaration">@property IBOutlet UILabel *descriptionLabel</code><h5>Declared In</h5>
+<code>Object3DParametersViewController.h</code></section><section class="definition" id="xRotationSlider"><h3>xRotationSlider</h3>
+<code class="methodDeclaration">@property IBOutlet UISlider *xRotationSlider</code><h5>Declared In</h5>
+<code>Object3DParametersViewController.h</code></section><section class="definition" id="yRotationSlider"><h3>yRotationSlider</h3>
+<code class="methodDeclaration">@property IBOutlet UISlider *yRotationSlider</code><h5>Declared In</h5>
+<code>Object3DParametersViewController.h</code></section><section class="definition" id="zRotationSlider"><h3>zRotationSlider</h3>
+<code class="methodDeclaration">@property IBOutlet UISlider *zRotationSlider</code><h5>Declared In</h5>
+<code>Object3DParametersViewController.h</code></section><section class="definition" id="zTranslationSlider"><h3>zTranslationSlider</h3>
+<code class="methodDeclaration">@property IBOutlet UISlider *zTranslationSlider</code><h5>Declared In</h5>
+<code>Object3DParametersViewController.h</code></section><section class="definition" id="scaleFactorSlider"><h3>scaleFactorSlider</h3>
+<code class="methodDeclaration">@property IBOutlet UISlider *scaleFactorSlider</code><h5>Declared In</h5>
+<code>Object3DParametersViewController.h</code></section><section class="definition" id="xRotationTextField"><h3>xRotationTextField</h3>
+<code class="methodDeclaration">@property IBOutlet UITextField *xRotationTextField</code><h5>Declared In</h5>
+<code>Object3DParametersViewController.h</code></section><section class="definition" id="yRotationTextField"><h3>yRotationTextField</h3>
+<code class="methodDeclaration">@property IBOutlet UITextField *yRotationTextField</code><h5>Declared In</h5>
+<code>Object3DParametersViewController.h</code></section><section class="definition" id="zRotationTextField"><h3>zRotationTextField</h3>
+<code class="methodDeclaration">@property IBOutlet UITextField *zRotationTextField</code><h5>Declared In</h5>
+<code>Object3DParametersViewController.h</code></section><section class="definition" id="zTranslationTextField"><h3>zTranslationTextField</h3>
+<code class="methodDeclaration">@property IBOutlet UITextField *zTranslationTextField</code><h5>Declared In</h5>
+<code>Object3DParametersViewController.h</code></section><section class="definition" id="scaleFactorTextField"><h3>scaleFactorTextField</h3>
+<code class="methodDeclaration">@property IBOutlet UITextField *scaleFactorTextField</code><h5>Declared In</h5>
+<code>Object3DParametersViewController.h</code></section></section><section id="instanceMethods"><h2>Instance Methods</h2>
+<section class="definition" id="refreshView"><h3>refreshView</h3>
+<p>Refresh the view according to the parameters of the <code><strong>Object3D</strong></code> instance hold. </p>
+<code class="methodDeclaration">- (void)refreshView</code><h5>Declared In</h5>
+<code>Object3DParametersViewController.h</code></section><section class="definition" id="save:"><h3>save:</h3>
+<p>This method saves the settings by serializing the object and storing the xml file in the document directory. </p>
+<code class="methodDeclaration">- (IBAction)save:(id)<span class="parameter">sender</span> </code><h5>Declared In</h5>
+<code>Object3DParametersViewController.h</code></section><section class="definition" id="sendByMail:"><h3>sendByMail:</h3>
+<p>This method send the xml file with the right settings by mail. </p>
+<code class="methodDeclaration">- (IBAction)sendByMail:(id)<span class="parameter">sender</span> </code><h5>Discussion</h5>
+<p>Using this method you can retrieve the xml file and add it in a client app for instance where you don't want the user to be able to display the parametersView. </p>
+<h5>Declared In</h5>
+<code>Object3DParametersViewController.h</code></section><section class="definition" id="xRotationSliderValueChanged:"><h3>xRotationSliderValueChanged:</h3>
+<code class="methodDeclaration">- (IBAction)xRotationSliderValueChanged:(id)<span class="parameter">sender</span> </code><h5>Declared In</h5>
+<code>Object3DParametersViewController.h</code></section><section class="definition" id="yRotationSliderValueChanged:"><h3>yRotationSliderValueChanged:</h3>
+<code class="methodDeclaration">- (IBAction)yRotationSliderValueChanged:(id)<span class="parameter">sender</span> </code><h5>Declared In</h5>
+<code>Object3DParametersViewController.h</code></section><section class="definition" id="zRotationSliderValueChanged:"><h3>zRotationSliderValueChanged:</h3>
+<code class="methodDeclaration">- (IBAction)zRotationSliderValueChanged:(id)<span class="parameter">sender</span> </code><h5>Declared In</h5>
+<code>Object3DParametersViewController.h</code></section><section class="definition" id="zTranslationSliderValueChanged:"><h3>zTranslationSliderValueChanged:</h3>
+<code class="methodDeclaration">- (IBAction)zTranslationSliderValueChanged:(id)<span class="parameter">sender</span> </code><h5>Declared In</h5>
+<code>Object3DParametersViewController.h</code></section><section class="definition" id="scaleFactorSliderValueChanged:"><h3>scaleFactorSliderValueChanged:</h3>
+<code class="methodDeclaration">- (IBAction)scaleFactorSliderValueChanged:(id)<span class="parameter">sender</span> </code><h5>Declared In</h5>
+<code>Object3DParametersViewController.h</code></section><section class="definition" id="xRotationTextFieldValueChanged:"><h3>xRotationTextFieldValueChanged:</h3>
+<code class="methodDeclaration">- (IBAction)xRotationTextFieldValueChanged:(id)<span class="parameter">sender</span> </code><h5>Declared In</h5>
+<code>Object3DParametersViewController.h</code></section><section class="definition" id="yRotationTextFieldValueChanged:"><h3>yRotationTextFieldValueChanged:</h3>
+<code class="methodDeclaration">- (IBAction)yRotationTextFieldValueChanged:(id)<span class="parameter">sender</span> </code><h5>Declared In</h5>
+<code>Object3DParametersViewController.h</code></section><section class="definition" id="zRotationTextFieldValueChanged:"><h3>zRotationTextFieldValueChanged:</h3>
+<code class="methodDeclaration">- (IBAction)zRotationTextFieldValueChanged:(id)<span class="parameter">sender</span> </code><h5>Declared In</h5>
+<code>Object3DParametersViewController.h</code></section><section class="definition" id="zTranslationTextFieldValueChanged:"><h3>zTranslationTextFieldValueChanged:</h3>
+<code class="methodDeclaration">- (IBAction)zTranslationTextFieldValueChanged:(id)<span class="parameter">sender</span> </code><h5>Declared In</h5>
+<code>Object3DParametersViewController.h</code></section><section class="definition" id="scaleFactorTextFieldValueChanged:"><h3>scaleFactorTextFieldValueChanged:</h3>
+<code class="methodDeclaration">- (IBAction)scaleFactorTextFieldValueChanged:(id)<span class="parameter">sender</span> </code><h5>Declared In</h5>
+<code>Object3DParametersViewController.h</code></section><section class="definition" id="enableUI"><h3>enableUI</h3>
+<p>Enable the buttons, sliders and textfields. </p>
+<code class="methodDeclaration">- (void)enableUI</code><h5>Declared In</h5>
+<code>Object3DParametersViewController.m</code></section><section class="definition" id="disableUI"><h3>disableUI</h3>
+<p>Disable the buttons, sliders and textfields. </p>
+<code class="methodDeclaration">- (void)disableUI</code><h5>Declared In</h5>
+<code>Object3DParametersViewController.m</code></section></section><hr>
+<p id="lastUpdated">Last updated: 2010-8-17</p>
+</div>
+<footer id="breadcrumbs"><ul>
+<li><a href="../index.html">ARApi</a></li>
+<li><a href="#classTitle">Object3DParametersViewController Class Reference</a></li>
+</ul></footer>
+</body>
+</html>

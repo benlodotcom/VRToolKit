@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="dir_73d81b3fffa1ec46d54f01f64c979b2f" kind="dir">
+    <compoundname>Classes/XMLParser/</compoundname>
+    <innerfile refid="_g_data_x_m_l_node_8h">GDataXMLNode.h</innerfile>
+    <innerfile refid="_g_data_x_m_l_node_8m">GDataXMLNode.m</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/XMLParser/"/>
+  </compounddef>
+</doxygen>

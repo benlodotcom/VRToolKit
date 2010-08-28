@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="interface_wavefront_parser_07_08" kind="class" prot="public">
+    <compoundname>WavefrontParser()</compoundname>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="interface_wavefront_parser_1a7a3f36cfc1f2949ec948e41431e2e116" prot="public" static="yes" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void WavefrontParser()::centerGLfloatArray:numberOfFaces:</definition>
+        <argsstring>(GLfloat *array,[numberOfFaces] int numberOfFaces)</argsstring>
+        <name>centerGLfloatArray:numberOfFaces:</name>
+        <param>
+          <type>GLfloat *</type>
+          <declname>array</declname>
+        </param>
+        <param>
+          <attributes>[numberOfFaces]</attributes>
+          <type>int</type>
+          <declname>numberOfFaces</declname>
+        </param>
+        <briefdescription>
+<para>This method takes an array of vertices and translate them so that the shape represented is centered in (0,0). </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The array you want to center the vertices. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>numberOfFaces</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of faces of the 3D object. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/WavefrontParser.m" line="14"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_wavefront_parser_1aab4bc10afde783de9b27bea0c1c84ad5" prot="public" static="yes" const="no" explicit="no" inline="no" virt="virtual">
+        <type>GLfloat *</type>
+        <definition>GLfloat * WavefrontParser()::gLfloatArrayFromArray:usingIndexArray:</definition>
+        <argsstring>(NSArray *array,[usingIndexArray] NSArray *indexArray)</argsstring>
+        <name>gLfloatArrayFromArray:usingIndexArray:</name>
+        <param>
+          <type>NSArray *</type>
+          <declname>array</declname>
+        </param>
+        <param>
+          <attributes>[usingIndexArray]</attributes>
+          <type>NSArray *</type>
+          <declname>indexArray</declname>
+        </param>
+        <briefdescription>
+<para>This method creates an array merging an index and some data. </para>        </briefdescription>
+        <detaileddescription>
+<para>For instance if the array is: 1,2,7,9,0 and the index array is: 0,0,4 the array returned will be 1,1,9.<linebreak/>
+ This method is used to have an array of vertices corresponding to the faces of the 3D object. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The array containing datas </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>indexArray</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The array containig the indexes </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>an array created from the datas and the index </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/WavefrontParser.m" line="25"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_wavefront_parser_1abee7edbc94844989133ac455d1637cf1" prot="public" static="yes" const="no" explicit="no" inline="no" virt="virtual">
+        <type>GLfloat *</type>
+        <definition>GLfloat * WavefrontParser()::gLTexturesArrayFromArray:usingIndexArray:</definition>
+        <argsstring>(NSArray *array,[usingIndexArray] NSArray *indexArray)</argsstring>
+        <name>gLTexturesArrayFromArray:usingIndexArray:</name>
+        <param>
+          <type>NSArray *</type>
+          <declname>array</declname>
+        </param>
+        <param>
+          <attributes>[usingIndexArray]</attributes>
+          <type>NSArray *</type>
+          <declname>indexArray</declname>
+        </param>
+        <briefdescription>
+<para>This method creates an array merging an index and some data. </para>        </briefdescription>
+        <detaileddescription>
+<para>This method does the same job as (GLfloat *)gLfloatArrayFromArray:(NSArray *)array usingIndexArray:(NSArray *)indexArray but for the texture coordinate datas.<linebreak/>
+ We also do basic calculation to convert texture UV coordinates in ST coordinates so that openGL can understand them. This method is used to have an array of texture coordinates corresponding to the faces of the 3D object.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>array</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The array containing datas </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>indexArray</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The array containig the indexes </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>an array created from the datas and the index </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/WavefrontParser.m" line="38"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Private interface for the <ref refid="interface_wavefront_parser" kindref="compound">WavefrontParser</ref> class. </para>    </detaileddescription>
+    <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/WavefrontParser.m" line="6" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/WavefrontParser.m" bodystart="6" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="interface_wavefront_parser_1a7a3f36cfc1f2949ec948e41431e2e116" prot="public" virt="virtual"><scope>WavefrontParser()</scope><name>centerGLfloatArray:numberOfFaces:</name></member>
+      <member refid="interface_wavefront_parser_1aab4bc10afde783de9b27bea0c1c84ad5" prot="public" virt="virtual"><scope>WavefrontParser()</scope><name>gLfloatArrayFromArray:usingIndexArray:</name></member>
+      <member refid="interface_wavefront_parser_1abee7edbc94844989133ac455d1637cf1" prot="public" virt="virtual"><scope>WavefrontParser()</scope><name>gLTexturesArrayFromArray:usingIndexArray:</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

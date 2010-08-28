@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="protocol_parameters_delegate-p" kind="protocol" prot="public">
+    <compoundname>ParametersDelegate-p</compoundname>
+    <derivedcompoundref refid="interface_v_r_view_controller" prot="public" virt="non-virtual">VRViewController</derivedcompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="protocol_parameters_delegate-p_1a6e57e41c4410c0ab4632b2ad53185c5c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ParametersDelegate-p::object3DParametersViewControllerWillDisplayModalViewController:</definition>
+        <argsstring>(Object3DParametersViewController *controller)</argsstring>
+        <name>object3DParametersViewControllerWillDisplayModalViewController:</name>
+        <param>
+          <type><ref refid="interface_object3_d_parameters_view_controller" kindref="compound">Object3DParametersViewController</ref> *</type>
+          <declname>controller</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.h" line="9"/>
+      </memberdef>
+      <memberdef kind="function" id="protocol_parameters_delegate-p_1af199dc8fdfca4874f81e41a4759a6009" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ParametersDelegate-p::object3DParametersViewControllerWillDismissModalViewController:</definition>
+        <argsstring>(Object3DParametersViewController *controller)</argsstring>
+        <name>object3DParametersViewControllerWillDismissModalViewController:</name>
+        <param>
+          <type><ref refid="interface_object3_d_parameters_view_controller" kindref="compound">Object3DParametersViewController</ref> *</type>
+          <declname>controller</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.h" line="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="52">
+        <label>&lt;ParametersDelegate&gt;</label>
+      </node>
+      <node id="53">
+        <label>VRViewController</label>
+        <link refid="interface_v_r_view_controller"/>
+        <childnode refid="52" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.h" line="7" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.h" bodystart="7" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="protocol_parameters_delegate-p_1af199dc8fdfca4874f81e41a4759a6009" prot="public" virt="virtual"><scope>ParametersDelegate-p</scope><name>object3DParametersViewControllerWillDismissModalViewController:</name></member>
+      <member refid="protocol_parameters_delegate-p_1a6e57e41c4410c0ab4632b2ad53185c5c" prot="public" virt="virtual"><scope>ParametersDelegate-p</scope><name>object3DParametersViewControllerWillDisplayModalViewController:</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

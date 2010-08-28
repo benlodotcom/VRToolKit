@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="class_a_r_tool_kit_plus_1_1_logger" kind="class" prot="public">
+    <compoundname>ARToolKitPlus::Logger</compoundname>
+    <derivedcompoundref refid="class_my_logger" prot="public" virt="non-virtual">MyLogger</derivedcompoundref>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/ARToolKitPlusWrapper.mm" line="36"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

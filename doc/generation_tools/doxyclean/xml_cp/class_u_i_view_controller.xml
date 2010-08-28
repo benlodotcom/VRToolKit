@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="class_u_i_view_controller" kind="class" prot="public">
+    <compoundname>UIViewController</compoundname>
+    <derivedcompoundref refid="interface_object3_d_parameters_view_controller" prot="public" virt="non-virtual">Object3DParametersViewController</derivedcompoundref>
+    <derivedcompoundref refid="interface_v_r_view_controller" prot="public" virt="non-virtual">VRViewController</derivedcompoundref>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="66">
+        <label>Object3DParametersViewController</label>
+        <link refid="interface_object3_d_parameters_view_controller"/>
+        <childnode refid="65" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="67">
+        <label>VRViewController</label>
+        <link refid="interface_v_r_view_controller"/>
+        <childnode refid="65" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="65">
+        <label>UIViewController</label>
+      </node>
+    </inheritancegraph>
+    <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.h" line="24"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

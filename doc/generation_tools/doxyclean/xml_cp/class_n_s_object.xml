@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="class_n_s_object" kind="class" prot="public">
+    <compoundname>NSObject</compoundname>
+    <derivedcompoundref refid="interface_a_r_tool_kit_plus_wrapper" prot="public" virt="non-virtual">ARToolKitPlusWrapper</derivedcompoundref>
+    <derivedcompoundref refid="interface_g_data_x_m_l_document" prot="public" virt="non-virtual">GDataXMLDocument</derivedcompoundref>
+    <derivedcompoundref refid="interface_g_data_x_m_l_node" prot="public" virt="non-virtual">GDataXMLNode</derivedcompoundref>
+    <derivedcompoundref refid="interface_object3_d" prot="public" virt="non-virtual">Object3D</derivedcompoundref>
+    <derivedcompoundref refid="interface_v_r_tool_kit_app_delegate" prot="public" virt="non-virtual">VRToolKitAppDelegate</derivedcompoundref>
+    <derivedcompoundref refid="interface_wavefront_parser" prot="public" virt="non-virtual">WavefrontParser</derivedcompoundref>
+    <derivedcompoundref refid="interface_wavefront_parser2" prot="public" virt="non-virtual">WavefrontParser2</derivedcompoundref>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="36">
+        <label>ARToolKitPlusWrapper</label>
+        <link refid="interface_a_r_tool_kit_plus_wrapper"/>
+        <childnode refid="35" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>Object3D</label>
+        <link refid="interface_object3_d"/>
+        <childnode refid="35" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>NSObject</label>
+      </node>
+      <node id="38">
+        <label>WavefrontParser</label>
+        <link refid="interface_wavefront_parser"/>
+        <childnode refid="35" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/ARToolKitPlusWrapper.h" line="66"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

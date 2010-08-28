@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="interface_a_r_tool_kit_plus_wrapper_07_08" kind="class" prot="public">
+    <compoundname>ARToolKitPlusWrapper()</compoundname>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="interface_a_r_tool_kit_plus_wrapper_1aa39d3a247f0b60b8d9bed37089717af0" prot="protected" static="no" mutable="no">
+        <type>ARToolKitPlus::TrackerSingleMarker *</type>
+        <definition>ARToolKitPlus::TrackerSingleMarker* ARToolKitPlusWrapper()::tracker</definition>
+        <argsstring></argsstring>
+        <name>tracker</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The Object from ARToolKitPlus library responsible for detecting markers </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/ARToolKitPlusWrapper.mm" line="23" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/ARToolKitPlusWrapper.mm" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Private interface for <ref refid="interface_a_r_tool_kit_plus_wrapper" kindref="compound">ARToolKitPlusWrapper</ref> </para>    </detaileddescription>
+    <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/ARToolKitPlusWrapper.mm" line="24" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/ARToolKitPlusWrapper.mm" bodystart="24" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="interface_a_r_tool_kit_plus_wrapper_1aa39d3a247f0b60b8d9bed37089717af0" prot="protected" virt="non-virtual"><scope>ARToolKitPlusWrapper()</scope><name>tracker</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

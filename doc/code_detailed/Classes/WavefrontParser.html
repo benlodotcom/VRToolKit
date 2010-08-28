@@ -1,0 +1,183 @@
+<!DOCTYPE html><html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<title>WavefrontParser Class Reference</title>
+<meta id="Generator" name="Generator" content="Doxyclean">
+<meta id="GeneratorVersion" name="GeneratorVersion" content="2.2">
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<link rel="stylesheet" type="text/css" media="screen" href="../css/screen.css">
+<link rel="stylesheet" type="text/css" media="print" href="../css/print.css">
+<script type="text/javascript">
+				function toggleTOC() {
+					var toc = document.getElementById('tableOfContents');
+					var tocButton = document.getElementById('toc_button');
+					var contents = document.getElementById('contents');
+					if (toc.style.display == 'block') {
+						toc.style.display = 'none';
+						contents.className = '';
+						tocButton.className = '';
+					} else {
+						toc.style.display = 'block';
+						contents.className = 'tableOfContentsOpen';
+						tocButton.className = 'open';
+					}
+				}
+				
+				function toggleTOCItem() {
+					var listItem = event.srcElement;
+					var sublist = listItem.getElementsByTagName('ul')[0];
+					if (sublist.style.display == 'block') {
+						sublist.style.display = 'none';
+						listItem.className = 'expandable';
+					} else {
+						sublist.style.display = 'block';
+						listItem.className = 'expandable expanded';
+					}
+				}
+				
+				function jumpTo() {
+					selectedItem = event.srcElement.options[event.srcElement.selectedIndex].value;
+					window.location = "#" + selectedItem;
+				}
+			</script>
+</head>
+<body>
+<header id="projectHeader"><h1><a href="../index.html">VRToolKit Reference Library</a></h1></header><header id="fileHeader"><h1><a href="#classTitle">WavefrontParser Class Reference</a></h1></header><nav id="buttons"><ul>
+<li id="toc_button"><button id="table_of_contents" onclick="toggleTOC()">Table of Contents</button></li>
+<li id="jumpto_button"><select id="jumpto" onchange="jumpTo()"><option value="classTitle">Jump To...</option>
+<option value="overview">Overview</option>
+<option value="tasks">Tasks</option>
+<option value="properties">Properties</option>
+<option value="delegate">    delegate</option>
+<option value="classMethods">Class Methods</option>
+<option value="centerGLfloatArray:numberOfFaces:">    + centerGLfloatArray:numberOfFaces:</option>
+<option value="gLfloatArrayFromArray:usingIndexArray:">    + gLfloatArrayFromArray:usingIndexArray:</option>
+<option value="gLTexturesArrayFromArray:usingIndexArray:">    + gLTexturesArrayFromArray:usingIndexArray:</option>
+<option value="instanceMethods">Instance Methods</option>
+<option value="parseFileNamed:">    - parseFileNamed:</option></select></li>
+</ul></nav><nav id="tableOfContents" style="display: none;"><ul>
+<li><a href="#overview">Overview</a></li>
+<li class="expandable" id="tocTasks" onclick="toggleTOCItem()">
+<a href="#tasks">Tasks</a><ul style="display: none;">
+<li><a href="#Other">Other</a></li>
+<li><a href="#Other">Other</a></li>
+<li><a href="#Other">Other</a></li>
+</ul>
+</li>
+<li class="expandable" id="tocProperties" onclick="toggleTOCItem()">
+<a href="#properties">Properties</a><ul style="display: none;"><li><a href="#delegate">delegate</a></li></ul>
+</li>
+<li class="expandable" id="tocClassMethods" onclick="toggleTOCItem()">
+<a href="#classMethods">Class Methods</a><ul style="display: none;">
+<li><a href="#centerGLfloatArray:numberOfFaces:">centerGLfloatArray:numberOfFaces:</a></li>
+<li><a href="#gLfloatArrayFromArray:usingIndexArray:">gLfloatArrayFromArray:usingIndexArray:</a></li>
+<li><a href="#gLTexturesArrayFromArray:usingIndexArray:">gLTexturesArrayFromArray:usingIndexArray:</a></li>
+</ul>
+</li>
+<li class="expandable" id="tocInstanceMethods" onclick="toggleTOCItem()">
+<a href="#instanceMethods">Instance Methods</a><ul style="display: none;"><li><a href="#parseFileNamed:">parseFileNamed:</a></li></ul>
+</li>
+</ul></nav><div id="contents">
+<h1 id="classTitle">WavefrontParser Class Reference</h1>
+<table id="metadata">
+<tr class="alt">
+<th>Inherits from</th>
+<td><ul class="inheritance"><li>NSObject</li></ul></td>
+</tr>
+<tr>
+<th>Declared in</th>
+<td>WavefrontParser.h</td>
+</tr>
+</table>
+<h2 id="overview">Overview</h2>
+<p>This class can parse basic wavefront files (.obj). </p>
+<p>
+For now it is very slow, and is not very usable to load complicated objects on demand prefer the .h method in that case. </p>
+<h2 id="tasks">Tasks</h2>
+<ul id="tasksList">
+<li id="Other">
+<h3>Other</h3>
+<ul class="methods"><li>
+<span class="tooltipRegion"><code><a href="#delegate">delegate</a></code> <span class="specialType">property</span></span><span class="tooltip">The object receiving the C arrays created while parsing. </span>
+</li></ul>
+</li>
+<li id="Other">
+<h3>Other</h3>
+<ul class="methods"><li>
+<span class="tooltipRegion"><code><a href="#parseFileNamed:">- parseFileNamed:</a></code></span><span class="tooltip"></span>
+</li></ul>
+</li>
+<li id="Other">
+<h3>Other</h3>
+<ul class="methods">
+<li>
+<span class="tooltipRegion"><code><a href="#centerGLfloatArray:numberOfFaces:">+ centerGLfloatArray:numberOfFaces:</a></code></span><span class="tooltip">This method takes an array of vertices and translate them so that the shape represented is centered in (0,0). </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#gLfloatArrayFromArray:usingIndexArray:">+ gLfloatArrayFromArray:usingIndexArray:</a></code></span><span class="tooltip">This method creates an array merging an index and some data. </span>
+</li>
+<li>
+<span class="tooltipRegion"><code><a href="#gLTexturesArrayFromArray:usingIndexArray:">+ gLTexturesArrayFromArray:usingIndexArray:</a></code></span><span class="tooltip">This method creates an array merging an index and some data. </span>
+</li>
+</ul>
+</li>
+</ul>
+<section id="properties"><h2>Properties</h2>
+<section class="definition" id="delegate"><h3>delegate</h3>
+<p>The object receiving the C arrays created while parsing. </p>
+<code class="methodDeclaration">@property id&lt;Parser3DDelegate&gt; delegate</code><h5>Declared In</h5>
+<code>WavefrontParser.h</code></section></section><section id="classMethods"><h2>Class Methods</h2>
+<section class="definition" id="centerGLfloatArray:numberOfFaces:"><h3>centerGLfloatArray:numberOfFaces:</h3>
+<p>This method takes an array of vertices and translate them so that the shape represented is centered in (0,0). </p>
+<code class="methodDeclaration">+ (void)centerGLfloatArray:(GLfloat *)<span class="parameter">array</span> numberOfFaces:(int)<span class="parameter">numberOfFaces</span> </code><h5>Parameters</h5>
+<dl class="parameterList">
+<dt>array</dt>
+<dd><p>The array you want to center the vertices. </p></dd>
+<dt>numberOfFaces</dt>
+<dd><p>The number of faces of the 3D object. </p></dd>
+</dl>
+<h5>Declared In</h5>
+<code>WavefrontParser.m</code></section><section class="definition" id="gLfloatArrayFromArray:usingIndexArray:"><h3>gLfloatArrayFromArray:usingIndexArray:</h3>
+<p>This method creates an array merging an index and some data. </p>
+<code class="methodDeclaration">+ (GLfloat *)gLfloatArrayFromArray:(NSArray *)<span class="parameter">array</span> usingIndexArray:(NSArray *)<span class="parameter">indexArray</span> </code><h5>Parameters</h5>
+<dl class="parameterList">
+<dt>array</dt>
+<dd><p>The array containing datas </p></dd>
+<dt>indexArray</dt>
+<dd><p>The array containig the indexes </p></dd>
+</dl>
+<h5>Return Value</h5>
+<p>an array created from the datas and the index </p>
+<h5>Discussion</h5>
+<p>For instance if the array is: 1,2,7,9,0 and the index array is: 0,0,4 the array returned will be 1,1,9.
+ This method is used to have an array of vertices corresponding to the faces of the 3D object. </p>
+<h5>Declared In</h5>
+<code>WavefrontParser.m</code></section><section class="definition" id="gLTexturesArrayFromArray:usingIndexArray:"><h3>gLTexturesArrayFromArray:usingIndexArray:</h3>
+<p>This method creates an array merging an index and some data. </p>
+<code class="methodDeclaration">+ (GLfloat *)gLTexturesArrayFromArray:(NSArray *)<span class="parameter">array</span> usingIndexArray:(NSArray *)<span class="parameter">indexArray</span> </code><h5>Parameters</h5>
+<dl class="parameterList">
+<dt>array</dt>
+<dd><p>The array containing datas </p></dd>
+<dt>indexArray</dt>
+<dd><p>The array containig the indexes </p></dd>
+</dl>
+<h5>Return Value</h5>
+<p>an array created from the datas and the index </p>
+<h5>Discussion</h5>
+<p>This method does the same job as (GLfloat *)gLfloatArrayFromArray:(NSArray *)array usingIndexArray:(NSArray *)indexArray but for the texture coordinate datas.
+ We also do basic calculation to convert texture UV coordinates in ST coordinates so that openGL can understand them. This method is used to have an array of texture coordinates corresponding to the faces of the 3D object.</p>
+<p></p>
+<h5>Declared In</h5>
+<code>WavefrontParser.m</code></section></section><section id="instanceMethods"><h2>Instance Methods</h2>
+<section class="definition" id="parseFileNamed:"><h3>parseFileNamed:</h3>
+<code class="methodDeclaration">- (void)parseFileNamed:(NSString *)<span class="parameter">filename</span> </code><h5>Declared In</h5>
+<code>WavefrontParser.h</code></section></section><hr>
+<p id="lastUpdated">Last updated: 2010-8-17</p>
+</div>
+<footer id="breadcrumbs"><ul>
+<li><a href="../index.html">ARApi</a></li>
+<li><a href="#classTitle">WavefrontParser Class Reference</a></li>
+</ul></footer>
+</body>
+</html>

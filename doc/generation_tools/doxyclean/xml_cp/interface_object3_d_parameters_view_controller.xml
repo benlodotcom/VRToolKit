@@ -1,0 +1,842 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="interface_object3_d_parameters_view_controller" kind="class" prot="public">
+    <compoundname>Object3DParametersViewController</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">UIViewController</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">MFMailComposeViewControllerDelegate-p</basecompoundref>
+    <includes refid="_object3_d_parameters_view_controller_8h" local="no">Object3DParametersViewController.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="interface_object3_d_parameters_view_controller_1a3f87587e570e4b7311382cc0b4e0507a" prot="private" static="no" mutable="no">
+        <type>id&lt; ParametersDelegate &gt;</type>
+        <definition>id&lt;ParametersDelegate&gt; Object3DParametersViewController::_delegate</definition>
+        <argsstring></argsstring>
+        <name>_delegate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.h" line="26" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="interface_object3_d_parameters_view_controller_1aee415aa21631f01dc3e5d53f6d73f21c" prot="private" static="no" mutable="no">
+        <type><ref refid="interface_object3_d" kindref="compound">Object3D</ref> *</type>
+        <definition>Object3D* Object3DParametersViewController::_object</definition>
+        <argsstring></argsstring>
+        <name>_object</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.h" line="28" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="interface_object3_d_parameters_view_controller_1ae208aa6225b622022b63c58d9f61bc2e" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Object3DParametersViewController::_markerID</definition>
+        <argsstring></argsstring>
+        <name>_markerID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.h" line="29" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="interface_object3_d_parameters_view_controller_1a02994f7673592726b08873f68dc89f34" prot="private" static="no" mutable="no">
+        <type>UIButton *</type>
+        <definition>UIButton* Object3DParametersViewController::_saveButton</definition>
+        <argsstring></argsstring>
+        <name>_saveButton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.h" line="31" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="interface_object3_d_parameters_view_controller_1a4c2a3e07e3d098beb4a76dfcae058eeb" prot="private" static="no" mutable="no">
+        <type>UIButton *</type>
+        <definition>UIButton* Object3DParametersViewController::_sendMailButton</definition>
+        <argsstring></argsstring>
+        <name>_sendMailButton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.h" line="32" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="interface_object3_d_parameters_view_controller_1a219d65568e5406df37fe5e1d623321ec" prot="private" static="no" mutable="no">
+        <type>UILabel *</type>
+        <definition>UILabel* Object3DParametersViewController::_descriptionLabel</definition>
+        <argsstring></argsstring>
+        <name>_descriptionLabel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.h" line="33" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="interface_object3_d_parameters_view_controller_1a2c379e417893c527599a13d608fa60bb" prot="private" static="no" mutable="no">
+        <type>UISlider *</type>
+        <definition>UISlider* Object3DParametersViewController::_xRotationSlider</definition>
+        <argsstring></argsstring>
+        <name>_xRotationSlider</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.h" line="34" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="interface_object3_d_parameters_view_controller_1a8d8634c2568b1936c6ffb2d1b1bd6d08" prot="private" static="no" mutable="no">
+        <type>UISlider *</type>
+        <definition>UISlider* Object3DParametersViewController::_yRotationSlider</definition>
+        <argsstring></argsstring>
+        <name>_yRotationSlider</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.h" line="35" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="interface_object3_d_parameters_view_controller_1a94fc5f7f4bfa7a87cb6e6b8597da9828" prot="private" static="no" mutable="no">
+        <type>UISlider *</type>
+        <definition>UISlider* Object3DParametersViewController::_zRotationSlider</definition>
+        <argsstring></argsstring>
+        <name>_zRotationSlider</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.h" line="36" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="interface_object3_d_parameters_view_controller_1a6c435717c9fdd8c9b3813e7663626d6b" prot="private" static="no" mutable="no">
+        <type>UISlider *</type>
+        <definition>UISlider* Object3DParametersViewController::_zTranslationSlider</definition>
+        <argsstring></argsstring>
+        <name>_zTranslationSlider</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.h" line="37" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="interface_object3_d_parameters_view_controller_1a28999fe721b68c5eac3ea936c24cd822" prot="private" static="no" mutable="no">
+        <type>UISlider *</type>
+        <definition>UISlider* Object3DParametersViewController::_scaleFactorSlider</definition>
+        <argsstring></argsstring>
+        <name>_scaleFactorSlider</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.h" line="38" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="interface_object3_d_parameters_view_controller_1a99aed5435ae2e758bfb88ec2bea3e2cf" prot="private" static="no" mutable="no">
+        <type>UITextField *</type>
+        <definition>UITextField* Object3DParametersViewController::_xRotationTextField</definition>
+        <argsstring></argsstring>
+        <name>_xRotationTextField</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.h" line="39" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="interface_object3_d_parameters_view_controller_1ae213a5aa0ed76ed6fea03f4d4d3c498e" prot="private" static="no" mutable="no">
+        <type>UITextField *</type>
+        <definition>UITextField* Object3DParametersViewController::_yRotationTextField</definition>
+        <argsstring></argsstring>
+        <name>_yRotationTextField</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.h" line="40" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="interface_object3_d_parameters_view_controller_1ac7f1d375da19e509796b61ec97ee9237" prot="private" static="no" mutable="no">
+        <type>UITextField *</type>
+        <definition>UITextField* Object3DParametersViewController::_zRotationTextField</definition>
+        <argsstring></argsstring>
+        <name>_zRotationTextField</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.h" line="41" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="interface_object3_d_parameters_view_controller_1a2bfaad740bd566dd8444ac5f1aec816f" prot="private" static="no" mutable="no">
+        <type>UITextField *</type>
+        <definition>UITextField* Object3DParametersViewController::_zTranslationTextField</definition>
+        <argsstring></argsstring>
+        <name>_zTranslationTextField</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.h" line="42" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="interface_object3_d_parameters_view_controller_1a449bc7bfb11f73fe58f47a936ce81366" prot="private" static="no" mutable="no">
+        <type>UITextField *</type>
+        <definition>UITextField* Object3DParametersViewController::_scaleFactorTextField</definition>
+        <argsstring></argsstring>
+        <name>_scaleFactorTextField</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.h" line="43" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="interface_object3_d_parameters_view_controller_1aa5ed4276fcd2ea0cb4ee6e09d3dca265" prot="public" static="no" readable="yes" writable="yes" gettable="no" settable="no" accessor="assign">
+        <type>id&lt; ParametersDelegate &gt;</type>
+        <definition>id&lt;ParametersDelegate&gt; Object3DParametersViewController::delegate</definition>
+        <argsstring></argsstring>
+        <name>delegate</name>
+        <read></read>
+        <write></write>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><linebreak/>
+ </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.h" line="47" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_object3_d_parameters_view_controller_1aa7084f4052cd55fe8e1d9ebaed3645a9" prot="public" static="no" readable="yes" writable="yes" gettable="no" settable="no" accessor="assign">
+        <type><ref refid="interface_object3_d" kindref="compound">Object3D</ref> *</type>
+        <definition>Object3D* Object3DParametersViewController::object</definition>
+        <argsstring></argsstring>
+        <name>object</name>
+        <read></read>
+        <write></write>
+        <briefdescription>
+<para>The 3D object whose informations are displayed. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.h" line="51" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_object3_d_parameters_view_controller_1a5857494925c30e16b6870faf646ae9df" prot="public" static="no" readable="yes" writable="yes" gettable="no" settable="no" accessor="assign">
+        <type>int</type>
+        <definition>int Object3DParametersViewController::markerID</definition>
+        <argsstring></argsstring>
+        <name>markerID</name>
+        <read></read>
+        <write></write>
+        <briefdescription>
+<para>The markerID detected. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.h" line="55" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_object3_d_parameters_view_controller_1aa8d0a8a0965ae0aee0539b40628c07ef" prot="public" static="no" readable="yes" writable="yes" gettable="no" settable="no" accessor="retain">
+        <type>IBOutlet UIButton *</type>
+        <definition>IBOutlet UIButton* Object3DParametersViewController::saveButton</definition>
+        <argsstring></argsstring>
+        <name>saveButton</name>
+        <read></read>
+        <write></write>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><linebreak/>
+ </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.h" line="57" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_object3_d_parameters_view_controller_1a9e32afa9605260782255155d14b9caa3" prot="public" static="no" readable="yes" writable="yes" gettable="no" settable="no" accessor="retain">
+        <type>IBOutlet UIButton *</type>
+        <definition>IBOutlet UIButton* Object3DParametersViewController::sendMailButton</definition>
+        <argsstring></argsstring>
+        <name>sendMailButton</name>
+        <read></read>
+        <write></write>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><linebreak/>
+ </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.h" line="59" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_object3_d_parameters_view_controller_1aaecdb70abd3e3a37cb77924768c665fd" prot="public" static="no" readable="yes" writable="yes" gettable="no" settable="no" accessor="retain">
+        <type>IBOutlet UILabel *</type>
+        <definition>IBOutlet UILabel* Object3DParametersViewController::descriptionLabel</definition>
+        <argsstring></argsstring>
+        <name>descriptionLabel</name>
+        <read></read>
+        <write></write>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><linebreak/>
+ </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.h" line="61" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_object3_d_parameters_view_controller_1a570d3810997c82313a4a67432ef0bcb4" prot="public" static="no" readable="yes" writable="yes" gettable="no" settable="no" accessor="retain">
+        <type>IBOutlet UISlider *</type>
+        <definition>IBOutlet UISlider* Object3DParametersViewController::xRotationSlider</definition>
+        <argsstring></argsstring>
+        <name>xRotationSlider</name>
+        <read></read>
+        <write></write>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><linebreak/>
+ </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.h" line="63" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_object3_d_parameters_view_controller_1a9a81eed92cd8186ee33e2969f56d79f7" prot="public" static="no" readable="yes" writable="yes" gettable="no" settable="no" accessor="retain">
+        <type>IBOutlet UISlider *</type>
+        <definition>IBOutlet UISlider* Object3DParametersViewController::yRotationSlider</definition>
+        <argsstring></argsstring>
+        <name>yRotationSlider</name>
+        <read></read>
+        <write></write>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><linebreak/>
+ </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.h" line="65" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_object3_d_parameters_view_controller_1aae4e3ae7ca4d8eee94ecaf6a16491793" prot="public" static="no" readable="yes" writable="yes" gettable="no" settable="no" accessor="retain">
+        <type>IBOutlet UISlider *</type>
+        <definition>IBOutlet UISlider* Object3DParametersViewController::zRotationSlider</definition>
+        <argsstring></argsstring>
+        <name>zRotationSlider</name>
+        <read></read>
+        <write></write>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><linebreak/>
+ </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.h" line="67" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_object3_d_parameters_view_controller_1a8a97c5b3b71756bbb8a0c1f7dba5dfef" prot="public" static="no" readable="yes" writable="yes" gettable="no" settable="no" accessor="retain">
+        <type>IBOutlet UISlider *</type>
+        <definition>IBOutlet UISlider* Object3DParametersViewController::zTranslationSlider</definition>
+        <argsstring></argsstring>
+        <name>zTranslationSlider</name>
+        <read></read>
+        <write></write>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><linebreak/>
+ </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.h" line="69" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_object3_d_parameters_view_controller_1ab8a3dcd36d6f693a5425cd195d74acdb" prot="public" static="no" readable="yes" writable="yes" gettable="no" settable="no" accessor="retain">
+        <type>IBOutlet UISlider *</type>
+        <definition>IBOutlet UISlider* Object3DParametersViewController::scaleFactorSlider</definition>
+        <argsstring></argsstring>
+        <name>scaleFactorSlider</name>
+        <read></read>
+        <write></write>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><linebreak/>
+ </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.h" line="71" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_object3_d_parameters_view_controller_1adaf8ec138a67507446109309f201e71d" prot="public" static="no" readable="yes" writable="yes" gettable="no" settable="no" accessor="retain">
+        <type>IBOutlet UITextField *</type>
+        <definition>IBOutlet UITextField* Object3DParametersViewController::xRotationTextField</definition>
+        <argsstring></argsstring>
+        <name>xRotationTextField</name>
+        <read></read>
+        <write></write>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><linebreak/>
+ </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.h" line="73" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_object3_d_parameters_view_controller_1af951ff5a29bb178fb99bd7fd94a888a7" prot="public" static="no" readable="yes" writable="yes" gettable="no" settable="no" accessor="retain">
+        <type>IBOutlet UITextField *</type>
+        <definition>IBOutlet UITextField* Object3DParametersViewController::yRotationTextField</definition>
+        <argsstring></argsstring>
+        <name>yRotationTextField</name>
+        <read></read>
+        <write></write>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><linebreak/>
+ </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.h" line="75" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_object3_d_parameters_view_controller_1a70a94afb25fad535b1efe6483e8d6ef1" prot="public" static="no" readable="yes" writable="yes" gettable="no" settable="no" accessor="retain">
+        <type>IBOutlet UITextField *</type>
+        <definition>IBOutlet UITextField* Object3DParametersViewController::zRotationTextField</definition>
+        <argsstring></argsstring>
+        <name>zRotationTextField</name>
+        <read></read>
+        <write></write>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><linebreak/>
+ </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.h" line="77" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_object3_d_parameters_view_controller_1ab6e7ab8e75a9a0b5079f5401403a2d2a" prot="public" static="no" readable="yes" writable="yes" gettable="no" settable="no" accessor="retain">
+        <type>IBOutlet UITextField *</type>
+        <definition>IBOutlet UITextField* Object3DParametersViewController::zTranslationTextField</definition>
+        <argsstring></argsstring>
+        <name>zTranslationTextField</name>
+        <read></read>
+        <write></write>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><linebreak/>
+ </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.h" line="79" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_object3_d_parameters_view_controller_1a4a3d46f003380d02a9ccb25c83d3b09b" prot="public" static="no" readable="yes" writable="yes" gettable="no" settable="no" accessor="retain">
+        <type>IBOutlet UITextField *</type>
+        <definition>IBOutlet UITextField* Object3DParametersViewController::scaleFactorTextField</definition>
+        <argsstring></argsstring>
+        <name>scaleFactorTextField</name>
+        <read></read>
+        <write></write>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><linebreak/>
+ </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.h" line="81" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_object3_d_parameters_view_controller_1a4fe295b5f8976680046b30046219dbf8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Object3DParametersViewController::loadObject:withMarkerID:</definition>
+        <argsstring>(Object3D *object,[withMarkerID] int markerID)</argsstring>
+        <name>loadObject:withMarkerID:</name>
+        <param>
+          <type><ref refid="interface_object3_d" kindref="compound">Object3D</ref> *</type>
+          <declname>object</declname>
+        </param>
+        <param>
+          <attributes>[withMarkerID]</attributes>
+          <type>int</type>
+          <declname>markerID</declname>
+        </param>
+        <briefdescription>
+<para>This methods change the object and markerID whose informations are displayed on the view. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>object</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>markerID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.h" line="89" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.m" bodystart="47" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_object3_d_parameters_view_controller_1a7fec7383cff456b674fee88bfa92c36b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Object3DParametersViewController::refreshView</definition>
+        <argsstring>()</argsstring>
+        <name>refreshView</name>
+        <briefdescription>
+<para>Refresh the view according to the parameters of the <ref refid="interface_object3_d" kindref="compound">Object3D</ref> instance hold. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.h" line="93" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.m" bodystart="56" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_object3_d_parameters_view_controller_1af7c854646742e327ee8f50b3660b5ae4" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>IBAction</type>
+        <definition>IBAction Object3DParametersViewController::save:</definition>
+        <argsstring>(id sender)</argsstring>
+        <name>save:</name>
+        <param>
+          <type>id</type>
+          <declname>sender</declname>
+        </param>
+        <briefdescription>
+<para>This method saves the settings by serializing the object and storing the xml file in the document directory. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.h" line="98" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.m" bodystart="169" bodyend="171"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_object3_d_parameters_view_controller_1a462470c07682ff4f9258b2261666bcaf" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>IBAction</type>
+        <definition>IBAction Object3DParametersViewController::sendByMail:</definition>
+        <argsstring>(id sender)</argsstring>
+        <name>sendByMail:</name>
+        <param>
+          <type>id</type>
+          <declname>sender</declname>
+        </param>
+        <briefdescription>
+<para>This method send the xml file with the right settings by mail. </para>        </briefdescription>
+        <detaileddescription>
+<para>Using this method you can retrieve the xml file and add it in a client app for instance where you don&apos;t want the user to be able to display the parametersView. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.h" line="105" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.m" bodystart="181" bodyend="199"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_object3_d_parameters_view_controller_1ad6dbdf714690b432749e7f9d22073e43" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>IBAction</type>
+        <definition>IBAction Object3DParametersViewController::xRotationSliderValueChanged:</definition>
+        <argsstring>(id sender)</argsstring>
+        <name>xRotationSliderValueChanged:</name>
+        <param>
+          <type>id</type>
+          <declname>sender</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><linebreak/>
+ </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.h" line="108" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.m" bodystart="120" bodyend="123"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_object3_d_parameters_view_controller_1afc1a08df5a34a6894357f796a3353f40" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>IBAction</type>
+        <definition>IBAction Object3DParametersViewController::yRotationSliderValueChanged:</definition>
+        <argsstring>(id sender)</argsstring>
+        <name>yRotationSliderValueChanged:</name>
+        <param>
+          <type>id</type>
+          <declname>sender</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><linebreak/>
+ </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.h" line="110" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.m" bodystart="124" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_object3_d_parameters_view_controller_1ae302321cd5110ef79a5a987cda8fe6cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>IBAction</type>
+        <definition>IBAction Object3DParametersViewController::zRotationSliderValueChanged:</definition>
+        <argsstring>(id sender)</argsstring>
+        <name>zRotationSliderValueChanged:</name>
+        <param>
+          <type>id</type>
+          <declname>sender</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><linebreak/>
+ </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.h" line="112" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.m" bodystart="128" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_object3_d_parameters_view_controller_1a42357a2e7135fdf4e61c902c180d2c9d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>IBAction</type>
+        <definition>IBAction Object3DParametersViewController::zTranslationSliderValueChanged:</definition>
+        <argsstring>(id sender)</argsstring>
+        <name>zTranslationSliderValueChanged:</name>
+        <param>
+          <type>id</type>
+          <declname>sender</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><linebreak/>
+ </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.h" line="114" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.m" bodystart="132" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_object3_d_parameters_view_controller_1afeb8723a6c9b544c41dc7ba2aa3f213d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>IBAction</type>
+        <definition>IBAction Object3DParametersViewController::scaleFactorSliderValueChanged:</definition>
+        <argsstring>(id sender)</argsstring>
+        <name>scaleFactorSliderValueChanged:</name>
+        <param>
+          <type>id</type>
+          <declname>sender</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><linebreak/>
+ </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.h" line="116" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.m" bodystart="136" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_object3_d_parameters_view_controller_1a44a9855ed36cfb3c66351cc49ae386e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>IBAction</type>
+        <definition>IBAction Object3DParametersViewController::xRotationTextFieldValueChanged:</definition>
+        <argsstring>(id sender)</argsstring>
+        <name>xRotationTextFieldValueChanged:</name>
+        <param>
+          <type>id</type>
+          <declname>sender</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><linebreak/>
+ </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.h" line="118" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.m" bodystart="141" bodyend="144"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_object3_d_parameters_view_controller_1aee2175572af049d46fdbe312664a0aca" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>IBAction</type>
+        <definition>IBAction Object3DParametersViewController::yRotationTextFieldValueChanged:</definition>
+        <argsstring>(id sender)</argsstring>
+        <name>yRotationTextFieldValueChanged:</name>
+        <param>
+          <type>id</type>
+          <declname>sender</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><linebreak/>
+ </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.h" line="120" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.m" bodystart="146" bodyend="149"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_object3_d_parameters_view_controller_1af22d1412a74782b4201d67696a083167" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>IBAction</type>
+        <definition>IBAction Object3DParametersViewController::zRotationTextFieldValueChanged:</definition>
+        <argsstring>(id sender)</argsstring>
+        <name>zRotationTextFieldValueChanged:</name>
+        <param>
+          <type>id</type>
+          <declname>sender</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><linebreak/>
+ </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.h" line="122" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.m" bodystart="151" bodyend="154"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_object3_d_parameters_view_controller_1acdf6a3e9b7a1380dbabbcad39531f5ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>IBAction</type>
+        <definition>IBAction Object3DParametersViewController::zTranslationTextFieldValueChanged:</definition>
+        <argsstring>(id sender)</argsstring>
+        <name>zTranslationTextFieldValueChanged:</name>
+        <param>
+          <type>id</type>
+          <declname>sender</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><linebreak/>
+ </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.h" line="124" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.m" bodystart="156" bodyend="159"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_object3_d_parameters_view_controller_1aa10c106dacea984b32b1318f917d82aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>IBAction</type>
+        <definition>IBAction Object3DParametersViewController::scaleFactorTextFieldValueChanged:</definition>
+        <argsstring>(id sender)</argsstring>
+        <name>scaleFactorTextFieldValueChanged:</name>
+        <param>
+          <type>id</type>
+          <declname>sender</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><linebreak/>
+ </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.h" line="126" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.m" bodystart="161" bodyend="164"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_object3_d_parameters_view_controller_1a7957d65b85a530b32aaf44343e9e3655" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Object3DParametersViewController()::enableUI</definition>
+        <argsstring>()</argsstring>
+        <name>enableUI</name>
+        <briefdescription>
+<para>Enable the buttons, sliders and textfields. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.m" line="12"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_object3_d_parameters_view_controller_1a62308dd9f545a3c621f13fa66e214d30" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Object3DParametersViewController()::disableUI</definition>
+        <argsstring>()</argsstring>
+        <name>disableUI</name>
+        <briefdescription>
+<para>Disable the buttons, sliders and textfields. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.m" line="16"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class is the view controller for the parametersView. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Benjamin Loulier</para></simplesect>
+The parametersView is a GUI where you can modify different display settings for your 3D Objects and see the results of these modifications on the way your object is displayed. You can the save those settings and/or send them by mail to integrate them in another app for instance. </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="47">
+        <label>Object3DParametersViewController</label>
+        <link refid="interface_object3_d_parameters_view_controller"/>
+        <childnode refid="48" relation="usage">
+          <edgelabel>_object</edgelabel>
+        </childnode>
+      </node>
+      <node id="49">
+        <label>&lt;Parser3DDelegate&gt;</label>
+        <link refid="protocol_parser3_d_delegate-p"/>
+      </node>
+      <node id="48">
+        <label>Object3D</label>
+        <link refid="interface_object3_d"/>
+        <childnode refid="49" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.h" line="24" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3DParametersViewController.h" bodystart="24" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="interface_object3_d_parameters_view_controller_1a3f87587e570e4b7311382cc0b4e0507a" prot="private" virt="non-virtual"><scope>Object3DParametersViewController</scope><name>_delegate</name></member>
+      <member refid="interface_object3_d_parameters_view_controller_1a219d65568e5406df37fe5e1d623321ec" prot="private" virt="non-virtual"><scope>Object3DParametersViewController</scope><name>_descriptionLabel</name></member>
+      <member refid="interface_object3_d_parameters_view_controller_1ae208aa6225b622022b63c58d9f61bc2e" prot="private" virt="non-virtual"><scope>Object3DParametersViewController</scope><name>_markerID</name></member>
+      <member refid="interface_object3_d_parameters_view_controller_1aee415aa21631f01dc3e5d53f6d73f21c" prot="private" virt="non-virtual"><scope>Object3DParametersViewController</scope><name>_object</name></member>
+      <member refid="interface_object3_d_parameters_view_controller_1a02994f7673592726b08873f68dc89f34" prot="private" virt="non-virtual"><scope>Object3DParametersViewController</scope><name>_saveButton</name></member>
+      <member refid="interface_object3_d_parameters_view_controller_1a28999fe721b68c5eac3ea936c24cd822" prot="private" virt="non-virtual"><scope>Object3DParametersViewController</scope><name>_scaleFactorSlider</name></member>
+      <member refid="interface_object3_d_parameters_view_controller_1a449bc7bfb11f73fe58f47a936ce81366" prot="private" virt="non-virtual"><scope>Object3DParametersViewController</scope><name>_scaleFactorTextField</name></member>
+      <member refid="interface_object3_d_parameters_view_controller_1a4c2a3e07e3d098beb4a76dfcae058eeb" prot="private" virt="non-virtual"><scope>Object3DParametersViewController</scope><name>_sendMailButton</name></member>
+      <member refid="interface_object3_d_parameters_view_controller_1a2c379e417893c527599a13d608fa60bb" prot="private" virt="non-virtual"><scope>Object3DParametersViewController</scope><name>_xRotationSlider</name></member>
+      <member refid="interface_object3_d_parameters_view_controller_1a99aed5435ae2e758bfb88ec2bea3e2cf" prot="private" virt="non-virtual"><scope>Object3DParametersViewController</scope><name>_xRotationTextField</name></member>
+      <member refid="interface_object3_d_parameters_view_controller_1a8d8634c2568b1936c6ffb2d1b1bd6d08" prot="private" virt="non-virtual"><scope>Object3DParametersViewController</scope><name>_yRotationSlider</name></member>
+      <member refid="interface_object3_d_parameters_view_controller_1ae213a5aa0ed76ed6fea03f4d4d3c498e" prot="private" virt="non-virtual"><scope>Object3DParametersViewController</scope><name>_yRotationTextField</name></member>
+      <member refid="interface_object3_d_parameters_view_controller_1a94fc5f7f4bfa7a87cb6e6b8597da9828" prot="private" virt="non-virtual"><scope>Object3DParametersViewController</scope><name>_zRotationSlider</name></member>
+      <member refid="interface_object3_d_parameters_view_controller_1ac7f1d375da19e509796b61ec97ee9237" prot="private" virt="non-virtual"><scope>Object3DParametersViewController</scope><name>_zRotationTextField</name></member>
+      <member refid="interface_object3_d_parameters_view_controller_1a6c435717c9fdd8c9b3813e7663626d6b" prot="private" virt="non-virtual"><scope>Object3DParametersViewController</scope><name>_zTranslationSlider</name></member>
+      <member refid="interface_object3_d_parameters_view_controller_1a2bfaad740bd566dd8444ac5f1aec816f" prot="private" virt="non-virtual"><scope>Object3DParametersViewController</scope><name>_zTranslationTextField</name></member>
+      <member refid="interface_object3_d_parameters_view_controller_1aa5ed4276fcd2ea0cb4ee6e09d3dca265" prot="public" virt="non-virtual"><scope>Object3DParametersViewController</scope><name>delegate</name></member>
+      <member refid="interface_object3_d_parameters_view_controller_1aaecdb70abd3e3a37cb77924768c665fd" prot="public" virt="non-virtual"><scope>Object3DParametersViewController</scope><name>descriptionLabel</name></member>
+      <member refid="interface_object3_d_parameters_view_controller_1a62308dd9f545a3c621f13fa66e214d30" prot="public" virt="virtual"><scope>Object3DParametersViewController</scope><name>disableUI</name></member>
+      <member refid="interface_object3_d_parameters_view_controller_1a7957d65b85a530b32aaf44343e9e3655" prot="public" virt="virtual"><scope>Object3DParametersViewController</scope><name>enableUI</name></member>
+      <member refid="interface_object3_d_parameters_view_controller_1a4fe295b5f8976680046b30046219dbf8" prot="public" virt="virtual"><scope>Object3DParametersViewController</scope><name>loadObject:withMarkerID:</name></member>
+      <member refid="interface_object3_d_parameters_view_controller_1a5857494925c30e16b6870faf646ae9df" prot="public" virt="non-virtual"><scope>Object3DParametersViewController</scope><name>markerID</name></member>
+      <member refid="interface_object3_d_parameters_view_controller_1aa7084f4052cd55fe8e1d9ebaed3645a9" prot="public" virt="non-virtual"><scope>Object3DParametersViewController</scope><name>object</name></member>
+      <member refid="interface_object3_d_parameters_view_controller_1a7fec7383cff456b674fee88bfa92c36b" prot="public" virt="virtual"><scope>Object3DParametersViewController</scope><name>refreshView</name></member>
+      <member refid="interface_object3_d_parameters_view_controller_1af7c854646742e327ee8f50b3660b5ae4" prot="public" virt="virtual"><scope>Object3DParametersViewController</scope><name>save:</name></member>
+      <member refid="interface_object3_d_parameters_view_controller_1aa8d0a8a0965ae0aee0539b40628c07ef" prot="public" virt="non-virtual"><scope>Object3DParametersViewController</scope><name>saveButton</name></member>
+      <member refid="interface_object3_d_parameters_view_controller_1ab8a3dcd36d6f693a5425cd195d74acdb" prot="public" virt="non-virtual"><scope>Object3DParametersViewController</scope><name>scaleFactorSlider</name></member>
+      <member refid="interface_object3_d_parameters_view_controller_1afeb8723a6c9b544c41dc7ba2aa3f213d" prot="public" virt="virtual"><scope>Object3DParametersViewController</scope><name>scaleFactorSliderValueChanged:</name></member>
+      <member refid="interface_object3_d_parameters_view_controller_1a4a3d46f003380d02a9ccb25c83d3b09b" prot="public" virt="non-virtual"><scope>Object3DParametersViewController</scope><name>scaleFactorTextField</name></member>
+      <member refid="interface_object3_d_parameters_view_controller_1aa10c106dacea984b32b1318f917d82aa" prot="public" virt="virtual"><scope>Object3DParametersViewController</scope><name>scaleFactorTextFieldValueChanged:</name></member>
+      <member refid="interface_object3_d_parameters_view_controller_1a462470c07682ff4f9258b2261666bcaf" prot="public" virt="virtual"><scope>Object3DParametersViewController</scope><name>sendByMail:</name></member>
+      <member refid="interface_object3_d_parameters_view_controller_1a9e32afa9605260782255155d14b9caa3" prot="public" virt="non-virtual"><scope>Object3DParametersViewController</scope><name>sendMailButton</name></member>
+      <member refid="interface_object3_d_parameters_view_controller_1a570d3810997c82313a4a67432ef0bcb4" prot="public" virt="non-virtual"><scope>Object3DParametersViewController</scope><name>xRotationSlider</name></member>
+      <member refid="interface_object3_d_parameters_view_controller_1ad6dbdf714690b432749e7f9d22073e43" prot="public" virt="virtual"><scope>Object3DParametersViewController</scope><name>xRotationSliderValueChanged:</name></member>
+      <member refid="interface_object3_d_parameters_view_controller_1adaf8ec138a67507446109309f201e71d" prot="public" virt="non-virtual"><scope>Object3DParametersViewController</scope><name>xRotationTextField</name></member>
+      <member refid="interface_object3_d_parameters_view_controller_1a44a9855ed36cfb3c66351cc49ae386e9" prot="public" virt="virtual"><scope>Object3DParametersViewController</scope><name>xRotationTextFieldValueChanged:</name></member>
+      <member refid="interface_object3_d_parameters_view_controller_1a9a81eed92cd8186ee33e2969f56d79f7" prot="public" virt="non-virtual"><scope>Object3DParametersViewController</scope><name>yRotationSlider</name></member>
+      <member refid="interface_object3_d_parameters_view_controller_1afc1a08df5a34a6894357f796a3353f40" prot="public" virt="virtual"><scope>Object3DParametersViewController</scope><name>yRotationSliderValueChanged:</name></member>
+      <member refid="interface_object3_d_parameters_view_controller_1af951ff5a29bb178fb99bd7fd94a888a7" prot="public" virt="non-virtual"><scope>Object3DParametersViewController</scope><name>yRotationTextField</name></member>
+      <member refid="interface_object3_d_parameters_view_controller_1aee2175572af049d46fdbe312664a0aca" prot="public" virt="virtual"><scope>Object3DParametersViewController</scope><name>yRotationTextFieldValueChanged:</name></member>
+      <member refid="interface_object3_d_parameters_view_controller_1aae4e3ae7ca4d8eee94ecaf6a16491793" prot="public" virt="non-virtual"><scope>Object3DParametersViewController</scope><name>zRotationSlider</name></member>
+      <member refid="interface_object3_d_parameters_view_controller_1ae302321cd5110ef79a5a987cda8fe6cb" prot="public" virt="virtual"><scope>Object3DParametersViewController</scope><name>zRotationSliderValueChanged:</name></member>
+      <member refid="interface_object3_d_parameters_view_controller_1a70a94afb25fad535b1efe6483e8d6ef1" prot="public" virt="non-virtual"><scope>Object3DParametersViewController</scope><name>zRotationTextField</name></member>
+      <member refid="interface_object3_d_parameters_view_controller_1af22d1412a74782b4201d67696a083167" prot="public" virt="virtual"><scope>Object3DParametersViewController</scope><name>zRotationTextFieldValueChanged:</name></member>
+      <member refid="interface_object3_d_parameters_view_controller_1a8a97c5b3b71756bbb8a0c1f7dba5dfef" prot="public" virt="non-virtual"><scope>Object3DParametersViewController</scope><name>zTranslationSlider</name></member>
+      <member refid="interface_object3_d_parameters_view_controller_1a42357a2e7135fdf4e61c902c180d2c9d" prot="public" virt="virtual"><scope>Object3DParametersViewController</scope><name>zTranslationSliderValueChanged:</name></member>
+      <member refid="interface_object3_d_parameters_view_controller_1ab6e7ab8e75a9a0b5079f5401403a2d2a" prot="public" virt="non-virtual"><scope>Object3DParametersViewController</scope><name>zTranslationTextField</name></member>
+      <member refid="interface_object3_d_parameters_view_controller_1acdf6a3e9b7a1380dbabbcad39531f5ea" prot="public" virt="virtual"><scope>Object3DParametersViewController</scope><name>zTranslationTextFieldValueChanged:</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

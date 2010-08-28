@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="interface_e_a_g_l_view_07_08" kind="class" prot="public">
+    <compoundname>EAGLView()</compoundname>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_e_a_g_l_view_1a2ac7c41a2d1fa913fcc927b8890e56c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>BOOL</type>
+        <definition>BOOL EAGLView()::createFramebuffer</definition>
+        <argsstring>()</argsstring>
+        <name>createFramebuffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><linebreak/>
+ </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/EAGLView.m" line="8"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_e_a_g_l_view_1ad96c7714cd26b1d8504db265bf865c16" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void EAGLView()::destroyFramebuffer</definition>
+        <argsstring>()</argsstring>
+        <name>destroyFramebuffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><linebreak/>
+ </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/EAGLView.m" line="10"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_e_a_g_l_view_1add172e3179a45f4eddfbc411da25bbc7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void EAGLView()::setupView</definition>
+        <argsstring>()</argsstring>
+        <name>setupView</name>
+        <briefdescription>
+<para>This function initialize the OpenGL view. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function sets up such things as lighting and the GL_Projection matrix. This method is called when the projectionMatrix property is set. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/EAGLView.m" line="18"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_e_a_g_l_view_1a7f69e08de9ced36043b1ee16c5360cf7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void EAGLView()::loadObject:</definition>
+        <argsstring>(Object3D *object)</argsstring>
+        <name>loadObject:</name>
+        <param>
+          <type><ref refid="interface_object3_d" kindref="compound">Object3D</ref> *</type>
+          <declname>object</declname>
+        </param>
+        <briefdescription>
+<para>This function loads the 3D model and textues associated to a 3DObject instance. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/EAGLView.m" line="23"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_e_a_g_l_view_1a565e99e4284385c9e46ff840978a3182" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void EAGLView()::loadTexture</definition>
+        <argsstring>()</argsstring>
+        <name>loadTexture</name>
+        <briefdescription>
+<para>This function loads the texture of the <ref refid="interface_object3_d" kindref="compound">Object3D</ref> instance hold by the <ref refid="interface_e_a_g_l_view" kindref="compound">EAGLView</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/EAGLView.m" line="27"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_e_a_g_l_view_1a1fb97747eb89d5d481ac44d20832716f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void EAGLView()::unloadTexture</definition>
+        <argsstring>()</argsstring>
+        <name>unloadTexture</name>
+        <briefdescription>
+<para>This function unloads the current texture. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/EAGLView.m" line="31"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Private interface of <ref refid="interface_e_a_g_l_view" kindref="compound">EAGLView</ref> class </para>    </detaileddescription>
+    <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/EAGLView.m" line="9" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/EAGLView.m" bodystart="9" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="interface_e_a_g_l_view_1a2ac7c41a2d1fa913fcc927b8890e56c1" prot="public" virt="virtual"><scope>EAGLView()</scope><name>createFramebuffer</name></member>
+      <member refid="interface_e_a_g_l_view_1ad96c7714cd26b1d8504db265bf865c16" prot="public" virt="virtual"><scope>EAGLView()</scope><name>destroyFramebuffer</name></member>
+      <member refid="interface_e_a_g_l_view_1a7f69e08de9ced36043b1ee16c5360cf7" prot="public" virt="virtual"><scope>EAGLView()</scope><name>loadObject:</name></member>
+      <member refid="interface_e_a_g_l_view_1a565e99e4284385c9e46ff840978a3182" prot="public" virt="virtual"><scope>EAGLView()</scope><name>loadTexture</name></member>
+      <member refid="interface_e_a_g_l_view_1add172e3179a45f4eddfbc411da25bbc7" prot="public" virt="virtual"><scope>EAGLView()</scope><name>setupView</name></member>
+      <member refid="interface_e_a_g_l_view_1a1fb97747eb89d5d481ac44d20832716f" prot="public" virt="virtual"><scope>EAGLView()</scope><name>unloadTexture</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

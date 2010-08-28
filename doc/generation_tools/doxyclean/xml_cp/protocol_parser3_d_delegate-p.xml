@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="protocol_parser3_d_delegate-p" kind="protocol" prot="public">
+    <compoundname>Parser3DDelegate-p</compoundname>
+    <derivedcompoundref refid="interface_object3_d" prot="public" virt="non-virtual">Object3D</derivedcompoundref>
+    <includes refid="_parser3_d_protocol_8h" local="no">Parser3DProtocol.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="protocol_parser3_d_delegate-p_1a45d59a7c1dcaeb598615324cd9d39339" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Parser3DDelegate-p::parserDidCountVertices:andDidParseVertices:normals:andTextures:</definition>
+        <argsstring>(unsigned int numberOfVertices,[andDidParseVertices] GLfloat *vertices,[normals] GLfloat *normals,[andTextures] GLfloat *textures)</argsstring>
+        <name>parserDidCountVertices:andDidParseVertices:normals:andTextures:</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>numberOfVertices</declname>
+        </param>
+        <param>
+          <attributes>[andDidParseVertices]</attributes>
+          <type>GLfloat *</type>
+          <declname>vertices</declname>
+        </param>
+        <param>
+          <attributes>[normals]</attributes>
+          <type>GLfloat *</type>
+          <declname>normals</declname>
+        </param>
+        <param>
+          <attributes>[andTextures]</attributes>
+          <type>GLfloat *</type>
+          <declname>textures</declname>
+        </param>
+        <briefdescription>
+<para>This method is called on the delegate when the parsing is over, it contains the arrays created while parsing the file. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>numberOfVertices</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The number of vertices in the vertices array </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>vertices</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The array of vertices </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>normals</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The array of normals </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>textures</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The array of texture coordinates </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Parser3DProtocol.h" line="41"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The method the delegate of a parser must implement. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Benjamin Loulier</para></simplesect>
+This protocols ensures that the parser can transmit datas to its delegate. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="55">
+        <label>&lt;Parser3DDelegate&gt;</label>
+        <link refid="protocol_parser3_d_delegate-p"/>
+      </node>
+      <node id="56">
+        <label>Object3D</label>
+        <link refid="interface_object3_d"/>
+        <childnode refid="55" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Parser3DProtocol.h" line="30" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Parser3DProtocol.h" bodystart="30" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="protocol_parser3_d_delegate-p_1a45d59a7c1dcaeb598615324cd9d39339" prot="public" virt="virtual"><scope>Parser3DDelegate-p</scope><name>parserDidCountVertices:andDidParseVertices:normals:andTextures:</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,98 @@
+<!DOCTYPE html><html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<title>Parser3DProtocol Protocol Reference</title>
+<meta id="Generator" name="Generator" content="Doxyclean">
+<meta id="GeneratorVersion" name="GeneratorVersion" content="2.2">
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<link rel="stylesheet" type="text/css" media="screen" href="../css/screen.css">
+<link rel="stylesheet" type="text/css" media="print" href="../css/print.css">
+<script type="text/javascript">
+				function toggleTOC() {
+					var toc = document.getElementById('tableOfContents');
+					var tocButton = document.getElementById('toc_button');
+					var contents = document.getElementById('contents');
+					if (toc.style.display == 'block') {
+						toc.style.display = 'none';
+						contents.className = '';
+						tocButton.className = '';
+					} else {
+						toc.style.display = 'block';
+						contents.className = 'tableOfContentsOpen';
+						tocButton.className = 'open';
+					}
+				}
+				
+				function toggleTOCItem() {
+					var listItem = event.srcElement;
+					var sublist = listItem.getElementsByTagName('ul')[0];
+					if (sublist.style.display == 'block') {
+						sublist.style.display = 'none';
+						listItem.className = 'expandable';
+					} else {
+						sublist.style.display = 'block';
+						listItem.className = 'expandable expanded';
+					}
+				}
+				
+				function jumpTo() {
+					selectedItem = event.srcElement.options[event.srcElement.selectedIndex].value;
+					window.location = "#" + selectedItem;
+				}
+			</script>
+</head>
+<body>
+<header id="projectHeader"><h1><a href="../index.html">VRToolKit Reference Library</a></h1></header><header id="fileHeader"><h1><a href="#classTitle">Parser3DProtocol Protocol Reference</a></h1></header><nav id="buttons"><ul>
+<li id="toc_button"><button id="table_of_contents" onclick="toggleTOC()">Table of Contents</button></li>
+<li id="jumpto_button"><select id="jumpto" onchange="jumpTo()"><option value="classTitle">Jump To...</option>
+<option value="overview">Overview</option>
+<option value="tasks">Tasks</option>
+<option value="instanceMethods">Instance Methods</option>
+<option value="parseFileNamed:">    - parseFileNamed:</option></select></li>
+</ul></nav><nav id="tableOfContents" style="display: none;"><ul>
+<li><a href="#overview">Overview</a></li>
+<li class="expandable" id="tocTasks" onclick="toggleTOCItem()">
+<a href="#tasks">Tasks</a><ul style="display: none;"><li><a href="#Other">Other</a></li></ul>
+</li>
+<li class="expandable" id="tocInstanceMethods" onclick="toggleTOCItem()">
+<a href="#instanceMethods">Instance Methods</a><ul style="display: none;"><li><a href="#parseFileNamed:">parseFileNamed:</a></li></ul>
+</li>
+</ul></nav><div id="contents">
+<h1 id="classTitle">Parser3DProtocol Protocol Reference</h1>
+<table id="metadata"><tr class="alt">
+<th>Declared in</th>
+<td>Parser3DProtocol.h</td>
+</tr></table>
+<h2 id="overview">Overview</h2>
+<p>The protocol a class parsing 3D shape description files (.obj, .vrml ...) must implement. </p>
+<p>
+These parsers parse 3D format not the xml description file ! </p>
+<h2 id="tasks">Tasks</h2>
+<ul id="tasksList"><li id="Other">
+<h3>Other</h3>
+<ul class="methods"><li>
+<span class="tooltipRegion"><code><a href="#parseFileNamed:">- parseFileNamed:</a></code> <span class="specialType">required</span></span><span class="tooltip">This method parse a file located in the mainBundle. </span>
+</li></ul>
+</li></ul>
+<section id="instanceMethods"><h2>Instance Methods</h2>
+<section class="definition" id="parseFileNamed:"><h3>parseFileNamed:</h3>
+<p>This method parse a file located in the mainBundle. </p>
+<code class="methodDeclaration">- (void)parseFileNamed:(NSString *)<span class="parameter">filename</span> </code><h5>Parameters</h5>
+<dl class="parameterList">
+<dt>filename</dt>
+<dd><p>The name of the file with the extension </p></dd>
+</dl>
+<h5>Discussion</h5>
+<p>When the parsing is over the delegate is called.</p>
+<p></p>
+<h5>Declared In</h5>
+<code>Parser3DProtocol.h</code></section></section><hr>
+<p id="lastUpdated">Last updated: 2010-8-17</p>
+</div>
+<footer id="breadcrumbs"><ul>
+<li><a href="../index.html">ARApi</a></li>
+<li><a href="#classTitle">Parser3DProtocol Protocol Reference</a></li>
+</ul></footer>
+</body>
+</html>

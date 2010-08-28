@@ -1,0 +1,10 @@
+.DS_Store
+*.swp
+*~.nib
+
+XcodeProject/build/
+
+*.pbxuser
+*.perspective
+*.perspective3
+

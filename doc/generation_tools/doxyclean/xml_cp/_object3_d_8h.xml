@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="_object3_d_8h" kind="file">
+    <compoundname>Object3D.h</compoundname>
+    <includes local="no">Foundation/Foundation.h</includes>
+    <includes local="no">OpenGLES/ES1/gl.h</includes>
+    <includes refid="_parser3_d_protocol_8h" local="yes">Parser3DProtocol.h</includes>
+    <includedby refid="_object3_d_8m" local="yes">Classes/Object3D.m</includedby>
+    <includedby refid="_object3_d_parameters_view_controller_8m" local="yes">Classes/Object3DParametersViewController.m</includedby>
+    <includedby refid="_v_r_tool_kit_app_delegate_8m" local="yes">Classes/VRToolKitAppDelegate.m</includedby>
+    <includedby refid="_v_r_view_controller_8m" local="yes">Classes/VRViewController.m</includedby>
+    <incdepgraph>
+      <node id="29">
+        <label>OpenGLES/ES1/gl.h</label>
+      </node>
+      <node id="30">
+        <label>Parser3DProtocol.h</label>
+        <link refid="_parser3_d_protocol_8h_source"/>
+        <childnode refid="29" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>Classes/Object3D.h</label>
+        <link refid="Object3D.h"/>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>Foundation/Foundation.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="33">
+        <label>Classes/Object3DParametersViewController.m</label>
+        <childnode refid="33" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>Classes/VRToolKitAppDelegate.m</label>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>Classes/VRViewController.m</label>
+      </node>
+      <node id="31">
+        <label>Classes/Object3D.h</label>
+        <link refid="Object3D.h"/>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>Classes/Object3D.m</label>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="interface_object3_d" prot="public">Object3D</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#import<sp/>&lt;Foundation/Foundation.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&lt;OpenGLES/ES1/gl.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&quot;Parser3DProtocol.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="interface_object3_d" refkind="compound"><highlight class="keyword">@interface<sp/></highlight><highlight class="normal"><ref refid="interface_object3_d" kindref="compound" tooltip="This class is the internal representation of an object you want to display in Virtual...">Object3D</ref><sp/>:<sp/>NSObject<sp/>&lt;<ref refid="protocol_parser3_d_delegate-p" kindref="compound" tooltip="The method the delegate of a parser must implement.">Parser3DDelegate</ref>&gt;<sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">@private</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NSString<sp/>*_name;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NSString<sp/>*_xmlFilePath;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>_scaleFactor;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>_xRotation;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>_yRotation;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>_zRotation;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>_zTranslation;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NSString<sp/>*_textureFileName;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NSString<sp/>*_modelFileName;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//3D<sp/>parameters</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>_numberOfVertices;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GLfloat<sp/>*_vertices;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GLfloat<sp/>*_normals;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GLfloat<sp/>*_textureCoordinates;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="interface_object3_d_1a3ec3163a2d7963ca9350bfdeb4ae4d38" refkind="member"><highlight class="normal">@property<sp/>(readonly,nonatomic,<sp/>retain)<sp/>NSString<sp/>*name;</highlight></codeline>
+<codeline lineno="40" refid="interface_object3_d_1a3ce9987599ad704f1d0114113b1f553e" refkind="member"><highlight class="normal">@property<sp/>(readonly,<sp/>nonatomic,<sp/>retain)<sp/>NSString<sp/>*xmlFilePath;</highlight></codeline>
+<codeline lineno="44" refid="interface_object3_d_1a38b3ffe5c68c6131c79f6479b43d70ef" refkind="member"><highlight class="normal">@property<sp/>(nonatomic,<sp/>assign)<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>scaleFactor;</highlight></codeline>
+<codeline lineno="48" refid="interface_object3_d_1a0f5a9a4b62d1f71da1147b90fe7494df" refkind="member"><highlight class="normal">@property<sp/>(nonatomic,<sp/>assign)<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>xRotation;</highlight></codeline>
+<codeline lineno="52" refid="interface_object3_d_1a0abdfa9f4085a04bf2897125c35907e5" refkind="member"><highlight class="normal">@property<sp/>(nonatomic,<sp/>assign)<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>yRotation;</highlight></codeline>
+<codeline lineno="56" refid="interface_object3_d_1aed0fe65e4196c109047af35a19b3702a" refkind="member"><highlight class="normal">@property<sp/>(nonatomic,<sp/>assign)<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>zRotation;</highlight></codeline>
+<codeline lineno="62" refid="interface_object3_d_1af2f170d4190a1670e5ed96101d68d44d" refkind="member"><highlight class="normal">@property<sp/>(nonatomic,<sp/>assign)<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>zTranslation;</highlight></codeline>
+<codeline lineno="66" refid="interface_object3_d_1a00a1bbe6405b05243e7e3828fc3028a8" refkind="member"><highlight class="normal">@property<sp/>(readonly,<sp/>nonatomic,<sp/>retain)<sp/>NSString<sp/>*textureFileName;</highlight></codeline>
+<codeline lineno="70" refid="interface_object3_d_1aaab2092d94774c3040d86d86adadfca1" refkind="member"><highlight class="normal">@property<sp/>(readonly,<sp/>nonatomic,<sp/>retain)<sp/>NSString<sp/>*modelFileName;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="comment">//3D<sp/>parameters</highlight></codeline>
+<codeline lineno="75" refid="interface_object3_d_1a5bf7d16f5da536be1d312324fa51e47b" refkind="member"><highlight class="comment"></highlight><highlight class="normal">@property<sp/>(readonly,<sp/>nonatomic,<sp/>assign)<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>numberOfVertices;</highlight></codeline>
+<codeline lineno="79" refid="interface_object3_d_1a3e3bd5f6514f9a945257693b5a7dae84" refkind="member"><highlight class="normal">@property<sp/>(readonly,<sp/>nonatomic,<sp/>assign)<sp/>GLfloat<sp/>*vertices;</highlight></codeline>
+<codeline lineno="83" refid="interface_object3_d_1aa2a0c570c072d451d412f286605d44f4" refkind="member"><highlight class="normal">@property<sp/>(readonly,<sp/>nonatomic,<sp/>assign)<sp/>GLfloat<sp/>*normals;</highlight></codeline>
+<codeline lineno="87" refid="interface_object3_d_1a66f996ac1db34139694eaf069a920b83" refkind="member"><highlight class="normal">@property<sp/>(readonly,<sp/>nonatomic,<sp/>assign)<sp/>GLfloat<sp/>*textureCoordinates;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal">+<sp/>(<ref refid="interface_object3_d" kindref="compound" tooltip="This class is the internal representation of an object you want to display in Virtual...">Object3D</ref><sp/>*)object3DFromFileNamed:(NSString<sp/>*)filename;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal">-<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)writeInDocumentDirectory;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal">@end</highlight></codeline>
+    </programlisting>
+    <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/Object3D.h"/>
+  </compounddef>
+</doxygen>

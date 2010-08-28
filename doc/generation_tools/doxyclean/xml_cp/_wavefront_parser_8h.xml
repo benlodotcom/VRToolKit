@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="_wavefront_parser_8h" kind="file">
+    <compoundname>WavefrontParser.h</compoundname>
+    <includes local="no">Foundation/Foundation.h</includes>
+    <includes refid="_parser3_d_protocol_8h" local="yes">Parser3DProtocol.h</includes>
+    <includedby refid="_wavefront_parser_8m" local="yes">Classes/WavefrontParser.m</includedby>
+    <incdepgraph>
+      <node id="133">
+        <label>OpenGLES/ES1/gl.h</label>
+      </node>
+      <node id="132">
+        <label>Parser3DProtocol.h</label>
+        <link refid="_parser3_d_protocol_8h_source"/>
+        <childnode refid="133" relation="include">
+        </childnode>
+      </node>
+      <node id="131">
+        <label>Foundation/Foundation.h</label>
+      </node>
+      <node id="130">
+        <label>Classes/WavefrontParser.h</label>
+        <link refid="WavefrontParser.h"/>
+        <childnode refid="131" relation="include">
+        </childnode>
+        <childnode refid="132" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="134">
+        <label>Classes/WavefrontParser.h</label>
+        <link refid="WavefrontParser.h"/>
+        <childnode refid="135" relation="include">
+        </childnode>
+      </node>
+      <node id="135">
+        <label>Classes/WavefrontParser.m</label>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="interface_wavefront_parser" prot="public">WavefrontParser</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#import<sp/>&lt;Foundation/Foundation.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&quot;Parser3DProtocol.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="interface_wavefront_parser" refkind="compound"><highlight class="keyword">@interface<sp/></highlight><highlight class="normal"><ref refid="interface_wavefront_parser" kindref="compound" tooltip="This class can parse basic wavefront files (.obj).">WavefrontParser</ref><sp/>:<sp/>NSObject<sp/>{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">@private</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>id<sp/>&lt;Parser3DDelegate&gt;<sp/>_delegate;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Boolean<sp/>iVar<sp/>we<sp/>use<sp/>internally</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BOOL<sp/>_containNormals;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BOOL<sp/>_containTextures;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="interface_wavefront_parser_1a665e398d8ae3a788ac6b49cbb224a3f1" refkind="member"><highlight class="normal">@property<sp/>(nonatomic,<sp/>assign)<sp/>id<sp/>&lt;Parser3DDelegate&gt;<sp/>delegate;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal">-<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>parseFileNamed:(NSString<sp/>*)filename;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal">@end</highlight></codeline>
+    </programlisting>
+    <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/WavefrontParser.h"/>
+  </compounddef>
+</doxygen>

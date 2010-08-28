@@ -1,0 +1,173 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="interface_v_r_view_controller_07_08" kind="class" prot="public">
+    <compoundname>VRViewController()</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="interface_v_r_view_controller_1ab6ad8d70a4d463d995c4989f548072a4" prot="public" static="no" readable="yes" writable="yes" gettable="no" settable="no" accessor="retain">
+        <type><ref refid="interface_a_r_tool_kit_plus_wrapper" kindref="compound">ARToolKitPlusWrapper</ref> *</type>
+        <definition>ARToolKitPlusWrapper* VRViewController()::wrapper</definition>
+        <argsstring></argsstring>
+        <name>wrapper</name>
+        <read></read>
+        <write></write>
+        <briefdescription>
+<para>The <ref refid="interface_a_r_tool_kit_plus_wrapper" kindref="compound">ARToolKitPlusWrapper</ref> instance the controller pass on video frames for marler detection. </para>        </briefdescription>
+        <detaileddescription>
+<para>The <ref refid="interface_v_r_view_controller" kindref="compound">VRViewController</ref> is also the delegate of this wrapper. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/VRViewController.m" line="34" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/VRViewController.m" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_v_r_view_controller_1a37e3cebc3581c8e3ab7d427359fea210" prot="public" static="no" readable="yes" writable="yes" gettable="no" settable="no" accessor="retain">
+        <type><ref refid="interface_object3_d_parameters_view_controller" kindref="compound">Object3DParametersViewController</ref> *</type>
+        <definition>Object3DParametersViewController* VRViewController()::parametersViewController</definition>
+        <argsstring></argsstring>
+        <name>parametersViewController</name>
+        <read></read>
+        <write></write>
+        <briefdescription>
+<para>The controller responsible of the parameters view. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/VRViewController.m" line="38" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/VRViewController.m" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_v_r_view_controller_1a915ef7e56455be72582b462f6d044482" prot="public" static="no" readable="yes" writable="yes" gettable="no" settable="no" accessor="retain">
+        <type>AVCaptureSession *</type>
+        <definition>AVCaptureSession* VRViewController()::captureSession</definition>
+        <argsstring></argsstring>
+        <name>captureSession</name>
+        <read></read>
+        <write></write>
+        <briefdescription>
+<para>The capture session we use to capture video frames. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/VRViewController.m" line="42" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/VRViewController.m" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_v_r_view_controller_1a6cc37a0c376a70c9cac71e8262954ff9" prot="public" static="no" readable="yes" writable="yes" gettable="no" settable="no" accessor="retain">
+        <type>AVCaptureVideoPreviewLayer *</type>
+        <definition>AVCaptureVideoPreviewLayer* VRViewController()::previewLayer</definition>
+        <argsstring></argsstring>
+        <name>previewLayer</name>
+        <read></read>
+        <write></write>
+        <briefdescription>
+<para>The layer displaying the frames from the camera. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/VRViewController.m" line="46" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/VRViewController.m" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_v_r_view_controller_1a34f830b1267d4174aec7150d366be39c" prot="public" static="no" readable="yes" writable="yes" gettable="no" settable="no" accessor="assign">
+        <type>BOOL</type>
+        <definition>BOOL VRViewController()::detectionEnabled</definition>
+        <argsstring></argsstring>
+        <name>detectionEnabled</name>
+        <read></read>
+        <write></write>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>/n </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/VRViewController.m" line="50" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/VRViewController.m" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_v_r_view_controller_1a6dabe1fd6bf20a957f30beb7fc83f8b3" prot="public" static="no" readable="yes" writable="yes" gettable="no" settable="no" accessor="assign">
+        <type>int</type>
+        <definition>int VRViewController()::currentMarkerID</definition>
+        <argsstring></argsstring>
+        <name>currentMarkerID</name>
+        <read></read>
+        <write></write>
+        <briefdescription>
+<para>The markerID of the current marker detect (-1 if or marker is detected). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/VRViewController.m" line="54" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/VRViewController.m" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_v_r_view_controller_1ae4ce8fb002e7c518a5bb55f102b40452" prot="public" static="no" readable="yes" writable="yes" gettable="no" settable="no" accessor="retain">
+        <type>NSDictionary *</type>
+        <definition>NSDictionary* VRViewController()::models</definition>
+        <argsstring></argsstring>
+        <name>models</name>
+        <read></read>
+        <write></write>
+        <briefdescription>
+<para>The NSDictionnary loaded from the models.plist file. </para>        </briefdescription>
+        <detaileddescription>
+<para>This dictionnary uses as key the markerID and as value the corresponding xml description file to load. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/VRViewController.m" line="61" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/VRViewController.m" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_v_r_view_controller_1aefe9aa4b4dbdeb8a9e8309d2134efb3b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void VRViewController()::initCapture</definition>
+        <argsstring>()</argsstring>
+        <name>initCapture</name>
+        <briefdescription>
+<para>This methods initialize the capture session. </para>        </briefdescription>
+        <detaileddescription>
+<para>It sets up the AVCaptureDeviceInput instance, the AVCaptureVideoDataOutput instance and create an AVCaptureSession which links the input and the output.<linebreak/>
+ The format chosen for the capture is kCVPixelFormatType_32BGRA because for now <ref refid="interface_a_r_tool_kit_plus_wrapper" kindref="compound">ARToolKitPlusWrapper</ref> want BGRA encoded frames.<linebreak/>
+ The queue used is not the main queue, so all the capture and detection process is done in a separate thread. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/VRViewController.m" line="72"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_v_r_view_controller_1ad1d646c8713f1604151fca152d38c8ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void VRViewController()::hideParameters</definition>
+        <argsstring>()</argsstring>
+        <name>hideParameters</name>
+        <briefdescription>
+<para>This shows the parameters view. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/VRViewController.m" line="77"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_v_r_view_controller_1a069293d46ab6e60379ab28b0f8c20913" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void VRViewController()::showParameters</definition>
+        <argsstring>()</argsstring>
+        <name>showParameters</name>
+        <briefdescription>
+<para>This hides the parameters view. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/VRViewController.m" line="81"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Private interface for the <ref refid="interface_v_r_view_controller" kindref="compound">VRViewController</ref> class </para>    </detaileddescription>
+    <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/VRViewController.m" line="27" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/VRViewController.m" bodystart="27" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="interface_v_r_view_controller_1a915ef7e56455be72582b462f6d044482" prot="public" virt="non-virtual"><scope>VRViewController()</scope><name>captureSession</name></member>
+      <member refid="interface_v_r_view_controller_1a6dabe1fd6bf20a957f30beb7fc83f8b3" prot="public" virt="non-virtual"><scope>VRViewController()</scope><name>currentMarkerID</name></member>
+      <member refid="interface_v_r_view_controller_1a34f830b1267d4174aec7150d366be39c" prot="public" virt="non-virtual"><scope>VRViewController()</scope><name>detectionEnabled</name></member>
+      <member refid="interface_v_r_view_controller_1ad1d646c8713f1604151fca152d38c8ba" prot="public" virt="virtual"><scope>VRViewController()</scope><name>hideParameters</name></member>
+      <member refid="interface_v_r_view_controller_1aefe9aa4b4dbdeb8a9e8309d2134efb3b" prot="public" virt="virtual"><scope>VRViewController()</scope><name>initCapture</name></member>
+      <member refid="interface_v_r_view_controller_1ae4ce8fb002e7c518a5bb55f102b40452" prot="public" virt="non-virtual"><scope>VRViewController()</scope><name>models</name></member>
+      <member refid="interface_v_r_view_controller_1a37e3cebc3581c8e3ab7d427359fea210" prot="public" virt="non-virtual"><scope>VRViewController()</scope><name>parametersViewController</name></member>
+      <member refid="interface_v_r_view_controller_1a6cc37a0c376a70c9cac71e8262954ff9" prot="public" virt="non-virtual"><scope>VRViewController()</scope><name>previewLayer</name></member>
+      <member refid="interface_v_r_view_controller_1a069293d46ab6e60379ab28b0f8c20913" prot="public" virt="virtual"><scope>VRViewController()</scope><name>showParameters</name></member>
+      <member refid="interface_v_r_view_controller_1ab6ad8d70a4d463d995c4989f548072a4" prot="public" virt="non-virtual"><scope>VRViewController()</scope><name>wrapper</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

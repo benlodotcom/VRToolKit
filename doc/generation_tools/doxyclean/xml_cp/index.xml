@@ -1,0 +1,414 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.6.3">
+  <compound refid="interface_a_r_tool_kit_plus_wrapper" kind="class"><name>ARToolKitPlusWrapper</name>
+    <member refid="interface_a_r_tool_kit_plus_wrapper_1a56d1ad4aded6b5abf3615378fef97595" kind="variable"><name>_delegate</name></member>
+    <member refid="interface_a_r_tool_kit_plus_wrapper_1aef1664bcfad6b3464fca76c0da35a0a4" kind="variable"><name>_useBCHMarker</name></member>
+    <member refid="interface_a_r_tool_kit_plus_wrapper_1a50244d0080416e828a52e644ee3df14c" kind="variable"><name>_useThinBorderMarker</name></member>
+    <member refid="interface_a_r_tool_kit_plus_wrapper_1a7e1d39c97018af294b851a18f5354bac" kind="property"><name>delegate</name></member>
+    <member refid="interface_a_r_tool_kit_plus_wrapper_1a9a65fc5fa39033f6f31533921e86e9e7" kind="property"><name>useBCHMarker</name></member>
+    <member refid="interface_a_r_tool_kit_plus_wrapper_1a381ffb7c89902394d892268c598651a9" kind="property"><name>useThinBorderMarker</name></member>
+    <member refid="interface_a_r_tool_kit_plus_wrapper_1a9328a02468d95a6c23cb46a79d18da86" kind="function"><name>setupWithImageBuffer:</name></member>
+    <member refid="interface_a_r_tool_kit_plus_wrapper_1a7398ba1fadc4d68368ebb7f832023830" kind="function"><name>detectMarkerInImageBuffer:</name></member>
+    <member refid="interface_a_r_tool_kit_plus_wrapper_1aa39d3a247f0b60b8d9bed37089717af0" kind="variable"><name>tracker</name></member>
+  </compound>
+  <compound refid="interface_a_r_tool_kit_plus_wrapper_07_08" kind="class"><name>ARToolKitPlusWrapper()</name>
+    <member refid="interface_a_r_tool_kit_plus_wrapper_1aa39d3a247f0b60b8d9bed37089717af0" kind="variable"><name>tracker</name></member>
+  </compound>
+  <compound refid="protocol_a_r_tool_kit_plus_wrapper_delegate-p" kind="protocol"><name>ARToolKitPlusWrapperDelegate-p</name>
+    <member refid="protocol_a_r_tool_kit_plus_wrapper_delegate-p_1a60ce3d7828d23a81aa3e1ee2432288e5" kind="function"><name>aRToolKitPlusWrapper:didSetupWithProjectionMatrix:</name></member>
+    <member refid="protocol_a_r_tool_kit_plus_wrapper_delegate-p_1a7bf7738f92f51164b6feee5b5f244010" kind="function"><name>aRToolKitPlusWrapper:didDetectMarker:withConfidence:andComputeModelViewMatrix:</name></member>
+  </compound>
+  <compound refid="class_a_v_capture_video_data_output_sample_buffer_delegate-p" kind="class"><name>AVCaptureVideoDataOutputSampleBufferDelegate-p</name>
+  </compound>
+  <compound refid="interface_e_a_g_l_view" kind="class"><name>EAGLView</name>
+    <member refid="interface_e_a_g_l_view_1a8d81252f06fa8730c6656810432a052e" kind="variable"><name>_projectionMatrix</name></member>
+    <member refid="interface_e_a_g_l_view_1af0174a4f2473580e291f9976e14f7f36" kind="variable"><name>_modelViewMatrix</name></member>
+    <member refid="interface_e_a_g_l_view_1ad4bac05718d1a162ded42e21d99b7276" kind="variable"><name>backingWidth</name></member>
+    <member refid="interface_e_a_g_l_view_1a57af74dbab0b48f43e76bd95d86edff5" kind="variable"><name>backingHeight</name></member>
+    <member refid="interface_e_a_g_l_view_1a5a11b0e5b21de25c1bf0abbbe0da671e" kind="variable"><name>context</name></member>
+    <member refid="interface_e_a_g_l_view_1aca878ef4233ad3e52a37946d89af2dc6" kind="variable"><name>viewRenderbuffer</name></member>
+    <member refid="interface_e_a_g_l_view_1a160b7b0b6ff9ee9a6afcf9dd30643762" kind="variable"><name>viewFramebuffer</name></member>
+    <member refid="interface_e_a_g_l_view_1a264809c4ce67d3fa5e4d1830098fc23b" kind="variable"><name>depthRenderbuffer</name></member>
+    <member refid="interface_e_a_g_l_view_1a44b44e3fe4def6988bf9da213d5289f6" kind="variable"><name>textures</name></member>
+    <member refid="interface_e_a_g_l_view_1acfd021c787844b7f9e9ef8c7888b8ae2" kind="variable"><name>_object</name></member>
+    <member refid="interface_e_a_g_l_view_1a317f0f1384e75708aca4722224cb2318" kind="variable"><name>animating</name></member>
+    <member refid="interface_e_a_g_l_view_1af85f4a42bac4d7a1a9eb1dbb17599c57" kind="property"><name>projectionMatrix</name></member>
+    <member refid="interface_e_a_g_l_view_1a7366a72beb8803d6f55a847c1e617273" kind="property"><name>modelViewMatrix</name></member>
+    <member refid="interface_e_a_g_l_view_1a5ffa8b552d166a08a3d91b4c12072fb3" kind="property"><name>object</name></member>
+    <member refid="interface_e_a_g_l_view_1a2ac3364c5af1ed13f769fad46d515003" kind="function"><name>drawView</name></member>
+    <member refid="interface_e_a_g_l_view_1a8ddc1c3c72a2e7dbb9a5c457bf10bdda" kind="function"><name>startAnimating</name></member>
+    <member refid="interface_e_a_g_l_view_1ad6c9acf6e68d0f284a949a7c2c45f0d6" kind="function"><name>stopAnimating</name></member>
+    <member refid="interface_e_a_g_l_view_1a2ac7c41a2d1fa913fcc927b8890e56c1" kind="function"><name>createFramebuffer</name></member>
+    <member refid="interface_e_a_g_l_view_1ad96c7714cd26b1d8504db265bf865c16" kind="function"><name>destroyFramebuffer</name></member>
+    <member refid="interface_e_a_g_l_view_1add172e3179a45f4eddfbc411da25bbc7" kind="function"><name>setupView</name></member>
+    <member refid="interface_e_a_g_l_view_1a7f69e08de9ced36043b1ee16c5360cf7" kind="function"><name>loadObject:</name></member>
+    <member refid="interface_e_a_g_l_view_1a565e99e4284385c9e46ff840978a3182" kind="function"><name>loadTexture</name></member>
+    <member refid="interface_e_a_g_l_view_1a1fb97747eb89d5d481ac44d20832716f" kind="function"><name>unloadTexture</name></member>
+  </compound>
+  <compound refid="interface_e_a_g_l_view_07_08" kind="class"><name>EAGLView()</name>
+    <member refid="interface_e_a_g_l_view_1a2ac7c41a2d1fa913fcc927b8890e56c1" kind="function"><name>createFramebuffer</name></member>
+    <member refid="interface_e_a_g_l_view_1ad96c7714cd26b1d8504db265bf865c16" kind="function"><name>destroyFramebuffer</name></member>
+    <member refid="interface_e_a_g_l_view_1add172e3179a45f4eddfbc411da25bbc7" kind="function"><name>setupView</name></member>
+    <member refid="interface_e_a_g_l_view_1a7f69e08de9ced36043b1ee16c5360cf7" kind="function"><name>loadObject:</name></member>
+    <member refid="interface_e_a_g_l_view_1a565e99e4284385c9e46ff840978a3182" kind="function"><name>loadTexture</name></member>
+    <member refid="interface_e_a_g_l_view_1a1fb97747eb89d5d481ac44d20832716f" kind="function"><name>unloadTexture</name></member>
+  </compound>
+  <compound refid="interface_g_data_x_m_l_document" kind="class"><name>GDataXMLDocument</name>
+    <member refid="interface_g_data_x_m_l_document_1a8ad6e8cee0d74d2b3b28c83099e14e48" kind="variable"><name>xmlDoc_</name></member>
+    <member refid="interface_g_data_x_m_l_document_1affa6920d0dfcedcd5bc0e21e74af971d" kind="function"><name>initWithXMLString:options:error:</name></member>
+    <member refid="interface_g_data_x_m_l_document_1a5aac20d1849c77ca0904fdd50e65491a" kind="function"><name>initWithData:options:error:</name></member>
+    <member refid="interface_g_data_x_m_l_document_1ab91990967e0e050dfe889f9b67b0d4db" kind="function"><name>initWithRootElement:</name></member>
+    <member refid="interface_g_data_x_m_l_document_1af6e96fd6b07f84044facaf26706f6497" kind="function"><name>rootElement</name></member>
+    <member refid="interface_g_data_x_m_l_document_1a984d2f49915376794041612b8c7b0534" kind="function"><name>XMLData</name></member>
+    <member refid="interface_g_data_x_m_l_document_1ac43d5fecaa5ca156d4a2202604f63098" kind="function"><name>setVersion:</name></member>
+    <member refid="interface_g_data_x_m_l_document_1a4c38b4821cf2fd94e0be91e5f58c47c5" kind="function"><name>setCharacterEncoding:</name></member>
+    <member refid="interface_g_data_x_m_l_document_1a8f72a4eb0c1d63deb9cf99ec44459cc4" kind="function"><name>nodesForXPath:namespaces:error:</name></member>
+    <member refid="interface_g_data_x_m_l_document_1aa354334c070410bde942b706ce83e190" kind="function"><name>nodesForXPath:error:</name></member>
+    <member refid="interface_g_data_x_m_l_document_1a9bc2a02ba6251d9670127923b43df1a9" kind="function"><name>description</name></member>
+    <member refid="interface_g_data_x_m_l_document_1a919a4f1c9925f4d6de2c09a92bfd0f35" kind="function"><name>addStringsCacheToDoc</name></member>
+  </compound>
+  <compound refid="interface_g_data_x_m_l_document_07_private_methods_08" kind="class"><name>GDataXMLDocument(PrivateMethods)</name>
+    <member refid="interface_g_data_x_m_l_document_1a919a4f1c9925f4d6de2c09a92bfd0f35" kind="function"><name>addStringsCacheToDoc</name></member>
+  </compound>
+  <compound refid="interface_g_data_x_m_l_element" kind="class"><name>GDataXMLElement</name>
+    <member refid="interface_g_data_x_m_l_element_1a8020a4dae6ad3175527534d5a793e285" kind="function"><name>initWithXMLString:error:</name></member>
+    <member refid="interface_g_data_x_m_l_element_1a4c0f13082cdf1115dd51a1199a6c8935" kind="function"><name>namespaces</name></member>
+    <member refid="interface_g_data_x_m_l_element_1af725206ae3ce5c7855a1a2960e82fef7" kind="function"><name>setNamespaces:</name></member>
+    <member refid="interface_g_data_x_m_l_element_1a58f2f9b4dbc512caa8b0a6ac42e907a1" kind="function"><name>addNamespace:</name></member>
+    <member refid="interface_g_data_x_m_l_element_1a506a65646d411876d1d23b1ce0afa920" kind="function"><name>addChild:</name></member>
+    <member refid="interface_g_data_x_m_l_element_1a8d9571efd0923ecc365b267fd1c95c8a" kind="function"><name>removeChild:</name></member>
+    <member refid="interface_g_data_x_m_l_element_1af0724908d7e1c6b831caddcaf7973aaa" kind="function"><name>elementsForName:</name></member>
+    <member refid="interface_g_data_x_m_l_element_1af2cb81abe782d2d3396fe9abe3b9f60e" kind="function"><name>elementsForLocalName:URI:</name></member>
+    <member refid="interface_g_data_x_m_l_element_1ae6e3e03eff00c20c2953fcbe88d3c4d5" kind="function"><name>attributes</name></member>
+    <member refid="interface_g_data_x_m_l_element_1a0823c7ce613abf40d5913805cbf54a8e" kind="function"><name>attributeForName:</name></member>
+    <member refid="interface_g_data_x_m_l_element_1aa685fc8bb2453aa2af8543eaa3ac27bc" kind="function"><name>attributeForLocalName:URI:</name></member>
+    <member refid="interface_g_data_x_m_l_element_1a51a2307fd7086c0e814fd7b3d5da86bf" kind="function"><name>addAttribute:</name></member>
+    <member refid="interface_g_data_x_m_l_element_1ab27be508b932cbe3d0686659069e41b7" kind="function"><name>resolvePrefixForNamespaceURI:</name></member>
+    <member refid="interface_g_data_x_m_l_element_1a5f56aa547c9ba1abdc3d68e050a9b4e3" kind="function"><name>fixUpNamespacesForNode:graftingToTreeNode:</name></member>
+  </compound>
+  <compound refid="interface_g_data_x_m_l_element_07_private_methods_08" kind="class"><name>GDataXMLElement(PrivateMethods)</name>
+    <member refid="interface_g_data_x_m_l_element_1a5f56aa547c9ba1abdc3d68e050a9b4e3" kind="function"><name>fixUpNamespacesForNode:graftingToTreeNode:</name></member>
+  </compound>
+  <compound refid="interface_g_data_x_m_l_node" kind="class"><name>GDataXMLNode</name>
+    <member refid="interface_g_data_x_m_l_node_1acfd13d67dcb0ed8011df204c36c88d6f" kind="variable"><name>xmlNode_</name></member>
+    <member refid="interface_g_data_x_m_l_node_1af6ca9b5845f17e614acc517388e1bfd5" kind="variable"><name>shouldFreeXMLNode_</name></member>
+    <member refid="interface_g_data_x_m_l_node_1abf237c0ffe4081e69064e6ca858b23c6" kind="variable"><name>cachedName_</name></member>
+    <member refid="interface_g_data_x_m_l_node_1a4bf9ed070da05d56e7af4481d7e85c3b" kind="variable"><name>cachedChildren_</name></member>
+    <member refid="interface_g_data_x_m_l_node_1a5681557d48aaa1ed6ba6a5d6488bb6a5" kind="variable"><name>cachedAttributes_</name></member>
+    <member refid="interface_g_data_x_m_l_node_1ad7e4405c6195d993a5633faa1899c8a0" kind="function"><name>elementWithName:</name></member>
+    <member refid="interface_g_data_x_m_l_node_1ad8afb69afa7b083627e8a6db5eba45f7" kind="function"><name>elementWithName:stringValue:</name></member>
+    <member refid="interface_g_data_x_m_l_node_1ae1241290bcd76d378ba9a5eb0612b6c4" kind="function"><name>elementWithName:URI:</name></member>
+    <member refid="interface_g_data_x_m_l_node_1abd922c9940730a4f78c906c2392123df" kind="function"><name>attributeWithName:stringValue:</name></member>
+    <member refid="interface_g_data_x_m_l_node_1a82060803e76687ce902f09c96f654ab2" kind="function"><name>attributeWithName:URI:stringValue:</name></member>
+    <member refid="interface_g_data_x_m_l_node_1a59cd9e673bcf2be9ed19ebbabc68ad26" kind="function"><name>namespaceWithName:stringValue:</name></member>
+    <member refid="interface_g_data_x_m_l_node_1a13761fd3b75c6f465800e2d4ae45db84" kind="function"><name>textWithStringValue:</name></member>
+    <member refid="interface_g_data_x_m_l_node_1abaa7cb3204ca104a89895f895728b942" kind="function"><name>localNameForName:</name></member>
+    <member refid="interface_g_data_x_m_l_node_1ad6038ded1bfe166d7c87718dde7a466f" kind="function"><name>prefixForName:</name></member>
+    <member refid="interface_g_data_x_m_l_node_1afa291e610c39be001971719e6eb37996" kind="function"><name>nodeConsumingXMLNode:</name></member>
+    <member refid="interface_g_data_x_m_l_node_1a0b67aacd8d9351afa5d159b3971b932f" kind="function"><name>nodeBorrowingXMLNode:</name></member>
+    <member refid="interface_g_data_x_m_l_node_1ad6cef8a7c9c6714b8ea42e2620f86866" kind="function"><name>stringValue</name></member>
+    <member refid="interface_g_data_x_m_l_node_1ab3b73dcb1ac9607325552747a3055a1e" kind="function"><name>setStringValue:</name></member>
+    <member refid="interface_g_data_x_m_l_node_1a8c1ecef5a1827105f8cdb435fe330dda" kind="function"><name>childCount</name></member>
+    <member refid="interface_g_data_x_m_l_node_1a5d78f07c8cd059176801973bf6883452" kind="function"><name>children</name></member>
+    <member refid="interface_g_data_x_m_l_node_1acabc5e624c3bbc27ba75c443d48b9795" kind="function"><name>childAtIndex:</name></member>
+    <member refid="interface_g_data_x_m_l_node_1a503afc6b19e456b831f6b45ae184336c" kind="function"><name>localName</name></member>
+    <member refid="interface_g_data_x_m_l_node_1a4dcfed52258221c7387f1482d7ee8488" kind="function"><name>name</name></member>
+    <member refid="interface_g_data_x_m_l_node_1ad243c0aec788b95cb5fa8b6a89707c10" kind="function"><name>prefix</name></member>
+    <member refid="interface_g_data_x_m_l_node_1a9d34ab47a4b5e1b3c67b26b07e9956a1" kind="function"><name>URI</name></member>
+    <member refid="interface_g_data_x_m_l_node_1a5e033ccdae3236c8875e1c6feb44c949" kind="function"><name>kind</name></member>
+    <member refid="interface_g_data_x_m_l_node_1a958c434d973db58ada939d7276977812" kind="function"><name>XMLString</name></member>
+    <member refid="interface_g_data_x_m_l_node_1a93c2784d84fc245d99cf2943fc41c19c" kind="function"><name>nodesForXPath:namespaces:error:</name></member>
+    <member refid="interface_g_data_x_m_l_node_1a48f3179efdba9b7e017aa32e7118907b" kind="function"><name>nodesForXPath:error:</name></member>
+    <member refid="interface_g_data_x_m_l_node_1a775ef8bdbcb26003bfd326930f028d44" kind="function"><name>XMLNode</name></member>
+    <member refid="interface_g_data_x_m_l_node_1a71cb5af09b5c6737c452f2e09bcdec36" kind="function"><name>releaseCachedValues</name></member>
+    <member refid="interface_g_data_x_m_l_node_1afe892d98b556fbab1381efd9fcde6819" kind="function"><name>initConsumingXMLNode:</name></member>
+    <member refid="interface_g_data_x_m_l_node_1ac32928fffb81e4e96957c82e759fd192" kind="function"><name>initBorrowingXMLNode:</name></member>
+    <member refid="interface_g_data_x_m_l_node_1af9ab19e292ae4d18c6302f97f6e284f8" kind="function"><name>XMLNodeCopy</name></member>
+    <member refid="interface_g_data_x_m_l_node_1adbb4de0b3d2e31e5016413f28df8ab23" kind="function"><name>attributeForXMLNode:</name></member>
+    <member refid="interface_g_data_x_m_l_node_1aab0df9eaa8a836f244fc035ceada7901" kind="function"><name>stringFromXMLString:</name></member>
+    <member refid="interface_g_data_x_m_l_node_1a7d6b77d179a4a83b5cfe0c173baf1c3c" kind="function"><name>shouldFreeXMLNode</name></member>
+    <member refid="interface_g_data_x_m_l_node_1a0faeb14e174431b0f7b6e90e5bb14e21" kind="function"><name>setShouldFreeXMLNode:</name></member>
+  </compound>
+  <compound refid="interface_g_data_x_m_l_node_07_private_methods_08" kind="class"><name>GDataXMLNode(PrivateMethods)</name>
+    <member refid="interface_g_data_x_m_l_node_1afa291e610c39be001971719e6eb37996" kind="function"><name>nodeConsumingXMLNode:</name></member>
+    <member refid="interface_g_data_x_m_l_node_1a0b67aacd8d9351afa5d159b3971b932f" kind="function"><name>nodeBorrowingXMLNode:</name></member>
+    <member refid="interface_g_data_x_m_l_node_1afe892d98b556fbab1381efd9fcde6819" kind="function"><name>initConsumingXMLNode:</name></member>
+    <member refid="interface_g_data_x_m_l_node_1ac32928fffb81e4e96957c82e759fd192" kind="function"><name>initBorrowingXMLNode:</name></member>
+    <member refid="interface_g_data_x_m_l_node_07_private_methods_08_1a472c0a766d820c7774f5c587e32db00d" kind="function"><name>XMLNode</name></member>
+    <member refid="interface_g_data_x_m_l_node_1af9ab19e292ae4d18c6302f97f6e284f8" kind="function"><name>XMLNodeCopy</name></member>
+    <member refid="interface_g_data_x_m_l_node_1adbb4de0b3d2e31e5016413f28df8ab23" kind="function"><name>attributeForXMLNode:</name></member>
+    <member refid="interface_g_data_x_m_l_node_1aab0df9eaa8a836f244fc035ceada7901" kind="function"><name>stringFromXMLString:</name></member>
+    <member refid="interface_g_data_x_m_l_node_1a7d6b77d179a4a83b5cfe0c173baf1c3c" kind="function"><name>shouldFreeXMLNode</name></member>
+    <member refid="interface_g_data_x_m_l_node_1a0faeb14e174431b0f7b6e90e5bb14e21" kind="function"><name>setShouldFreeXMLNode:</name></member>
+  </compound>
+  <compound refid="class_a_r_tool_kit_plus_1_1_logger" kind="class"><name>ARToolKitPlus::Logger</name>
+  </compound>
+  <compound refid="class_m_f_mail_compose_view_controller_delegate-p" kind="class"><name>MFMailComposeViewControllerDelegate-p</name>
+  </compound>
+  <compound refid="class_my_logger" kind="class"><name>MyLogger</name>
+    <member refid="class_my_logger_1abb555e3f0819ba8e8d8655c4c6882252" kind="function"><name>artLog</name></member>
+  </compound>
+  <compound refid="class_n_s_object" kind="class"><name>NSObject</name>
+  </compound>
+  <compound refid="interface_object3_d" kind="class"><name>Object3D</name>
+    <member refid="interface_object3_d_1a5f8fc4c476776b3b8ff7a5553d763071" kind="variable"><name>_name</name></member>
+    <member refid="interface_object3_d_1a23cd39d911549226e6f119a6618abc65" kind="variable"><name>_xmlFilePath</name></member>
+    <member refid="interface_object3_d_1ab49db9066445a0f20a4174d1a687faf8" kind="variable"><name>_scaleFactor</name></member>
+    <member refid="interface_object3_d_1ab7656abefe37026ad4fbc3c425719f46" kind="variable"><name>_xRotation</name></member>
+    <member refid="interface_object3_d_1ac52b0d7d646e49faf83d73bae85d8da5" kind="variable"><name>_yRotation</name></member>
+    <member refid="interface_object3_d_1a278e612eac482df5a9201fca30804571" kind="variable"><name>_zRotation</name></member>
+    <member refid="interface_object3_d_1aea0aa7f98c040e8a2c4397e0e840d9ea" kind="variable"><name>_zTranslation</name></member>
+    <member refid="interface_object3_d_1a5964a9c2404231e38297097dd479d0d4" kind="variable"><name>_textureFileName</name></member>
+    <member refid="interface_object3_d_1a790b8ca762a7519133fc24f540043abf" kind="variable"><name>_modelFileName</name></member>
+    <member refid="interface_object3_d_1ac9b924c8b38349d18b63f44213c79307" kind="variable"><name>_numberOfVertices</name></member>
+    <member refid="interface_object3_d_1a4b64b9e7093c76d8e838962971c3ae4a" kind="variable"><name>_vertices</name></member>
+    <member refid="interface_object3_d_1abbafccfb02b30d82605342ba666566c0" kind="variable"><name>_normals</name></member>
+    <member refid="interface_object3_d_1a22ccd66d3219b90a0d40e2d1a0357a26" kind="variable"><name>_textureCoordinates</name></member>
+    <member refid="interface_object3_d_1a3ec3163a2d7963ca9350bfdeb4ae4d38" kind="property"><name>name</name></member>
+    <member refid="interface_object3_d_1a3ce9987599ad704f1d0114113b1f553e" kind="property"><name>xmlFilePath</name></member>
+    <member refid="interface_object3_d_1a38b3ffe5c68c6131c79f6479b43d70ef" kind="property"><name>scaleFactor</name></member>
+    <member refid="interface_object3_d_1a0f5a9a4b62d1f71da1147b90fe7494df" kind="property"><name>xRotation</name></member>
+    <member refid="interface_object3_d_1a0abdfa9f4085a04bf2897125c35907e5" kind="property"><name>yRotation</name></member>
+    <member refid="interface_object3_d_1aed0fe65e4196c109047af35a19b3702a" kind="property"><name>zRotation</name></member>
+    <member refid="interface_object3_d_1af2f170d4190a1670e5ed96101d68d44d" kind="property"><name>zTranslation</name></member>
+    <member refid="interface_object3_d_1a00a1bbe6405b05243e7e3828fc3028a8" kind="property"><name>textureFileName</name></member>
+    <member refid="interface_object3_d_1aaab2092d94774c3040d86d86adadfca1" kind="property"><name>modelFileName</name></member>
+    <member refid="interface_object3_d_1a5bf7d16f5da536be1d312324fa51e47b" kind="property"><name>numberOfVertices</name></member>
+    <member refid="interface_object3_d_1a3e3bd5f6514f9a945257693b5a7dae84" kind="property"><name>vertices</name></member>
+    <member refid="interface_object3_d_1aa2a0c570c072d451d412f286605d44f4" kind="property"><name>normals</name></member>
+    <member refid="interface_object3_d_1a66f996ac1db34139694eaf069a920b83" kind="property"><name>textureCoordinates</name></member>
+    <member refid="interface_object3_d_1a2ad4104c7968619b5ffce18495b8a02d" kind="function"><name>object3DFromFileNamed:</name></member>
+    <member refid="interface_object3_d_1a9a8f5dc459a31fb269df05a5ba6f8c87" kind="function"><name>writeInDocumentDirectory</name></member>
+    <member refid="interface_object3_d_1a6d9c93a1e7a82967a4d3c07a872555ea" kind="function"><name>loadShapesAndTextures</name></member>
+  </compound>
+  <compound refid="interface_object3_d_07_08" kind="class"><name>Object3D()</name>
+    <member refid="interface_object3_d_07_08_1a98800bbe36d9d3723864822fd8b66f20" kind="property"><name>name</name></member>
+    <member refid="interface_object3_d_07_08_1a83e23345e68bfa0623a5ded5a474d3c2" kind="property"><name>xmlFilePath</name></member>
+    <member refid="interface_object3_d_07_08_1ac61f789edda36cb5663eea668a19160d" kind="property"><name>textureFileName</name></member>
+    <member refid="interface_object3_d_07_08_1aef83c01b2a365027288d38ed32e21825" kind="property"><name>modelFileName</name></member>
+    <member refid="interface_object3_d_07_08_1a69003b485b466a21bb5c2c6781e5eb95" kind="property"><name>numberOfVertices</name></member>
+    <member refid="interface_object3_d_07_08_1a5e6cf23bf810be01f881a714250c6fe1" kind="property"><name>vertices</name></member>
+    <member refid="interface_object3_d_07_08_1a6a70ea276bc020ddcda8ad10f21486d1" kind="property"><name>normals</name></member>
+    <member refid="interface_object3_d_07_08_1a70c18df7e98dc446c368cd035adf8628" kind="property"><name>textureCoordinates</name></member>
+    <member refid="interface_object3_d_1a6d9c93a1e7a82967a4d3c07a872555ea" kind="function"><name>loadShapesAndTextures</name></member>
+  </compound>
+  <compound refid="interface_object3_d_parameters_view_controller" kind="class"><name>Object3DParametersViewController</name>
+    <member refid="interface_object3_d_parameters_view_controller_1a3f87587e570e4b7311382cc0b4e0507a" kind="variable"><name>_delegate</name></member>
+    <member refid="interface_object3_d_parameters_view_controller_1aee415aa21631f01dc3e5d53f6d73f21c" kind="variable"><name>_object</name></member>
+    <member refid="interface_object3_d_parameters_view_controller_1ae208aa6225b622022b63c58d9f61bc2e" kind="variable"><name>_markerID</name></member>
+    <member refid="interface_object3_d_parameters_view_controller_1a02994f7673592726b08873f68dc89f34" kind="variable"><name>_saveButton</name></member>
+    <member refid="interface_object3_d_parameters_view_controller_1a4c2a3e07e3d098beb4a76dfcae058eeb" kind="variable"><name>_sendMailButton</name></member>
+    <member refid="interface_object3_d_parameters_view_controller_1a219d65568e5406df37fe5e1d623321ec" kind="variable"><name>_descriptionLabel</name></member>
+    <member refid="interface_object3_d_parameters_view_controller_1a2c379e417893c527599a13d608fa60bb" kind="variable"><name>_xRotationSlider</name></member>
+    <member refid="interface_object3_d_parameters_view_controller_1a8d8634c2568b1936c6ffb2d1b1bd6d08" kind="variable"><name>_yRotationSlider</name></member>
+    <member refid="interface_object3_d_parameters_view_controller_1a94fc5f7f4bfa7a87cb6e6b8597da9828" kind="variable"><name>_zRotationSlider</name></member>
+    <member refid="interface_object3_d_parameters_view_controller_1a6c435717c9fdd8c9b3813e7663626d6b" kind="variable"><name>_zTranslationSlider</name></member>
+    <member refid="interface_object3_d_parameters_view_controller_1a28999fe721b68c5eac3ea936c24cd822" kind="variable"><name>_scaleFactorSlider</name></member>
+    <member refid="interface_object3_d_parameters_view_controller_1a99aed5435ae2e758bfb88ec2bea3e2cf" kind="variable"><name>_xRotationTextField</name></member>
+    <member refid="interface_object3_d_parameters_view_controller_1ae213a5aa0ed76ed6fea03f4d4d3c498e" kind="variable"><name>_yRotationTextField</name></member>
+    <member refid="interface_object3_d_parameters_view_controller_1ac7f1d375da19e509796b61ec97ee9237" kind="variable"><name>_zRotationTextField</name></member>
+    <member refid="interface_object3_d_parameters_view_controller_1a2bfaad740bd566dd8444ac5f1aec816f" kind="variable"><name>_zTranslationTextField</name></member>
+    <member refid="interface_object3_d_parameters_view_controller_1a449bc7bfb11f73fe58f47a936ce81366" kind="variable"><name>_scaleFactorTextField</name></member>
+    <member refid="interface_object3_d_parameters_view_controller_1aa5ed4276fcd2ea0cb4ee6e09d3dca265" kind="property"><name>delegate</name></member>
+    <member refid="interface_object3_d_parameters_view_controller_1aa7084f4052cd55fe8e1d9ebaed3645a9" kind="property"><name>object</name></member>
+    <member refid="interface_object3_d_parameters_view_controller_1a5857494925c30e16b6870faf646ae9df" kind="property"><name>markerID</name></member>
+    <member refid="interface_object3_d_parameters_view_controller_1aa8d0a8a0965ae0aee0539b40628c07ef" kind="property"><name>saveButton</name></member>
+    <member refid="interface_object3_d_parameters_view_controller_1a9e32afa9605260782255155d14b9caa3" kind="property"><name>sendMailButton</name></member>
+    <member refid="interface_object3_d_parameters_view_controller_1aaecdb70abd3e3a37cb77924768c665fd" kind="property"><name>descriptionLabel</name></member>
+    <member refid="interface_object3_d_parameters_view_controller_1a570d3810997c82313a4a67432ef0bcb4" kind="property"><name>xRotationSlider</name></member>
+    <member refid="interface_object3_d_parameters_view_controller_1a9a81eed92cd8186ee33e2969f56d79f7" kind="property"><name>yRotationSlider</name></member>
+    <member refid="interface_object3_d_parameters_view_controller_1aae4e3ae7ca4d8eee94ecaf6a16491793" kind="property"><name>zRotationSlider</name></member>
+    <member refid="interface_object3_d_parameters_view_controller_1a8a97c5b3b71756bbb8a0c1f7dba5dfef" kind="property"><name>zTranslationSlider</name></member>
+    <member refid="interface_object3_d_parameters_view_controller_1ab8a3dcd36d6f693a5425cd195d74acdb" kind="property"><name>scaleFactorSlider</name></member>
+    <member refid="interface_object3_d_parameters_view_controller_1adaf8ec138a67507446109309f201e71d" kind="property"><name>xRotationTextField</name></member>
+    <member refid="interface_object3_d_parameters_view_controller_1af951ff5a29bb178fb99bd7fd94a888a7" kind="property"><name>yRotationTextField</name></member>
+    <member refid="interface_object3_d_parameters_view_controller_1a70a94afb25fad535b1efe6483e8d6ef1" kind="property"><name>zRotationTextField</name></member>
+    <member refid="interface_object3_d_parameters_view_controller_1ab6e7ab8e75a9a0b5079f5401403a2d2a" kind="property"><name>zTranslationTextField</name></member>
+    <member refid="interface_object3_d_parameters_view_controller_1a4a3d46f003380d02a9ccb25c83d3b09b" kind="property"><name>scaleFactorTextField</name></member>
+    <member refid="interface_object3_d_parameters_view_controller_1a4fe295b5f8976680046b30046219dbf8" kind="function"><name>loadObject:withMarkerID:</name></member>
+    <member refid="interface_object3_d_parameters_view_controller_1a7fec7383cff456b674fee88bfa92c36b" kind="function"><name>refreshView</name></member>
+    <member refid="interface_object3_d_parameters_view_controller_1af7c854646742e327ee8f50b3660b5ae4" kind="function"><name>save:</name></member>
+    <member refid="interface_object3_d_parameters_view_controller_1a462470c07682ff4f9258b2261666bcaf" kind="function"><name>sendByMail:</name></member>
+    <member refid="interface_object3_d_parameters_view_controller_1ad6dbdf714690b432749e7f9d22073e43" kind="function"><name>xRotationSliderValueChanged:</name></member>
+    <member refid="interface_object3_d_parameters_view_controller_1afc1a08df5a34a6894357f796a3353f40" kind="function"><name>yRotationSliderValueChanged:</name></member>
+    <member refid="interface_object3_d_parameters_view_controller_1ae302321cd5110ef79a5a987cda8fe6cb" kind="function"><name>zRotationSliderValueChanged:</name></member>
+    <member refid="interface_object3_d_parameters_view_controller_1a42357a2e7135fdf4e61c902c180d2c9d" kind="function"><name>zTranslationSliderValueChanged:</name></member>
+    <member refid="interface_object3_d_parameters_view_controller_1afeb8723a6c9b544c41dc7ba2aa3f213d" kind="function"><name>scaleFactorSliderValueChanged:</name></member>
+    <member refid="interface_object3_d_parameters_view_controller_1a44a9855ed36cfb3c66351cc49ae386e9" kind="function"><name>xRotationTextFieldValueChanged:</name></member>
+    <member refid="interface_object3_d_parameters_view_controller_1aee2175572af049d46fdbe312664a0aca" kind="function"><name>yRotationTextFieldValueChanged:</name></member>
+    <member refid="interface_object3_d_parameters_view_controller_1af22d1412a74782b4201d67696a083167" kind="function"><name>zRotationTextFieldValueChanged:</name></member>
+    <member refid="interface_object3_d_parameters_view_controller_1acdf6a3e9b7a1380dbabbcad39531f5ea" kind="function"><name>zTranslationTextFieldValueChanged:</name></member>
+    <member refid="interface_object3_d_parameters_view_controller_1aa10c106dacea984b32b1318f917d82aa" kind="function"><name>scaleFactorTextFieldValueChanged:</name></member>
+    <member refid="interface_object3_d_parameters_view_controller_1a7957d65b85a530b32aaf44343e9e3655" kind="function"><name>enableUI</name></member>
+    <member refid="interface_object3_d_parameters_view_controller_1a62308dd9f545a3c621f13fa66e214d30" kind="function"><name>disableUI</name></member>
+  </compound>
+  <compound refid="interface_object3_d_parameters_view_controller_07_08" kind="class"><name>Object3DParametersViewController()</name>
+    <member refid="interface_object3_d_parameters_view_controller_07_08_1a1d0fad4d22280b14661890ecf689c20a" kind="function"><name>refreshView</name></member>
+    <member refid="interface_object3_d_parameters_view_controller_1a7957d65b85a530b32aaf44343e9e3655" kind="function"><name>enableUI</name></member>
+    <member refid="interface_object3_d_parameters_view_controller_1a62308dd9f545a3c621f13fa66e214d30" kind="function"><name>disableUI</name></member>
+  </compound>
+  <compound refid="protocol_parameters_delegate-p" kind="protocol"><name>ParametersDelegate-p</name>
+    <member refid="protocol_parameters_delegate-p_1a6e57e41c4410c0ab4632b2ad53185c5c" kind="function"><name>object3DParametersViewControllerWillDisplayModalViewController:</name></member>
+    <member refid="protocol_parameters_delegate-p_1af199dc8fdfca4874f81e41a4759a6009" kind="function"><name>object3DParametersViewControllerWillDismissModalViewController:</name></member>
+  </compound>
+  <compound refid="protocol_parser3_d_delegate-p" kind="protocol"><name>Parser3DDelegate-p</name>
+    <member refid="protocol_parser3_d_delegate-p_1a45d59a7c1dcaeb598615324cd9d39339" kind="function"><name>parserDidCountVertices:andDidParseVertices:normals:andTextures:</name></member>
+  </compound>
+  <compound refid="protocol_parser3_d_protocol-p" kind="protocol"><name>Parser3DProtocol-p</name>
+    <member refid="protocol_parser3_d_protocol-p_1a360fc89bca11ba6ea954ddb70376ebe6" kind="function"><name>parseFileNamed:</name></member>
+  </compound>
+  <compound refid="class_u_i_application_delegate-p" kind="class"><name>UIApplicationDelegate-p</name>
+  </compound>
+  <compound refid="class_u_i_view" kind="class"><name>UIView</name>
+  </compound>
+  <compound refid="class_u_i_view_controller" kind="class"><name>UIViewController</name>
+  </compound>
+  <compound refid="interface_v_r_tool_kit_app_delegate" kind="class"><name>VRToolKitAppDelegate</name>
+    <member refid="interface_v_r_tool_kit_app_delegate_1a436653f358c43b8ae216f052d0808cdf" kind="variable"><name>window</name></member>
+    <member refid="interface_v_r_tool_kit_app_delegate_1a9589f48d4984d27e72ae4b17b6e2c39b" kind="variable"><name>viewController</name></member>
+    <member refid="interface_v_r_tool_kit_app_delegate_1a710eb10081a8dabb7e55e56201739932" kind="property"><name>window</name></member>
+    <member refid="interface_v_r_tool_kit_app_delegate_1acbf0d3be374cb3b387c7bb5b978b1d00" kind="property"><name>viewController</name></member>
+  </compound>
+  <compound refid="interface_v_r_view_controller" kind="class"><name>VRViewController</name>
+    <member refid="interface_v_r_view_controller_1a2404f57345d5bcb8a82c97ce282923bf" kind="variable"><name>_wrapper</name></member>
+    <member refid="interface_v_r_view_controller_1af34144e5e186fe8f60291ee7ddc7da40" kind="variable"><name>_overlay</name></member>
+    <member refid="interface_v_r_view_controller_1a1f78f52a58b98651f0290a5c90230abe" kind="variable"><name>_parametersViewController</name></member>
+    <member refid="interface_v_r_view_controller_1a3322502200b00c595258794e1ce3210a" kind="variable"><name>_captureSession</name></member>
+    <member refid="interface_v_r_view_controller_1aaf15dad404e7f5d34d85ec81e4add8aa" kind="variable"><name>_previewLayer</name></member>
+    <member refid="interface_v_r_view_controller_1ae2609cf06672a987541652fb95db6981" kind="variable"><name>_detectionEnabled</name></member>
+    <member refid="interface_v_r_view_controller_1a63886bd70b10522873617f6eaa9dc0ea" kind="variable"><name>_currentMarkerID</name></member>
+    <member refid="interface_v_r_view_controller_1ae582c9ce6a2624bf65bd0c44bb3e3e87" kind="variable"><name>_models</name></member>
+    <member refid="interface_v_r_view_controller_1a81a47393d88351255984c62b05975ebe" kind="variable"><name>_parametersButton</name></member>
+    <member refid="interface_v_r_view_controller_1a6530562e82c33b2a3db854a8a8d98ebb" kind="property"><name>overlay</name></member>
+    <member refid="interface_v_r_view_controller_1aaabf7c54f7a7c69f8221d87cca2e8919" kind="property"><name>parametersButton</name></member>
+    <member refid="interface_v_r_view_controller_1ab6ad8d70a4d463d995c4989f548072a4" kind="property"><name>wrapper</name></member>
+    <member refid="interface_v_r_view_controller_1a37e3cebc3581c8e3ab7d427359fea210" kind="property"><name>parametersViewController</name></member>
+    <member refid="interface_v_r_view_controller_1a915ef7e56455be72582b462f6d044482" kind="property"><name>captureSession</name></member>
+    <member refid="interface_v_r_view_controller_1a6cc37a0c376a70c9cac71e8262954ff9" kind="property"><name>previewLayer</name></member>
+    <member refid="interface_v_r_view_controller_1a34f830b1267d4174aec7150d366be39c" kind="property"><name>detectionEnabled</name></member>
+    <member refid="interface_v_r_view_controller_1a6dabe1fd6bf20a957f30beb7fc83f8b3" kind="property"><name>currentMarkerID</name></member>
+    <member refid="interface_v_r_view_controller_1ae4ce8fb002e7c518a5bb55f102b40452" kind="property"><name>models</name></member>
+    <member refid="interface_v_r_view_controller_1a13360bdb46d679959801fc8e10ec5903" kind="function"><name>startDetection</name></member>
+    <member refid="interface_v_r_view_controller_1a0d66a76241cc489ebab70df5aa3c7867" kind="function"><name>stopDetection</name></member>
+    <member refid="interface_v_r_view_controller_1a1c543b69097b958762259152d1c50775" kind="function"><name>showHideParameters:</name></member>
+    <member refid="interface_v_r_view_controller_1a294d0081205b4261d3a95d0c02c255b1" kind="function"><name>startStopAnimatingObject:</name></member>
+    <member refid="interface_v_r_view_controller_1aefe9aa4b4dbdeb8a9e8309d2134efb3b" kind="function"><name>initCapture</name></member>
+    <member refid="interface_v_r_view_controller_1ad1d646c8713f1604151fca152d38c8ba" kind="function"><name>hideParameters</name></member>
+    <member refid="interface_v_r_view_controller_1a069293d46ab6e60379ab28b0f8c20913" kind="function"><name>showParameters</name></member>
+  </compound>
+  <compound refid="interface_v_r_view_controller_07_08" kind="class"><name>VRViewController()</name>
+    <member refid="interface_v_r_view_controller_1ab6ad8d70a4d463d995c4989f548072a4" kind="property"><name>wrapper</name></member>
+    <member refid="interface_v_r_view_controller_1a37e3cebc3581c8e3ab7d427359fea210" kind="property"><name>parametersViewController</name></member>
+    <member refid="interface_v_r_view_controller_1a915ef7e56455be72582b462f6d044482" kind="property"><name>captureSession</name></member>
+    <member refid="interface_v_r_view_controller_1a6cc37a0c376a70c9cac71e8262954ff9" kind="property"><name>previewLayer</name></member>
+    <member refid="interface_v_r_view_controller_1a34f830b1267d4174aec7150d366be39c" kind="property"><name>detectionEnabled</name></member>
+    <member refid="interface_v_r_view_controller_1a6dabe1fd6bf20a957f30beb7fc83f8b3" kind="property"><name>currentMarkerID</name></member>
+    <member refid="interface_v_r_view_controller_1ae4ce8fb002e7c518a5bb55f102b40452" kind="property"><name>models</name></member>
+    <member refid="interface_v_r_view_controller_1aefe9aa4b4dbdeb8a9e8309d2134efb3b" kind="function"><name>initCapture</name></member>
+    <member refid="interface_v_r_view_controller_1ad1d646c8713f1604151fca152d38c8ba" kind="function"><name>hideParameters</name></member>
+    <member refid="interface_v_r_view_controller_1a069293d46ab6e60379ab28b0f8c20913" kind="function"><name>showParameters</name></member>
+  </compound>
+  <compound refid="interface_wavefront_parser" kind="class"><name>WavefrontParser</name>
+    <member refid="interface_wavefront_parser_1a598a76ae40227d64ddc6e69f7971507a" kind="variable"><name>_delegate</name></member>
+    <member refid="interface_wavefront_parser_1a8cd726b37e1f00b19c62a18c9cf6a2ce" kind="variable"><name>_containNormals</name></member>
+    <member refid="interface_wavefront_parser_1ae5963d3dda5b8b854d6b42808416aa3b" kind="variable"><name>_containTextures</name></member>
+    <member refid="interface_wavefront_parser_1a665e398d8ae3a788ac6b49cbb224a3f1" kind="property"><name>delegate</name></member>
+    <member refid="interface_wavefront_parser_1a7c6120a556aeeb54c8e96538e5d444f0" kind="function"><name>parseFileNamed:</name></member>
+    <member refid="interface_wavefront_parser_1a7a3f36cfc1f2949ec948e41431e2e116" kind="function"><name>centerGLfloatArray:numberOfFaces:</name></member>
+    <member refid="interface_wavefront_parser_1aab4bc10afde783de9b27bea0c1c84ad5" kind="function"><name>gLfloatArrayFromArray:usingIndexArray:</name></member>
+    <member refid="interface_wavefront_parser_1abee7edbc94844989133ac455d1637cf1" kind="function"><name>gLTexturesArrayFromArray:usingIndexArray:</name></member>
+  </compound>
+  <compound refid="interface_wavefront_parser_07_08" kind="class"><name>WavefrontParser()</name>
+    <member refid="interface_wavefront_parser_1a7a3f36cfc1f2949ec948e41431e2e116" kind="function"><name>centerGLfloatArray:numberOfFaces:</name></member>
+    <member refid="interface_wavefront_parser_1aab4bc10afde783de9b27bea0c1c84ad5" kind="function"><name>gLfloatArrayFromArray:usingIndexArray:</name></member>
+    <member refid="interface_wavefront_parser_1abee7edbc94844989133ac455d1637cf1" kind="function"><name>gLTexturesArrayFromArray:usingIndexArray:</name></member>
+  </compound>
+  <compound refid="interface_wavefront_parser2" kind="class"><name>WavefrontParser2</name>
+    <member refid="interface_wavefront_parser2_1a682790ca5e015205c89e703e1048a78c" kind="variable"><name>_delegate</name></member>
+    <member refid="interface_wavefront_parser2_1ae35cc305e105840a874bc48293977cd6" kind="variable"><name>_containNormals</name></member>
+    <member refid="interface_wavefront_parser2_1a48dcdaa40f12c1eab9f5ac8b4ef2f5e4" kind="variable"><name>_containTextures</name></member>
+    <member refid="interface_wavefront_parser2_1ad0256f70a47b9233e27f88856b3831cf" kind="property"><name>delegate</name></member>
+    <member refid="interface_wavefront_parser2_1ae9c54523ad787233e4de457d74227166" kind="function"><name>parseFileNamed:</name></member>
+    <member refid="interface_wavefront_parser2_1a8fc1fdeb59a176805821ef0c11df43b5" kind="function"><name>centerGLfloatArray:numberOfFaces:</name></member>
+    <member refid="interface_wavefront_parser2_1aba7ed78591aadaa61474839309e19ac7" kind="function"><name>gLfloatArrayFromArray:usingIndexArray:</name></member>
+    <member refid="interface_wavefront_parser2_1ae970ed7af0aa32bb18664c84ee7c5b16" kind="function"><name>gLTexturesArrayFromArray:usingIndexArray:</name></member>
+  </compound>
+  <compound refid="interface_wavefront_parser2_07_08" kind="class"><name>WavefrontParser2()</name>
+    <member refid="interface_wavefront_parser2_1a8fc1fdeb59a176805821ef0c11df43b5" kind="function"><name>centerGLfloatArray:numberOfFaces:</name></member>
+    <member refid="interface_wavefront_parser2_1aba7ed78591aadaa61474839309e19ac7" kind="function"><name>gLfloatArrayFromArray:usingIndexArray:</name></member>
+    <member refid="interface_wavefront_parser2_1ae970ed7af0aa32bb18664c84ee7c5b16" kind="function"><name>gLTexturesArrayFromArray:usingIndexArray:</name></member>
+  </compound>
+  <compound refid="_a_r_tool_kit_plus_wrapper_8h" kind="file"><name>ARToolKitPlusWrapper.h</name>
+  </compound>
+  <compound refid="_a_r_tool_kit_plus_wrapper_8mm" kind="file"><name>ARToolKitPlusWrapper.mm</name>
+  </compound>
+  <compound refid="_e_a_g_l_view_8h" kind="file"><name>EAGLView.h</name>
+  </compound>
+  <compound refid="_e_a_g_l_view_8m" kind="file"><name>EAGLView.m</name>
+    <member refid="_e_a_g_l_view_8m_1afca4b5f4e7aa60bd182f8111a7eb96bc" kind="variable"><name>spinZ</name></member>
+  </compound>
+  <compound refid="_object3_d_8h" kind="file"><name>Object3D.h</name>
+  </compound>
+  <compound refid="_object3_d_8m" kind="file"><name>Object3D.m</name>
+  </compound>
+  <compound refid="_object3_d_parameters_view_controller_8h" kind="file"><name>Object3DParametersViewController.h</name>
+  </compound>
+  <compound refid="_object3_d_parameters_view_controller_8m" kind="file"><name>Object3DParametersViewController.m</name>
+  </compound>
+  <compound refid="_parser3_d_protocol_8h" kind="file"><name>Parser3DProtocol.h</name>
+  </compound>
+  <compound refid="_v_r_tool_kit_app_delegate_8h" kind="file"><name>VRToolKitAppDelegate.h</name>
+  </compound>
+  <compound refid="_v_r_tool_kit_app_delegate_8m" kind="file"><name>VRToolKitAppDelegate.m</name>
+  </compound>
+  <compound refid="_v_r_view_controller_8h" kind="file"><name>VRViewController.h</name>
+  </compound>
+  <compound refid="_v_r_view_controller_8m" kind="file"><name>VRViewController.m</name>
+    <member refid="_v_r_view_controller_8m_1a2505250fa75aa9f32517d0099d3a0361" kind="define"><name>ADMIN_MODE</name></member>
+  </compound>
+  <compound refid="_wavefront_parser_8h" kind="file"><name>WavefrontParser.h</name>
+  </compound>
+  <compound refid="_wavefront_parser_8m" kind="file"><name>WavefrontParser.m</name>
+  </compound>
+  <compound refid="_wavefront_parser2_8h" kind="file"><name>WavefrontParser2.h</name>
+  </compound>
+  <compound refid="_wavefront_parser2_8m" kind="file"><name>WavefrontParser2.m</name>
+  </compound>
+  <compound refid="_g_data_x_m_l_node_8h" kind="file"><name>GDataXMLNode.h</name>
+    <member refid="_g_data_x_m_l_node_8h_1ab7d1de9a28b370a2ed9d5426d225abbe" kind="define"><name>_EXTERN</name></member>
+    <member refid="_g_data_x_m_l_node_8h_1aa9bf4a8049cd7a87d81d88525d98d5d6" kind="define"><name>_INITIALIZE_AS</name></member>
+    <member refid="_g_data_x_m_l_node_8h_1a06fc87d81c62e9abb8790b6e5713c55b" kind="enum"><name>@0</name></member>
+    <member refid="_g_data_x_m_l_node_8h_1a06fc87d81c62e9abb8790b6e5713c55bac8681236885100fd971d3a5815da7c9d" kind="enumvalue"><name>GDataXMLInvalidKind</name></member>
+    <member refid="_g_data_x_m_l_node_8h_1a06fc87d81c62e9abb8790b6e5713c55ba5ebaa547fea5e8c6770b79c60982946c" kind="enumvalue"><name>GDataXMLDocumentKind</name></member>
+    <member refid="_g_data_x_m_l_node_8h_1a06fc87d81c62e9abb8790b6e5713c55baec79c7e743c795b03be9847592fca488" kind="enumvalue"><name>GDataXMLElementKind</name></member>
+    <member refid="_g_data_x_m_l_node_8h_1a06fc87d81c62e9abb8790b6e5713c55ba910b0888dd43e9f47e4ba3b8ff191ad7" kind="enumvalue"><name>GDataXMLAttributeKind</name></member>
+    <member refid="_g_data_x_m_l_node_8h_1a06fc87d81c62e9abb8790b6e5713c55ba42eb09358cb029bce446ad5b8e6f5873" kind="enumvalue"><name>GDataXMLNamespaceKind</name></member>
+    <member refid="_g_data_x_m_l_node_8h_1a06fc87d81c62e9abb8790b6e5713c55ba4fdf88c92b42fd61bdcdf048351a9d4a" kind="enumvalue"><name>GDataXMLProcessingInstructionKind</name></member>
+    <member refid="_g_data_x_m_l_node_8h_1a06fc87d81c62e9abb8790b6e5713c55ba5ffc3a09535d7f4ef95526fed897ae42" kind="enumvalue"><name>GDataXMLCommentKind</name></member>
+    <member refid="_g_data_x_m_l_node_8h_1a06fc87d81c62e9abb8790b6e5713c55baacfc763efab48e977ef4585c1a11c82b" kind="enumvalue"><name>GDataXMLTextKind</name></member>
+    <member refid="_g_data_x_m_l_node_8h_1a06fc87d81c62e9abb8790b6e5713c55ba607492e603d08ed2233f89ea45f8e31f" kind="enumvalue"><name>GDataXMLDTDKind</name></member>
+    <member refid="_g_data_x_m_l_node_8h_1a06fc87d81c62e9abb8790b6e5713c55ba949b3d527427325e33fcd90e1a68aaf5" kind="enumvalue"><name>GDataXMLEntityDeclarationKind</name></member>
+    <member refid="_g_data_x_m_l_node_8h_1a06fc87d81c62e9abb8790b6e5713c55ba2eaaf1c2c7b01bab5cbcf03773eec5b1" kind="enumvalue"><name>GDataXMLAttributeDeclarationKind</name></member>
+    <member refid="_g_data_x_m_l_node_8h_1a06fc87d81c62e9abb8790b6e5713c55ba8ac0a4c07febaf329e2ccc250b8570fa" kind="enumvalue"><name>GDataXMLElementDeclarationKind</name></member>
+    <member refid="_g_data_x_m_l_node_8h_1a06fc87d81c62e9abb8790b6e5713c55ba55db76bac307e4886d7c02ac7828e663" kind="enumvalue"><name>GDataXMLNotationDeclarationKind</name></member>
+    <member refid="_g_data_x_m_l_node_8h_1abdf0c58d7e8504639df551cabfec3a4e" kind="typedef"><name>GDataXMLNodeKind</name></member>
+    <member refid="_g_data_x_m_l_node_8h_1a7109a9dc4bd03e724ac25401c24fa16f" kind="function"><name>_INITIALIZE_AS</name></member>
+  </compound>
+  <compound refid="_g_data_x_m_l_node_8m" kind="file"><name>GDataXMLNode.m</name>
+    <member refid="_g_data_x_m_l_node_8m_1ac62efb9a4cdbdb05a1186490e9f19911" kind="define"><name>GDATAXMLNODE_DEFINE_GLOBALS</name></member>
+    <member refid="_g_data_x_m_l_node_8m_1a2e69f2fb104c115b40d94183b50e68d9" kind="variable"><name>kGDataXMLParseOptions</name></member>
+    <member refid="_g_data_x_m_l_node_8m_1aa6358149807385c6bbaeb52b894ae1fd" kind="function"><name>StringCacheKeyRetainCallBack</name></member>
+    <member refid="_g_data_x_m_l_node_8m_1a149087a13c0eb57914c61f2520e77682" kind="function"><name>StringCacheKeyReleaseCallBack</name></member>
+    <member refid="_g_data_x_m_l_node_8m_1a3eca908687cd1036f82b6ce29f223940" kind="function"><name>StringCacheKeyCopyDescriptionCallBack</name></member>
+    <member refid="_g_data_x_m_l_node_8m_1a176c64e23a97aa73c734fc52e22d72bd" kind="function"><name>StringCacheKeyEqualCallBack</name></member>
+    <member refid="_g_data_x_m_l_node_8m_1a7f82d0d05c340911f6918f72001e72ea" kind="function"><name>StringCacheKeyHashCallBack</name></member>
+    <member refid="_g_data_x_m_l_node_8m_1a1137be137493db9b7a82d4bda30aea3a" kind="function"><name>AreEqualOrBothNilPrivate</name></member>
+    <member refid="_g_data_x_m_l_node_8m_1a95de8bc57cec1b9d68919cc03a994790" kind="function"><name>GDataGetXMLString</name></member>
+    <member refid="_g_data_x_m_l_node_8m_1a5e3c4dff6e8de98874d9f0ff1c807973" kind="function"><name>GDataFakeQNameForURIAndName</name></member>
+    <member refid="_g_data_x_m_l_node_8m_1a6526e124eb1913b557ce3e9f094801e2" kind="function"><name>SplitQNameReverse</name></member>
+  </compound>
+  <compound refid="dir_60cc6377bd22748315d73331340ff43e" kind="dir"><name>Classes/</name>
+  </compound>
+  <compound refid="dir_73d81b3fffa1ec46d54f01f64c979b2f" kind="dir"><name>Classes/XMLParser/</name>
+  </compound>
+</doxygenindex>

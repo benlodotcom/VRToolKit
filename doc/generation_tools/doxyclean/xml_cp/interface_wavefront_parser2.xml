@@ -1,0 +1,167 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="interface_wavefront_parser2" kind="class" prot="public">
+    <compoundname>WavefrontParser2</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">NSObject</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="interface_wavefront_parser2_1a682790ca5e015205c89e703e1048a78c" prot="private" static="no" mutable="no">
+        <type>id&lt; <ref refid="protocol_parser3_d_delegate-p" kindref="compound">Parser3DDelegate</ref> &gt;</type>
+        <definition>id&lt;Parser3DDelegate&gt; WavefrontParser2::_delegate</definition>
+        <argsstring></argsstring>
+        <name>_delegate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/WavefrontParser2.h" line="6" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/WavefrontParser2.h" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="interface_wavefront_parser2_1ae35cc305e105840a874bc48293977cd6" prot="private" static="no" mutable="no">
+        <type>BOOL</type>
+        <definition>BOOL WavefrontParser2::_containNormals</definition>
+        <argsstring></argsstring>
+        <name>_containNormals</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/WavefrontParser2.h" line="8" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/WavefrontParser2.h" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="interface_wavefront_parser2_1a48dcdaa40f12c1eab9f5ac8b4ef2f5e4" prot="private" static="no" mutable="no">
+        <type>BOOL</type>
+        <definition>BOOL WavefrontParser2::_containTextures</definition>
+        <argsstring></argsstring>
+        <name>_containTextures</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/WavefrontParser2.h" line="9" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/WavefrontParser2.h" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="interface_wavefront_parser2_1ad0256f70a47b9233e27f88856b3831cf" prot="public" static="no" readable="yes" writable="yes" gettable="no" settable="no" accessor="assign">
+        <type>id&lt; <ref refid="protocol_parser3_d_delegate-p" kindref="compound">Parser3DDelegate</ref> &gt;</type>
+        <definition>id&lt;Parser3DDelegate&gt; WavefrontParser2::delegate</definition>
+        <argsstring></argsstring>
+        <name>delegate</name>
+        <read></read>
+        <write></write>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/WavefrontParser2.h" line="12" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/WavefrontParser2.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_wavefront_parser2_1ae9c54523ad787233e4de457d74227166" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void WavefrontParser2::parseFileNamed:</definition>
+        <argsstring>(NSString *filename)</argsstring>
+        <name>parseFileNamed:</name>
+        <param>
+          <type>NSString *</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/WavefrontParser2.h" line="14" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/WavefrontParser2.m" bodystart="29" bodyend="128"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="interface_wavefront_parser2_1a8fc1fdeb59a176805821ef0c11df43b5" prot="public" static="yes" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void WavefrontParser2()::centerGLfloatArray:numberOfFaces:</definition>
+        <argsstring>(GLfloat *array,[numberOfFaces] int numberOfFaces)</argsstring>
+        <name>centerGLfloatArray:numberOfFaces:</name>
+        <param>
+          <type>GLfloat *</type>
+          <declname>array</declname>
+        </param>
+        <param>
+          <attributes>[numberOfFaces]</attributes>
+          <type>int</type>
+          <declname>numberOfFaces</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/WavefrontParser2.m" line="6"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_wavefront_parser2_1aba7ed78591aadaa61474839309e19ac7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="virtual">
+        <type>GLfloat *</type>
+        <definition>GLfloat * WavefrontParser2()::gLfloatArrayFromArray:usingIndexArray:</definition>
+        <argsstring>(NSArray *array,[usingIndexArray] NSArray *indexArray)</argsstring>
+        <name>gLfloatArrayFromArray:usingIndexArray:</name>
+        <param>
+          <type>NSArray *</type>
+          <declname>array</declname>
+        </param>
+        <param>
+          <attributes>[usingIndexArray]</attributes>
+          <type>NSArray *</type>
+          <declname>indexArray</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/WavefrontParser2.m" line="7"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_wavefront_parser2_1ae970ed7af0aa32bb18664c84ee7c5b16" prot="public" static="yes" const="no" explicit="no" inline="no" virt="virtual">
+        <type>GLfloat *</type>
+        <definition>GLfloat * WavefrontParser2()::gLTexturesArrayFromArray:usingIndexArray:</definition>
+        <argsstring>(NSArray *array,[usingIndexArray] NSArray *indexArray)</argsstring>
+        <name>gLTexturesArrayFromArray:usingIndexArray:</name>
+        <param>
+          <type>NSArray *</type>
+          <declname>array</declname>
+        </param>
+        <param>
+          <attributes>[usingIndexArray]</attributes>
+          <type>NSArray *</type>
+          <declname>indexArray</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/WavefrontParser2.m" line="8"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/WavefrontParser2.h" line="4" bodyfile="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/WavefrontParser2.h" bodystart="4" bodyend="-1"/>
+    <listofallmembers>
+      <member refid="interface_wavefront_parser2_1ae35cc305e105840a874bc48293977cd6" prot="private" virt="non-virtual"><scope>WavefrontParser2</scope><name>_containNormals</name></member>
+      <member refid="interface_wavefront_parser2_1a48dcdaa40f12c1eab9f5ac8b4ef2f5e4" prot="private" virt="non-virtual"><scope>WavefrontParser2</scope><name>_containTextures</name></member>
+      <member refid="interface_wavefront_parser2_1a682790ca5e015205c89e703e1048a78c" prot="private" virt="non-virtual"><scope>WavefrontParser2</scope><name>_delegate</name></member>
+      <member refid="interface_wavefront_parser2_1a8fc1fdeb59a176805821ef0c11df43b5" prot="public" virt="virtual"><scope>WavefrontParser2</scope><name>centerGLfloatArray:numberOfFaces:</name></member>
+      <member refid="interface_wavefront_parser2_1ad0256f70a47b9233e27f88856b3831cf" prot="public" virt="non-virtual"><scope>WavefrontParser2</scope><name>delegate</name></member>
+      <member refid="interface_wavefront_parser2_1aba7ed78591aadaa61474839309e19ac7" prot="public" virt="virtual"><scope>WavefrontParser2</scope><name>gLfloatArrayFromArray:usingIndexArray:</name></member>
+      <member refid="interface_wavefront_parser2_1ae970ed7af0aa32bb18664c84ee7c5b16" prot="public" virt="virtual"><scope>WavefrontParser2</scope><name>gLTexturesArrayFromArray:usingIndexArray:</name></member>
+      <member refid="interface_wavefront_parser2_1ae9c54523ad787233e4de457d74227166" prot="public" virt="virtual"><scope>WavefrontParser2</scope><name>parseFileNamed:</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,149 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.6.3">
+  <compounddef id="_v_r_view_controller_8h" kind="file">
+    <compoundname>VRViewController.h</compoundname>
+    <includes local="no">UIKit/UIKit.h</includes>
+    <includes local="no">AVFoundation/AVFoundation.h</includes>
+    <includes local="no">CoreGraphics/CoreGraphics.h</includes>
+    <includes local="no">CoreVideo/CoreVideo.h</includes>
+    <includes local="no">CoreMedia/CoreMedia.h</includes>
+    <includes local="no">QuartzCore/QuartzCore.h</includes>
+    <includes refid="_a_r_tool_kit_plus_wrapper_8h" local="yes">ARToolKitPlusWrapper.h</includes>
+    <includes refid="_object3_d_parameters_view_controller_8h" local="yes">Object3DParametersViewController.h</includes>
+    <includedby refid="_v_r_view_controller_8m" local="yes">Classes/VRViewController.m</includedby>
+    <incdepgraph>
+      <node id="107">
+        <label>Object3DParametersViewController.h</label>
+        <link refid="_object3_d_parameters_view_controller_8h_source"/>
+        <childnode refid="99" relation="include">
+        </childnode>
+        <childnode refid="108" relation="include">
+        </childnode>
+      </node>
+      <node id="102">
+        <label>CoreVideo/CoreVideo.h</label>
+      </node>
+      <node id="99">
+        <label>UIKit/UIKit.h</label>
+      </node>
+      <node id="98">
+        <label>Classes/VRViewController.h</label>
+        <link refid="VRViewController.h"/>
+        <childnode refid="99" relation="include">
+        </childnode>
+        <childnode refid="100" relation="include">
+        </childnode>
+        <childnode refid="101" relation="include">
+        </childnode>
+        <childnode refid="102" relation="include">
+        </childnode>
+        <childnode refid="103" relation="include">
+        </childnode>
+        <childnode refid="104" relation="include">
+        </childnode>
+        <childnode refid="105" relation="include">
+        </childnode>
+        <childnode refid="107" relation="include">
+        </childnode>
+      </node>
+      <node id="103">
+        <label>CoreMedia/CoreMedia.h</label>
+      </node>
+      <node id="105">
+        <label>ARToolKitPlusWrapper.h</label>
+        <link refid="_a_r_tool_kit_plus_wrapper_8h_source"/>
+        <childnode refid="106" relation="include">
+        </childnode>
+        <childnode refid="102" relation="include">
+        </childnode>
+      </node>
+      <node id="101">
+        <label>CoreGraphics/CoreGraphics.h</label>
+      </node>
+      <node id="100">
+        <label>AVFoundation/AVFoundation.h</label>
+      </node>
+      <node id="108">
+        <label>MessageUI/MessageUI.h</label>
+      </node>
+      <node id="106">
+        <label>Foundation/Foundation.h</label>
+      </node>
+      <node id="104">
+        <label>QuartzCore/QuartzCore.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="109">
+        <label>Classes/VRViewController.h</label>
+        <link refid="VRViewController.h"/>
+        <childnode refid="110" relation="include">
+        </childnode>
+      </node>
+      <node id="110">
+        <label>Classes/VRViewController.m</label>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="interface_v_r_view_controller" prot="public">VRViewController</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>Copyright<sp/>Benjamin<sp/>Loulier<sp/>2010,<sp/>http://www.benjaminloulier.com</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/></highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>This<sp/>program<sp/>is<sp/>free<sp/>software:<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>the<sp/>Free<sp/>Software<sp/>Foundation,<sp/>either<sp/>version<sp/>3<sp/>of<sp/>the<sp/>License,<sp/>or</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>(at<sp/>your<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/></highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>This<sp/>program<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/></highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>along<sp/>with<sp/>this<sp/>program.<sp/><sp/>If<sp/>not,<sp/>see<sp/>&lt;http://www.gnu.org/licenses/&gt;.</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&lt;UIKit/UIKit.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&lt;AVFoundation/AVFoundation.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&lt;CoreGraphics/CoreGraphics.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&lt;CoreVideo/CoreVideo.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&lt;CoreMedia/CoreMedia.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&lt;QuartzCore/QuartzCore.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&quot;ARToolKitPlusWrapper.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#import<sp/>&quot;Object3DParametersViewController.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">@class</highlight><highlight class="normal"><sp/><ref refid="interface_e_a_g_l_view" kindref="compound" tooltip="This view is used to display 3D models using OpenGL ES.">EAGLView</ref>;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">@class</highlight><highlight class="normal"><sp/><ref refid="interface_object3_d_parameters_view_controller" kindref="compound" tooltip="This class is the view controller for the parametersView.">Object3DParametersViewController</ref>;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">@class</highlight><highlight class="normal"><sp/><ref refid="interface_object3_d" kindref="compound" tooltip="This class is the internal representation of an object you want to display in Virtual...">Object3D</ref>;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="interface_v_r_view_controller" refkind="compound"><highlight class="keyword">@interface<sp/></highlight><highlight class="normal"><ref refid="interface_v_r_view_controller" kindref="compound" tooltip="This class is the core of the Application.">VRViewController</ref><sp/>:<sp/>UIViewController<sp/>&lt;AVCaptureVideoDataOutputSampleBufferDelegate,<sp/><ref refid="protocol_a_r_tool_kit_plus_wrapper_delegate-p" kindref="compound" tooltip="This protocol describes the delegates methods that the delegate of an ARToolKitPlusWrapper...">ARToolKitPlusWrapperDelegate</ref>,<sp/>ParametersDelegate&gt;<sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="keyword">@private</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="interface_a_r_tool_kit_plus_wrapper" kindref="compound" tooltip="This class is an objective-c wrapper for ARToolKitPlus.">ARToolKitPlusWrapper</ref><sp/>*_wrapper;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="interface_e_a_g_l_view" kindref="compound" tooltip="This view is used to display 3D models using OpenGL ES.">EAGLView</ref><sp/>*_overlay;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="interface_object3_d_parameters_view_controller" kindref="compound" tooltip="This class is the view controller for the parametersView.">Object3DParametersViewController</ref><sp/>*_parametersViewController;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>AVCaptureSession<sp/>*_captureSession;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>AVCaptureVideoPreviewLayer<sp/>*_previewLayer;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BOOL<sp/>_detectionEnabled;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>_currentMarkerID;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NSDictionary<sp/>*_models;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>UIButton<sp/>*_parametersButton;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="interface_v_r_view_controller_1a6530562e82c33b2a3db854a8a8d98ebb" refkind="member"><highlight class="normal">@property<sp/>(nonatomic,<sp/>retain)<sp/>IBOutlet<sp/><ref refid="interface_e_a_g_l_view" kindref="compound" tooltip="This view is used to display 3D models using OpenGL ES.">EAGLView</ref><sp/>*overlay;</highlight></codeline>
+<codeline lineno="59" refid="interface_v_r_view_controller_1aaabf7c54f7a7c69f8221d87cca2e8919" refkind="member"><highlight class="normal">@property<sp/>(nonatomic,<sp/>retain)<sp/>IBOutlet<sp/>UIButton<sp/>*parametersButton;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal">-<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)startDetection;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal">-<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)stopDetection;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal">-<sp/>(IBAction)showHideParameters:(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">)sender;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal">-<sp/>(IBAction)startStopAnimatingObject:(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">)sender;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal">@end</highlight></codeline>
+    </programlisting>
+    <location file="/Users/Benjamin/Travail/GFI/VRToolKit/XcodeProject/Classes/VRViewController.h"/>
+  </compounddef>
+</doxygen>
