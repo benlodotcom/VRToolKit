@@ -79,7 +79,7 @@
 /*ARToolkit options*/
 
 /*!
- @brief	Options to make ARToolKitPlus use BCH Markers instead of the regular ones (untested)
+ @brief	Options to make ARToolKitPlus use BCH Markers instead of the regular ones (tested by Franck, thanks a lot !)
  */
 @property (nonatomic, assign) BOOL useBCHMarker;
 /*!

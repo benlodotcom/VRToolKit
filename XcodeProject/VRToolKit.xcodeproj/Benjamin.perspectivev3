@@ -268,9 +268,6 @@
 							<array>
 								<string>29B97314FDCFA39411CA2CEA</string>
 								<string>43465E4B1213E9EC00972295</string>
-								<string>43465E4E1213E9EC00972295</string>
-								<string>43465E4F1213E9EC00972295</string>
-								<string>43465ED81213E9FF00972295</string>
 								<string>29B97315FDCFA39411CA2CEA</string>
 								<string>43465F031213EA4000972295</string>
 								<string>1C37FBAC04509CD000000102</string>
@@ -279,13 +276,12 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>60</integer>
-									<integer>53</integer>
-									<integer>0</integer>
+									<integer>25</integer>
+									<integer>23</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 513}, {331, 660}}</string>
+							<string>{{0, 0}, {331, 573}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -295,14 +291,14 @@
 					<key>GeometryConfiguration</key>
 					<dict>
 						<key>Frame</key>
-						<string>{{0, 0}, {348, 678}}</string>
+						<string>{{0, 0}, {348, 591}}</string>
 						<key>GroupTreeTableConfiguration</key>
 						<array>
 							<string>MainColumn</string>
 							<real>331</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>0 59 1280 719 0 0 1280 778 </string>
+						<string>0 146 1280 632 0 0 1280 778 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -318,7 +314,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>43414E801213E92F00817E50</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>VRToolKit-Info.plist</string>
+								<string>ARToolKitPlusWrapper.h</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -326,44 +322,16 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>43414E811213E92F00817E50</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>VRToolKit-Info.plist</string>
+										<string>ARToolKitPlusWrapper.h</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>432A428C1229ACCA00AEFBA3</string>
+										<string>4345D8E21281906300731664</string>
 										<key>history</key>
 										<array>
-											<string>43465F221213EBB900972295</string>
-											<string>43465F231213EBB900972295</string>
-											<string>4346600A1213F34E00972295</string>
-											<string>4346600B1213F34E00972295</string>
-											<string>4364C54F121AB7CE00E7393F</string>
-											<string>4364C550121AB7CE00E7393F</string>
-											<string>4364C551121AB7CE00E7393F</string>
-											<string>4364C552121AB7CE00E7393F</string>
-											<string>4364C571121ACD1100E7393F</string>
-											<string>4364C572121ACD1100E7393F</string>
-											<string>434D85431228A79300F6AA0F</string>
-											<string>434D85441228A79300F6AA0F</string>
-											<string>434D85451228A79300F6AA0F</string>
-											<string>434D85461228A79300F6AA0F</string>
-											<string>434D85471228A79300F6AA0F</string>
-											<string>434D85481228A79300F6AA0F</string>
-											<string>434D85491228A79300F6AA0F</string>
-											<string>434D854A1228A79300F6AA0F</string>
-											<string>434D854B1228A79300F6AA0F</string>
-											<string>434D854C1228A79300F6AA0F</string>
-											<string>434D854D1228A79300F6AA0F</string>
-											<string>434D854E1228A79300F6AA0F</string>
-											<string>434D854F1228A79300F6AA0F</string>
-											<string>434D85501228A79300F6AA0F</string>
-											<string>434D85511228A79300F6AA0F</string>
-											<string>434D85521228A79300F6AA0F</string>
-											<string>434D85531228A79300F6AA0F</string>
-											<string>434D85541228A79300F6AA0F</string>
-											<string>434D85551228A79300F6AA0F</string>
-											<string>432A428A1229ACCA00AEFBA3</string>
-											<string>432A428B1229ACCA00AEFBA3</string>
+											<string>4345D8DF1281906300731664</string>
+											<string>4345D8E01281906300731664</string>
+											<string>4345D8E11281906300731664</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -377,18 +345,18 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {927, 388}}</string>
+								<string>{{0, 0}, {927, 338}}</string>
 								<key>RubberWindowFrame</key>
-								<string>0 59 1280 719 0 0 1280 778 </string>
+								<string>0 146 1280 632 0 0 1280 778 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>388pt</string>
+							<string>338pt</string>
 						</dict>
 						<dict>
 							<key>Proportion</key>
-							<string>285pt</string>
+							<string>248pt</string>
 							<key>Tabs</key>
 							<array>
 								<dict>
@@ -402,9 +370,7 @@
 									<key>GeometryConfiguration</key>
 									<dict>
 										<key>Frame</key>
-										<string>{{10, 27}, {927, 258}}</string>
-										<key>RubberWindowFrame</key>
-										<string>0 59 1280 719 0 0 1280 778 </string>
+										<string>{{10, 27}, {927, 221}}</string>
 									</dict>
 									<key>Module</key>
 									<string>XCDetailModule</string>
@@ -458,7 +424,9 @@
 									<key>GeometryConfiguration</key>
 									<dict>
 										<key>Frame</key>
-										<string>{{10, 27}, {927, 241}}</string>
+										<string>{{10, 27}, {927, 221}}</string>
+										<key>RubberWindowFrame</key>
+										<string>0 146 1280 632 0 0 1280 778 </string>
 									</dict>
 									<key>Module</key>
 									<string>PBXBuildResultsModule</string>
@@ -486,11 +454,11 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>432A428D1229ACCA00AEFBA3</string>
+				<string>4345D8E31281906300731664</string>
 				<string>1CA23ED40692098700951B8B</string>
-				<string>432A428E1229ACCA00AEFBA3</string>
+				<string>4345D8E41281906300731664</string>
 				<string>43414E801213E92F00817E50</string>
-				<string>432A428F1229ACCA00AEFBA3</string>
+				<string>4345D8E51281906300731664</string>
 				<string>1CA23EDF0692099D00951B8B</string>
 				<string>1CA23EE00692099D00951B8B</string>
 				<string>1CA23EE10692099D00951B8B</string>
@@ -683,7 +651,7 @@
 		<string>/Users/Benjamin/Travail/Info_perso/VRToolKit/XcodeProject/VRToolKit.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>0 59 1280 719 0 0 1280 778 </string>
+	<string>0 146 1280 632 0 0 1280 778 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>
