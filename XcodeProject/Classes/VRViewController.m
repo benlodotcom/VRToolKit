@@ -132,6 +132,7 @@
 	[captureOutput setVideoSettings:videoSettings]; 
 	/*And we create a capture session*/
 	self.captureSession = [[AVCaptureSession alloc] init];
+	[self.captureSession setSessionPreset:AVCaptureSessionPresetMedium];
 	/*We add input and output*/
 	[self.captureSession addInput:captureInput];
 	[self.captureSession addOutput:captureOutput];
