@@ -20,14 +20,9 @@
 #include "ARToolKitPlus/TrackerSingleMarkerImpl.h"
 
 /*!
- Private interface for ARToolKitPlusWrapper
- */
-@interface ARToolKitPlusWrapper ()
-/*!
  The Object from ARToolKitPlus library responsible for detecting markers
  */
 ARToolKitPlus::TrackerSingleMarker *tracker;
-@end
 
 
 @implementation ARToolKitPlusWrapper
