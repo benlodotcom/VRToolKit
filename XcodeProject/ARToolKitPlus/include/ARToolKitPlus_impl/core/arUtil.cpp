@@ -107,9 +107,10 @@ AR_TEMPL_TRACKER::arGetLine2(int x_coord[], int y_coord[], int coord_num,
         n = ed - st + 1;
         input  = Matrix::alloc( n, 2 );
         for( j = 0; j < n; j++ ) {
-			// does not work
-            (this->*arParamObserv2Ideal_func)( pCam, (ARFloat)x_coord[st+j], (ARFloat)y_coord[st+j], &(input->m[j*2+0]), &(input->m[j*2+1]) );
-			//
+			ARFloat x,y;
+			(this->*arParamObserv2Ideal_func)( pCam, (ARFloat)x_coord[st+j], (ARFloat)y_coord[st+j], &x,&y);
+			input->m[j*2+0] = x;
+			input->m[j*2+1] = y;
         }
         if( arMatrixPCA(input, evec, ev, mean) < 0 ) {
             Matrix::free( input );

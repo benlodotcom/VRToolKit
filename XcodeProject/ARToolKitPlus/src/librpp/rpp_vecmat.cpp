@@ -42,8 +42,10 @@
 
 
 #include "rpp_vecmat.h"
-#include "math.h"
-#include "assert.h"
+#include <cmath>
+#include <cassert>
+#include <cstdlib>
+#include <cstdio>
 
 
 namespace rpp {
@@ -752,6 +754,32 @@ void mat33_svd2(mat33_t &u, mat33_t &s, mat33_t &v, const mat33_t &m)
 	free_double_pptr(&m_ptr);
 	free_double_pptr(&v_ptr);
 	free_double_ptr(&q_ptr);
+
+
+	// WE need to sort the diagonal values of the result !!!
+	// this is neccessery for the absolute orientation algo !!!
+	// Biggest value first !!
+	
+	bool sorted = false;
+	while( !sorted ){
+	  
+	  sorted = true;
+	  for(unsigned int i=1;i<3;i++)
+	    if( s.m[i-1][i-1] < s.m[i][i] ){
+	      sorted = false;   
+	      // change i mit i-1 !!!
+	      
+	      // in the S
+	      real_t t =  s.m[i-1][i-1] ;  s.m[i-1][i-1]  =  s.m[i][i]; s.m[i][i]=t;
+	      
+	      for(unsigned j=0;j<3;j++){
+		// in U 
+		t = u.m[j][i-1];  u.m[j][i-1] =  u.m[j][i];  u.m[j][i] = t;
+		// and in V
+		t = v.m[j][i-1];  v.m[j][i-1] =  v.m[j][i];  v.m[j][i] = t;
+	      }
+	    }
+	}
 }
 
 void quat_mult(quat_t &q, const real_t s)

@@ -64,8 +64,16 @@ AR_TEMPL_TRACKER::rppMultiGetTransMat(ARMarkerInfo *marker_info, int marker_num,
 		if(m_patt_id >= 0)
 		{
 			std::map<int, int>::iterator iter = marker_id_freq.find(m_patt_id);
-			if(iter == marker_id_freq.end()) marker_id_freq.insert(std::make_pair<int,int>(m_patt_id,1));
-			else ((*iter).second)++;
+			
+			if(iter == marker_id_freq.end()) {
+			    marker_id_freq.insert(std::make_pair<int,int>(
+			    #ifdef __GXX_EXPERIMENTAL_CXX0X__
+			    (int&&)
+			    #endif
+			    m_patt_id, 1));
+			} else {
+			    ((*iter).second)++;
+			}
 		}
 	}
 

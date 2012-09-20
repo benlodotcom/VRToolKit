@@ -43,9 +43,10 @@
 
 
 #include <ARToolKitPlus/Logger.h>
+#include <vector>
 
 
-#ifdef ARTOOLKITPLUS_DLL
+#if defined ARTOOLKITPLUS_DLL && defined _WIN32
 #  ifdef ARTOOLKITPLUS_EXPORTS
 #    define ARTOOLKITPLUS_API __declspec(dllexport)
 #  else
@@ -94,6 +95,12 @@ enum IMAGE_PROC_MODE {
 };
 
 
+enum HULL_TRACKING_MODE {
+	HULL_OFF,
+	HULL_FOUR,
+	HULL_FULL
+};
+
 // ARToolKitPlus versioning
 //
 enum ARTKP_VERSION {
@@ -125,15 +132,24 @@ class TrackerSingleMarker;
 class MemoryManager;
 
 
-ARTOOLKITPLUS_API ARToolKitPlus::TrackerSingleMarker* createTrackerSingleMarker(int nWidth, int nHeight,
-																				int nMarkerSizeX, int nMarkerSizeY, int nMarkerSampleNum,
-																				ARToolKitPlus::PIXEL_FORMAT nPixelFormat = ARToolKitPlus::PIXEL_FORMAT_RGB);
+struct CornerPoint
+{
+	CornerPoint() : x(0), y(0)
+	{}
+ 
+	CornerPoint(int nX, int nY) : x(static_cast<short>(nX)), y(static_cast<short>(nY))
+	{}
 
+	short x,y;
+};
 
+typedef std::vector<CornerPoint> CornerPoints;
+
+#ifndef _ARTKP_NO_MEMORYMANAGER_
 ARTOOLKITPLUS_API void setMemoryManager(MemoryManager* nManager);
 
 ARTOOLKITPLUS_API MemoryManager* getMemoryManager();
-
+#endif
 
 }  // namespace ARToolKitPlus
 

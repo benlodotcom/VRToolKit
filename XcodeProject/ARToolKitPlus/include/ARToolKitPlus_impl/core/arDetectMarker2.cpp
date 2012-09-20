@@ -48,7 +48,7 @@ static int get_vertex( int x_coord[], int y_coord[], int st,  int ed,
 
 
 AR_TEMPL_FUNC ARMarkerInfo2*
-AR_TEMPL_TRACKER::arDetectMarker2(ARInt16 *limage, int label_num, int *label_ref,
+AR_TEMPL_TRACKER::arDetectMarker2(int16_t *limage, int label_num, int *label_ref,
                     int *warea, ARFloat *wpos, int *wclip,
                     int area_max, int area_min, ARFloat factor, int *marker_num)
 {
@@ -140,13 +140,13 @@ AR_TEMPL_TRACKER::arDetectMarker2(ARInt16 *limage, int label_num, int *label_ref
 
 
 AR_TEMPL_FUNC int
-AR_TEMPL_TRACKER::arGetContour(ARInt16 *limage, int *label_ref, int label, int clip[4], ARMarkerInfo2 *marker_infoTWO)
+AR_TEMPL_TRACKER::arGetContour(int16_t *limage, int *label_ref, int label, int clip[4], ARMarkerInfo2 *marker_infoTWO)
 {
     static const int      xdir[8] = { 0, 1, 1, 1, 0,-1,-1,-1};
     static const int      ydir[8] = {-1,-1, 0, 1, 1, 1, 0,-1};
     //static int      wx[AR_CHAIN_MAX];
     //static int      wy[AR_CHAIN_MAX];
-    ARInt16         *p1;
+    int16_t         *p1;
     int             xsize, ysize;
     int             sx, sy, dir;
     int             dmax, d, v1 = 0;

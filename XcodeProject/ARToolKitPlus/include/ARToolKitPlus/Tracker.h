@@ -110,11 +110,11 @@ public:
 
 
 	/// marker detection using tracking history
-	virtual int arDetectMarker(ARUint8 *dataPtr, int thresh, ARMarkerInfo **marker_info, int *marker_num) = 0;
+	virtual int arDetectMarker(uint8_t *dataPtr, int thresh, ARMarkerInfo **marker_info, int *marker_num) = 0;
 
 
 	/// marker detection without using tracking history
-	virtual int arDetectMarkerLite(ARUint8 *dataPtr, int thresh, ARMarkerInfo **marker_info, int *marker_num) = 0;
+	virtual int arDetectMarkerLite(uint8_t *dataPtr, int thresh, ARMarkerInfo **marker_info, int *marker_num) = 0;
 
 
 	/// calculates the transformation matrix between camera and the given multi-marker config
@@ -189,9 +189,23 @@ public:
 	/// Changes the Pose Estimation Algorithm
 	/**
 	* POSE_ESTIMATOR_ORIGINAL (default): arGetTransMat()
+	* POSE_ESTIMATOR_CONT: original pose estimator with "Cont"
 	* POSE_ESTIMATOR_RPP: "Robust Pose Estimation from a Planar Target"
 	*/
 	virtual bool setPoseEstimator(POSE_ESTIMATOR nMethod) = 0;
+
+	/// If true the alternative hull-algorithm will be used for multi-marker tracking
+	/**
+	 *  Starting with version 2.2 ARToolKitPlus has a new mode for tracking multi-markers:
+	 *  Instead of using all points (as done by RPP multi-marker tracking)
+	 *  or tracking all markers independently and combine lateron
+	 *  (as done in ARToolKit's standard multi-marker pose estimator), ARToolKitPlus can now
+	 *  use only 4 'good' points of the convex hull to do the pose estimation.
+	 *  If the pose estimator is set to RPP then RPP will be used to track those 4 points.
+	 *  Otherwise, ARToolKit's standard single-marker pose estimator will be used to
+	 *  track the pose of these 4 points.
+	 */
+	virtual void setHullMode(HULL_TRACKING_MODE nMode) = 0;
 
 	/// Sets a new relative border width. ARToolKit's default value is 0.25
 	/**
@@ -294,6 +308,9 @@ public:
 
 	/// Calls the pose estimator set with setPoseEstimator() for multi marker tracking
 	virtual ARFloat executeMultiMarkerPoseEstimator(ARMarkerInfo *marker_info, int marker_num, ARMultiMarkerInfoT *config) = 0;
+
+	/// Returns a vector with screen coordinates of all corners that were used for marker tracking for the last image
+	virtual const CornerPoints& getTrackedCorners() const = 0;
 };
 
 

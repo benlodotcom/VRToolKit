@@ -632,7 +632,7 @@ AR_TEMPL_TRACKER::arGetRot( ARFloat a, ARFloat b, ARFloat c, ARFloat rot[3][3] )
 #pragma message(">>> Using arGetNewMatrix12()")
 
 // optimized arGetNewMatrix() version which completely
-// works with intel's fixed point library
+// works with fixed point
 // (n is 12)
 int arGetNewMatrix12(I32 _a, I32 _b, I32 _c,
                     FIXED_VEC3D _trans, ARFloat trans2[3][4],
@@ -648,7 +648,8 @@ int arGetNewMatrix12(I32 _a, I32 _b, I32 _c,
 	FIXED_VEC3D	_rot[3], _rot2[3];
 
 	PROFILE_BEGINSEC(nProfiler, GETROT)
-	arGetRot_28(_a*conv, _b*conv, _c*conv, _rot2);
+	arGetRot_28(_a<<dbits, _b<<dbits, _c<<dbits, _rot2);
+	//arGetRot_28(_a*conv, _b*conv, _c*conv, _rot2);
 	//arGetRot_28_old(_a*conv, _b*conv, _c*conv, _rot2);
 	PROFILE_ENDSEC(nProfiler, GETROT)
 
@@ -670,8 +671,8 @@ int arGetNewMatrix12(I32 _a, I32 _b, I32 _c,
 		FIXED_VEC3_DOT(_cpara2+j, _rot+1, &ret[j].y, BITS);
 		FIXED_VEC3_DOT(_cpara2+j, _rot+2, &ret[j].z, BITS);
 
-		FIXED_VEC3_DOT(_cpara2+j, &_trans, _ret3+j, BITS);
-		_ret3[j] += _cpara32[j];
+		//FIXED_VEC3_DOT(_cpara2+j, &_trans, _ret3+j, BITS);
+		//_ret3[j] += _cpara32[j];
 	}
 
     return(0);

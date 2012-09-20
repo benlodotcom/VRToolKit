@@ -1,14 +1,11 @@
 /* ========================================================================
  * PROJECT: ARToolKitPlus
  * ========================================================================
- *
- * The robust pose estimator algorithm has been provided by G. Schweighofer
- * and A. Pinz (Inst.of El.Measurement and Measurement Signal Processing,
- * Graz University of Technology). Details about the algorithm are given in
- * a Technical Report: TR-EMT-2005-01, available at:
- * http://www.emt.tu-graz.ac.at/publications/index.htm
- *
- * Ported from MATLAB to C by T.Pintaric (Vienna University of Technology).
+ * This work is based on the original ARToolKit developed by
+ *   Hirokazu Kato
+ *   Mark Billinghurst
+ *   HITLab, University of Washington, Seattle
+ * http://www.hitl.washington.edu/artoolkit/
  *
  * Copyright of the derived and new portions of this work
  *     (C) 2006 Graz University of Technology
@@ -34,53 +31,36 @@
  *   Institut for Computer Graphics and Vision,
  *   Inffeldgasse 16a, 8010 Graz, Austria.
  * ========================================================================
- ** @author   Thomas Pintaric
+ ** @author   Daniel Wagner
  *
- * $Id: librpp.cpp 162 2006-04-19 21:28:10Z grabner $
+ * $Id: arGetInitRot2Sub.cpp 180 2006-08-20 16:57:22Z daniel $
  * @file
  * ======================================================================== */
 
 
-#include "librpp.h"
+#include <ARToolKitPlus/arGetInitRot2Sub.h>
 #include "rpp.h"
+#include <cstring>
 #include "rpp_vecmat.h"
-using namespace rpp;
 
-#ifdef LIBRPP_DLL
-BOOL APIENTRY DllMain( HANDLE hModule, 
-					DWORD  ul_reason_for_call, 
-					LPVOID lpReserved
-					)
-{
-	switch (ul_reason_for_call)
-	{
-	case DLL_PROCESS_ATTACH:
-	case DLL_THREAD_ATTACH:
-	case DLL_THREAD_DETACH:
-	case DLL_PROCESS_DETACH:
-		break;
-	}
-	return TRUE;
-}
-#endif //LIBRPP_DLL
+namespace rpp {
 
 
-#ifndef _NO_LIBRPP_
+void arGetInitRot2_sub2(real_t &err, mat33_t &R, vec3_t &t, const vec3_array &_model, const vec3_array &_iprts, const options_t _options);
 
-
-LIBRPP_API void robustPlanarPose(rpp_float &err,
-								 rpp_mat &R,
-								 rpp_vec &t,
-								 const rpp_float cc[2],
-								 const rpp_float fc[2],
-								 const rpp_vec *model,
-								 const rpp_vec *iprts,
-								 const unsigned int model_iprts_size,
-								 const rpp_mat R_init,
-								 const bool estimate_R_init,
-								 const rpp_float epsilon,
-								 const rpp_float tolerance,
-								 const unsigned int max_iterations)
+void arGetInitRot2_sub(rpp_float &err,
+					   rpp_mat &R,
+					   rpp_vec &t,
+					   const rpp_float cc[2],
+					   const rpp_float fc[2],
+					   const rpp_vec *model,
+					   const rpp_vec *iprts,
+					   const unsigned int model_iprts_size,
+					   const rpp_mat R_init,
+					   const bool estimate_R_init,
+					   const rpp_float epsilon,
+					   const rpp_float tolerance,
+					   const unsigned int max_iterations)
 {
 	vec3_array _model;
 	vec3_array _iprts;
@@ -115,16 +95,16 @@ LIBRPP_API void robustPlanarPose(rpp_float &err,
 	else
 	{
 		mat33_assign(options.initR,
-					(real_t)R_init[0][0], (real_t)R_init[0][1], (real_t)R_init[0][2],
-					(real_t)R_init[1][0], (real_t)R_init[1][1], (real_t)R_init[1][2],
-					(real_t)R_init[2][0], (real_t)R_init[2][1], (real_t)R_init[2][2]);
+			(real_t)R_init[0][0], (real_t)R_init[0][1], (real_t)R_init[0][2],
+			(real_t)R_init[1][0], (real_t)R_init[1][1], (real_t)R_init[1][2],
+			(real_t)R_init[2][0], (real_t)R_init[2][1], (real_t)R_init[2][2]);
 	}
 
 	real_t _err;
 	mat33_t _R;
 	vec3_t _t;
 
-	robust_pose(_err,_R,_t,_model,_iprts,options);
+	arGetInitRot2_sub2(_err,_R,_t,_model,_iprts,options);
 
 	for(int j=0; j<3; j++)
 	{
@@ -137,35 +117,58 @@ LIBRPP_API void robustPlanarPose(rpp_float &err,
 }
 
 
-bool rppSupportAvailabe()
+void arGetInitRot2_sub2(real_t &err, mat33_t &R, vec3_t &t, const vec3_array &_model, const vec3_array &_iprts, const options_t _options)
 {
-	return true;
+	mat33_t Rlu_;
+	vec3_t tlu_;
+	unsigned int it1_;
+	real_t obj_err1_;
+	real_t img_err1_;
+
+	vec3_array model(_model.begin(),_model.end());
+	vec3_array iprts(_iprts.begin(),_iprts.end());
+	options_t options;
+	memcpy(&options,&_options,sizeof(options_t));
+
+	mat33_clear(Rlu_);
+	vec3_clear(tlu_);
+	it1_ = 0;
+	obj_err1_ = 0;
+	img_err1_ = 0;
+
+	objpose(R, t, it1_, obj_err1_, img_err1_, false, model, iprts, options);
+
+	/*pose_vec sol;
+	sol.clear();
+	get2ndPose_Exact(sol,iprts,model,Rlu_,tlu_,0);
+	int min_err_idx = (-1);
+	real_t min_err = MAX_FLOAT;
+	for(unsigned int i=0; i<sol.size(); i++)
+	{
+		mat33_copy(options.initR,sol[i].R);
+		objpose(Rlu_, tlu_, it1_, obj_err1_, img_err1_, true, model, iprts, options);
+		mat33_copy(sol[i].PoseLu_R,Rlu_);
+		vec3_copy(sol[i].PoseLu_t,tlu_);
+		sol[i].obj_err = obj_err1_;
+		if(sol[i].obj_err < min_err)
+		{
+			min_err = sol[i].obj_err;
+			min_err_idx = i;
+		}
+	}
+
+	if(min_err_idx >= 0)
+	{
+		mat33_copy(R,sol[min_err_idx].PoseLu_R);
+		vec3_copy(t,sol[min_err_idx].PoseLu_t);
+		err = sol[min_err_idx].obj_err;
+	}
+	else
+	{
+		mat33_clear(R);
+		vec3_clear(t);
+		err = MAX_FLOAT;
+	}*/
 }
 
-
-#else //_NO_LIBRPP_
-
-
-LIBRPP_API void robustPlanarPose(rpp_float &err,
-								 rpp_mat &R,
-								 rpp_vec &t,
-								 const rpp_float cc[2],
-								 const rpp_float fc[2],
-								 const rpp_vec *model,
-								 const rpp_vec *iprts,
-								 const unsigned int model_iprts_size,
-								 const rpp_mat R_init,
-								 const bool estimate_R_init,
-								 const rpp_float epsilon,
-								 const rpp_float tolerance,
-								 const unsigned int max_iterations)
-{
-}
-
-
-bool rppSupportAvailabe()
-{
-	return false;
-}
-
-#endif //_NO_LIBRPP_
+} // namespace rpp

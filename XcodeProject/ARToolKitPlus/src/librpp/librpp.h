@@ -60,9 +60,7 @@
 
 #endif
 
-typedef double rpp_float;
-typedef double rpp_vec[3];
-typedef double rpp_mat[3][3];
+#include "rpp_types.h"
 
 LIBRPP_API void robustPlanarPose(rpp_float &err,
 								 rpp_mat &R,

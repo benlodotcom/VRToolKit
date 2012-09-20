@@ -50,7 +50,7 @@ namespace ARToolKitPlus {
 	
 
 static void get_cpara(ARFloat world[4][2], ARFloat vertex[4][2], ARFloat para[3][3]);
-static void put_zero(ARUint8 *p, int size);
+static void put_zero(uint8_t *p, int size);
 
 
 AR_TEMPL_FUNC int
@@ -162,10 +162,10 @@ AR_TEMPL_TRACKER::arDeactivatePatt( int patno )
 
 
 AR_TEMPL_FUNC int
-AR_TEMPL_TRACKER::arGetCode(ARUint8 *image, int *x_coord, int *y_coord, int *vertex,
+AR_TEMPL_TRACKER::arGetCode(uint8_t *image, int *x_coord, int *y_coord, int *vertex,
 				   int *code, int *dir, ARFloat *cf, int thresh)
 {
-    ARUint8 ext_pat[PATTERN_HEIGHT][PATTERN_WIDTH][3];
+    uint8_t ext_pat[PATTERN_HEIGHT][PATTERN_WIDTH][3];
 
     arGetPatt(image, x_coord, y_coord, vertex, ext_pat);
 
@@ -188,37 +188,37 @@ AR_TEMPL_TRACKER::arGetCode(ARUint8 *image, int *x_coord, int *y_coord, int *ver
 	switch(markerMode)
 	{
 	case MARKER_TEMPLATE:
-		pattern_match((ARUint8 *)ext_pat, code, dir, cf);
+		pattern_match((uint8_t *)ext_pat, code, dir, cf);
 		break;
 
 	case MARKER_ID_SIMPLE:
-		bitfield_check_simple((ARUint8 *)ext_pat, code, dir, cf, thresh);
+		bitfield_check_simple((uint8_t *)ext_pat, code, dir, cf, thresh);
 		break;
 
 	case MARKER_ID_BCH:
-		bitfield_check_BCH((ARUint8 *)ext_pat, code, dir, cf, thresh);
+		bitfield_check_BCH((uint8_t *)ext_pat, code, dir, cf, thresh);
 		break;
 	}
 
 	/*if(useBitFieldMarkers)
 	{
 		if(idMarkerMode==IDMARKER_SIMPLE)
-			bitfield_check_simple((ARUint8 *)ext_pat, code, dir, cf, thresh);
+			bitfield_check_simple((uint8_t *)ext_pat, code, dir, cf, thresh);
 		else
-			bitfield_check_BCH((ARUint8 *)ext_pat, code, dir, cf, thresh);
+			bitfield_check_BCH((uint8_t *)ext_pat, code, dir, cf, thresh);
 	}
 	else
-		pattern_match((ARUint8 *)ext_pat, code, dir, cf);*/
+		pattern_match((uint8_t *)ext_pat, code, dir, cf);*/
 
     return(0);
 }
 
 //#if 1
 AR_TEMPL_FUNC int
-AR_TEMPL_TRACKER::arGetPatt(ARUint8 *image, int *x_coord, int *y_coord, int *vertex,
-						    ARUint8 ext_pat[PATTERN_HEIGHT][PATTERN_WIDTH][3])
+AR_TEMPL_TRACKER::arGetPatt(uint8_t *image, int *x_coord, int *y_coord, int *vertex,
+						    uint8_t ext_pat[PATTERN_HEIGHT][PATTERN_WIDTH][3])
 {
-    ARUint32  ext_pat2[PATTERN_HEIGHT][PATTERN_WIDTH][3];
+    uint32_t  ext_pat2[PATTERN_HEIGHT][PATTERN_WIDTH][3];
     ARFloat    world[4][2];
     ARFloat    local[4][2];
     ARFloat    para[3][3];
@@ -228,7 +228,7 @@ AR_TEMPL_TRACKER::arGetPatt(ARUint8 *image, int *x_coord, int *y_coord, int *ver
     int       xdiv2, ydiv2;
     int       lx1, lx2, ly1, ly2;
     int       i, j;
-	ARUint8		col8;
+	uint8_t		col8;
     // int       k1, k2, k3; // unreferenced
 
 	unsigned short* image16 = (unsigned short*)image;
@@ -365,9 +365,9 @@ printf("%3d(%f), %3d(%f)\n", xdiv2, sqrt(lx1), ydiv2, sqrt(ly1));
 				xyTo = 110.0f - border,
 				xyStep = xyTo-xyFrom;
 		int jy,ix;
-		ARUint8 col8;
+		uint8_t col8;
 
-		put_zero( (ARUint8 *)ext_pat2, PATTERN_HEIGHT*PATTERN_WIDTH*3*sizeof(ARUint32) );
+		put_zero( (uint8_t *)ext_pat2, PATTERN_HEIGHT*PATTERN_WIDTH*3*sizeof(uint32_t) );
 
 		for( j = 0; j < ydiv2; j++ ) {
 			//yw = (ARFloat)(102.5) + (ARFloat)(5.0) * (ARFloat)(j+0.5) / (ARFloat)ydiv2;
@@ -413,15 +413,15 @@ printf("%3d(%f), %3d(%f)\n", xdiv2, sqrt(lx1), ydiv2, sqrt(ly1));
 					}
 					if(PIX_FORMAT==PIXEL_FORMAT_RGB565) {
 						int jy=j/ydiv, ix=i/xdiv;
-						//ARUint8 col = RGB565_to_LUM8_LUT[image16[yc*arImXsize+xc]];
-						ARUint8 col = getLUM8_from_RGB565(image16+yc*arImXsize+xc);
+						//uint8_t col = RGB565_to_LUM8_LUT[image16[yc*arImXsize+xc]];
+						uint8_t col = getLUM8_from_RGB565(image16+yc*arImXsize+xc);
 						ext_pat2[jy][ix][0] += col;
 						ext_pat2[jy][ix][1] += col;
 						ext_pat2[jy][ix][2] += col;
 					}
 					if(PIX_FORMAT==PIXEL_FORMAT_LUM) {
 						int jy=j/ydiv, ix=i/xdiv;
-						ARUint8 col = image[(yc*arImXsize+xc)*PIX_SIZE];
+						uint8_t col = image[(yc*arImXsize+xc)*PIX_SIZE];
 						ext_pat2[jy][ix][0] += col;
 						ext_pat2[jy][ix][1] += col;
 						ext_pat2[jy][ix][2] += col;
@@ -492,8 +492,8 @@ printf("%3d(%f), %3d(%f)\n", xdiv2, sqrt(lx1), ydiv2, sqrt(ly1));
 }
 //#else
 /*
-int arGetPatt( ARUint8 *image, int *x_coord, int *y_coord, int *vertex,
-               ARUint8 ext_pat[PATTERN_HEIGHT][PATTERN_WIDTH][3] )
+int arGetPatt( uint8_t *image, int *x_coord, int *y_coord, int *vertex,
+               uint8_t ext_pat[PATTERN_HEIGHT][PATTERN_WIDTH][3] )
 {
     ARFloat  world[4][2];
     ARFloat  local[4][2];
@@ -517,7 +517,7 @@ int arGetPatt( ARUint8 *image, int *x_coord, int *y_coord, int *vertex,
     }
     get_cpara( world, local, para );
 
-    put_zero( (ARUint8 *)ext_pat, PATTERN_HEIGHT*PATTERN_WIDTH*3 );
+    put_zero( (uint8_t *)ext_pat, PATTERN_HEIGHT*PATTERN_WIDTH*3 );
     for( j = 0; j < AR_PATT_SAMPLE_NUM; j++ ) {
         yw = 102.5 + 5.0 * (j+0.5) / (ARFloat)AR_PATT_SAMPLE_NUM;
         for( i = 0; i < AR_PATT_SAMPLE_NUM; i++ ) {
@@ -612,7 +612,7 @@ int arGetPatt( ARUint8 *image, int *x_coord, int *y_coord, int *vertex,
 
 
 AR_TEMPL_FUNC int
-AR_TEMPL_TRACKER::pattern_match( ARUint8 *data, int *code, int *dir, ARFloat *cf)
+AR_TEMPL_TRACKER::pattern_match( uint8_t *data, int *code, int *dir, ARFloat *cf)
 {
     ARFloat invec[EVEC_MAX];
     int    input[PATTERN_HEIGHT*PATTERN_WIDTH*3];
@@ -878,7 +878,7 @@ get_cpara( ARFloat world[4][2], ARFloat vertex[4][2], ARFloat para[3][3] )
 
 
 /*
-static void   put_zero( ARUint8 *p, int size )
+static void   put_zero( uint8_t *p, int size )
 {
     while( (size--) > 0 ) *(p++) = 0;
 }

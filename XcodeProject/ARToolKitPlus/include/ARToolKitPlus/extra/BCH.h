@@ -72,16 +72,16 @@ typedef unsigned long long _64bits;
 #endif
 
 
-static bool _isBitSet(_64bits bn, int which_bit);
-static void _setBit(_64bits &bn, int which_bit);
+//static bool _isBitSet(_64bits bn, int which_bit);
+//static void _setBit(_64bits &bn, int which_bit);
 /*
 static void _clearBit(_64bits &bn, int which_bit);
 static void _copyBit(_64bits &dest_n, const int dest_bit, const _64bits src_n, const int src_bit);
 static int _countOnes(const _64bits src_n);
 */
 
-static int* toBitPattern(int b[], _64bits n, int n_bits);
-static _64bits fromBitPattern(int b[], int n_bits);
+//static int* toBitPattern(int b[], _64bits n, int n_bits);
+//static _64bits fromBitPattern(int b[], int n_bits);
 
 // static void printBitPattern(_64bits n, int n_bits);
 
