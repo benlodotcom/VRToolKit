@@ -50,14 +50,7 @@
 #include <ARToolKitPlus/Camera.h>
 #include <ARToolKitPlus/CameraFactory.h>
 #include <ARToolKitPlus/extra/BCH.h>
-
-
-#if defined(_MSC_VER)
-#  if _MSC_VER<1300
-#    define _OLD_MSCOMPILER_
-#    pragma message (">>> Compiling for old MS Compiler")
-#  endif
-#endif
+#include <ARToolKitPlus/extra/Hull.h>
 
 
 #define AR_TEMPL_FUNC template <int __PATTERN_SIZE_X, int __PATTERN_SIZE_Y, int __PATTERN_SAMPLE_NUM, int __MAX_LOAD_PATTERNS, int __MAX_IMAGE_PATTERNS>
@@ -140,13 +133,15 @@ public:
 	virtual void setLogger(ARToolKitPlus::Logger* nLogger)  {  logger = nLogger;  }
 
 	/// marker detection using tracking history
-	virtual int arDetectMarker(ARUint8 *dataPtr, int thresh, ARMarkerInfo **marker_info, int *marker_num);
+	virtual int arDetectMarker(uint8_t *dataPtr, int thresh, ARMarkerInfo **marker_info, int *marker_num);
 
 	/// marker detection without using tracking history
-	virtual int arDetectMarkerLite(ARUint8 *dataPtr, int thresh, ARMarkerInfo **marker_info, int *marker_num);
+	virtual int arDetectMarkerLite(uint8_t *dataPtr, int thresh, ARMarkerInfo **marker_info, int *marker_num);
 
 	/// calculates the transformation matrix between camera and the given multi-marker config
 	virtual ARFloat arMultiGetTransMat(ARMarkerInfo *marker_info, int marker_num, ARMultiMarkerInfoT *config);
+
+    virtual ARFloat arMultiGetTransMatHull(ARMarkerInfo *marker_info, int marker_num, ARMultiMarkerInfoT *config);
 
 	/// calculates the transformation matrix between camera and the given marker
 	virtual ARFloat arGetTransMat(ARMarkerInfo *marker_info, ARFloat center[2], ARFloat width, ARFloat conv[3][4]);
@@ -216,9 +211,24 @@ public:
 	/// Changes the Pose Estimation Algorithm
 	/**
 	* POSE_ESTIMATOR_ORIGINAL (default): arGetTransMat()
+	* POSE_ESTIMATOR_CONT: original pose estimator with "Cont"
 	* POSE_ESTIMATOR_RPP: "Robust Pose Estimation from a Planar Target"
 	*/
 	virtual bool setPoseEstimator(POSE_ESTIMATOR nMethod);
+
+
+	/// If true the alternative hull-algorithm will be used for multi-marker tracking
+	/**
+	 *  Starting with version 2.2 ARToolKitPlus has a new mode for tracking multi-markers:
+	 *  Instead of using all points (as done by RPP multi-marker tracking)
+	 *  or tracking all markers independently and combine lateron
+	 *  (as done in ARToolKit's standard multi-marker pose estimator), ARToolKitPlus can now
+	 *  use only 4 'good' points of the convex hull to do the pose estimation.
+	 *  If the pose estimator is set to RPP then RPP will be used to track those 4 points.
+	 *  Otherwise, ARToolKit's standard single-marker pose estimator will be used to
+	 *  track the pose of these 4 points.
+	 */
+	virtual void setHullMode(HULL_TRACKING_MODE nMode)  {  hullTrackingMode = nMode;  }
 
 	/// Sets a new relative border width. ARToolKit's default value is 0.25
 	/**
@@ -310,8 +320,8 @@ public:
 
 
 	virtual ARFloat executeMultiMarkerPoseEstimator(ARMarkerInfo *marker_info, int marker_num, ARMultiMarkerInfoT *config);
-
-
+	
+	virtual const CornerPoints& getTrackedCorners() const  {  return trackedCorners;  }
 
 protected:
 	bool checkPixelFormat();
@@ -331,31 +341,31 @@ protected:
 	static bool convertProjectionMatrixToOpenGLStyle2(ARFloat cparam[3][4], int width, int height, ARFloat gnear, ARFloat gfar, ARFloat m[16]);
 
 
-	ARMarkerInfo2* arDetectMarker2(ARInt16 *limage, int label_num, int *label_ref,
+	ARMarkerInfo2* arDetectMarker2(int16_t *limage, int label_num, int *label_ref,
 								   int *warea, ARFloat *wpos, int *wclip,
 								   int area_max, int area_min, ARFloat factor, int *marker_num);
 
-	int arGetContour(ARInt16 *limage, int *label_ref, int label, int clip[4], ARMarkerInfo2 *marker_infoTWO);
+	int arGetContour(int16_t *limage, int *label_ref, int label, int clip[4], ARMarkerInfo2 *marker_infoTWO);
 
 	int check_square(int area, ARMarkerInfo2 *marker_infoTWO, ARFloat factor);
 
-	int arGetCode(ARUint8 *image, int *x_coord, int *y_coord, int *vertex,
+	int arGetCode(uint8_t *image, int *x_coord, int *y_coord, int *vertex,
 				  int *code, int *dir, ARFloat *cf, int thresh);
 
-	int arGetPatt(ARUint8 *image, int *x_coord, int *y_coord, int *vertex,
-				  ARUint8 ext_pat[PATTERN_HEIGHT][PATTERN_WIDTH][3]);
+	int arGetPatt(uint8_t *image, int *x_coord, int *y_coord, int *vertex,
+				  uint8_t ext_pat[PATTERN_HEIGHT][PATTERN_WIDTH][3]);
 
-	int pattern_match( ARUint8 *data, int *code, int *dir, ARFloat *cf);
+	int pattern_match( uint8_t *data, int *code, int *dir, ARFloat *cf);
 
-	int downsamplePattern(ARUint8* data, unsigned char* imgPtr);
+	int downsamplePattern(uint8_t* data, unsigned char* imgPtr);
 
-	int bitfield_check_simple(ARUint8 *data, int *code, int *dir, ARFloat *cf, int thresh);
+	int bitfield_check_simple(uint8_t *data, int *code, int *dir, ARFloat *cf, int thresh);
 
-	int bitfield_check_BCH(ARUint8 *data, int *code, int *dir, ARFloat *cf, int thresh);
+	int bitfield_check_BCH(uint8_t *data, int *code, int *dir, ARFloat *cf, int thresh);
 
 	void gen_evec(void);
 
-	ARMarkerInfo* arGetMarkerInfo(ARUint8 *image, ARMarkerInfo2 *marker_info2, int *marker_num, int thresh);
+	ARMarkerInfo* arGetMarkerInfo(uint8_t *image, ARMarkerInfo2 *marker_info2, int *marker_num, int thresh);
 
 	ARFloat arGetTransMat2(ARFloat rot[3][3], ARFloat ppos2d[][2], ARFloat ppos3d[][2], int num, ARFloat conv[3][4]);
 
@@ -388,6 +398,7 @@ protected:
 
 	int arGetInitRot(ARMarkerInfo *marker_info, ARFloat cpara[3][4], ARFloat rot[3][3]);
 
+    int arGetInitRot2(ARMarkerInfo *marker_info, ARFloat cpara[3][4], ARFloat rot[3][3], ARFloat center[2], ARFloat width);
 
 	ARFloat arGetTransMatCont2(ARMarkerInfo *marker_info, ARFloat center[2], ARFloat width, ARFloat conv[3][4]);
 
@@ -395,20 +406,20 @@ protected:
 
 
 
-	ARInt16* arLabeling(ARUint8 *image, int thresh,int *label_num, int **area,
+	int16_t* arLabeling(uint8_t *image, int thresh,int *label_num, int **area,
 						ARFloat **pos, int **clip, int **label_ref );
 
 
-	ARInt16* arLabeling_ABGR(ARUint8 *image, int thresh,int *label_num, int **area, ARFloat **pos, int **clip, int **label_ref);
-	ARInt16* arLabeling_BGR(ARUint8 *image, int thresh,int *label_num, int **area, ARFloat **pos, int **clip, int **label_ref);
-	ARInt16* arLabeling_RGB(ARUint8 *image, int thresh,int *label_num, int **area, ARFloat **pos, int **clip, int **label_ref);
-	ARInt16* arLabeling_RGB565(ARUint8 *image, int thresh,int *label_num, int **area, ARFloat **pos, int **clip, int **label_ref);
-	ARInt16* arLabeling_LUM(ARUint8 *image, int thresh,int *label_num, int **area, ARFloat **pos, int **clip, int **label_ref);
+	int16_t* arLabeling_ABGR(uint8_t *image, int thresh,int *label_num, int **area, ARFloat **pos, int **clip, int **label_ref);
+	int16_t* arLabeling_BGR(uint8_t *image, int thresh,int *label_num, int **area, ARFloat **pos, int **clip, int **label_ref);
+	int16_t* arLabeling_RGB(uint8_t *image, int thresh,int *label_num, int **area, ARFloat **pos, int **clip, int **label_ref);
+	int16_t* arLabeling_RGB565(uint8_t *image, int thresh,int *label_num, int **area, ARFloat **pos, int **clip, int **label_ref);
+	int16_t* arLabeling_LUM(uint8_t *image, int thresh,int *label_num, int **area, ARFloat **pos, int **clip, int **label_ref);
 
-	//ARInt16* labeling2(ARUint8 *image, int thresh,int *label_num, int **area,
+	//int16_t* labeling2(uint8_t *image, int thresh,int *label_num, int **area,
 	//				   ARFloat **pos, int **clip, int **label_ref, int LorR );
 
-	//ARInt16* labeling3(ARUint8 *image, int thresh, int *label_num, int **area,
+	//int16_t* labeling3(uint8_t *image, int thresh, int *label_num, int **area,
 	//				   ARFloat **pos, int **clip, int **label_ref, int LorR );
 
 
@@ -580,8 +591,8 @@ protected:
 
 	// arLabeling.cpp
 	//
-	ARInt16      *l_imageL; //[HARDCODED_BUFFER_WIDTH*HARDCODED_BUFFER_HEIGHT];		// dyna
-	ARInt16      *l_imageR;
+	int16_t      *l_imageL; //[HARDCODED_BUFFER_WIDTH*HARDCODED_BUFFER_HEIGHT];		// dyna
+	int16_t      *l_imageR;
 	int			 l_imageL_size;
 
 	int          *workL;  //[WORK_SIZE];											// dyna
@@ -607,7 +618,7 @@ protected:
 	int        arTemplateMatchingMode;
 	int        arMatchingPCAMode;
 
-	ARUint8*   arImageL;
+	uint8_t*   arImageL;
 
 	MARKER_MODE		markerMode;
 
@@ -618,8 +629,12 @@ protected:
 	//
 	UNDIST_MODE		undistMode;
 	unsigned int	*undistO2ITable;
-	//unsigned int	*undistI2OTable;
 
+	// used for Hull Tracking
+	MarkerPoint	hullInPoints[MAX_HULL_POINTS];
+	MarkerPoint	hullOutPoints[MAX_HULL_POINTS];
+
+	CornerPoints	trackedCorners;
 
 	ARFloat			relBorderWidth;
 
@@ -628,12 +643,12 @@ protected:
 
 	// RPP integration -- [t.pintaric]
 	POSE_ESTIMATOR  poseEstimator;
-	//POSE_ESTIMATOR_FUNC poseEstimator_func;
-	//MULTI_POSE_ESTIMATOR_FUNC multiPoseEstimator_func;
+
+    HULL_TRACKING_MODE hullTrackingMode;
 
 	ARToolKitPlus::Logger	*logger;
 
-	int						screenWidth, screenHeight;
+	static int						screenWidth, screenHeight;
 	int						thresh;
 
 	ARParam					cparam;
@@ -648,6 +663,20 @@ protected:
 		int corners, leftright, bottomtop;
 	} vignetting;
 
+#ifdef DEBUG_DIV_RANGE
+	struct DBG_INFO {
+		DBG_INFO() : hMin(30000<<16), hMax(-30000<<16), hxMin(30000<<16), hxMax(-30000<<16), hyMin(30000<<16), hyMax(-30000<<16), dxMax(0), dyMax(0)
+		{}
+
+		int hMin,hMax;
+		int hxMin,hxMax;
+		int hyMin,hyMax;
+		int dxMax, dyMax;
+	} dbgInfo;
+#endif
+
+	unsigned short			*DIV_TABLE;
+
 	BCH						*bchProcessor;
 	Profiler				profiler;
 };
@@ -659,40 +688,31 @@ protected:
 
 // this is templated code, so we need to include all this here...
 //
-#include "../../src/extra/FixedPoint.h"
-#include "../../src/core/arBitFieldPattern.cxx"
-#include "../../src/core/arDetectMarker.cxx"
-#include "../../src/core/arDetectMarker2.cxx"
-#include "../../src/core/arGetCode.cxx"
-#include "../../src/core/arGetMarkerInfo.cxx"
-#include "../../src/core/arGetTransMat.cxx"
-#include "../../src/core/arGetTransMat2.cxx"
-#include "../../src/core/arGetTransMat3.cxx"
-#include "../../src/core/rppGetTransMat.cxx" // RPP integration -- [t.pintaric]
-#include "../../src/core/arGetTransMatCont.cxx"
-#include "../../src/core/arLabeling.cxx"
-#include "../../src/core/arMultiActivate.cxx"
-#include "../../src/core/arMultiGetTransMat.cxx"
-#include "../../src/core/rppMultiGetTransMat.cxx" 	// RPP integration -- [t.pintaric]
-#include "../../src/core/arMultiReadConfigFile.cxx"
-#include "../../src/core/arUtil.cxx"
-#include "../../src/core/matrix.cxx"
-#include "../../src/core/mPCA.cxx"
-//#include "../../src/core/paramChangeSize.cxx"
-#include "../../src/core/paramDecomp.cxx"
-#include "../../src/core/paramDistortion.cxx"
-#include "../../src/core/byteSwap.cxx"
-#include "../../src/core/paramFile.cxx"
-#include "../../src/core/vector.cxx"
+#include <ARToolKitPlus_impl/core/arBitFieldPattern.cpp>
+#include <ARToolKitPlus_impl/core/arDetectMarker.cpp>
+#include <ARToolKitPlus_impl/core/arDetectMarker2.cpp>
+#include <ARToolKitPlus_impl/core/arGetCode.cpp>
+#include <ARToolKitPlus_impl/core/arGetMarkerInfo.cpp>
+#include <ARToolKitPlus_impl/core/arGetTransMat.cpp>
+#include <ARToolKitPlus_impl/core/arGetTransMat2.cpp>
+#include <ARToolKitPlus_impl/core/arGetTransMat3.cpp>
+#include <ARToolKitPlus_impl/core/rppGetTransMat.cpp> // RPP integration -- [t.pintaric]
+#include <ARToolKitPlus_impl/core/arGetTransMatCont.cpp>
+#include <ARToolKitPlus_impl/core/arLabeling.cpp>
+#include <ARToolKitPlus_impl/core/arMultiActivate.cpp>
+#include <ARToolKitPlus_impl/core/arMultiGetTransMat.cpp>
+#include <ARToolKitPlus_impl/core/rppMultiGetTransMat.cpp> 	// RPP integration -- [t.pintaric]
+#include <ARToolKitPlus_impl/core/arMultiReadConfigFile.cpp>
+#include <ARToolKitPlus_impl/core/arUtil.cpp>
+#include <ARToolKitPlus_impl/core/matrix.cpp>
+#include <ARToolKitPlus_impl/core/mPCA.cpp>
+#include <ARToolKitPlus_impl/core/paramDecomp.cpp>
+#include <ARToolKitPlus_impl/core/paramDistortion.cpp>
+#include <ARToolKitPlus_impl/core/paramFile.cpp>
+#include <ARToolKitPlus_impl/core/vector.cpp>
+#include <ARToolKitPlus_impl/core/arMultiGetTransMatHull.cpp>
 
-#include "../../src/CameraImpl.cxx"
-#include "../../src/CameraAdvImpl.cxx"
-#include "../../src/CameraFactory.cxx"
-#include "../../src/extra/BCH.cxx"
-
-#include "../../src/TrackerImpl.cxx"
-//#include "../../src/extra/harrisCornerDetector.cxx"
-//#include "../../src/extra/cornerRefinement.cxx"
-
+#include <ARToolKitPlus_impl/arGetInitRot2.cpp>
+#include <ARToolKitPlus_impl/TrackerImpl.cpp>
 
 #endif //__ARTOOLKIT_TRACKERIMPL_HEADERFILE__

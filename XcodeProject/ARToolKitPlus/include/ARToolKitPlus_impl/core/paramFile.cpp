@@ -42,7 +42,7 @@
 #include <stdarg.h>
 #include <ARToolKitPlus/Tracker.h>
 #include <ARToolKitPlus/param.h>
-
+#include <ARToolKitPlus/byteSwap.h>
 
 namespace ARToolKitPlus {
 

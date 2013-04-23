@@ -31,64 +31,70 @@
  *   Institut for Computer Graphics and Vision,
  *   Inffeldgasse 16a, 8010 Graz, Austria.
  * ========================================================================
- ** @author   Daniel Wagner
+ ** @author   Thomas Pintaric
  *
- * $Id: MemoryManager.cpp 164 2006-05-02 11:29:10Z daniel $
+ * $Id: byteSwap.cxx 162 2006-04-19 21:28:10Z grabner $
  * @file
  * ======================================================================== */
 
 
-#include <ARToolKitPlus/MemoryManager.h>
-#ifndef __APPLE__
-#include <malloc.h>
-#else
-#include <stdlib.h>
-#endif
+#include <ARToolKitPlus/param.h>
+#include <stdint.h>
 
+namespace ARToolKitPlus {
 
-namespace ARToolKitPlus
+#ifdef AR_LITTLE_ENDIAN
+
+static void
+byteSwapInt( int *from, int *to )
 {
+    uint8_t   *w1, *w2;
 
-
-#ifndef _ARTKP_NO_MEMORYMANAGER_
-
-MemoryManager* memManager = NULL;
-
-
-ARTOOLKITPLUS_API void
-setMemoryManager(MemoryManager* nManager)
-{
-	memManager = nManager;
+    w1 = (uint8_t *)from;
+    w2 = (uint8_t *)to;
+    
+    for(int i = 0; i < 4; i++ ) {
+        w2[i] = w1[3-i];
+    }
 }
 
-
-ARTOOLKITPLUS_API MemoryManager*
-getMemoryManager()
+// FIXME: This function is inheretly broken
+// one must be breindead to try byte shuffling floating point numbers
+static void
+byteSwapDouble( double *from, double *to )
 {
-	return memManager;
+    uint8_t   *w1, *w2;
+
+    w1 = (uint8_t *)from;
+    w2 = (uint8_t *)to;
+    
+    for(int i = 0; i < 8; i++ ) {
+        w2[i] = w1[7-i];
+    }
 }
-
-
-#endif //_ARTKP_NO_MEMORYMANAGER_
-
 
 void
-artkp_Free(void* rawMemory)
+byteswap( ARParamDouble *param )
 {
-	if(!rawMemory)
-		return;
+    ARParamDouble  wparam;
+    int            i, j;
 
-#ifndef _ARTKP_NO_MEMORYMANAGER_
-	if(memManager)
-		memManager->releaseMemory(rawMemory);
-	else
-#endif //_ARTKP_NO_MEMORYMANAGER_
-		::free(rawMemory);
+    byteSwapInt( &(param->xsize), &(wparam.xsize) );
+    byteSwapInt( &(param->ysize), &(wparam.ysize) );
 
-	rawMemory = NULL;
+    for( j = 0; j < 3; j++ ) {
+        for( i = 0; i < 4; i++ ) {
+            byteSwapDouble( &(param->mat[j][i]), &(wparam.mat[j][i]) );
+        }
+    }
+
+    for( i = 0; i < 4; i++ ) {
+        byteSwapDouble( &(param->dist_factor[i]), &(wparam.dist_factor[i]) );
+    }
+
+    *param = wparam;
 }
 
+#endif  //AR_LITTLE_ENDIAN
 
 }  // namespace ARToolKitPlus
-
-

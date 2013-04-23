@@ -38,7 +38,8 @@
  * ======================================================================== */
 
 
-//#include <ARToolKitPlus/Tracker.h>
+#include <ARToolKitPlus/Tracker.h>
+#include <ARToolKitPlus/TrackerImpl.h>
 
 
 //#if AR_PATT_SIZE_X!=16 || AR_PATT_SIZE_Y!=16
@@ -50,6 +51,8 @@
 
 namespace ARToolKitPlus {
 
+AR_TEMPL_FUNC int AR_TEMPL_TRACKER::screenWidth;
+AR_TEMPL_FUNC int AR_TEMPL_TRACKER::screenHeight;
 
 AR_TEMPL_FUNC 
 AR_TEMPL_TRACKER::TrackerImpl()
@@ -152,8 +155,8 @@ AR_TEMPL_TRACKER::TrackerImpl()
 
 	// RPP integration -- [t.pintaric]
 	poseEstimator = POSE_ESTIMATOR_ORIGINAL;
-	//poseEstimator_func = &AR_TEMPL_TRACKER::arGetTransMat;
-	//multiPoseEstimator_func = &AR_TEMPL_TRACKER::arMultiGetTransMat;
+	
+	hullTrackingMode = HULL_OFF;
 
 	descriptionString = new char[512];
 
@@ -261,8 +264,8 @@ AR_TEMPL_TRACKER::checkImageBuffer()
 
 	l_imageL_size = newSize;
 
-	//l_imageL = new ARInt16[newSize];
-	l_imageL = artkp_Alloc<ARInt16>(newSize);
+	//l_imageL = new int16_t[newSize];
+	l_imageL = artkp_Alloc<int16_t>(newSize);
 }
 
 
@@ -446,7 +449,7 @@ AR_TEMPL_TRACKER::calcCameraMatrix(const char* nCamParamFile, int nWidth, int nH
 		return(false);
 	}
 
-	pCam->changeFrameSize(320,480);
+	pCam->changeFrameSize(AR_TEMPL_TRACKER::screenWidth,AR_TEMPL_TRACKER::screenHeight);
 
 	int i;
     for(i = 0; i < 4; i++ )
@@ -566,6 +569,9 @@ AR_TEMPL_TRACKER::executeSingleMarkerPoseEstimator(ARMarkerInfo *marker_info, AR
 AR_TEMPL_FUNC ARFloat
 AR_TEMPL_TRACKER::executeMultiMarkerPoseEstimator(ARMarkerInfo *marker_info, int marker_num, ARMultiMarkerInfoT *config)
 {
+	if(hullTrackingMode!=HULL_OFF)
+		return arMultiGetTransMatHull(marker_info, marker_num, config);
+
 	switch(poseEstimator)
 	{
 	case POSE_ESTIMATOR_ORIGINAL:
@@ -783,7 +789,7 @@ AR_TEMPL_TRACKER::getDynamicMemoryRequirements()
 
 	// requirements for the image buffer (arImageL)
 	//
-	size += sizeof(ARUint8)*MAX_BUFFER_WIDTH*MAX_BUFFER_HEIGHT;
+	size += sizeof(uint8_t)*MAX_BUFFER_WIDTH*MAX_BUFFER_HEIGHT;
 
 
 	// requirements for allocation of marker_infoTWO
@@ -793,7 +799,7 @@ AR_TEMPL_TRACKER::getDynamicMemoryRequirements()
 
 	// requirements for allocation of l_imageL
 	//
-	size += sizeof(ARInt16)*MAX_BUFFER_WIDTH*MAX_BUFFER_HEIGHT;
+	size += sizeof(int16_t)*MAX_BUFFER_WIDTH*MAX_BUFFER_HEIGHT;
 
 
 	// requirements for the lens undistortion table (undistO2ITable)

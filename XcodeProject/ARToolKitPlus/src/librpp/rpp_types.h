@@ -48,6 +48,10 @@
 #include <vector>
 #include "rpp_const.h"
 
+typedef double rpp_float;
+typedef double rpp_vec[3];
+typedef double rpp_mat[3][3];
+
 //
 // _USE_CUSTOMFLOAT_ is defined in rpp_const.h
 //

@@ -40,6 +40,7 @@
 
 #include <stdlib.h>
 #include <stdio.h>
+#include <locale.h>
 #include <math.h>
 
 #include <ARToolKitPlus/CameraAdvImpl.h>
@@ -57,6 +58,7 @@ CameraAdvImpl::~CameraAdvImpl()
 bool CameraAdvImpl::
 loadFromFile(const char* filename)
 {
+    setlocale(LC_NUMERIC, "C");
 	FILE *fp = fopen( filename, "r" );
 	if( fp == NULL ) return(false);
 
@@ -102,6 +104,7 @@ loadFromFile(const char* filename)
 		undist_iterations = CAMERA_ADV_MAX_UNDIST_ITERATIONS;
 
 	fclose(fp);
+	setlocale(LC_NUMERIC, "");
 	return(true);
 }
 

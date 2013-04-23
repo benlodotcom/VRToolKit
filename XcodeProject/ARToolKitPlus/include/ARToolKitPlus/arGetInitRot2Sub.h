@@ -33,51 +33,22 @@
  * ========================================================================
  ** @author   Daniel Wagner
  *
- * $Id: arGetMarkerInfo.cxx 162 2006-04-19 21:28:10Z grabner $
+ * $Id: arGetInitRot2Sub.h 176 2006-08-04 06:59:22Z daniel $
  * @file
  * ======================================================================== */
 
 
-#include <ARToolKitPlus/Tracker.h>
+#ifndef __ARTOOLKITPLUS_ARGETINITROT2SUB_HEADERFILE__
+#define __ARTOOLKITPLUS_ARGETINITROT2SUB_HEADERFILE__
+
+#include <ARToolKitPlus/extra/rpp.h>
+
+namespace rpp {
+
+void arGetInitRot2_sub(rpp_float &err, rpp_mat &R, rpp_vec &t, const rpp_float cc[2], const rpp_float fc[2], const rpp_vec *model, const rpp_vec *iprts,
+					   const unsigned int model_iprts_size, const rpp_mat R_init, const bool estimate_R_init, const rpp_float epsilon, const rpp_float tolerance, const unsigned int max_iterations);
+
+} // namespace rpp
 
 
-namespace ARToolKitPlus {
-
-
-AR_TEMPL_FUNC ARMarkerInfo*
-AR_TEMPL_TRACKER::arGetMarkerInfo(ARUint8 *image, ARMarkerInfo2 *marker_info2, int *marker_num, int thresh)
-{
-    int            id, dir;
-    ARFloat         cf;
-    int            i, j;
-
-	PROFILE_BEGINSEC(profiler, GETMARKERINFO)
-
-    for( i = j = 0; i < *marker_num; i++ ) {
-        marker_infoL[j].area   = marker_info2[i].area;
-        marker_infoL[j].pos[0] = marker_info2[i].pos[0];
-        marker_infoL[j].pos[1] = marker_info2[i].pos[1];
-
-        if( arGetLine(marker_info2[i].x_coord, marker_info2[i].y_coord,
-                      marker_info2[i].coord_num, marker_info2[i].vertex,
-                      marker_infoL[j].line, marker_infoL[j].vertex) < 0 ) continue;
-
-        arGetCode( image,
-                   marker_info2[i].x_coord, marker_info2[i].y_coord,
-                   marker_info2[i].vertex, &id, &dir, &cf, thresh);
-
-        marker_infoL[j].id  = id;
-        marker_infoL[j].dir = dir;
-        marker_infoL[j].cf  = cf;
-
-        j++;
-    }
-    *marker_num = j;
-
-	PROFILE_ENDSEC(profiler, GETMARKERINFO)
-
-    return( marker_infoL );
-}
-
-
-}  // namespace ARToolKitPlus
+#endif //__ARTOOLKITPLUS_ARGETINITROT2SUB_HEADERFILE__

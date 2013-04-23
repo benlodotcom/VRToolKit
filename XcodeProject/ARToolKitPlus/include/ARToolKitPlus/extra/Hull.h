@@ -33,48 +33,52 @@
 * ========================================================================
 ** @author   Daniel Wagner
 *
-* $Id: param.h 162 2006-04-19 21:28:10Z grabner $
+* $Id: Hull.h 176 2006-08-04 06:59:22Z daniel $
 * @file
 * ======================================================================== */
+ 
 
+#ifndef __ARTOOLKITPLUS_HULL_HEADERFILE__
+#define __ARTOOLKITPLUS_HULL_HEADERFILE__
 
-#ifndef __ARTOOLKIT_PARAM_HEADERFILE__
-#define __ARTOOLKIT_PARAM_HEADERFILE__
-
-#include <ARToolKitPlus/config.h>
 
 namespace ARToolKitPlus {
 
-class ARParam
+
+enum {
+	MAX_HULL_POINTS = 64		// support up to 16 visible markers
+};
+
+struct MarkerPoint
 {
-  public:
-	int      xsize, ysize;
-	ARFloat  mat[3][4];
-	ARFloat  dist_factor[4];
+	typedef int		coord_type;
+
+	coord_type		x,y;
+	unsigned short	markerIdx,
+					cornerIdx;
 };
 
-typedef struct {
-    int      xsize, ysize;
-    double   mat[3][4];
-    double   dist_factor[4];
-} ARParamDouble;
 
-typedef struct {
-    int      xsize, ysize;
-    ARFloat   matL[3][4];
-    ARFloat   matR[3][4];
-    ARFloat   matL2R[3][4];
-    ARFloat   dist_factorL[4];
-    ARFloat   dist_factorR[4];
-} ARSParam;
+inline int iabs(int nValue)
+{
+	return nValue>=0 ? nValue : -nValue;
+}
 
 
-namespace Param {
-	// static int display( ARParam *param );
-};
+int nearHull_2D(const MarkerPoint* P, int n, int k, MarkerPoint* H);
+
+void findLongestDiameter(const MarkerPoint* nPoints, int nNumPoints, int &nIdx0, int &nIdx1);
+
+void findFurthestAway(const MarkerPoint* nPoints, int nNumPoints, int nIdx0, int nIdx1, int& nIdxFarthest);
+
+void maximizeArea(const MarkerPoint* nPoints, int nNumPoints, int nIdx0, int nIdx1, int nIdx2, int& nIdxMax);
+
+void sortIntegers(int& nIdx0, int& nIdx1, int& nIdx2);
+
+void sortInLastInteger(int& nIdx0, int& nIdx1, int& nIdx2, int &nIdx3);
 
 
 }  // namespace ARToolKitPlus
 
 
-#endif // __ARTOOLKIT_PARAM_HEADERFILE__
+#endif //__ARTOOLKITPLUS_HULL_HEADERFILE__
