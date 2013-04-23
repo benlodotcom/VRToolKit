@@ -42,7 +42,7 @@
 #define __ARTOOLKITAR_HEADERFILE__
 
 
-#include <stdio.h>
+//#include <stdio.h>
 #ifndef __APPLE__
 #include <malloc.h>
 #else
@@ -51,6 +51,7 @@
 
 #include <ARToolKitPlus/config.h>
 #include <ARToolKitPlus/param.h>
+#include <stdint.h>
 
 #define arMalloc(V,T,S)  \
 { if( ((V) = (T *)malloc( sizeof(T) * (S) )) == 0 ) \
@@ -58,15 +59,6 @@
 
 
 namespace ARToolKitPlus {
-
-
-typedef char              ARInt8;
-typedef short             ARInt16;
-typedef int               ARInt32;
-typedef unsigned char     ARUint8;
-typedef unsigned short    ARUint16;
-typedef unsigned int      ARUint32;
-
 
 typedef struct {
     int     area;

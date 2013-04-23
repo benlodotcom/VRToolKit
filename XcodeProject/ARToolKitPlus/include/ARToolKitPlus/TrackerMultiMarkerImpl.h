@@ -125,8 +125,8 @@ public:
 	bool loadCameraFile(const char* nCamParamFile, ARFloat nNearClip, ARFloat nFarClip)  {  return AR_TEMPL_TRACKER::loadCameraFile(nCamParamFile, nNearClip, nFarClip);  }
 	void setLoadUndistLUT(bool nSet)  {  AR_TEMPL_TRACKER::setLoadUndistLUT(nSet);  }
 	void setLogger(ARToolKitPlus::Logger* nLogger)  {  AR_TEMPL_TRACKER::setLogger(nLogger);  }
-	int arDetectMarker(ARUint8 *dataPtr, int thresh, ARMarkerInfo **marker_info, int *marker_num)  {  return AR_TEMPL_TRACKER::arDetectMarker(dataPtr, thresh, marker_info, marker_num);  }
-	int arDetectMarkerLite(ARUint8 *dataPtr, int thresh, ARMarkerInfo **marker_info, int *marker_num)  {  return AR_TEMPL_TRACKER::arDetectMarkerLite(dataPtr, thresh, marker_info, marker_num);  }
+	int arDetectMarker(uint8_t *dataPtr, int thresh, ARMarkerInfo **marker_info, int *marker_num)  {  return AR_TEMPL_TRACKER::arDetectMarker(dataPtr, thresh, marker_info, marker_num);  }
+	int arDetectMarkerLite(uint8_t *dataPtr, int thresh, ARMarkerInfo **marker_info, int *marker_num)  {  return AR_TEMPL_TRACKER::arDetectMarkerLite(dataPtr, thresh, marker_info, marker_num);  }
 	ARFloat arMultiGetTransMat(ARMarkerInfo *marker_info, int marker_num, ARMultiMarkerInfoT *config)  {  return AR_TEMPL_TRACKER::arMultiGetTransMat(marker_info, marker_num, config);  }
 	ARFloat arGetTransMat(ARMarkerInfo *marker_info, ARFloat center[2], ARFloat width, ARFloat conv[3][4])  {  return AR_TEMPL_TRACKER::arGetTransMat(marker_info, center, width, conv);  }
 	ARFloat arGetTransMatCont(ARMarkerInfo *marker_info, ARFloat prev_conv[3][4], ARFloat center[2], ARFloat width, ARFloat conv[3][4])  {  return AR_TEMPL_TRACKER::arGetTransMatCont(marker_info, prev_conv, center, width, conv);  }
@@ -142,6 +142,7 @@ public:
 	void changeCameraSize(int nWidth, int nHeight)  {  AR_TEMPL_TRACKER::changeCameraSize(nWidth, nHeight);  }
 	void setUndistortionMode(UNDIST_MODE nMode)  {  AR_TEMPL_TRACKER::setUndistortionMode(nMode);  }
 	bool setPoseEstimator(POSE_ESTIMATOR nMethod) {  return AR_TEMPL_TRACKER::setPoseEstimator(nMethod);  }
+	void setHullMode(HULL_TRACKING_MODE nMode)  {  AR_TEMPL_TRACKER::setHullMode(nMode);  }
 	void setBorderWidth(ARFloat nFraction)  {  AR_TEMPL_TRACKER::setBorderWidth(nFraction);  }
 	void setThreshold(int nValue)  {  AR_TEMPL_TRACKER::setThreshold(nValue);  }
 	int getThreshold() const  {  return AR_TEMPL_TRACKER::getThreshold();  }
@@ -162,6 +163,7 @@ public:
 	ARFloat calcOpenGLMatrixFromMarker(ARMarkerInfo* nMarkerInfo, ARFloat nPatternCenter[2], ARFloat nPatternSize, ARFloat *nOpenGLMatrix)  {  return AR_TEMPL_TRACKER::calcOpenGLMatrixFromMarker(nMarkerInfo, nPatternCenter, nPatternSize, nOpenGLMatrix);  }
 	ARFloat executeSingleMarkerPoseEstimator(ARMarkerInfo *marker_info, ARFloat center[2], ARFloat width, ARFloat conv[3][4])  {  return AR_TEMPL_TRACKER::executeSingleMarkerPoseEstimator(marker_info, center, width, conv);  }
 	ARFloat executeMultiMarkerPoseEstimator(ARMarkerInfo *marker_info, int marker_num, ARMultiMarkerInfoT *config)  {  return AR_TEMPL_TRACKER::executeMultiMarkerPoseEstimator(marker_info, marker_num, config);  }
+	const CornerPoints& getTrackedCorners() const  {  return AR_TEMPL_TRACKER::getTrackedCorners();  }
 
 	static void* operator new(size_t size);
 
@@ -182,8 +184,7 @@ protected:
 
 };	// namespace ARToolKitPlus
 
-
-#include "../src/TrackerMultiMarkerImpl.cxx"
+#include <ARToolKitPlus_impl/TrackerMultiMarkerImpl.cpp>
 
 
 #endif //__ARTOOLKITPLUS_TRACKERMULTIMARKERIMPL_HEADERFILE__

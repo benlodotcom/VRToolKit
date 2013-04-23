@@ -43,9 +43,9 @@
 
 #ifndef _NO_LIBRPP_
 
-
 #include <vector>
-#include "assert.h"
+#include <cstring>
+#include <cassert>
 
 #include "rpp.h"
 #include "rpp_const.h"

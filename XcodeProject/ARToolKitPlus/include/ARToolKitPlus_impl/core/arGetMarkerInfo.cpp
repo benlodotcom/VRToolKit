@@ -31,83 +31,53 @@
  *   Institut for Computer Graphics and Vision,
  *   Inffeldgasse 16a, 8010 Graz, Austria.
  * ========================================================================
- ** @author   Thomas Pintaric
+ ** @author   Daniel Wagner
  *
- * $Id: byteSwap.cxx 162 2006-04-19 21:28:10Z grabner $
+ * $Id: arGetMarkerInfo.cxx 162 2006-04-19 21:28:10Z grabner $
  * @file
  * ======================================================================== */
 
 
-#include <ARToolKitPlus/param.h>
+#include <ARToolKitPlus/Tracker.h>
+
 
 namespace ARToolKitPlus {
 
 
-#ifdef AR_LITTLE_ENDIAN
-
-typedef union {
-	int  x;
-	unsigned char y[4];
-} SwapIntT;
-
-typedef union {
-	ARFloat  x;
-	unsigned char y[8];
-} SwapDoubleT;
-
-
-static void
-byteSwapInt( int *from, int *to )
+AR_TEMPL_FUNC ARMarkerInfo*
+AR_TEMPL_TRACKER::arGetMarkerInfo(uint8_t *image, ARMarkerInfo2 *marker_info2, int *marker_num, int thresh)
 {
-    SwapIntT   *w1, *w2;
-    int        i;
-
-    w1 = (SwapIntT *)from;
-    w2 = (SwapIntT *)to;
-    for( i = 0; i < 4; i++ ) {
-        w2->y[i] = w1->y[3-i];
-    }
-
-    return;
-}
-
-static void
-byteSwapDouble( double *from, double *to )
-{
-    SwapDoubleT   *w1, *w2;
-    int           i;
-
-    w1 = (SwapDoubleT *)from;
-    w2 = (SwapDoubleT *)to;
-    for( i = 0; i < 8; i++ ) {
-        w2->y[i] = w1->y[7-i];
-    }
-
-    return;
-}
-
-static void
-byteswap( ARParamDouble *param )
-{
-    ARParamDouble  wparam;
+    int            id, dir;
+    ARFloat         cf;
     int            i, j;
 
-    byteSwapInt( &(param->xsize), &(wparam.xsize) );
-    byteSwapInt( &(param->ysize), &(wparam.ysize) );
+	PROFILE_BEGINSEC(profiler, GETMARKERINFO)
 
-    for( j = 0; j < 3; j++ ) {
-        for( i = 0; i < 4; i++ ) {
-            byteSwapDouble( &(param->mat[j][i]), &(wparam.mat[j][i]) );
-        }
+    for( i = j = 0; i < *marker_num; i++ ) {
+        marker_infoL[j].area   = marker_info2[i].area;
+        marker_infoL[j].pos[0] = marker_info2[i].pos[0];
+        marker_infoL[j].pos[1] = marker_info2[i].pos[1];
+
+        if( arGetLine(marker_info2[i].x_coord, marker_info2[i].y_coord,
+                      marker_info2[i].coord_num, marker_info2[i].vertex,
+                      marker_infoL[j].line, marker_infoL[j].vertex) < 0 ) continue;
+
+        arGetCode( image,
+                   marker_info2[i].x_coord, marker_info2[i].y_coord,
+                   marker_info2[i].vertex, &id, &dir, &cf, thresh);
+
+        marker_infoL[j].id  = id;
+        marker_infoL[j].dir = dir;
+        marker_infoL[j].cf  = cf;
+
+        j++;
     }
+    *marker_num = j;
 
-    for( i = 0; i < 4; i++ ) {
-        byteSwapDouble( &(param->dist_factor[i]), &(wparam.dist_factor[i]) );
-    }
+	PROFILE_ENDSEC(profiler, GETMARKERINFO)
 
-    *param = wparam;
+    return( marker_infoL );
 }
 
-#endif  //AR_LITTLE_ENDIAN
 
 }  // namespace ARToolKitPlus

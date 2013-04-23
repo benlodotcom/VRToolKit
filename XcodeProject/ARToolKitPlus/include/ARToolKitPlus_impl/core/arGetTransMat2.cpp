@@ -255,9 +255,7 @@ AR_TEMPL_FUNC ARFloat
 AR_TEMPL_TRACKER::arModifyMatrix(ARFloat rot[3][3], ARFloat trans[3], ARFloat cpara[3][4],
                    ARFloat vertex[][3], ARFloat pos2d[][2], int num)
 {
-    //ARFloat		factor;
     ARFloat		a, b, c;
-    //ARFloat		a1, b1, c1;
     ARFloat		a2, b2, c2;
     ARFloat		ma, mb, mc;
     int			t1, t2, t3;
@@ -272,7 +270,7 @@ AR_TEMPL_TRACKER::arModifyMatrix(ARFloat rot[3][3], ARFloat trans[3], ARFloat cp
 	I32	   _a2,_b2,_c2;
 	I32		_ma, _mb, _mc;
 
-	PROFILE_BEGINSEC(profiler, MODIFYMATRIX)
+//	PROFILE_BEGINSEC(profiler, MODIFYMATRIX)
 
 	FIXED_VEC3D	*_vertex = (FIXED_VEC3D*)malloc(num*sizeof(FIXED_VEC3D)),
 				*_pos2d = (FIXED_VEC3D*)malloc(num*sizeof(FIXED_VEC3D)),
@@ -310,7 +308,16 @@ AR_TEMPL_TRACKER::arModifyMatrix(ARFloat rot[3][3], ARFloat trans[3], ARFloat cp
 
     arGetAngle( rot, &a, &b, &c );
 
-	PROFILE_BEGINSEC(profiler, MODIFYMATRIX_LOOP)
+	// _cpara and _trans are constant, which allows us to calcualte _combo3 beforehand...
+	//
+	for(j=0; j<3; j++)
+	{
+		FIXED_VEC3_DOT(_cpara+j, &_trans, _combo3+j, 12);
+		_combo3[j] += _cpara3[j];
+		_combo3[j] >>= 4;
+	}
+
+//	PROFILE_BEGINSEC(profiler, MODIFYMATRIX_LOOP)
 
     a2 = a;
     b2 = b;
@@ -333,75 +340,121 @@ AR_TEMPL_TRACKER::arModifyMatrix(ARFloat rot[3][3], ARFloat trans[3], ARFloat cp
 		fix_c[0] = _c2 - fix_factor;   fix_c[1] = _c2;   fix_c[2] = _c2 + fix_factor;
 
         for(t1=-1;t1<=1;t1++) {
-        for(t2=-1;t2<=1;t2++) {
-        for(t3=-1;t3<=1;t3++) {
-            //a1 = a2 + factor*t1;
-            //b1 = b2 + factor*t2;
-            //c1 = c2 + factor*t3;
+			for(t2=-1;t2<=1;t2++) {
+				for(t3=-1;t3<=1;t3++) {
 
-			_a1 = fix_a[t1+1];
-			_b1 = fix_b[t2+1];
-			_c1 = fix_c[t3+1];
+					_a1 = fix_a[t1+1];
+					_b1 = fix_b[t2+1];
+					_c1 = fix_c[t3+1];
 
-			PROFILE_BEGINSEC(profiler, GETNEWMATRIX)
-            arGetNewMatrix12(_a1, _b1, _c1, _trans, NULL, _cpara, _cpara3, _combo, _combo3, profiler);
-			PROFILE_ENDSEC(profiler, GETNEWMATRIX)
+					//PROFILE_BEGINSEC(profiler, GETNEWMATRIX)
+					arGetNewMatrix12(_a1, _b1, _c1, _trans, NULL, _cpara, _cpara3, _combo, _combo3, profiler);
+					//PROFILE_ENDSEC(profiler, GETNEWMATRIX)
 
-			for(k=0; k<3; k++)
-			{
-				_combo[k].x >>= 4;
-				_combo[k].y >>= 4;
-				_combo[k].z >>= 4;
-				_combo3[k] >>= 4;
+					for(k=0; k<3; k++)
+					{
+						_combo[k].x >>= 4;
+						_combo[k].y >>= 4;
+						_combo[k].z >>= 4;
+						//_combo3[k] >>= 4;
+					}
+
+					_err = 0;
+					for( i = 0; i < num; i++ ) {
+						FIXED_VEC3_DOT(_combo+0, _vertex+i, &_hx, BITS);
+						_hx += _combo3[0];
+
+						FIXED_VEC3_DOT(_combo+1, _vertex+i, &_hy, BITS);
+						_hy += _combo3[1];
+
+						FIXED_VEC3_DOT(_combo+2, _vertex+i, &_h, BITS);
+						_h += _combo3[2];
+
+						// old method of doing two divides
+						// there is no reason at all to use this anymore
+						//
+						//FIXED_DIV2(_hx, _h, _vec1.x, BITS);
+						//FIXED_DIV2(_hy, _h, _vec1.y, BITS);
+
+
+#ifndef _USE_DIV_TABLE_
+						// new method of doing one correct division
+						// and two multiplications. as accurate as two divisions but faster
+						//
+						I64 _rev = ((I64)1<<(BITS+32))/_h;
+						_vec1.x = (I32)((_hx*_rev)>>32);
+						_vec1.y = (I32)((_hy*_rev)>>32);
+#endif
+
+
+#ifdef _USE_DIV_TABLE_
+						// latest method of using a lookup table for division
+						// extremely fast (+30%) but less accurate
+						if((_h>>8)>=DIV_TABLE_MIN && (_h>>8)<DIV_TABLE_MAX)
+						{
+							I32 _revT4 = DIV_TABLE_FIXEDx4_FROM_FIXED(_h<<8);
+							I32 __x = imul(_hx, _revT4, 18);
+							I32 __y = imul(_hy, _revT4, 18);
+
+#ifdef DEBUG_DIV_RANGE
+							int dx = __x-_vec1.x>0 ? __x-_vec1.x : _vec1.x-__x;
+							int dy = __y-_vec1.y>0 ? __y-_vec1.y : _vec1.y-__y;
+							if(dx>dbgInfo.dxMax)	dbgInfo.dxMax  = dx;
+							if(dy>dbgInfo.dyMax)	dbgInfo.dyMax  = dy;
+
+							if(dx/256.0f > 1.0f)
+								dx = dx;
+							if(dy/256.0f > 1.0f)
+								dy = dy;
+#endif
+							_vec1.x = __x;
+							_vec1.y = __y;
+						}
+						else
+						{
+							I64 _rev = ((I64)1<<(BITS+32))/_h;
+							_vec1.x = (I32)((_hx*_rev)>>32);
+							_vec1.y = (I32)((_hy*_rev)>>32);
+						}
+#endif //_USE_DIV_TABLE_
+
+
+#ifdef DEBUG_DIV_RANGE
+#  pragma message("!!! COMPILING WITH RANGE CHECKING !!!")
+						if(_h<dbgInfo.hMin)		dbgInfo.hMin  = _h;
+						if(_h>dbgInfo.hMax)		dbgInfo.hMax  = _h;
+						if(_hx<dbgInfo.hxMin)	dbgInfo.hxMin  = _hx;
+						if(_hx>dbgInfo.hxMax)	dbgInfo.hxMax  = _hx;
+						if(_hy<dbgInfo.hyMin)	dbgInfo.hyMin  = _hy;
+						if(_hy>dbgInfo.hyMax)	dbgInfo.hyMax  = _hy;
+						if(_hy>dbgInfo.hyMax)	dbgInfo.hyMax  = _hy;
+#endif
+
+						FIXED_VEC2_SUB(_pos2d+i, &_vec1, &_vec2);
+						FIXED_VEC2_LENGTH_SQ(&_vec2, &_ures, BITS);
+						_err += _ures;
+					}
+
+					if( _err < _minerr ) {
+						_minerr = _err;
+						_ma = _a1;
+						_mb = _b1;
+						_mc = _c1;
+						s1 = t1; s2 = t2; s3 = t3;
+					}
+				}
 			}
-
-            _err = 0;
-            for( i = 0; i < num; i++ ) {
-				FIXED_VEC3_DOT(_combo+0, _vertex+i, &_hx, BITS);
-				_hx += _combo3[0];
-
-				FIXED_VEC3_DOT(_combo+1, _vertex+i, &_hy, BITS);
-				_hy += _combo3[1];
-
-				FIXED_VEC3_DOT(_combo+2, _vertex+i, &_h, BITS);
-				_h += _combo3[2];
-
-				FIXED_DIV2(_hx, _h, _vec1.x, BITS);
-				FIXED_DIV2(_hy, _h, _vec1.y, BITS);
-
-				FIXED_VEC3_SUB(_pos2d+i, &_vec1, &_vec2);
-				FIXED_VEC3_LENGTH_SQ(&_vec2, &_ures, BITS);
-				_err += _ures;
-            }
-
-            if( _err < _minerr ) {
-                _minerr = _err;
-                //ma = a1;
-                //mb = b1;
-                //mc = c1;
-				_ma = _a1;
-				_mb = _b1;
-				_mc = _c1;
-                s1 = t1; s2 = t2; s3 = t3;
-            }
-        }
-        }
         }
 
         if(s1 == 0 && s2 == 0 && s3 == 0)
-		{
-			//factor *= (ARFloat)0.5;
 			fix_factor >>= 1;
-		}
-        //a2 = ma;
-        //b2 = mb;
-        //c2 = mc;
+
 		_a2 = _ma;
 		_b2 = _mb;
 		_c2 = _mc;
     }
 
-	PROFILE_ENDSEC(profiler, MODIFYMATRIX_LOOP)
+//	PROFILE_ENDSEC(profiler, MODIFYMATRIX_LOOP)
 
 	free(_vertex);
 	free(_pos2d);
@@ -414,7 +467,7 @@ AR_TEMPL_TRACKER::arModifyMatrix(ARFloat rot[3][3], ARFloat trans[3], ARFloat cp
 
 	minerr = FIXED_Fixed_n_To_Float(_minerr, BITS);
 
-	PROFILE_ENDSEC(profiler, MODIFYMATRIX)
+//	PROFILE_ENDSEC(profiler, MODIFYMATRIX)
 
     return minerr/num;
 }

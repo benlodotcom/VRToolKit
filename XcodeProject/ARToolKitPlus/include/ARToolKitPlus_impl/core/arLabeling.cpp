@@ -33,24 +33,111 @@
  * ========================================================================
  ** @author   Daniel Wagner
  *
- * $Id$
+ * $Id: arLabeling.cxx 162 2006-04-19 21:28:10Z grabner $
  * @file
  * ======================================================================== */
 
 
-AR_TEMPL_FUNC ARInt16*
-AR_TEMPL_TRACKER::LABEL_FUNC_NAME(ARUint8 *image, int thresh, int *label_num, int **area,
-								  ARFloat **pos, int **clip, int **label_ref)
+#include <stdlib.h>
+#include <stdio.h>
+#include <ARToolKitPlus/Tracker.h>
+
+
+namespace ARToolKitPlus {
+
+
+static void
+put_zero( uint8_t *p, int size )
 {
-    ARUint8   *pnt;                     /*  image pointer       */
-    ARInt16   *pnt1, *pnt2;             /*  image pointer       */
+    while( (size--) > 0 ) *(p++) = 0;
+}
+
+
+// in order to get no speed loss we use the preprocessor
+// to create 5 different versions of labeling2, for the
+// five different major pixel formats
+//
+#define _DEF_PIXEL_FORMAT_ABGR
+#define LABEL_FUNC_NAME arLabeling_ABGR
+#include "arLabelingImpl.h"
+#undef _DEF_PIXEL_FORMAT_ABGR
+
+#define _DEF_PIXEL_FORMAT_BGR
+#define LABEL_FUNC_NAME arLabeling_BGR
+#include "arLabelingImpl.h"
+#undef _DEF_PIXEL_FORMAT_BGR
+
+#define _DEF_PIXEL_FORMAT_RGB
+#define LABEL_FUNC_NAME arLabeling_RGB
+#include "arLabelingImpl.h"
+#undef _DEF_PIXEL_FORMAT_RGB
+
+#define _DEF_PIXEL_FORMAT_RGB565
+#define LABEL_FUNC_NAME arLabeling_RGB565
+#include "arLabelingImpl.h"
+#undef _DEF_PIXEL_FORMAT_RGB565
+
+#define _DEF_PIXEL_FORMAT_LUM
+#define LABEL_FUNC_NAME arLabeling_LUM
+#include "arLabelingImpl.h"
+#undef _DEF_PIXEL_FORMAT_LUM
+
+
+AR_TEMPL_FUNC int16_t*
+AR_TEMPL_TRACKER::arLabeling(uint8_t *image, int thresh, int *label_num, int **area,
+					ARFloat **pos, int **clip, int **label_ref )
+{
+	int16_t* ret = NULL;
+
+	PROFILE_BEGINSEC(profiler, LABELING)
+	//ret = labeling2(image, thresh, label_num, area, pos, clip, label_ref, 1);
+
+	switch(pixelFormat)
+	{
+	case PIXEL_FORMAT_ABGR:
+		ret = arLabeling_ABGR(image, thresh, label_num, area, pos, clip, label_ref);
+		break;
+
+	case PIXEL_FORMAT_BGRA:
+	case PIXEL_FORMAT_BGR:
+		ret = arLabeling_BGR(image, thresh, label_num, area, pos, clip, label_ref);
+		break;
+
+	case PIXEL_FORMAT_RGBA:
+	case PIXEL_FORMAT_RGB:
+		ret = arLabeling_RGB(image, thresh, label_num, area, pos, clip, label_ref);
+		break;
+
+	case PIXEL_FORMAT_RGB565:
+		ret = arLabeling_RGB565(image, thresh, label_num, area, pos, clip, label_ref);
+		break;
+
+	case PIXEL_FORMAT_LUM:
+		ret = arLabeling_LUM(image, thresh, label_num, area, pos, clip, label_ref);
+		break;
+	}
+
+    PROFILE_ENDSEC(profiler, LABELING)
+
+	return ret;
+}
+
+
+
+#if 0
+AR_TEMPL_FUNC int16_t*
+AR_TEMPL_TRACKER::labeling2(uint8_t *image, int thresh, int *label_num, int **area,
+				   ARFloat **pos, int **clip, int **label_ref, int LorR)
+{
+    uint8_t   *pnt;                     /*  image pointer       */
+    int16_t   *pnt1, *pnt2;             /*  image pointer       */
     int       *wk;                      /*  pointer for work    */
     int       wk_max;                   /*  work                */
     int       m,n;                      /*  work                */
     int       i,j,k;                    /*  for loop            */
     int       lxsize, lysize;
     int       poff;
-    ARInt16   *l_image;
+    int16_t   *l_image;
     int       *work, *work2;
     int       *wlabel_num;
     int       *warea;
@@ -62,22 +149,37 @@ AR_TEMPL_TRACKER::LABEL_FUNC_NAME(ARUint8 *image, int thresh, int *label_num, in
 	#pragma message(">> Performance Warning: arlabeling() optimizations disabled.")
 #endif //_!DISABLE_TP_OPTIMIZATIONS_
 
-	if(pixelFormat==PIXEL_FORMAT_RGB565)
+//#ifdef AR_PIX_FORMAT_RGB565
+	if(PIX_FORMAT==PIXEL_FORMAT_RGB565)
 		checkRGB565LUT();
+//#endif
+
+	THESHOLD_FUNC threshFunc = thresholdLUM8;
 
 
 	assert(l_imageL && "checkImageBuffer() must be called before labeling2(). this should happen automatically in arDetectMarker() & arDetectMarkerLite()");
 
-    l_image = &l_imageL[0];
-    work    = &workL[0];
-    work2   = &work2L[0];
-    wlabel_num = &wlabel_numL;
-    warea   = &wareaL[0];
-    wclip   = &wclipL[0];
-    wpos    = &wposL[0];
+    if( LorR ) {
+        l_image = &l_imageL[0];
+        work    = &workL[0];
+        work2   = &work2L[0];
+        wlabel_num = &wlabel_numL;
+        warea   = &wareaL[0];
+        wclip   = &wclipL[0];
+        wpos    = &wposL[0];
+    }
+    else {
+        l_image = &l_imageR[0];
+        work    = &workR[0];
+        work2   = &work2R[0];
+        wlabel_num = &wlabel_numR;
+        warea   = &wareaR[0];
+        wclip   = &wclipR[0];
+        wpos    = &wposR[0];
+    }
 
 
-	if(pixelFormat!=PIXEL_FORMAT_RGB565 && pixelFormat!=PIXEL_FORMAT_LUM)
+	if(PIX_FORMAT!=PIXEL_FORMAT_RGB565 && PIX_FORMAT!=PIXEL_FORMAT_LUM)
 		thresh *= 3;
 
     if( arImageProcMode == AR_IMAGE_PROC_IN_HALF ) {
@@ -106,12 +208,12 @@ AR_TEMPL_TRACKER::LABEL_FUNC_NAME(ARUint8 *image, int thresh, int *label_num, in
     wk_max = 0;
     pnt2 = &(l_image[lxsize+1]);
     if( arImageProcMode == AR_IMAGE_PROC_IN_HALF ) {
-        pnt = &(image[(arImXsize*2+2)*pixelSize]);
-        poff = pixelSize*2;
+        pnt = &(image[(arImXsize*2+2)*PIX_SIZE]);
+        poff = PIX_SIZE*2;
     }
     else {
-        pnt = &(image[(arImXsize+1)*pixelSize]);
-        poff = pixelSize;
+        pnt = &(image[(arImXsize+1)*PIX_SIZE]);
+        poff = PIX_SIZE;
     }
 
 
@@ -122,13 +224,13 @@ AR_TEMPL_TRACKER::LABEL_FUNC_NAME(ARUint8 *image, int thresh, int *label_num, in
 	const int shiftBits = 10;
 	int iHalf=lxsize/2, jHalf=lysize/2;
 
-	int threshFact = (pixelFormat!=PIXEL_FORMAT_RGB565 && pixelFormat!=PIXEL_FORMAT_LUM) ? 3 : 1;
+	int threshFact = (PIX_FORMAT!=PIXEL_FORMAT_RGB565 && PIX_FORMAT!=PIXEL_FORMAT_LUM) ? 3 : 1;
 
 	int corrLeftY = (vignetting.corners*threshFact)<<shiftBits,
 		dCorrLeftY = ((vignetting.leftright-vignetting.corners*threshFact)<<shiftBits)/jHalf,
 		corrCenterY = (vignetting.bottomtop*threshFact)<<shiftBits,
 		dCorrCenterY = -corrCenterY/jHalf,
-		corrX = 0, dCorrX = 0,
+		corrX, dCorrX,
 		corrThresh;
 
 
@@ -165,22 +267,20 @@ AR_TEMPL_TRACKER::LABEL_FUNC_NAME(ARUint8 *image, int thresh, int *label_num, in
 
 			bool isBlack = false;
 
-
-#ifdef _DEF_PIXEL_FORMAT_ABGR
+			if(PIX_FORMAT==PIXEL_FORMAT_ABGR)
 	            isBlack = ( *(pnt+1) + *(pnt+2) + *(pnt+3) <= corrThresh );
-#endif
-#ifdef _DEF_PIXEL_FORMAT_BGR
+			if(PIX_FORMAT==PIXEL_FORMAT_BGRA)
 				isBlack = ( *(pnt+0) + *(pnt+1) + *(pnt+2) <= corrThresh );
-#endif
-#ifdef _DEF_PIXEL_FORMAT_RGB
+			if(PIX_FORMAT==PIXEL_FORMAT_BGR)
 				isBlack = ( *(pnt+0) + *(pnt+1) + *(pnt+2) <= corrThresh );
-#endif
-#ifdef _DEF_PIXEL_FORMAT_RGB565
+			if(PIX_FORMAT==PIXEL_FORMAT_RGBA)
+				isBlack = ( *(pnt+0) + *(pnt+1) + *(pnt+2) <= corrThresh );
+			if(PIX_FORMAT==PIXEL_FORMAT_RGB)
+				isBlack = ( *(pnt+0) + *(pnt+1) + *(pnt+2) <= corrThresh );
+			if(PIX_FORMAT==PIXEL_FORMAT_RGB565)
 				isBlack = (getLUM8_from_RGB565(pnt) <= corrThresh );
-#endif
-#ifdef _DEF_PIXEL_FORMAT_LUM
+			if(PIX_FORMAT==PIXEL_FORMAT_LUM)
 				isBlack = ( *pnt <= corrThresh );
-#endif
 
 			if(isBlack) {
 				pnt1 = &(pnt2[-lxsize]);
@@ -373,7 +473,7 @@ AR_TEMPL_TRACKER::LABEL_FUNC_NAME(ARUint8 *image, int thresh, int *label_num, in
 
 		}	// end for x
 		
-		if( arImageProcMode == AR_IMAGE_PROC_IN_HALF ) pnt += arImXsize*pixelSize;
+		if( arImageProcMode == AR_IMAGE_PROC_IN_HALF ) pnt += arImXsize*PIX_SIZE;
 
 	}	// end for y
 
@@ -388,8 +488,8 @@ AR_TEMPL_TRACKER::LABEL_FUNC_NAME(ARUint8 *image, int thresh, int *label_num, in
         return( l_image );
     }
 
-    put_zero( (ARUint8 *)warea, *label_num *     sizeof(int) );
-    put_zero( (ARUint8 *)wpos,  *label_num * 2 * sizeof(ARFloat) );
+    put_zero( (uint8_t *)warea, *label_num *     sizeof(int) );
+    put_zero( (uint8_t *)wpos,  *label_num * 2 * sizeof(ARFloat) );
 
 #ifdef _DISABLE_TP_OPTIMIZATIONS_
     for(i = 0; i < *label_num; i++) {
@@ -470,6 +570,7 @@ AR_TEMPL_TRACKER::LABEL_FUNC_NAME(ARUint8 *image, int thresh, int *label_num, in
     *clip      = wclip;
     return( l_image );
 }
+#endif // #if 0
 
 
-#undef LABEL_FUNC_NAME
+}  // namespace ARToolKitPlus
